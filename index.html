@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Worklynq — One intelligence platform. Four ways to run your business.</title>
+<title>Worklynq — One intelligent platform to run your business.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -212,100 +212,209 @@
     box-shadow:0 24px 60px -20px rgba(11,59,54,0.35);
   }
 
-  /* ---------- SEQUENCE ---------- */
-  .sequence{
+  /* ---------- FEATURES ---------- */
+  .features{
     padding:64px 0 84px;
     border-top:1px solid var(--line);
   }
-  .sequence-head{
+  .features-head{
     display:flex;
     justify-content:space-between;
     align-items:flex-end;
-    gap:24px;
-    margin-bottom:44px;
+    gap:24px 48px;
+    margin-bottom:40px;
     flex-wrap:wrap;
   }
-  .sequence-head h2{
+  .features-head h2{
     font-size:clamp(24px, 2.8vw, 32px);
     color:var(--teal-deep);
     max-width:20ch;
   }
-  .sequence-head p{
+  .features-head p{
     color:var(--ink-soft);
-    font-size:15px;
-    max-width:34ch;
+    font-size:15.5px;
+    line-height:1.6;
+    max-width:46ch;
     margin:0;
   }
-  .seq-list{
+  .suite{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 24px 60px -32px rgba(11,59,54,0.28);
+  }
+  .suite-bar{
     display:flex;
-    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:16px 26px;
+    border-bottom:1px solid var(--line);
+    background:var(--paper-2);
   }
-  .seq-item{
-    display:grid;
-    grid-template-columns:64px 1.1fr 1.4fr auto;
-    gap:28px;
-    align-items:start;
-    padding:26px 0;
-    border-top:1px solid var(--line);
-  }
-  .seq-item:last-child{border-bottom:1px solid var(--line);}
-  .seq-num{
+  .suite-name{
     font-family:'Fraunces', serif;
-    font-size:26px;
-    color:var(--line);
-    font-weight:450;
-    line-height:1;
-    padding-top:2px;
-  }
-  .seq-item.is-next .seq-num{color:var(--teal);}
-  .seq-name{
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-  }
-  .seq-name strong{
-    font-family:'Fraunces', serif;
-    font-size:21px;
+    font-size:19px;
     font-weight:560;
+    color:var(--teal-deep);
+  }
+  .suite-note{
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .suite-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .feature{
+    padding:30px 30px 32px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .feature:nth-child(odd){border-right:1px solid var(--line);}
+  .feature:nth-child(-n+2){border-bottom:1px solid var(--line);}
+  .feature-icon{
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:var(--sage);
+    color:var(--teal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:6px;
+  }
+  .feature-icon svg{width:21px; height:21px;}
+  .feature h3{
+    font-size:21px;
     color:var(--ink);
     line-height:1.2;
   }
-  .seq-name span{
-    font-size:13px;
-    color:var(--ink-soft);
-    font-style:italic;
-    font-family:'Fraunces', serif;
-  }
-  .seq-desc{
+  .feature-desc{
+    margin:0;
     font-size:14.5px;
+    line-height:1.6;
     color:var(--ink-soft);
+    max-width:48ch;
+  }
+  .suite-foot{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px 28px;
+    padding:16px 26px;
+    border-top:1px solid var(--line);
+    font-size:13.5px;
+    color:var(--ink-soft);
+  }
+  .suite-foot span{display:inline-flex; align-items:center; gap:8px;}
+  .suite-foot span::before{
+    content:"";
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--teal-bright);
+  }
+  @media (max-width:760px){
+    .suite-grid{grid-template-columns:1fr;}
+    .feature{padding:26px 22px 28px;}
+    .feature:nth-child(odd){border-right:0;}
+    .feature:nth-child(-n+3){border-bottom:1px solid var(--line);}
+    .suite-bar{padding:14px 22px; flex-wrap:wrap;}
+    .suite-foot{justify-content:flex-start; padding:16px 22px;}
+  }
+
+  /* ---------- INTEGRATIONS ---------- */
+  .integrations{
+    padding:72px 0 88px;
+    border-top:1px solid var(--line);
+  }
+  .integrations-head{
+    max-width:640px;
+    margin-bottom:40px;
+  }
+  .integrations-head h2{
+    font-size:clamp(24px, 2.8vw, 32px);
+    color:var(--teal-deep);
+    margin-bottom:14px;
+  }
+  .integrations-head p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:15.5px;
+    line-height:1.6;
+  }
+  .int-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .int-card{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:24px 24px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .int-card-head{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .int-icon{
+    width:36px;
+    height:36px;
+    border-radius:9px;
+    background:var(--sage);
+    color:var(--teal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .int-icon svg{width:19px; height:19px;}
+  .int-card h3{
+    font-size:18px;
+    color:var(--ink);
+    line-height:1.25;
+  }
+  .int-card p{
+    margin:0;
+    font-size:14px;
     line-height:1.55;
-    padding-top:2px;
+    color:var(--ink-soft);
   }
-  .seq-status{
-    text-align:right;
-    white-space:nowrap;
-    padding-top:2px;
+  .int-tools{
+    list-style:none;
+    margin:6px 0 0;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
   }
-  .status-pill{
-    display:inline-block;
-    font-size:12.5px;
-    padding:5px 12px;
+  .int-tools li{
+    font-size:13px;
+    padding:5px 11px;
     border-radius:100px;
     border:1px solid var(--line);
-    color:var(--ink-soft);
+    background:var(--paper);
+    color:var(--ink);
   }
-  .status-pill.next{
+  .int-card--custom{
     background:var(--teal-deep);
     border-color:var(--teal-deep);
-    color:var(--paper);
   }
-  @media (max-width:860px){
-    .seq-item{grid-template-columns:40px 1fr; grid-template-areas:"num name" ". desc" ". status"; row-gap:10px;}
-    .seq-num{grid-area:num;}
-    .seq-name{grid-area:name;}
-    .seq-desc{grid-area:desc;}
-    .seq-status{grid-area:status; text-align:left;}
+  .int-card--custom h3{color:var(--paper);}
+  .int-card--custom p{color:var(--sage);}
+  .int-card--custom .int-icon{background:rgba(255,255,255,0.12); color:var(--teal-bright);}
+  @media (max-width:980px){
+    .int-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:640px){
+    .int-grid{grid-template-columns:1fr;}
   }
 
   /* ---------- FOUNDATION ---------- */
@@ -439,9 +548,10 @@
       <img src="data:image/png;base64,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" alt="Worklynq — Intelligence Behind Every Operation" class="wordmark">
     </a>
     <nav class="nav-links">
-      <a href="#sequence">Products</a>
+      <a href="#features">Features</a>
+      <a href="#integrations">Integrations</a>
       <a href="#foundation">How it works</a>
-      <a class="nav-cta" href="#sequence">See what's launching first</a>
+      <a class="nav-cta" href="#features">See what's inside</a>
     </nav>
   </div>
 </header>
@@ -466,52 +576,136 @@
     </div>
   </section>
 
-  <section class="sequence" id="sequence">
+  <section class="features" id="features">
     <div class="wrap">
-      <div class="sequence-head">
-        <h2>Focused products for how your team actually works</h2>
+      <div class="features-head">
+        <h2>One product for how your business actually works</h2>
+        <p>Project management, business operations, product management, and customer experience management are built into Worklynq — one workspace, sharing the same people, data, and context.</p>
       </div>
 
-      <div class="seq-list">
-        <div class="seq-item is-next">
-          <div class="seq-num">01</div>
-          <div class="seq-name">
-            <strong>Worklynq PSA</strong>
-            <span>Never lose the why behind an engagement.</span>
-          </div>
-          <div class="seq-desc">AI-native professional services automation — customer, engagement, project, people, work, time, knowledge, and financials, connected instead of scattered across separate tools.</div>
-          <div class="seq-status"><span class="status-pill next">Launching October 2026</span></div>
+      <div class="suite">
+        <div class="suite-bar">
+          <span class="suite-name">Worklynq</span>
+          <span class="suite-note">Four feature sets, one product</span>
         </div>
+        <div class="suite-grid">
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h5M8 16h8"/></svg></div>
+            <h3>Project management</h3>
+            <p class="feature-desc">Customers, engagements, projects, people, work, time, knowledge, and financials in one place — connected instead of scattered across separate tools.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></div>
+            <h3>Business operations</h3>
+            <p class="feature-desc">Day-to-day operations sized for franchise restaurants, independent shops, and other brick-and-mortar businesses — without enterprise cost or complexity.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
+            <h3>Product management</h3>
+            <p class="feature-desc">Connects knowledge to execution, so product teams keep the reasoning behind every ticket, roadmap, and decision.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><path d="M15.5 5.2a3 3 0 010 5.6M17.5 14.6c1.6.6 2.7 2.2 3 4.4"/></svg></div>
+            <h3>Customer experience management</h3>
+            <p class="feature-desc">Accounts, deals, and subscriptions managed the way sales works today, with AI throughout rather than layered on top.</p>
+          </article>
+        </div>
+        <div class="suite-foot">
+          <span>One workspace</span>
+          <span>One set of people and permissions</span>
+          <span>One intelligence foundation</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="seq-item">
-          <div class="seq-num">02</div>
-          <div class="seq-name">
-            <strong>Worklynq BOS</strong>
-            <span>Never lose what keeps your business running.</span>
+  <section class="integrations" id="integrations">
+    <div class="wrap">
+      <div class="integrations-head">
+        <h2>Works with the tools you already use</h2>
+        <p>Worklynq connects to the developer tools, enterprise apps, and business systems your teams rely on every day — so the context behind your work comes together in one place instead of staying scattered.</p>
+      </div>
+      <div class="int-grid">
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></div>
+            <h3>Developer tools</h3>
           </div>
-          <div class="seq-desc">The same category of intelligence, sized for franchise restaurants, mom-and-pop shops, and other brick-and-mortar operators — without enterprise cost or complexity.</div>
-          <div class="seq-status"><span class="status-pill">In development</span></div>
-        </div>
-
-        <div class="seq-item">
-          <div class="seq-num">03</div>
-          <div class="seq-name">
-            <strong>Worklynq WPM</strong>
-            <span>Never lose the why behind what you ship.</span>
+          <p>Link code, pull requests, and AI coding agents to the tickets and decisions behind them.</p>
+          <ul class="int-tools">
+            <li>GitHub</li>
+            <li>Claude</li>
+            <li>Cursor</li>
+            <li>Jira</li>
+            <li>Confluence</li>
+            <li>GitLab</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></div>
+            <h3>Workspace & mail</h3>
           </div>
-          <div class="seq-desc">AI-native work and product management — connecting knowledge to execution so product teams stop losing the reasoning behind tickets, roadmaps, and decisions.</div>
-          <div class="seq-status"><span class="status-pill">In development</span></div>
-        </div>
-
-        <div class="seq-item">
-          <div class="seq-num">04</div>
-          <div class="seq-name">
-            <strong>Worklynq CXM</strong>
-            <span>The customer relationship, connected.</span>
+          <p>Bring email, calendars, and documents into the same context as the work they're about.</p>
+          <ul class="int-tools">
+            <li>Gmail</li>
+            <li>Outlook</li>
+            <li>Google Calendar</li>
+            <li>Google Drive</li>
+            <li>Microsoft 365</li>
+            <li>OneDrive</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a7.5 7.5 0 01-11 6.6L4 20l1.4-4.6A7.5 7.5 0 1120 12z"/></svg></div>
+            <h3>Communications</h3>
           </div>
-          <div class="seq-desc">A CRM built the way sales works today — but subscription, deal, and account-native from day one, with AI throughout rather than layered on top.</div>
-          <div class="seq-status"><span class="status-pill">In development</span></div>
-        </div>
+          <p>Keep conversations connected to the customers, projects, and products they concern.</p>
+          <ul class="int-tools">
+            <li>Slack</li>
+            <li>Microsoft Teams</li>
+            <li>Zoom</li>
+            <li>Google Meet</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M7 15h3"/></svg></div>
+            <h3>Business systems</h3>
+          </div>
+          <p>Connect the systems that run your sales, money, and front counter.</p>
+          <ul class="int-tools">
+            <li>POS systems</li>
+            <li>QuickBooks</li>
+            <li>Xero</li>
+            <li>Stripe</li>
+            <li>Shopify</li>
+            <li>Square</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/></svg></div>
+            <h3>Social media</h3>
+          </div>
+          <p>See what's happening across your channels alongside the rest of the business.</p>
+          <ul class="int-tools">
+            <li>LinkedIn</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>X</li>
+            <li>YouTube</li>
+            <li>TikTok</li>
+          </ul>
+        </article>
+        <article class="int-card int-card--custom">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+            <h3>Tools unique to your business</h3>
+          </div>
+          <p>Every business runs on something no one else does. Worklynq can connect the specialized systems your team depends on, so nothing important lives outside the picture.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -519,8 +713,8 @@
   <section class="foundation" id="foundation">
     <div class="wrap foundation-grid">
       <div>
-        <h2>One intelligence foundation underneath every product</h2>
-        <p>Worklynq was built as one shared foundation first — so every Worklynq product understands not just data, but the meaning, relationships, and history behind it.</p>
+        <h2>One intelligence foundation underneath everything</h2>
+        <p>Worklynq was built as one shared foundation first — so every part of Worklynq understands not just data, but the meaning, relationships, and history behind it.</p>
         <ul class="layer-list">
           <li>Knowledge Graph</li>
           <li>Context Engine</li>
@@ -567,7 +761,8 @@
       </div>
       <div class="footer-links">
         <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
-        <a href="#sequence">Products</a>
+        <a href="#features">Features</a>
+        <a href="#integrations">Integrations</a>
         <a href="#foundation">Platform</a>
       </div>
     </div>
