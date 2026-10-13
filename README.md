@@ -7,7 +7,6 @@ The Worklynq website. One plain HTML page — no build step, no framework. GitHu
 | File | What it is |
 |---|---|
 | `index.html` | The whole page: styles in the `<style>` block at the top, then the header, hero, features, integrations, foundation section and footer. The Worklynq logos and hero image are embedded in the file. |
-| `assets/feature-*.png` | Photos for the Project management and Product management feature cards. (Business operations and Customer experience management use Unsplash photos linked by URL.) |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
 | `CNAME` | Tells GitHub Pages to serve this site at worklynq.com. Don't delete it. |
 
