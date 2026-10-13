@@ -265,9 +265,10 @@
   }
   .suite-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
   }
   .feature{
+    min-width:0;
     padding:30px 30px 32px;
     display:flex;
     flex-direction:column;
@@ -275,6 +276,16 @@
   }
   .feature:nth-child(odd){border-right:1px solid var(--line);}
   .feature:nth-child(-n+2){border-bottom:1px solid var(--line);}
+  .feature-photo{
+    width:calc(100% + 60px);
+    max-width:none;
+    height:auto;
+    margin:-30px -30px 14px;
+    aspect-ratio:2 / 1;
+    object-fit:cover;
+    background:var(--sage);
+    display:block;
+  }
   .feature-icon{
     width:40px;
     height:40px;
@@ -317,8 +328,9 @@
     background:var(--teal-bright);
   }
   @media (max-width:760px){
-    .suite-grid{grid-template-columns:1fr;}
+    .suite-grid{grid-template-columns:minmax(0, 1fr);}
     .feature{padding:26px 22px 28px;}
+    .feature-photo{width:calc(100% + 44px); margin:-26px -22px 12px; aspect-ratio:16 / 9;}
     .feature:nth-child(odd){border-right:0;}
     .feature:nth-child(-n+3){border-bottom:1px solid var(--line);}
     .suite-bar{padding:14px 22px; flex-wrap:wrap;}
@@ -396,12 +408,38 @@
     gap:8px;
   }
   .int-tools li{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
     font-size:13px;
-    padding:5px 11px;
+    padding:5px 12px 5px 5px;
     border-radius:100px;
     border:1px solid var(--line);
     background:var(--paper);
     color:var(--ink);
+  }
+  .int-logo{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--teal-deep);
+    color:var(--paper);
+    font-size:9.5px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    overflow:hidden;
+  }
+  .int-logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:#fff;
+    padding:3px;
+    display:block;
   }
   .int-card--custom{
     background:var(--teal-deep);
@@ -590,21 +628,25 @@
         </div>
         <div class="suite-grid">
           <article class="feature">
+            <img class="feature-photo" src="assets/feature-project-management.png" alt="Laptop showing a project analytics dashboard" loading="lazy" width="900" height="520" />
             <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h5M8 16h8"/></svg></div>
             <h3>Project management</h3>
             <p class="feature-desc">Customers, engagements, projects, people, work, time, knowledge, and financials in one place — connected instead of scattered across separate tools.</p>
           </article>
           <article class="feature">
+            <img class="feature-photo" src="https://images.unsplash.com/photo-1516197370049-569c4eaba1d6?auto=format&fit=crop&w=900&h=520&q=70" alt="Staff taking an order at the counter of a bright café" loading="lazy" width="900" height="520" />
             <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></div>
             <h3>Business operations</h3>
             <p class="feature-desc">Day-to-day operations sized for franchise restaurants, independent shops, and other brick-and-mortar businesses — without enterprise cost or complexity.</p>
           </article>
           <article class="feature">
+            <img class="feature-photo" src="assets/feature-product-management.png" alt="Hand pinning product planning mockups to a board" loading="lazy" width="900" height="520" />
             <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div>
             <h3>Product management</h3>
             <p class="feature-desc">Connects knowledge to execution, so product teams keep the reasoning behind every ticket, roadmap, and decision.</p>
           </article>
           <article class="feature">
+            <img class="feature-photo" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=900&h=520&q=70" alt="Staff member greeting a customer at a front desk" loading="lazy" width="900" height="520" />
             <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><path d="M15.5 5.2a3 3 0 010 5.6M17.5 14.6c1.6.6 2.7 2.2 3 4.4"/></svg></div>
             <h3>Customer experience management</h3>
             <p class="feature-desc">Accounts, deals, and subscriptions managed the way sales works today, with AI throughout rather than layered on top.</p>
@@ -633,12 +675,12 @@
           </div>
           <p>Link code, pull requests, and AI coding agents to the tickets and decisions behind them.</p>
           <ul class="int-tools">
-            <li>GitHub</li>
-            <li>Claude</li>
-            <li>Cursor</li>
-            <li>Jira</li>
-            <li>Confluence</li>
-            <li>GitLab</li>
+            <li class="int-tool" data-logo="github"><span class="int-logo" aria-hidden="true">G</span>GitHub</li>
+            <li class="int-tool" data-logo="claude"><span class="int-logo" aria-hidden="true">C</span>Claude</li>
+            <li class="int-tool" data-logo="cursor"><span class="int-logo" aria-hidden="true">C</span>Cursor</li>
+            <li class="int-tool" data-logo="jira"><span class="int-logo" aria-hidden="true">J</span>Jira</li>
+            <li class="int-tool" data-logo="confluence"><span class="int-logo" aria-hidden="true">C</span>Confluence</li>
+            <li class="int-tool" data-logo="gitlab"><span class="int-logo" aria-hidden="true">G</span>GitLab</li>
           </ul>
         </article>
         <article class="int-card">
@@ -648,12 +690,12 @@
           </div>
           <p>Bring email, calendars, and documents into the same context as the work they're about.</p>
           <ul class="int-tools">
-            <li>Gmail</li>
-            <li>Outlook</li>
-            <li>Google Calendar</li>
-            <li>Google Drive</li>
-            <li>Microsoft 365</li>
-            <li>OneDrive</li>
+            <li class="int-tool" data-logo="gmail"><span class="int-logo" aria-hidden="true">G</span>Gmail</li>
+            <li class="int-tool" data-logo="outlook"><span class="int-logo" aria-hidden="true">O</span>Outlook</li>
+            <li class="int-tool" data-logo="google-calendar"><span class="int-logo" aria-hidden="true">GC</span>Google Calendar</li>
+            <li class="int-tool" data-logo="google-drive"><span class="int-logo" aria-hidden="true">GD</span>Google Drive</li>
+            <li class="int-tool" data-logo="microsoft-365"><span class="int-logo" aria-hidden="true">M3</span>Microsoft 365</li>
+            <li class="int-tool" data-logo="onedrive"><span class="int-logo" aria-hidden="true">O</span>OneDrive</li>
           </ul>
         </article>
         <article class="int-card">
@@ -663,10 +705,10 @@
           </div>
           <p>Keep conversations connected to the customers, projects, and products they concern.</p>
           <ul class="int-tools">
-            <li>Slack</li>
-            <li>Microsoft Teams</li>
-            <li>Zoom</li>
-            <li>Google Meet</li>
+            <li class="int-tool" data-logo="slack"><span class="int-logo" aria-hidden="true">S</span>Slack</li>
+            <li class="int-tool" data-logo="microsoft-teams"><span class="int-logo" aria-hidden="true">MT</span>Microsoft Teams</li>
+            <li class="int-tool" data-logo="zoom"><span class="int-logo" aria-hidden="true">Z</span>Zoom</li>
+            <li class="int-tool" data-logo="google-meet"><span class="int-logo" aria-hidden="true">GM</span>Google Meet</li>
           </ul>
         </article>
         <article class="int-card">
@@ -676,12 +718,12 @@
           </div>
           <p>Connect the systems that run your sales, money, and front counter.</p>
           <ul class="int-tools">
-            <li>POS systems</li>
-            <li>QuickBooks</li>
-            <li>Xero</li>
-            <li>Stripe</li>
-            <li>Shopify</li>
-            <li>Square</li>
+            <li class="int-tool" data-logo="pos-systems"><span class="int-logo" aria-hidden="true">PS</span>POS systems</li>
+            <li class="int-tool" data-logo="quickbooks"><span class="int-logo" aria-hidden="true">Q</span>QuickBooks</li>
+            <li class="int-tool" data-logo="xero"><span class="int-logo" aria-hidden="true">X</span>Xero</li>
+            <li class="int-tool" data-logo="stripe"><span class="int-logo" aria-hidden="true">S</span>Stripe</li>
+            <li class="int-tool" data-logo="shopify"><span class="int-logo" aria-hidden="true">S</span>Shopify</li>
+            <li class="int-tool" data-logo="square"><span class="int-logo" aria-hidden="true">S</span>Square</li>
           </ul>
         </article>
         <article class="int-card">
@@ -691,12 +733,12 @@
           </div>
           <p>See what's happening across your channels alongside the rest of the business.</p>
           <ul class="int-tools">
-            <li>LinkedIn</li>
-            <li>Instagram</li>
-            <li>Facebook</li>
-            <li>X</li>
-            <li>YouTube</li>
-            <li>TikTok</li>
+            <li class="int-tool" data-logo="linkedin"><span class="int-logo" aria-hidden="true">L</span>LinkedIn</li>
+            <li class="int-tool" data-logo="instagram"><span class="int-logo" aria-hidden="true">I</span>Instagram</li>
+            <li class="int-tool" data-logo="facebook"><span class="int-logo" aria-hidden="true">F</span>Facebook</li>
+            <li class="int-tool" data-logo="x"><span class="int-logo" aria-hidden="true">X</span>X</li>
+            <li class="int-tool" data-logo="youtube"><span class="int-logo" aria-hidden="true">Y</span>YouTube</li>
+            <li class="int-tool" data-logo="tiktok"><span class="int-logo" aria-hidden="true">T</span>TikTok</li>
           </ul>
         </article>
         <article class="int-card int-card--custom">
@@ -768,6 +810,24 @@
     </div>
   </div>
 </footer>
+
+<script>
+  // Integration logos: drop an official logo file into assets/logos/ named after the tool
+  // (e.g. github.svg, google-drive.png). If a file is found it replaces the monogram.
+  document.querySelectorAll('.int-tool[data-logo]').forEach(function (li) {
+    var slot = li.querySelector('.int-logo');
+    var name = li.getAttribute('data-logo');
+    var exts = ['svg', 'png'];
+    (function tryNext(i) {
+      if (i >= exts.length) return;
+      var img = new Image();
+      img.alt = '';
+      img.onload = function () { slot.textContent = ''; slot.appendChild(img); };
+      img.onerror = function () { tryNext(i + 1); };
+      img.src = 'assets/logos/' + name + '.' + exts[i];
+    })(0);
+  });
+</script>
 
 </body>
 </html>
