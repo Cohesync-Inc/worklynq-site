@@ -459,8 +459,8 @@
 
   /* ---------- REQUEST A DEMO ---------- */
   .demo{
-    background:#0B3B36;
-    color:#EDF3F0;
+    background:var(--paper);
+    color:var(--ink);
     padding:88px 0 96px;
   }
   .demo-grid{
@@ -470,28 +470,39 @@
     align-items:center;
   }
   .demo-kicker{
-    font-size:12.5px;
-    font-weight:600;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:#63D6B2;
-    margin:0 0 16px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--teal-deep);
+    background:var(--sage);
+    border:1px solid var(--line);
+    padding:6px 13px 6px 11px;
+    border-radius:100px;
+    margin:0 0 22px;
+  }
+  .demo-kicker::before{
+    content:"";
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--teal-bright);
   }
   .demo h2{
-    font-size:clamp(30px, 3.6vw, 44px);
-    line-height:1.1;
-    color:#FFFFFF;
+    font-size:clamp(32px, 3.8vw, 46px);
+    line-height:1.08;
+    color:var(--teal-deep);
     margin-bottom:18px;
   }
   .demo h2 em{
     font-style:italic;
-    color:#E2C27A;
+    font-weight:450;
+    color:var(--teal);
   }
   .demo-lede{
     margin:0 0 30px;
-    font-size:16.5px;
+    font-size:17px;
     line-height:1.65;
-    color:#B7C8C2;
+    color:var(--ink-soft);
     max-width:44ch;
   }
   .demo-points{
@@ -508,43 +519,44 @@
     align-items:flex-start;
   }
   .demo-point-icon{
-    width:36px;
-    height:36px;
+    width:38px;
+    height:38px;
     border-radius:10px;
-    background:rgba(255,255,255,0.08);
-    color:#63D6B2;
+    background:var(--sage);
+    color:var(--teal);
     display:flex;
     align-items:center;
     justify-content:center;
     flex-shrink:0;
   }
-  .demo-point-icon svg{width:18px; height:18px;}
+  .demo-point-icon svg{width:19px; height:19px;}
   .demo-points strong{
     display:block;
     font-size:15px;
     font-weight:600;
-    color:#FFFFFF;
+    color:var(--ink);
   }
   .demo-points span.demo-point-text{
     font-size:14px;
-    color:#B7C8C2;
+    color:var(--ink-soft);
   }
   .demo-card{
-    background:#FFFFFF;
-    color:#122522;
+    background:var(--card-bg);
+    color:var(--ink);
+    border:1px solid var(--line);
     border-radius:18px;
     padding:32px;
-    box-shadow:0 30px 70px -30px rgba(0,0,0,0.5);
+    box-shadow:0 24px 60px -28px rgba(11,59,54,0.35);
   }
   .demo-card h3{
     font-size:24px;
-    color:#0B3B36;
+    color:var(--teal-deep);
     margin-bottom:6px;
   }
   .demo-card-sub{
     margin:0 0 22px;
     font-size:14px;
-    color:#3D5750;
+    color:var(--ink-soft);
   }
   .demo-form{
     display:flex;
@@ -560,59 +572,62 @@
     display:block;
     font-size:13px;
     font-weight:500;
-    color:#122522;
+    color:var(--ink);
     margin-bottom:6px;
   }
+  .demo-field label .optional{color:var(--ink-soft); font-weight:400;}
   .demo-field input,
   .demo-field select,
   .demo-field textarea{
     width:100%;
     font:inherit;
     font-size:14.5px;
-    color:#122522;
-    background:#FFFFFF;
-    border:1px solid #CBD8CE;
+    color:var(--ink);
+    background:var(--paper);
+    border:1px solid var(--line);
     border-radius:9px;
     padding:11px 13px;
   }
+  .demo-field input::placeholder,
+  .demo-field textarea::placeholder{color:var(--ink-soft); opacity:0.7;}
   .demo-field textarea{resize:vertical; min-height:96px;}
   .demo-field input:focus,
   .demo-field select:focus,
   .demo-field textarea:focus{
-    outline:2px solid #1F8F76;
+    outline:2px solid var(--focus);
     outline-offset:1px;
-    border-color:#1F8F76;
+    border-color:var(--teal);
   }
   .demo-form[hidden], .demo-card [hidden]{display:none;}
   .demo-honeypot{position:absolute; left:-9999px; width:1px; height:1px; opacity:0;}
   .demo-submit{
     font:inherit;
     font-size:15px;
-    font-weight:600;
-    color:#FFFFFF;
-    background:#0B3B36;
+    font-weight:500;
+    color:var(--paper);
+    background:var(--teal-deep);
     border:0;
-    border-radius:100px;
+    border-radius:8px;
     padding:14px 22px;
     cursor:pointer;
-    transition:background .15s ease;
+    transition:background .15s ease, transform .15s ease;
   }
-  .demo-submit:hover:not(:disabled){background:#1F8F76;}
+  .demo-submit:hover:not(:disabled){background:var(--teal); transform:translateY(-1px);}
   .demo-submit:disabled{opacity:0.6; cursor:default;}
   .demo-error{
     margin:0;
     font-size:13.5px;
-    color:#B42318;
+    color:#C2410C;
   }
   .demo-note{
     margin:0;
     text-align:center;
     font-size:12.5px;
-    color:#3D5750;
+    color:var(--ink-soft);
   }
   .demo-success{text-align:center; padding:32px 8px;}
   .demo-success h3{margin-bottom:8px;}
-  .demo-success p{margin:0; color:#3D5750; font-size:15px;}
+  .demo-success p{margin:0; color:var(--ink-soft); font-size:15px;}
   @media (max-width:900px){
     .demo-grid{grid-template-columns:minmax(0, 1fr); gap:40px;}
   }
@@ -1028,7 +1043,7 @@
             </select>
           </div>
           <div class="demo-field">
-            <label for="demo-message">Anything else? <span style="color:#6b7472;font-weight:400">(optional)</span></label>
+            <label for="demo-message">Anything else? <span class="optional">(optional)</span></label>
             <textarea id="demo-message" name="message" rows="3" placeholder="Team size, tools you use today, what you're hoping to solve…"></textarea>
           </div>
           <p class="demo-error" role="alert" hidden></p>
