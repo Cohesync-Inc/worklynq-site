@@ -457,6 +457,186 @@
     .int-grid{grid-template-columns:1fr;}
   }
 
+  /* ---------- REQUEST A DEMO ---------- */
+  .demo{
+    background:var(--paper);
+    color:var(--ink);
+    padding:88px 0 96px;
+  }
+  .demo-grid{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+    gap:64px;
+    align-items:center;
+  }
+  .demo-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--teal-deep);
+    background:var(--sage);
+    border:1px solid var(--line);
+    padding:6px 13px 6px 11px;
+    border-radius:100px;
+    margin:0 0 22px;
+  }
+  .demo-kicker::before{
+    content:"";
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--teal-bright);
+  }
+  .demo h2{
+    font-size:clamp(32px, 3.8vw, 46px);
+    line-height:1.08;
+    color:var(--teal-deep);
+    margin-bottom:18px;
+  }
+  .demo h2 em{
+    font-style:italic;
+    font-weight:450;
+    color:var(--teal);
+  }
+  .demo-lede{
+    margin:0 0 30px;
+    font-size:17px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    max-width:44ch;
+  }
+  .demo-points{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .demo-points li{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .demo-point-icon{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    background:var(--sage);
+    color:var(--teal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .demo-point-icon svg{width:19px; height:19px;}
+  .demo-points strong{
+    display:block;
+    font-size:15px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .demo-points span.demo-point-text{
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .demo-card{
+    background:var(--card-bg);
+    color:var(--ink);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:32px;
+    box-shadow:0 24px 60px -28px rgba(11,59,54,0.35);
+  }
+  .demo-card h3{
+    font-size:24px;
+    color:var(--teal-deep);
+    margin-bottom:6px;
+  }
+  .demo-card-sub{
+    margin:0 0 22px;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .demo-form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .demo-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .demo-field label{
+    display:block;
+    font-size:13px;
+    font-weight:500;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .demo-field label .optional{color:var(--ink-soft); font-weight:400;}
+  .demo-field input,
+  .demo-field select,
+  .demo-field textarea{
+    width:100%;
+    font:inherit;
+    font-size:14.5px;
+    color:var(--ink);
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:11px 13px;
+  }
+  .demo-field input::placeholder,
+  .demo-field textarea::placeholder{color:var(--ink-soft); opacity:0.7;}
+  .demo-field textarea{resize:vertical; min-height:96px;}
+  .demo-field input:focus,
+  .demo-field select:focus,
+  .demo-field textarea:focus{
+    outline:2px solid var(--focus);
+    outline-offset:1px;
+    border-color:var(--teal);
+  }
+  .demo-form[hidden], .demo-card [hidden]{display:none;}
+  .demo-honeypot{position:absolute; left:-9999px; width:1px; height:1px; opacity:0;}
+  .demo-submit{
+    font:inherit;
+    font-size:15px;
+    font-weight:500;
+    color:var(--paper);
+    background:var(--teal-deep);
+    border:0;
+    border-radius:8px;
+    padding:14px 22px;
+    cursor:pointer;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .demo-submit:hover:not(:disabled){background:var(--teal); transform:translateY(-1px);}
+  .demo-submit:disabled{opacity:0.6; cursor:default;}
+  .demo-error{
+    margin:0;
+    font-size:13.5px;
+    color:#C2410C;
+  }
+  .demo-note{
+    margin:0;
+    text-align:center;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .demo-success{text-align:center; padding:32px 8px;}
+  .demo-success h3{margin-bottom:8px;}
+  .demo-success p{margin:0; color:var(--ink-soft); font-size:15px;}
+  @media (max-width:900px){
+    .demo-grid{grid-template-columns:minmax(0, 1fr); gap:40px;}
+  }
+  @media (max-width:520px){
+    .demo{padding:64px 0 72px;}
+    .demo-card{padding:24px 20px;}
+    .demo-row{grid-template-columns:1fr;}
+  }
+
   /* ---------- FOUNDATION ---------- */
   .foundation{
     background:var(--sage);
@@ -560,7 +740,8 @@
   .footer-mark img{height:26px; width:auto;}
   .footer-links{
     display:flex;
-    gap:22px;
+    flex-wrap:wrap;
+    gap:10px 22px;
     font-size:14px;
   }
   .footer-links a{
@@ -591,7 +772,7 @@
       <a href="#features">Features</a>
       <a href="#integrations">Integrations</a>
       <a href="#foundation">How it works</a>
-      <a class="nav-cta" href="#features">See what's inside</a>
+      <a class="nav-cta" href="#demo">Request a demo</a>
     </nav>
   </div>
 </header>
@@ -629,7 +810,7 @@
             <img class="frow-photo" src="assets/feature-project-management.png" alt="Laptop showing a project analytics dashboard" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h5M8 16h8"/></svg></span>Worklynq</div>
+            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h5M8 16h8"/></svg></span></div>
             <h3>Project management</h3>
             <p>Customers, engagements, projects, people, work, time, knowledge, and financials in one place — connected instead of scattered across separate tools.</p>
           </div>
@@ -639,7 +820,7 @@
             <img class="frow-photo" src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?auto=format&fit=crop&w=900&h=520&q=70" alt="Barista using a tablet at the counter of a bright café" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></span>Worklynq</div>
+            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></span></div>
             <h3>Business operations</h3>
             <p>Day-to-day operations sized for franchise restaurants, independent shops, and other brick-and-mortar businesses — without enterprise cost or complexity.</p>
           </div>
@@ -649,7 +830,7 @@
             <img class="frow-photo" src="assets/feature-product-management.png" alt="Hand pinning product planning mockups to a board" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span>Worklynq</div>
+            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span></div>
             <h3>Product management</h3>
             <p>Connects knowledge to execution, so product teams keep the reasoning behind every ticket, roadmap, and decision.</p>
           </div>
@@ -659,7 +840,7 @@
             <img class="frow-photo" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=900&h=520&q=70" alt="Staff member greeting a customer at a front desk" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><path d="M15.5 5.2a3 3 0 010 5.6M17.5 14.6c1.6.6 2.7 2.2 3 4.4"/></svg></span>Worklynq</div>
+            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><path d="M15.5 5.2a3 3 0 010 5.6M17.5 14.6c1.6.6 2.7 2.2 3 4.4"/></svg></span></div>
             <h3>Customer experience management</h3>
             <p>Accounts, deals, and subscriptions managed the way sales works today, with AI throughout rather than layered on top.</p>
           </div>
@@ -805,6 +986,74 @@
     </div>
   </section>
 
+  <section class="demo" id="demo">
+    <div class="wrap demo-grid">
+      <div class="demo-copy">
+        <p class="demo-kicker">Request a demo</p>
+        <h2>See Worklynq <em>in action</em></h2>
+        <p class="demo-lede">Tell us a little about your business and we'll walk you through how Worklynq brings your projects, operations, products, and customers together in one place.</p>
+        <ul class="demo-points">
+          <li>
+            <span class="demo-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+            <span><strong>A guided walkthrough</strong><span class="demo-point-text">Tailored to the feature sets you care about</span></span>
+          </li>
+          <li>
+            <span class="demo-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a7.5 7.5 0 01-11 6.6L4 20l1.4-4.6A7.5 7.5 0 1120 12z"/></svg></span>
+            <span><strong>Your questions answered</strong><span class="demo-point-text">Integrations, setup, and how your team would use it</span></span>
+          </li>
+          <li>
+            <span class="demo-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+            <span><strong>Quick to arrange</strong><span class="demo-point-text">We typically reply within one business day</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-success" hidden>
+          <h3>Thank you!</h3>
+          <p>We'll be in touch within one business day to set up your demo.</p>
+        </div>
+        <h3 class="demo-title">Request a demo</h3>
+        <p class="demo-card-sub">It takes less than a minute.</p>
+        <form class="demo-form" novalidate>
+          <input class="demo-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="demo-row">
+            <div class="demo-field">
+              <label for="demo-name">Name</label>
+              <input id="demo-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="demo-field">
+              <label for="demo-company">Company</label>
+              <input id="demo-company" name="company" type="text" autocomplete="organization" placeholder="Your company" required>
+            </div>
+          </div>
+          <div class="demo-field">
+            <label for="demo-email">Work email</label>
+            <input id="demo-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+          </div>
+          <div class="demo-field">
+            <label for="demo-interest">What would you like to see?</label>
+            <select id="demo-interest" name="interest">
+              <option>All of Worklynq</option>
+              <option>Project management</option>
+              <option>Business operations</option>
+              <option>Product management</option>
+              <option>Customer experience management</option>
+              <option>Integrations</option>
+            </select>
+          </div>
+          <div class="demo-field">
+            <label for="demo-message">Anything else? <span class="optional">(optional)</span></label>
+            <textarea id="demo-message" name="message" rows="3" placeholder="Team size, tools you use today, what you're hoping to solve…"></textarea>
+          </div>
+          <p class="demo-error" role="alert" hidden></p>
+          <button type="submit" class="demo-submit">Request demo</button>
+          <p class="demo-note">We typically respond within one business day.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -819,6 +1068,7 @@
         <a href="#features">Features</a>
         <a href="#integrations">Integrations</a>
         <a href="#foundation">Platform</a>
+        <a href="#demo">Request a demo</a>
       </div>
     </div>
   </div>
@@ -840,6 +1090,75 @@
       img.src = 'assets/logos/' + name + '.' + exts[i];
     })(0);
   });
+</script>
+
+<script>
+  // Request-a-demo form. Each request is emailed to DEMO_EMAIL via FormSubmit
+  // (formsubmit.co), a free form-to-email service — no server needed.
+  //
+  // One-time setup: the FIRST request ever sent triggers a "Confirm your email /
+  // Activate Form" email from FormSubmit to DEMO_EMAIL. Click it once; from then on
+  // every request arrives as an email (Reply-To is set to the visitor's address).
+  // After activation FormSubmit also emails a random-string alias: put it in
+  // DEMO_EMAIL instead of the address to keep the address out of the page source.
+  (function () {
+    var DEMO_EMAIL = 'darvesh.taneja@cohesync.com';
+    var DEMO_ENDPOINT = 'https://formsubmit.co/ajax/' + DEMO_EMAIL;
+    var form = document.querySelector('.demo-form');
+    if (!form) return;
+    var card = form.closest('.demo-card');
+    var errorEl = form.querySelector('.demo-error');
+    var submit = form.querySelector('.demo-submit');
+    var sending = false;
+
+    function showError(msg) { errorEl.textContent = msg; errorEl.hidden = !msg; }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      if (sending) return;
+      var fd = new FormData(form);
+      var get = function (k) { return String(fd.get(k) || '').trim(); };
+      var name = get('name'), company = get('company'), email = get('email');
+      if (!name || !company || !email) { showError('Please fill in your name, company, and work email.'); return; }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
+      showError('');
+      sending = true; submit.disabled = true; submit.textContent = 'Sending…';
+      try {
+        var res = await fetch(DEMO_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            'Name': name,
+            'Company': company,
+            'Email': email,
+            'Wants to see': get('interest'),
+            'Notes': get('message') || '—',
+            'Sent from': 'worklynq.com — Request a demo',
+            _replyto: email,
+            _subject: 'Worklynq demo request: ' + name + ' (' + company + ')',
+            _template: 'table',
+            _captcha: 'false',
+            _honey: get('_honey')
+          })
+        });
+        var body = {};
+        try { body = await res.json(); } catch (_) { body = {}; }
+        // FormSubmit returns success as the string "true"/"false"
+        if (!res.ok || String(body.success) !== 'true') {
+          showError(res.status === 429 ? 'Too many requests. Please try again in a few minutes.' : 'Could not send your request. Please try again in a moment.');
+          return;
+        }
+        form.hidden = true;
+        card.querySelector('.demo-title').hidden = true;
+        card.querySelector('.demo-card-sub').hidden = true;
+        card.querySelector('.demo-success').hidden = false;
+      } catch (_) {
+        showError('Network error. Please check your connection and try again.');
+      } finally {
+        sending = false; submit.disabled = false; submit.textContent = 'Request demo';
+      }
+    });
+  })();
 </script>
 
 </body>
