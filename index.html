@@ -337,6 +337,22 @@
     font-size:15.5px;
     line-height:1.6;
   }
+  .integrations-head p.int-note{
+    margin-top:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--teal);
+  }
+  .integrations-head p.int-note::before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--teal-bright);
+  }
   .int-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -863,6 +879,7 @@
       <div class="integrations-head">
         <h2>Works with the tools you already use</h2>
         <p>Worklynq connects to the developer tools, enterprise apps, and business systems your teams rely on every day — so the context behind your work comes together in one place instead of staying scattered.</p>
+        <p class="int-note">Integrations roll out through the beta.</p>
       </div>
       <div class="int-grid">
         <article class="int-card">
