@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Data Processing Agreement — Worklynq</title>
+<meta name="description" content="How Cohesync Inc. processes personal data on behalf of business customers using Worklynq.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F3EC; --ink:#122522; --ink-soft:#3D5750; --teal-deep:#0B3B36;
+    --teal:#1F8F76; --sage:#E1EAE3; --line:#CBD8CE; --focus:#1F8F76;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--paper); color:var(--ink);
+    font-family:'IBM Plex Sans', -apple-system, sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--teal-deep);}
+  a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:2px;}
+  img{max-width:100%; display:block;}
+  h1,h2{font-family:'Fraunces', Georgia, serif; font-weight:560; letter-spacing:-0.01em; color:var(--teal-deep); margin:0;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 32px;}
+  header.nav{padding:26px 0 0;}
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding-bottom:22px; border-bottom:1px solid var(--line);}
+  .brand img{height:68px; width:auto;}
+  .nav-links{display:flex; align-items:center; gap:28px; font-size:14.5px;}
+  .nav-links a{text-decoration:none; color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{color:var(--paper) !important; background:var(--teal-deep); padding:9px 18px; border-radius:7px; font-weight:500;}
+  .nav-cta:hover{background:var(--teal);}
+  main{padding:64px 0 40px;}
+  .doc{max-width:760px;}
+  .doc h1{font-size:clamp(32px, 4vw, 46px); line-height:1.1;}
+  .updated{margin:14px 0 0; color:var(--ink-soft); font-size:14.5px;}
+  .intro{margin:28px 0 8px; font-size:17.5px; color:var(--ink-soft);}
+  .toc{margin:32px 0 8px; padding:20px 24px; background:var(--sage); border:1px solid var(--line); border-radius:10px;}
+  .toc strong{display:block; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px;}
+  .toc ol{margin:0; padding-left:20px; columns:2; column-gap:32px; font-size:15px;}
+  .toc li{break-inside:avoid; margin:3px 0;}
+  .toc a{text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+  .doc h2{font-size:24px; margin:48px 0 12px; scroll-margin-top:24px;}
+  .doc p, .doc li{font-size:16.5px;}
+  .doc ul{padding-left:22px;}
+  .doc li{margin:6px 0;}
+  .doc table{width:100%; border-collapse:collapse; margin:14px 0; font-size:15.5px;}
+  .doc th, .doc td{text-align:left; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--line);}
+  .doc th{font-weight:600; color:var(--ink-soft); font-size:14px;}
+  footer{padding:52px 0 60px;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; gap:20px;
+    padding-top:28px; border-top:1px solid var(--line); flex-wrap:wrap;}
+  .footer-mark{display:flex; flex-direction:column; align-items:flex-start; gap:10px; font-size:14px; color:var(--ink-soft);}
+  .footer-mark img{height:30px; width:auto;}
+  .footer-links{display:flex; flex-wrap:wrap; gap:10px 22px; font-size:14px;}
+  .footer-links a{text-decoration:none; color:var(--ink-soft);}
+  .footer-links a:hover{color:var(--ink);}
+  .footer-links a[aria-current]{color:var(--ink); font-weight:500;}
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    .nav-links{display:none;}
+    .brand img{height:52px;}
+    main{padding-top:40px;}
+    .toc ol{columns:1;}
+    .doc table, .doc thead, .doc tbody, .doc tr, .doc th, .doc td{display:block;}
+    .doc thead{display:none;}
+    .doc td{border-bottom:none; padding:2px 0;}
+    .doc tr{border-bottom:1px solid var(--line); padding:10px 0;}
+    .doc td:first-child{font-weight:600;}
+    .footer-inner{flex-direction:column; align-items:center; text-align:center;}
+    .footer-mark{align-items:center;}
+    .footer-links{justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#integrations">Integrations</a>
+      <a href="/#foundation">How it works</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <article class="doc">
+      <h1>Data Processing Agreement</h1>
+      <p class="updated">Last updated: October 14, 2026</p>
+      <p class="intro">This Data Processing Agreement (“DPA”) applies when a business or organization (“Customer”) uses Worklynq and, in doing so, has Cohesync Inc. (“Cohesync”) process personal data on its behalf. It forms part of the <a href="/terms/">Terms of Use</a> (or any other agreement between Customer and Cohesync for Worklynq, together the “Agreement”). If this DPA and the Agreement conflict on data protection, this DPA wins.</p>
+
+      <nav class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <ol>
+          <li><a href="#definitions">Definitions</a></li>
+          <li><a href="#roles">Roles and scope</a></li>
+          <li><a href="#instructions">Customer instructions</a></li>
+          <li><a href="#confidentiality">Confidentiality</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#subprocessors">Subprocessors</a></li>
+          <li><a href="#requests">Data subject requests</a></li>
+          <li><a href="#breach">Personal data breaches</a></li>
+          <li><a href="#assistance">Assessments and consultations</a></li>
+          <li><a href="#transfers">International transfers</a></li>
+          <li><a href="#deletion">Return and deletion</a></li>
+          <li><a href="#audits">Audits</a></li>
+          <li><a href="#general">General</a></li>
+          <li><a href="#annex">Annex: processing details</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="definitions">1. Definitions</h2>
+      <ul>
+        <li><strong>Data Protection Laws</strong> means the data protection and privacy laws that apply to the processing of Customer Personal Data, such as the EU and UK General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), as amended.</li>
+        <li><strong>Customer Personal Data</strong> means personal data in Customer’s Worklynq workspace that Cohesync processes on Customer’s behalf to provide Worklynq.</li>
+        <li><strong>Subprocessor</strong> means a third party that Cohesync engages to process Customer Personal Data.</li>
+        <li>“Controller”, “processor”, “personal data”, “processing”, “data subject” and “supervisory authority” have the meanings given in the GDPR. Under the CCPA, Customer is the “business” and Cohesync the “service provider”.</li>
+      </ul>
+
+      <h2 id="roles">2. Roles and scope</h2>
+      <p>Customer is the controller and Cohesync is the processor of Customer Personal Data. Cohesync is a controller only of the limited data it uses to run its own business, such as account administration, billing and security logs, as described in the <a href="/privacy/">Privacy Policy</a>. The Annex describes the processing.</p>
+
+      <h2 id="instructions">3. Customer instructions</h2>
+      <p>Cohesync processes Customer Personal Data only on Customer’s documented instructions. The Agreement, this DPA, and Customer’s use and configuration of Worklynq (including which tools it connects and which AI features it turns on) are those instructions. Cohesync will tell Customer if it believes an instruction breaks Data Protection Laws. Cohesync will not sell or share Customer Personal Data, keep or use it for any purpose other than providing Worklynq, combine it with data from other sources except as allowed by Data Protection Laws, or use it to train AI models.</p>
+      <p>Customer is responsible for having a lawful basis for the processing and for the instructions it gives.</p>
+
+      <h2 id="confidentiality">4. Confidentiality</h2>
+      <p>Cohesync makes sure that everyone it authorizes to process Customer Personal Data is bound by confidentiality, and gives access only to those who need it to provide or support Worklynq.</p>
+
+      <h2 id="security">5. Security</h2>
+      <p>Cohesync maintains appropriate technical and organizational measures to protect Customer Personal Data, including:</p>
+      <ul>
+        <li>encryption in transit (HTTPS) and at rest (by our cloud providers);</li>
+        <li>logical separation of each customer’s workspace data, with a separate database per dedicated instance;</li>
+        <li>private storage for uploaded files, and encrypted storage of credentials for connected tools;</li>
+        <li>passwords stored only as hashes, and role-based access controls inside each workspace;</li>
+        <li>restricted, logged administrative access to production systems; and</li>
+        <li>automated backups of production databases.</li>
+      </ul>
+      <p>Cohesync may update these measures as long as the overall level of protection does not decrease.</p>
+
+      <h2 id="subprocessors">6. Subprocessors</h2>
+      <p>Customer authorizes Cohesync to use the Subprocessors listed below. Cohesync imposes data protection terms on each Subprocessor that are at least as protective as this DPA, and remains responsible for their performance.</p>
+      <table>
+        <thead><tr><th>Subprocessor</th><th>Purpose</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td>Google LLC (Google Cloud)</td><td>Application hosting, databases, file storage</td><td>United States</td></tr>
+          <tr><td>Amazon Web Services, Inc.</td><td>Email delivery (Amazon SES), AI models (Amazon Bedrock)</td><td>United States</td></tr>
+        </tbody>
+      </table>
+      <p>Services that Customer chooses to connect, such as GitHub, Jira, Confluence, Gmail, Anthropic (Claude) or Anysphere (Cursor), are used under Customer’s own account with those providers and are not Cohesync’s Subprocessors.</p>
+      <p>Cohesync will give at least 30 days’ notice, by email to Customer’s workspace administrators or by updating this page, before adding or replacing a Subprocessor. Customer may object on reasonable data protection grounds within that period. The parties will then work in good faith to find a solution; if none is found, Customer may terminate the affected part of the service and receive a refund of any prepaid fees for the remaining term.</p>
+
+      <h2 id="requests">7. Data subject requests</h2>
+      <p>Taking into account the nature of the processing, Cohesync will help Customer respond to requests from data subjects to exercise their rights, mainly through features in Worklynq that let Customer access, correct, export and delete data. If Cohesync receives such a request directly, it will refer the person to Customer and will not respond itself unless Customer asks it to or the law requires it.</p>
+
+      <h2 id="breach">8. Personal data breaches</h2>
+      <p>Cohesync will notify Customer without undue delay, and in any case within 72 hours, after becoming aware of a personal data breach affecting Customer Personal Data. The notice will describe, as far as then known, what happened, the data and people affected, the likely consequences, and the steps taken or proposed. Cohesync will take reasonable steps to contain and fix the breach and will keep Customer updated. Notifying Customer is not an admission of fault.</p>
+
+      <h2 id="assistance">9. Assessments and consultations</h2>
+      <p>Cohesync will give Customer reasonable information and help, taking into account the nature of the processing, for data protection impact assessments and prior consultations with supervisory authorities that relate to Customer’s use of Worklynq.</p>
+
+      <h2 id="transfers">10. International transfers</h2>
+      <p>Customer Personal Data is processed in the United States. Where Data Protection Laws require a transfer mechanism for personal data sent from the European Economic Area, the United Kingdom or Switzerland, the parties agree that the European Commission’s Standard Contractual Clauses (Module Two, controller to processor), with the UK Addendum or Swiss amendments where relevant, are incorporated into this DPA, with Customer as data exporter and Cohesync as data importer. The Annex provides the information those clauses require. Under the clauses, the governing law is that of Ireland and disputes go to the courts of Ireland (for the UK, England and Wales).</p>
+
+      <h2 id="deletion">11. Return and deletion</h2>
+      <p>When the Agreement ends, Customer may export its content within 30 days. After that, Cohesync will delete Customer Personal Data from active systems within 30 days and from backups within a further 90 days, unless the law requires Cohesync to keep it. Data kept for legal reasons stays protected by this DPA.</p>
+
+      <h2 id="audits">12. Audits</h2>
+      <p>On written request, no more than once a year (or after a personal data breach, or when a supervisory authority requires it), Cohesync will answer reasonable written questions and provide information needed to show compliance with this DPA. If that is not enough to meet Data Protection Laws, Customer may carry out an audit at its own cost, with at least 30 days’ notice, during normal business hours, under confidentiality, and without accessing other customers’ data.</p>
+
+      <h2 id="general">13. General</h2>
+      <ul>
+        <li>This DPA lasts as long as Cohesync processes Customer Personal Data.</li>
+        <li>Each party’s liability under this DPA is subject to the limits in the Agreement, except where Data Protection Laws or the Standard Contractual Clauses do not allow it.</li>
+        <li>Apart from section 10, this DPA is governed by the laws of the State of Delaware, USA, and disputes go to the state or federal courts in Santa Clara County, California, as in the <a href="/terms/#law">Terms of Use</a>.</li>
+        <li>Cohesync may update this DPA to reflect changes in law or in Worklynq, giving notice of material changes. Changes will not reduce the protection given to Customer Personal Data.</li>
+        <li>Customers that need a countersigned copy can request one at <a href="mailto:info@cohesync.com">info@cohesync.com</a>.</li>
+      </ul>
+
+      <h2 id="annex">Annex: processing details</h2>
+      <table>
+        <tbody>
+          <tr><td>Parties</td><td><strong>Data exporter / controller:</strong> the Customer that accepted the Agreement. <strong>Data importer / processor:</strong> Cohesync Inc., 349 Cobalt Way, Suite 304, Sunnyvale, CA 94085, USA, <a href="mailto:info@cohesync.com">info@cohesync.com</a>.</td></tr>
+          <tr><td>Subject matter and duration</td><td>Providing Worklynq to Customer, for as long as the Agreement lasts plus the return and deletion period in section 11.</td></tr>
+          <tr><td>Nature and purpose</td><td>Hosting, storing, organizing, displaying, transmitting and analyzing workspace content, including with AI features, to provide and support Worklynq; sending service emails.</td></tr>
+          <tr><td>Data subjects</td><td>Customer’s users (employees, contractors), and people whose details Customer puts into its workspace, such as its own customers, suppliers and partners.</td></tr>
+          <tr><td>Categories of personal data</td><td>Names, work email addresses, profile photos, roles; content of tickets, comments, documents and files; data imported from tools Customer connects; usage logs such as IP address and browser.</td></tr>
+          <tr><td>Special categories</td><td>None intended. Customer should not put special-category data (such as health data) into Worklynq unless agreed in writing.</td></tr>
+          <tr><td>Frequency</td><td>Continuous, while Customer uses Worklynq.</td></tr>
+          <tr><td>Retention</td><td>As described in section 11.</td></tr>
+          <tr><td>Security measures</td><td>As described in section 5.</td></tr>
+        </tbody>
+      </table>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/" aria-current="page">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
