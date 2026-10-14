@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
 <title>Worklynq — One intelligent platform to run your business.</title>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -25,34 +26,8 @@
     --line:#CBD8CE;
     --card-bg:#FFFFFF;
     --focus:#1F8F76;
+    color-scheme:light;
   }
-  :root:not([data-theme="light"]) {
-    @media (prefers-color-scheme: dark) {
-      --paper:#0E1A18;
-      --paper-2:#132420;
-      --ink:#EDF3F0;
-      --ink-soft:#B7C8C2;
-      --teal-deep:#EAF6F1;
-      --teal:#4FC3A1;
-      --teal-bright:#63D6B2;
-      --sage:#173029;
-      --line:#274139;
-      --card-bg:#132420;
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper:#0E1A18;
-    --paper-2:#132420;
-    --ink:#EDF3F0;
-    --ink-soft:#B7C8C2;
-    --teal-deep:#EAF6F1;
-    --teal:#4FC3A1;
-    --teal-bright:#63D6B2;
-    --sage:#173029;
-    --line:#274139;
-    --card-bg:#132420;
-  }
-
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
   body{
@@ -1092,10 +1067,7 @@
   <div class="wrap">
     <div class="footer-inner">
       <div class="footer-mark">
-        <picture>
-          <source srcset="assets/cohesync-logo-light.png" media="(prefers-color-scheme: dark)">
-          <img src="assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
-        </picture>
+        <img src="assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
         Where Humans and AI Thrive Together
       </div>
       <div class="footer-links">
