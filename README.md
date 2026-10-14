@@ -6,7 +6,7 @@ The Worklynq website. One plain HTML page — no build step, no framework. GitHu
 
 | File | What it is |
 |---|---|
-| `index.html` | The whole page: styles in the `<style>` block at the top, then the header, hero, features, integrations, foundation section and footer. The Worklynq logos are embedded in the file; the footer Cohesync logo is `assets/cohesync-logo.png` (with a `-light` version for dark mode); the hero and feature photos load from Unsplash (free license). |
+| `index.html` | The whole page: styles in the `<style>` block at the top, then the header, hero, features, integrations, foundation section and footer. The Worklynq logos are embedded in the file; the footer Cohesync logo is `assets/cohesync-logo.png`; the hero and feature photos load from Unsplash (free license). |
 | `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser tab and home-screen icons (the Worklynq W badge). |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
 | `CNAME` | Tells GitHub Pages to serve this site at worklynq.com. Don't delete it. |
