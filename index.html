@@ -764,6 +764,32 @@
     .hero-grid{grid-template-columns:1fr;}
     .hero-visual{order:-1;}
   }
+
+  /* ---------- PHONES: center-align the page ---------- */
+  @media (max-width:640px){
+    .nav-inner{justify-content:center;}
+    .hero-copy{text-align:center;}
+    .hero h1, .hero p.lede{margin-left:auto; margin-right:auto;}
+    .hero-ctas{justify-content:center;}
+    .features-head{flex-direction:column; align-items:center; text-align:center;}
+    .frow-copy{text-align:center;}
+    .features-foot{align-items:center;}
+    .integrations-head{text-align:center; margin-left:auto; margin-right:auto;}
+    .int-card{align-items:center; text-align:center;}
+    .int-tools{justify-content:center;}
+    .foundation-grid{text-align:center;}
+    .foundation h2, .foundation p{margin-left:auto; margin-right:auto;}
+    .layer-list{justify-content:center;}
+    .op-col ul{align-items:center;}
+    .demo-copy{text-align:center;}
+    .demo-lede{margin-left:auto; margin-right:auto;}
+    .demo-points{align-items:center;}
+    .demo-points li{text-align:left; max-width:340px; width:100%;}
+    .demo-card h3, .demo-card-sub, .demo-note{text-align:center;}
+    .footer-inner{flex-direction:column; align-items:center; text-align:center;}
+    .footer-mark{align-items:center;}
+    .footer-links{justify-content:center;}
+  }
 </style>
 </head>
 <body>
