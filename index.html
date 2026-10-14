@@ -256,17 +256,6 @@
   .frow-copy{
     max-width:460px;
   }
-  .frow-label{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    font-size:12.5px;
-    font-weight:600;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--teal);
-    margin-bottom:16px;
-  }
   .frow-icon{
     width:34px;
     height:34px;
@@ -278,6 +267,15 @@
     justify-content:center;
   }
   .frow-icon svg{width:18px; height:18px;}
+  .frow-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:14px;
+  }
+  .frow-title .frow-icon{flex-shrink:0; width:40px; height:40px; border-radius:10px;}
+  .frow-title .frow-icon svg{width:20px; height:20px;}
+  .frow-copy .frow-title h3{margin-bottom:0;}
   .frow-copy h3{
     font-size:clamp(24px, 2.6vw, 32px);
     line-height:1.15;
@@ -748,6 +746,8 @@
     .hero-ctas{justify-content:center;}
     .features-head{flex-direction:column; align-items:center; text-align:center;}
     .frow-copy{text-align:center;}
+    .frow-title{justify-content:center;}
+    .frow-title h3{text-align:left;}
     .features-foot{align-items:center;}
     .integrations-head{text-align:center; margin-left:auto; margin-right:auto;}
     .int-card{align-items:center; text-align:center;}
@@ -817,8 +817,7 @@
             <img class="frow-photo" src="https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?auto=format&fit=crop&w=900&h=520&q=70" alt="Team mapping out a project plan with sticky notes on a table" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h5M8 16h8"/></svg></span></div>
-            <h3>Project management</h3>
+            <div class="frow-title"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h5M8 16h8"/></svg></span><h3>Project management</h3></div>
             <p>Customers, engagements, projects, people, work, time, knowledge, and financials in one place — connected instead of scattered across separate tools.</p>
           </div>
         </article>
@@ -827,8 +826,7 @@
             <img class="frow-photo" src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?auto=format&fit=crop&w=900&h=520&q=70" alt="Barista using a tablet at the counter of a bright café" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></span></div>
-            <h3>Business operations</h3>
+            <div class="frow-title"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></span><h3>Business operations</h3></div>
             <p>Day-to-day operations sized for franchise restaurants, independent shops, and other brick-and-mortar businesses — without enterprise cost or complexity.</p>
           </div>
         </article>
@@ -837,8 +835,7 @@
             <img class="frow-photo" src="https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?auto=format&fit=crop&w=900&h=520&q=70" alt="Two people mapping a product flow on a whiteboard" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span></div>
-            <h3>Product management</h3>
+            <div class="frow-title"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><h3>Product management</h3></div>
             <p>Connects knowledge to execution, so product teams keep the reasoning behind every ticket, roadmap, and decision.</p>
           </div>
         </article>
@@ -847,8 +844,7 @@
             <img class="frow-photo" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=900&h=520&q=70" alt="Staff member greeting a customer at a front desk" loading="lazy" width="900" height="520" />
           </div>
           <div class="frow-copy">
-            <div class="frow-label"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><path d="M15.5 5.2a3 3 0 010 5.6M17.5 14.6c1.6.6 2.7 2.2 3 4.4"/></svg></span></div>
-            <h3>Customer experience management</h3>
+            <div class="frow-title"><span class="frow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><path d="M15.5 5.2a3 3 0 010 5.6M17.5 14.6c1.6.6 2.7 2.2 3 4.4"/></svg></span><h3>Customer experience management</h3></div>
             <p>Accounts, deals, and subscriptions managed the way sales works today, with AI throughout rather than layered on top.</p>
           </div>
         </article>
