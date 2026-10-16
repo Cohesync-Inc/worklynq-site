@@ -192,6 +192,119 @@
     box-shadow:0 24px 60px -20px rgba(11,59,54,0.35);
   }
 
+  /* ---------- WHO WE BUILD FOR ---------- */
+  .who{
+    background:var(--teal-deep);
+    color:var(--paper);
+    padding:84px 0;
+  }
+  .who-grid{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+    gap:56px;
+    align-items:center;
+  }
+  .who-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--paper);
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.16);
+    padding:6px 13px 6px 11px;
+    border-radius:100px;
+    margin:0 0 22px;
+  }
+  .who-kicker::before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--teal-bright);
+  }
+  .who h2{
+    font-size:clamp(30px, 3.6vw, 44px);
+    line-height:1.1;
+    color:var(--paper);
+    max-width:16ch;
+    margin-bottom:20px;
+  }
+  .who-copy p{
+    margin:0 0 16px;
+    font-size:17px;
+    line-height:1.65;
+    color:rgba(245,243,236,0.82);
+    max-width:48ch;
+  }
+  .who-copy p.who-lead{color:var(--paper); font-weight:500;}
+  .who-types{
+    list-style:none;
+    margin:24px 0 0;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .who-types li{
+    font-size:13.5px;
+    padding:6px 13px;
+    border-radius:100px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.14);
+    color:var(--paper);
+  }
+  .who-photo{
+    width:100%;
+    height:auto;
+    aspect-ratio:16 / 10;
+    object-fit:cover;
+    border-radius:16px;
+    display:block;
+    background:#164a44;
+    box-shadow:0 24px 60px -24px rgba(0,0,0,0.45);
+  }
+  .who-points{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:18px;
+    margin-top:56px;
+  }
+  .who-point{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;
+    padding:24px;
+  }
+  .who-point-head{display:flex; align-items:center; gap:12px; margin-bottom:10px;}
+  .who-point-icon{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    background:rgba(47,174,142,0.18);
+    color:var(--teal-bright);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .who-point-icon svg{width:19px; height:19px;}
+  .who-point h3{font-size:19px; line-height:1.25; color:var(--paper);}
+  .who-point p{margin:0; font-size:15px; line-height:1.6; color:rgba(245,243,236,0.78);}
+  @media (max-width:900px){
+    .who-grid{grid-template-columns:minmax(0, 1fr); gap:36px;}
+    .who-points{grid-template-columns:minmax(0, 1fr);}
+  }
+  @media (max-width:640px){
+    .who{padding:64px 0;}
+    .who-copy{text-align:center;}
+    .who h2, .who-copy p{margin-left:auto; margin-right:auto;}
+    .who-types{justify-content:center;}
+    .who-point{text-align:center;}
+    .who-point-head{justify-content:center;}
+    .who-point h3{text-align:left;}
+  }
+
   /* ---------- FEATURES ---------- */
   .features{
     padding:64px 0 84px;
@@ -816,6 +929,44 @@
       <div class="hero-visual">
         <!-- Photo: Unsplash (free license), photo-1572021335469-31706a17aaef -->
         <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=1400&h=875&q=75" alt="A small team gathered around a laptop at a shared table, smiling as they work through something together" class="hero-photo" width="1400" height="875" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="who" id="who">
+    <div class="wrap">
+      <div class="who-grid">
+        <div class="who-copy">
+          <p class="who-kicker">Who we build for</p>
+          <h2>Built for the businesses that need it most</h2>
+          <p class="who-lead">Most business software is built for big companies with IT teams and big budgets. The businesses people rely on every day get left with spreadsheets, sticky notes, and a dozen apps that don't talk to each other.</p>
+          <p>The local shop owner, the family restaurant, the contractor running jobs from a truck — they deal with the same scattered information, with fewer people to absorb it. Worklynq is being built for them first.</p>
+          <ul class="who-types" aria-label="Businesses Worklynq is built for">
+            <li>Local shops</li>
+            <li>Restaurants &amp; cafés</li>
+            <li>Contractors &amp; trades</li>
+            <li>Salons &amp; studios</li>
+            <li>Franchise locations</li>
+          </ul>
+        </div>
+        <div class="who-media">
+          <!-- Photo: Unsplash (free license), photo-1556741533-6e6a62bd8b49 -->
+          <img class="who-photo" src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?auto=format&fit=crop&w=1000&h=625&q=72" alt="A shop owner serving a customer at a bright counter, with a laptop beside the register" loading="lazy" width="1000" height="625">
+        </div>
+      </div>
+      <div class="who-points">
+        <article class="who-point">
+          <div class="who-point-head"><span class="who-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Simple on a busy day</h3></div>
+          <p>Designed for owners and staff between customers, not for an implementation team.</p>
+        </article>
+        <article class="who-point">
+          <div class="who-point-head"><span class="who-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></span><h3>Everything that runs the business</h3></div>
+          <p>Staff, schedules, customers, orders, vendors, and cash in one place — not just tickets and code.</p>
+        </article>
+        <article class="who-point">
+          <div class="who-point-head"><span class="who-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg></span><h3>AI that handles the busywork</h3></div>
+          <p>It finds the information, keeps track, and follows up. You stay in charge of the decisions.</p>
+        </article>
       </div>
     </div>
   </section>
