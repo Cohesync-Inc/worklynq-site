@@ -7,7 +7,7 @@ The Worklynq website. Plain HTML pages — no build step, no framework. GitHub P
 | File | What it is |
 |---|---|
 | `index.html` | The whole page: styles in the `<style>` block at the top, then the header, hero, features, integrations, foundation section and footer. The Worklynq logos are embedded in the file; the footer Cohesync logo is `assets/cohesync-logo.png`; the hero and feature photos load from Unsplash (free license). |
-| `docs/` | Product documentation at worklynq.com/docs: `docs/index.html` (overview), `docs/getting-started/index.html` (setup guide) and `docs/modules/index.html` (every module). The three pages share `docs/docs.css`. Edit the text directly in each page; the left-hand menu is repeated in each page, so update all three when adding a page or section. Mark unbuilt parts with `<span class="badge badge--soon">Coming in the beta</span>`. |
+| `docs/` | Product documentation at worklynq.com/docs: overview, Getting started, Modules, Integrations (GitHub, Claude, Cursor), industry guides (restaurants, construction, software), FAQ, and Security & data — one `index.html` per page in its own folder. All pages share `docs/docs.css`. The left-hand menu is repeated in every page, so update it everywhere when adding a page. Mark unbuilt parts with `<span class="badge badge--soon">Coming in the beta</span>`. Keep the Security page and FAQ consistent with the Privacy Policy and DPA. |
 | `terms/`, `privacy/`, `dpa/` | Terms of Use, Privacy Policy and Data Processing Agreement pages. |
 | `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser tab and home-screen icons (the Worklynq W badge). |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
