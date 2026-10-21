@@ -305,6 +305,168 @@
     .who-point h3{text-align:left;}
   }
 
+  /* ---------- MODULES ---------- */
+  .modules{
+    padding:84px 0;
+    border-top:1px solid var(--line);
+  }
+  .modules-head{
+    max-width:680px;
+    margin-bottom:44px;
+  }
+  .modules-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--teal-deep);
+    background:var(--sage);
+    border:1px solid var(--line);
+    padding:6px 13px 6px 11px;
+    border-radius:100px;
+    margin:0 0 22px;
+  }
+  .modules-kicker::before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--teal-bright);
+  }
+  .modules-head h2{
+    font-size:clamp(28px, 3.2vw, 40px);
+    line-height:1.1;
+    color:var(--teal-deep);
+    margin-bottom:18px;
+  }
+  .modules-head p{
+    margin:0;
+    font-size:16.5px;
+    line-height:1.65;
+    color:var(--ink-soft);
+  }
+  .mod-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:20px;
+  }
+  .mod-card{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .mod-card-head{display:flex; align-items:center; gap:12px;}
+  .mod-icon{
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:var(--sage);
+    color:var(--teal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .mod-icon svg{width:20px; height:20px;}
+  .mod-card h3{font-size:20px; line-height:1.2; color:var(--teal-deep);}
+  .mod-card .mod-for{margin:2px 0 0; font-size:13px; color:var(--ink-soft);}
+  .mod-org{
+    margin:0;
+    font-size:14.5px;
+    line-height:1.55;
+    color:var(--ink);
+  }
+  .mod-org strong{color:var(--teal-deep); font-weight:600;}
+  .mod-label{
+    margin:4px 0 0;
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--teal);
+  }
+  .mod-chips{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .mod-chips li{
+    font-size:12.5px;
+    padding:4px 10px;
+    border-radius:100px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    color:var(--ink);
+  }
+  .mod-chips.mod-chips--on li{background:var(--sage); color:var(--teal-deep);}
+  .mod-promises{
+    list-style:none;
+    margin:40px 0 0;
+    padding:20px 24px;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:12px 28px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:var(--card-bg);
+  }
+  .mod-promises li{
+    position:relative;
+    padding-left:26px;
+    font-size:14.5px;
+    line-height:1.55;
+    color:var(--ink-soft);
+  }
+  .mod-promises li strong{display:block; color:var(--ink); font-weight:600;}
+  .mod-promises li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:4px;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:var(--sage) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F8F76' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/10px no-repeat;
+  }
+  @media (max-width:980px){
+    .mod-grid{grid-template-columns:minmax(0, 1fr);}
+    .mod-promises{grid-template-columns:minmax(0, 1fr);}
+  }
+  @media (max-width:640px){
+    .modules{padding:64px 0;}
+    .modules-head{text-align:center; margin-left:auto; margin-right:auto;}
+    .mod-card{text-align:center; align-items:center;}
+    .mod-card-head{justify-content:center;}
+    .mod-card-head > div{text-align:left;}
+    .mod-chips{justify-content:center;}
+  }
+
+  /* Modules on the green base (same deep teal as Who we build for) */
+  .modules{background:var(--teal-deep); color:var(--paper); border-top:0;}
+  .modules-kicker{color:var(--paper); background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.16);}
+  .modules-head h2{color:var(--paper);}
+  .modules-head p{color:rgba(245,243,236,0.82);}
+  .mod-card{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.12);}
+  .mod-icon{background:rgba(47,174,142,0.18); color:var(--teal-bright);}
+  .mod-card h3{color:var(--paper);}
+  .mod-card .mod-for{color:rgba(245,243,236,0.7);}
+  .mod-org{color:rgba(245,243,236,0.88);}
+  .mod-org strong{color:var(--paper);}
+  .mod-label{color:var(--teal-bright);}
+  .mod-chips li{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.14); color:var(--paper);}
+  .mod-chips.mod-chips--on li{background:rgba(47,174,142,0.22); border-color:rgba(99,214,178,0.35); color:var(--paper);}
+  .mod-promises{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.12);}
+  .mod-promises li{color:rgba(245,243,236,0.78);}
+  .mod-promises li strong{color:var(--paper);}
+  .mod-promises li::before{background-color:rgba(47,174,142,0.22); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2363D6B2' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E");}
+
   /* ---------- FEATURES ---------- */
   .features{
     padding:64px 0 84px;
@@ -905,6 +1067,7 @@
     </a>
     <nav class="nav-links">
       <a href="#features">Features</a>
+      <a href="#modules">Modules</a>
       <a href="#integrations">Integrations</a>
       <a href="#foundation">How it works</a>
       <a class="nav-cta" href="#demo">Request a demo</a>
@@ -1022,6 +1185,47 @@
         <span>One set of people and permissions</span>
         <span>One intelligence foundation</span>
       </div>
+    </div>
+  </section>
+
+  <section class="modules" id="modules">
+    <div class="wrap">
+      <div class="modules-head">
+        <p class="modules-kicker">Modular by design</p>
+        <h2>Turn on what you need. Leave out what you don't.</h2>
+        <p>Worklynq is built from modules. Tell it what kind of business you run, and it shapes itself around you: the right modules switched on, work organized the way you actually run it, and ticket types ready for your industry. A restaurant never has to wade through software-team features, and a dev team gets everything it needs.</p>
+      </div>
+      <div class="mod-grid">
+        <article class="mod-card">
+          <div class="mod-card-head"><span class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></span><div><h3>Run your store</h3><p class="mod-for">Restaurants, cafés, retail, hospitality</p></div></div>
+          <p class="mod-org">Work is organized around <strong>your store</strong> — each shop, café, or kitchen gets its own daily schedule, recurring checklists, requests, and dashboard.</p>
+          <p class="mod-label">Modules switched on</p>
+          <ul class="mod-chips mod-chips--on"><li>Operations</li><li>Tickets</li><li>Dashboards</li><li>AI Search</li><li>Knowledge</li></ul>
+          <p class="mod-label">Ready-made ticket types</p>
+          <ul class="mod-chips"><li>Checklist</li><li>Maintenance Request</li><li>Supplier Order</li><li>Food Safety Issue</li><li>Guest Feedback</li><li>Staffing Request</li></ul>
+        </article>
+        <article class="mod-card">
+          <div class="mod-card-head"><span class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg></span><div><h3>Deliver projects</h3><p class="mod-for">Construction, trades, agencies, IT services</p></div></div>
+          <p class="mod-org">Work is organized by <strong>project and client</strong> — every job site or engagement with its own milestones, team board, and paper trail.</p>
+          <p class="mod-label">Modules switched on</p>
+          <ul class="mod-chips mod-chips--on"><li>Tickets</li><li>Team Board</li><li>Roadmaps</li><li>Dashboards</li><li>AI Search</li><li>Knowledge</li></ul>
+          <p class="mod-label">Ready-made ticket types</p>
+          <ul class="mod-chips"><li>Milestone</li><li>RFI</li><li>Change Order</li><li>Punch Item</li><li>Inspection</li><li>Daily Log</li></ul>
+        </article>
+        <article class="mod-card">
+          <div class="mod-card-head"><span class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span><div><h3>Build products</h3><p class="mod-for">Software and tech teams</p></div></div>
+          <p class="mod-org">Work is organized by <strong>product</strong> — with roadmaps, releases, and AI coding agents that pick up tickets alongside your team.</p>
+          <p class="mod-label">Modules switched on</p>
+          <ul class="mod-chips mod-chips--on"><li>Tickets</li><li>Team Board</li><li>Roadmaps</li><li>Releases</li><li>AI Agents</li><li>Knowledge</li></ul>
+          <p class="mod-label">Ready-made ticket types</p>
+          <ul class="mod-chips"><li>Epic</li><li>Story</li><li>Task</li><li>Bug</li><li>Spike</li><li>Feature Request</li></ul>
+        </article>
+      </div>
+      <ul class="mod-promises">
+        <li><strong>Change it anytime</strong>Switch modules on or off as you grow. Turning one off hides it — your data stays.</li>
+        <li><strong>Start fast</strong>Pick ticket types from a library built for your industry, then edit them to fit.</li>
+        <li><strong>Grows with you</strong>Add projects, AI agents, or another store when you need them — same workspace.</li>
+      </ul>
     </div>
   </section>
 
@@ -1237,6 +1441,7 @@
       <div class="footer-links">
         <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
         <a href="#features">Features</a>
+        <a href="#modules">Modules</a>
         <a href="#integrations">Integrations</a>
         <a href="#foundation">Platform</a>
         <a href="#demo">Request a demo</a>
