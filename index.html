@@ -467,6 +467,85 @@
   .mod-promises li strong{color:var(--paper);}
   .mod-promises li::before{background-color:rgba(47,174,142,0.22); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2363D6B2' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E");}
 
+  /* ---------- CUSTOMER EXPERIENCE ---------- */
+  .cx{
+    background:var(--sage);
+    padding:84px 0;
+  }
+  .cx-head{max-width:680px; margin-bottom:44px;}
+  .cx-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--teal-deep);
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    padding:6px 13px 6px 11px;
+    border-radius:100px;
+    margin:0 0 22px;
+  }
+  .cx-kicker::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--teal-bright);}
+  .cx-head h2{
+    font-size:clamp(28px, 3.2vw, 40px);
+    line-height:1.1;
+    color:var(--teal-deep);
+    margin-bottom:18px;
+  }
+  .cx-head p{margin:0; font-size:16.5px; line-height:1.65; color:var(--ink-soft);}
+  .cx-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:18px;
+  }
+  .cx-card{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:24px;
+  }
+  .cx-card-head{display:flex; align-items:center; gap:12px; margin-bottom:10px;}
+  .cx-icon{
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:var(--sage);
+    color:var(--teal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .cx-icon svg{width:20px; height:20px;}
+  .cx-card h3{font-size:19px; line-height:1.25; color:var(--teal-deep);}
+  .cx-card p{margin:0; font-size:15px; line-height:1.6; color:var(--ink-soft);}
+  .cx-card--ai{background:var(--teal-deep); border-color:var(--teal-deep);}
+  .cx-card--ai .cx-icon{background:rgba(47,174,142,0.2); color:var(--teal-bright);}
+  .cx-card--ai h3{color:var(--paper);}
+  .cx-card--ai p{color:rgba(245,243,236,0.82);}
+  .cx-note{
+    margin:28px 0 0;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--teal);
+  }
+  .cx-note::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--teal-bright);}
+  @media (max-width:980px){
+    .cx-grid{grid-template-columns:repeat(2, minmax(0, 1fr));}
+  }
+  @media (max-width:640px){
+    .cx{padding:64px 0;}
+    .cx-head{text-align:center; margin-left:auto; margin-right:auto;}
+    .cx-grid{grid-template-columns:minmax(0, 1fr);}
+    .cx-card{text-align:center;}
+    .cx-card-head{justify-content:center;}
+    .cx-card h3{text-align:left;}
+    .cx > .wrap{text-align:center;}
+  }
+
   /* ---------- FEATURES ---------- */
   .features{
     padding:64px 0 84px;
@@ -1226,6 +1305,43 @@
         <li><strong>Start fast</strong>Pick ticket types from a library built for your industry, then edit them to fit.</li>
         <li><strong>Grows with you</strong>Add projects, AI agents, or another store when you need them — same workspace.</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="cx" id="customer-experience">
+    <div class="wrap">
+      <div class="cx-head">
+        <p class="cx-kicker">Customer Experience</p>
+        <h2>Every customer, every conversation, in one place</h2>
+        <p>Taking care of customers looks the same in every business — a café, a contractor, or a software company. Customer Experience in Worklynq brings it all together, from the first question to the repeat order, so no regular and no request slips through the cracks.</p>
+      </div>
+      <div class="cx-grid">
+        <article class="cx-card">
+          <div class="cx-card-head"><span class="cx-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></span><h3>Customer engagement</h3></div>
+          <p>Customer records, requests from forms, email, or a QR code at the counter, replies, follow-ups, and satisfaction — in one thread per customer.</p>
+        </article>
+        <article class="cx-card">
+          <div class="cx-card-head"><span class="cx-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></span><h3>Order tracking</h3></div>
+          <p>Every order and where it stands, from placed to ready to picked up or delivered — so nobody has to ask twice.</p>
+        </article>
+        <article class="cx-card">
+          <div class="cx-card-head"><span class="cx-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 001 1h2l5 4V6L6 10H4a1 1 0 00-1 1z"/><path d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"/></svg></span><h3>Marketing</h3></div>
+          <p>Plan campaigns, reach the customers who will care, and see what actually brought people back.</p>
+        </article>
+        <article class="cx-card">
+          <div class="cx-card-head"><span class="cx-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/></svg></span><h3>Social media</h3></div>
+          <p>Posts, mentions, and reviews in one place, so you can respond quickly and keep your reputation in good shape.</p>
+        </article>
+        <article class="cx-card">
+          <div class="cx-card-head"><span class="cx-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"/><path d="M6 16l4-5 3 3 5-7"/></svg></span><h3>Trends</h3></div>
+          <p>What customers ask for, complain about, and buy — spotted over time, so you can act before it becomes a problem.</p>
+        </article>
+        <article class="cx-card cx-card--ai">
+          <div class="cx-card-head"><span class="cx-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><h3>AI that remembers</h3></div>
+          <p>It keeps the history of every customer, drafts replies, and flags who needs a follow-up. You decide what goes out.</p>
+        </article>
+      </div>
+      <p class="cx-note">Customer Experience rolls out through the beta.</p>
     </div>
   </section>
 
