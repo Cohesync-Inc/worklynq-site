@@ -1,12 +1,14 @@
 # worklynq.com
 
-The Worklynq website. One plain HTML page — no build step, no framework. GitHub Pages serves this repository's `main` branch as-is at **worklynq.com** (set by the `CNAME` file), the same way `cohesync-site` serves cohesync.com and `cannonball-site` serves cannonballdigitalworks.com.
+The Worklynq website. Plain HTML pages — no build step, no framework. GitHub Pages serves this repository's `main` branch as-is at **worklynq.com** (set by the `CNAME` file), the same way `cohesync-site` serves cohesync.com and `cannonball-site` serves cannonballdigitalworks.com.
 
 ## Files
 
 | File | What it is |
 |---|---|
 | `index.html` | The whole page: styles in the `<style>` block at the top, then the header, hero, features, integrations, foundation section and footer. The Worklynq logos are embedded in the file; the footer Cohesync logo is `assets/cohesync-logo.png`; the hero and feature photos load from Unsplash (free license). |
+| `docs/` | Product documentation at worklynq.com/docs: `docs/index.html` (overview), `docs/getting-started/index.html` (setup guide) and `docs/modules/index.html` (every module). The three pages share `docs/docs.css`. Edit the text directly in each page; the left-hand menu is repeated in each page, so update all three when adding a page or section. Mark unbuilt parts with `<span class="badge badge--soon">Coming in the beta</span>`. |
+| `terms/`, `privacy/`, `dpa/` | Terms of Use, Privacy Policy and Data Processing Agreement pages. |
 | `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser tab and home-screen icons (the Worklynq W badge). |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
 | `CNAME` | Tells GitHub Pages to serve this site at worklynq.com. Don't delete it. |
