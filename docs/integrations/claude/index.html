@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Claude — Worklynq Docs</title>
+<meta name="description" content="Connect Claude to Worklynq and hand tickets to Claude: setup, three ways to start it, what you see on the ticket, limits, and troubleshooting.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/" aria-current="page">Claude</a><ul class="side-sections"><li><a href="#what">What it does</a></li><li><a href="#before">Before you start</a></li><li><a href="#connect">Connect Claude</a></li><li><a href="#hand-off">Hand a ticket to Claude</a></li><li><a href="#on-the-ticket">What you see on the ticket</a></li><li><a href="#control">Limits and control</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Integrations</p>
+      <h1>Claude</h1>
+      <p class="intro">Hand tickets to Claude, Anthropic’s AI, and it does the work: Claude reads the ticket, works in the product’s repository, and pushes its changes. Worklynq then opens the pull request and shows everything Claude did right on the ticket.</p>
+      <section class="sec" id="what"><h2>What it does</h2>
+        <ul>
+          <li>Picks up a ticket — a bug, a story, a small feature — with any extra instructions you add.</li>
+          <li>Works in the repository mapped to the ticket’s product, on its own branch.</li>
+          <li>When it’s done, Worklynq opens a pull request for your team to review. Claude never merges its own work.</li>
+        </ul>
+      </section>
+      <section class="sec" id="before"><h2>Before you start</h2>
+        <ul>
+          <li><strong>Connect GitHub first.</strong> Claude uses Worklynq’s <a href="/docs/integrations/github/">GitHub connection</a> to work in your code, with Contents and Pull requests write permission on the repositories it should touch.</li>
+          <li><strong>An Anthropic API key.</strong> Create one in the Claude Console under <em>API keys</em>. Usage is billed to that Claude Console account by Anthropic, pay as you go — separate from a Claude Pro subscription.</li>
+          <li>You need to be your workspace’s <strong>System Admin</strong>.</li>
+        </ul>
+      </section>
+      <section class="sec" id="connect"><h2>Connect Claude</h2>
+        <ol class="howto">
+          <li>Open the <strong>Admin console → Connectors → Developer Connections</strong> and choose <strong>Claude</strong>.</li>
+          <li>Paste your Anthropic API key.</li>
+          <li>Choose the Claude model to use.</li>
+          <li>Map each <strong>product</strong> to its <strong>repository</strong> and <strong>base branch</strong> — this is where Claude works for that product’s tickets.</li>
+          <li>Optionally set limits for each session (see <a href="#control">Limits and control</a>).</li>
+          <li>Save. Claude shows as <strong>Connected</strong>.</li>
+        </ol>
+      </section>
+      <section class="sec" id="hand-off"><h2>Hand a ticket to Claude</h2>
+        <p>There are three ways to start Claude on a ticket:</p>
+        <ul>
+          <li><strong>From a ticket:</strong> choose <em>Hand this ticket to Claude</em> and add any instructions.</li>
+          <li><strong>When you create a ticket:</strong> tick <em>Hand this ticket to Claude after it’s created</em>.</li>
+          <li><strong>Automatically:</strong> in a ticket type’s workflow, add the action <em>Hand ticket to Claude</em> to a stage. Every ticket that reaches that stage goes to Claude. The instructions can include the ticket’s title and description.</li>
+        </ul>
+        <p class="tip">Write tickets the way you would for a new teammate: what’s wrong or wanted, where to look, and how to know it’s done.</p>
+      </section>
+      <section class="sec" id="on-the-ticket"><h2>What you see on the ticket</h2>
+        <p>Each ticket gets a <strong>Claude</strong> section showing the session’s status, Claude’s summary, the files it changed, its activity, the pull request, and how much it used. From there you can <strong>stop</strong> a running session or <strong>run Claude again</strong> (which starts a fresh session).</p>
+        <p>Your System Admin can turn the Claude section on or off for each ticket type in <strong>Admin console → Work Configuration → Ticket types</strong>. When it’s off, that type’s tickets can’t be handed to Claude, including by automations.</p>
+      </section>
+      <section class="sec" id="control"><h2>Limits and control</h2>
+        <ul>
+          <li><strong>Maximum run time</strong> and <strong>stop if idle</strong>: Worklynq stops a session that runs too long or goes quiet.</li>
+          <li><strong>Maximum cost per session</strong>: Anthropic stops the session when it reaches the budget.</li>
+          <li>Leave a limit blank for no limit. Limits are set in Developer Connections → Claude.</li>
+          <li>Claude’s changes always come back as a pull request. Your team decides what to review, merge, and deploy.</li>
+        </ul>
+      </section>
+      <section class="sec" id="troubleshooting"><h2>Troubleshooting</h2>
+        <dl class="ts">
+          <dt>“No repository is mapped to this ticket’s product”</dt><dd>Add the product’s repository and base branch in Developer Connections → Claude.</dd>
+          <dt>“Claude needs Worklynq’s GitHub connection”</dt><dd><a href="/docs/integrations/github/">Connect GitHub</a> first.</dd>
+          <dt>Claude finished but made no changes</dt><dd>Read what Claude reported on the ticket — it explains why. Often the ticket needs more detail.</dd>
+          <dt>The session failed while opening the pull request</dt><dd>Usually GitHub permissions (Contents and Pull requests need write access) or branch protection on the base branch.</dd>
+          <dt>The key is rejected when connecting</dt><dd>The key is wrong, revoked, or from a different Anthropic workspace. Create a new key and try again.</dd>
+        </dl>
+      </section>
+      <p class="doc-foot">Last updated: October 21, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
