@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>QuickBooks — Worklynq Docs</title>
+<meta name="description" content="Connect QuickBooks Online to Worklynq: read-only profit and loss, invoices, and open balances in your dashboards and reports.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/" aria-current="page">QuickBooks</a><ul class="side-sections"><li><a href="#what">What it does</a></li><li><a href="#reads">What Worklynq reads</a></li><li><a href="#before">Before you start</a></li><li><a href="#connect">Connect QuickBooks</a></li><li><a href="#dashboards">QuickBooks in dashboards</a></li><li><a href="#access">Who can see the numbers</a></li><li><a href="#stay-connected">Stay connected</a></li><li><a href="#disconnect">Disconnect</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Integrations</p>
+      <h1>QuickBooks</h1>
+      <p class="intro">Connect QuickBooks Online so your dashboards and reports can show profit and loss, invoices, and open balances next to the work that drives them. Worklynq only <strong>reads</strong> from QuickBooks — it never creates, changes, or sends anything there.</p>
+      <section class="sec" id="what"><h2>What it does</h2>
+        <ul>
+          <li>Connects your company’s QuickBooks Online company to Worklynq, once, for the whole company.</li>
+          <li>Adds two widgets to Dashboards and Reports: <strong>QuickBooks profit &amp; loss</strong> and <strong>QuickBooks invoices</strong>.</li>
+        </ul>
+      </section>
+      <section class="sec" id="reads"><h2>What Worklynq reads</h2>
+        <ul>
+          <li>Your company name, currency, and fiscal year</li>
+          <li>Your profit and loss report</li>
+          <li>Your invoices and their balances</li>
+        </ul>
+        <p>All access is <strong>read-only</strong>. Worklynq can’t create invoices, record payments, or change anything in QuickBooks.</p>
+      </section>
+      <section class="sec" id="before"><h2>Before you start</h2>
+        <ul>
+          <li>You need to be your workspace’s <strong>System Admin</strong>.</li>
+          <li>You need <strong>QuickBooks Online</strong> (not QuickBooks Desktop), and a QuickBooks user who can connect apps to the company — usually the company admin.</li>
+        </ul>
+      </section>
+      <section class="sec" id="connect"><h2>Connect QuickBooks</h2>
+        <ol class="howto">
+          <li>In Worklynq, open the <strong>Admin console → Connectors → Integrations</strong> and choose <strong>QuickBooks</strong>.</li>
+          <li>Review what Worklynq will read, then click <strong>Continue to QuickBooks</strong>.</li>
+          <li>Sign in to QuickBooks, choose your company if you have more than one, and approve access.</li>
+          <li>You’re taken back to Worklynq. QuickBooks shows as <strong>Connected</strong> with your company’s name and currency.</li>
+        </ol>
+      </section>
+      <section class="sec" id="dashboards"><h2>QuickBooks in dashboards</h2>
+        <p>In <strong>Dashboards</strong> or <strong>Reports</strong>, add a QuickBooks widget:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Widget</th><th>Shows</th><th>Split by</th></tr></thead>
+          <tbody>
+            <tr><td>QuickBooks profit &amp; loss</td><td>Income, cost of sales, gross profit, expenses, net income — as a total or a trend by day, week, or month</td><td>Account (income, cost of sales, or expenses)</td></tr>
+            <tr><td>QuickBooks invoices</td><td>Amount invoiced, open balance, overdue balance, number of invoices</td><td>Customer, or status (open, overdue, paid); by invoice date or due date, including invoices due in the next 7 days</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li>Profit and loss uses your QuickBooks reporting settings (cash or accrual), and weekly columns follow QuickBooks’ weeks, so the numbers match your QuickBooks reports.</li>
+          <li>Invoice lists link straight to each invoice in QuickBooks.</li>
+          <li>Numbers can be up to 5 minutes behind QuickBooks.</li>
+        </ul>
+        <p class="tip">Put a profit and loss trend next to your store or project dashboards to see how the work and the money move together.</p>
+      </section>
+      <section class="sec" id="access"><h2>Who can see the numbers</h2>
+        <p>By default, only System Admins can use QuickBooks widgets. To share them, a System Admin opens <strong>Dashboards → Connected data</strong> and sets QuickBooks to <strong>everyone in the company</strong>. Widgets always run as the person looking, so on a shared dashboard, people who aren’t allowed to see QuickBooks data see a note instead of the numbers.</p>
+      </section>
+      <section class="sec" id="stay-connected"><h2>Stay connected</h2>
+        <ul>
+          <li>Worklynq keeps the connection fresh on its own — there’s nothing to do day to day.</li>
+          <li>A QuickBooks connection lasts up to <strong>five years</strong>. When it’s within 30 days of ending, the QuickBooks window shows the date with a <strong>Reconnect now</strong> link, and QuickBooks also warns you 30 and 7 days before.</li>
+          <li>Changed your company name, currency, or fiscal year in QuickBooks? Click <strong>Refresh from QuickBooks</strong>.</li>
+        </ul>
+      </section>
+      <section class="sec" id="disconnect"><h2>Disconnect</h2>
+        <p>Open QuickBooks in <strong>Admin console → Connectors → Integrations</strong> and click <strong>Disconnect</strong>. Worklynq’s access is revoked at QuickBooks, and QuickBooks widgets stop showing data.</p>
+      </section>
+      <section class="sec" id="troubleshooting"><h2>Troubleshooting</h2>
+        <dl class="ts">
+          <dt>“QuickBooks needs to be reconnected” or “Needs attention”</dt><dd>The connection ended or was removed in QuickBooks. Click <strong>Reconnect QuickBooks</strong> and approve access again.</dd>
+          <dt>The numbers don’t match a QuickBooks report</dt><dd>Check the report uses the same dates and the same cash or accrual setting as your QuickBooks company. Recent changes can take up to 5 minutes to show.</dd>
+          <dt>Some invoices seem to be missing</dt><dd>Only invoices in your company’s home currency are counted.</dd>
+          <dt>“QuickBooks isn’t set up on this Worklynq server yet”</dt><dd>Contact us at <a href="mailto:info@cohesync.com">info@cohesync.com</a> and we’ll turn it on for your workspace.</dd>
+        </dl>
+      </section>
+      <p class="doc-foot">Last updated: October 22, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
