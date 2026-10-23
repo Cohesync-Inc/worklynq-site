@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
 <title>Approvals — Worklynq Docs</title>
-<meta name="description" content="Use the Approvals module for requests that need a yes or no: turn it on, ask for approval, APR numbers, and approval stages.">
+<meta name="description" content="Use the Approvals module for requests that need a yes or no: approval types with their own stages, document approvals and Verified pages, and adding your own types.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -32,69 +32,89 @@
 
 <main id="top">
   <div class="wrap docs-layout">
-    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/" aria-current="page">Approvals</a><ul class="side-sections"><li><a href="#what">What it’s for</a></li><li><a href="#turn-on">Turn on Approvals</a></li><li><a href="#request">Ask for approval</a></li><li><a href="#stages">How a request moves</a></li><li><a href="#numbers">APR numbers</a></li><li><a href="#types">Ticket types for approvals</a></li><li><a href="#tips">Tips</a></li></ul></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/" aria-current="page">Approvals</a><ul class="side-sections"><li><a href="#what">What it’s for</a></li><li><a href="#turn-on">Turn on Approvals</a></li><li><a href="#request">Ask for approval</a></li><li><a href="#types">Approval types</a></li><li><a href="#stages">How a request moves</a></li><li><a href="#documents">Document approvals</a></li><li><a href="#own-types">Add your own types</a></li><li><a href="#tickets">Approval tickets (APR)</a></li><li><a href="#tips">Tips</a></li></ul></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
     <article class="doc">
       <p class="eyebrow">Features</p>
       <h1>Approvals</h1>
-      <p class="intro">Some things need a yes or no before they go ahead — a purchase, access to a system, time off, a change to a menu or a price. The Approvals module gives those requests their own place, their own numbers, and a clear path from asked to answered.</p>
-      <div class="callout"><strong>Optional.</strong> Approvals is off for every company until your System Admin turns it on — whatever your business type.</div>
+      <p class="intro">Some things need a yes or no before they go ahead — a purchase, access to a system, time off, a new version of a policy. Approvals gives those requests one place of their own, with a clear path from asked to answered and a record of who decided what.</p>
+      <div class="callout"><strong>Optional, and on its own.</strong> Approvals is off for every company until your System Admin turns it on, whatever your business type. It doesn’t need any other module.</div>
       <section class="sec" id="what"><h2>What it’s for</h2>
         <ul>
-          <li><strong>Purchases</strong> — new equipment, a supplier change, anything over a spending limit.</li>
-          <li><strong>Access</strong> — a new account, a key, permissions to a system.</li>
-          <li><strong>Time off</strong> and shift swaps.</li>
-          <li>Anything else where someone has to sign off before work starts.</li>
+          <li><strong>Documents</strong>: a new procedure, policy, or guide that someone should check before the team relies on it.</li>
+          <li><strong>Purchases</strong>: new equipment, a supplier change, anything over a spending limit.</li>
+          <li><strong>Access</strong>: a new account, a key, permissions to a system.</li>
+          <li><strong>Time off</strong>: leave and shift swaps.</li>
+          <li>Anything else where someone has to sign off first. Your System Admin can <a href="#own-types">add a type</a> for it.</li>
         </ul>
-        <p>Approvals sit alongside your products, projects, and stores as a fourth kind of work, so requests never get lost in the general task list.</p>
       </section>
       <section class="sec" id="turn-on"><h2>Turn on Approvals</h2>
         <ol class="howto">
-          <li>As System Admin, open the <strong>Admin console → Modules</strong>.</li>
-          <li>Switch on <strong>Approvals</strong> (it needs the Tickets module) and save. The change applies to everyone in your company.</li>
-          <li>Worklynq sets you up automatically: an <strong>Approvals</strong> space, with the ready-made <strong>Approval Request</strong> ticket type mapped to it.</li>
+          <li>As System Admin, open <strong>Admin console → Modules</strong>.</li>
+          <li>Switch on <strong>Approvals</strong> and save. The change applies to everyone in your company.</li>
+          <li><strong>Approvals</strong> now appears in the Workspace menu, with four ready-made types: Document approval, Access request, Purchase request, and Time off.</li>
         </ol>
-        <p>Turning Approvals off later only hides it — your requests and their history stay.</p>
+        <p>Turning Approvals off later only hides it. Your requests and their history stay, and come back if you turn it on again.</p>
       </section>
       <section class="sec" id="request"><h2>Ask for approval</h2>
         <ol class="howto">
-          <li>Create a ticket. <strong>Approvals</strong> appears as its own group, next to products, projects, and operations.</li>
-          <li>Choose the <strong>Approvals</strong> space and the <strong>Approval Request</strong> type — only ticket types mapped to that space are offered.</li>
-          <li>Say what you need and why, add any quote or document, and assign it to the person who decides.</li>
+          <li>Open <strong>Approvals</strong> from the Workspace menu and click <strong>New Approval</strong>.</li>
+          <li>Give it a clear name and choose its <strong>type</strong>.</li>
+          <li>Pick an <strong>assignee</strong> (the person who decides) and any <strong>reviewers</strong> who should weigh in.</li>
+          <li>Optionally link a <strong>Knowledge Center page</strong>, or a file on that page, so the approver has the details in front of them.</li>
         </ol>
+        <p>The request starts in its type’s first stage. Everyone with access sees it in the list, which you can filter by type and by <em>Open</em>, <em>Approved</em>, <em>Rejected</em>, or <em>Withdrawn</em>, or search by name, type, or person. Open a request to edit it and to see its activity log: who created it, who moved it, and when.</p>
+      </section>
+      <section class="sec" id="types"><h2>Approval types</h2>
+        <p>Every request has a type, and each type has its own stages. These four come ready to use:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Type</th><th>For</th><th>Stages</th></tr></thead>
+          <tbody>
+            <tr><td>Document approval</td><td>Checking a Knowledge Center page or file</td><td>Draft, Ready for Review, In Review, Changes Requested, then Final Approval, Published, Rejected, or Archived</td></tr>
+            <tr><td>Access request</td><td>Accounts, keys, and permissions</td><td>Requested, Under Review, then Approved, Rejected, or Withdrawn</td></tr>
+            <tr><td>Purchase request</td><td>Spending that needs a yes first</td><td>Requested, Under Review, then Approved, Rejected, or Withdrawn</td></tr>
+            <tr><td>Time off</td><td>Leave and time-off requests</td><td>Requested, then Approved, Rejected, or Withdrawn</td></tr>
+          </tbody>
+        </table></div>
       </section>
       <section class="sec" id="stages"><h2>How a request moves</h2>
-        <div class="flowline" aria-label="Approval Request stages">
+        <div class="flowline" aria-label="Purchase request stages">
           <span class="st st-grey">Requested</span><span class="arr">→</span><span class="st st-yellow">Under Review</span><span class="arr">→</span>
           <span class="ends"><span class="st st-green">Approved</span><span class="st st-red">Rejected</span><span class="st st-grey">Withdrawn</span></span>
         </div>
-        <div class="table-wrap"><table>
-          <thead><tr><th>Stage</th><th>What it means</th></tr></thead>
-          <tbody>
-            <tr><td>Requested</td><td>Someone has asked. Nobody has looked yet.</td></tr>
-            <tr><td>Under Review</td><td>The approver is looking at it.</td></tr>
-            <tr><td>Approved</td><td>Yes — the work can go ahead.</td></tr>
-            <tr><td>Rejected</td><td>No. Add a comment so the requester knows why.</td></tr>
-            <tr><td>Withdrawn</td><td>The requester no longer needs it.</td></tr>
-          </tbody>
-        </table></div>
-        <p>A request can end in any of the three final stages, and Worklynq knows which ones mean yes, no, and cancelled.</p>
+        <p>A type has two kinds of stage:</p>
+        <ul>
+          <li><strong>Open stages</strong> are where a request sits while people work on it, like <em>Requested</em> or <em>Under Review</em>.</li>
+          <li><strong>Closing stages</strong> end the request. Each one ends it one of three ways: <strong>approved</strong> (yes, go ahead), <strong>rejected</strong> (no; leave a note so the requester knows why), or <strong>withdrawn</strong> (no longer needed).</li>
+        </ul>
+        <p>Change a request’s stage straight from the list. When a request reaches an approved stage, Worklynq records the approval date.</p>
       </section>
-      <section class="sec" id="numbers"><h2>APR numbers</h2>
-        <p>Every approval request gets a number from one company-wide sequence — <strong>APR-1</strong>, <strong>APR-2</strong>, and so on — just like operations tickets use OPS. Mention “APR-14” in a comment or a chat and everyone knows exactly which request you mean.</p>
-        <p>APR and OPS are reserved, so a product or project name never ends up with those letters.</p>
+      <section class="sec" id="documents"><h2>Document approvals</h2>
+        <p>A <strong>Document approval</strong> linked to a Knowledge Center page or file decides whether it shows as <strong>Verified</strong>. Once the latest document approval for a page or file reaches an approved stage (<em>Final Approval</em> or <em>Published</em>), it shows as Verified. Until then, it shows as Un-verified, so your team knows what has been checked.</p>
+        <p>You can also start a document approval from Knowledge Center: use <strong>Approval</strong> next to a file on a page, or tick <strong>Start approval workflow</strong> when you save a document from a template. Track it under Approvals.</p>
+        <p>Verified tags and these options only show while the Approvals module is on. Other types can link a page too, for context, but only document approvals verify it.</p>
       </section>
-      <section class="sec" id="types"><h2>Ticket types for approvals</h2>
-        <p>The <strong>Approval Request</strong> type comes ready to use. You can rename it, change its stages, or add your own approval types — say, <em>Purchase Request</em> with an extra stage for a second approver — in <strong>Admin console → Work Configuration → Ticket types</strong>, then map them to your Approvals space in <strong>Ticket Type Mapping</strong>, where approval spaces are listed after operations.</p>
-        <p>The ready-made Approval Request type only shows in the ticket type library while the Approvals module is on.</p>
+      <section class="sec" id="own-types"><h2>Add your own types</h2>
+        <p>Your System Admin manages types in <strong>Admin console → Work Configuration → Approval Types</strong>:</p>
+        <ul>
+          <li><strong>Add a type</strong> (say, <em>Expense claim</em> or <em>Menu change</em>) or <strong>duplicate</strong> one to start from its stages.</li>
+          <li><strong>Edit stages</strong>: rename them, pick colours, change the order, add open stages (for example, a second approver), and choose the stage new requests start in.</li>
+          <li>Every type needs at least one open stage and at least one approved, one rejected, and one withdrawn stage. A stage that still has requests in it can’t be removed until they’re moved.</li>
+          <li><strong>Archive</strong> a type to stop new requests of that kind. Existing requests stay, and you can restore the type later. Document approval can’t be archived, because Knowledge Center uses it to verify pages.</li>
+        </ul>
+        <p>Changes apply to everyone in your company.</p>
+      </section>
+      <section class="sec" id="tickets"><h2>Approval tickets (APR)</h2>
+        <p>If your company also uses <strong>Tickets</strong>, you can raise approvals as tickets too. Worklynq creates an <strong>Approvals</strong> ticket space with the ready-made <strong>Approval Request</strong> ticket type. Those tickets get numbers from one company-wide sequence (<strong>APR-1</strong>, <strong>APR-2</strong>, and so on) and move from <em>Requested</em> to <em>Under Review</em> to <em>Approved</em>, <em>Rejected</em>, or <em>Withdrawn</em>.</p>
+        <p>Use them when an approval belongs with other ticket work, such as on a board or a dashboard of tickets. To create one, choose the Approvals space and the Approval Request type when you create a ticket. You can change that ticket type, or add more, in <strong>Work Configuration → Ticket types</strong>, and map them to the space in <strong>Ticket Type Mapping</strong>. Without Tickets, you don’t need any of this: the Approvals page does the job on its own.</p>
       </section>
       <section class="sec" id="tips"><h2>Tips</h2>
         <ul>
-          <li>Ask your team to put the cost or the dates in the title — “New espresso grinder, $1,200” — so approvers can decide at a glance.</li>
-          <li>Build a dashboard of open approval requests so nothing waits too long.</li>
+          <li>Put the cost or the dates in the name (“New espresso grinder, $1,200”) so approvers can decide at a glance.</li>
+          <li>Filter the list to <em>Open</em> to see everything still waiting on a decision.</li>
           <li>Write your approval rules (who approves what, and spending limits) in <strong>Knowledge Center</strong>, so AI Search can answer “Who approves purchases over $500?”</li>
         </ul>
       </section>
-      <p class="doc-foot">Last updated: October 22, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+      <p class="doc-foot">Last updated: October 23, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
     </article>
   </div>
 </main>
