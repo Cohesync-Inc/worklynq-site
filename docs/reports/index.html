@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Scheduled reports — Worklynq Docs</title>
+<meta name="description" content="Email a Worklynq report on a schedule, with an AI summary, to each person as they see it.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/" aria-current="page">Scheduled reports</a><ul class="side-sections"><li><a href="#what">What you get</a></li><li><a href="#schedule">Email a report on a schedule</a></li><li><a href="#recipients">Who gets it</a></li><li><a href="#summary">The AI summary</a></li><li><a href="#email">What’s in the email</a></li><li><a href="#copy">Email yourself a copy</a></li><li><a href="#last-send">Check the last send</a></li><li><a href="#stop">Change or stop it</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li><a href="/docs/approvals/">Approvals</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Scheduled reports</h1>
+      <p class="intro">Send a report to the people who need it, automatically — every morning, every Monday, or on the first of the month. Each email starts with a short AI summary of what changed, so nobody has to dig through the numbers.</p>
+      <section class="sec" id="what"><h2>What you get</h2>
+        <ul>
+          <li>Reports emailed <strong>every day</strong>, on <strong>weekdays</strong>, <strong>weekly</strong> on a day you pick, or <strong>monthly</strong> on a day from the 1st to the 28th — at a time you choose.</li>
+          <li><strong>Each person gets their own copy, worked out as them.</strong> They only see numbers they’re allowed to see.</li>
+          <li>A 2–5 point <strong>AI summary</strong> at the top of every email.</li>
+        </ul>
+      </section>
+      <section class="sec" id="schedule"><h2>Email a report on a schedule</h2>
+        <p>You can schedule a report if you own it, or if you’re a System Admin.</p>
+        <ol class="howto">
+          <li>Open the report in <strong>Workspace → Reports</strong> and click <strong>Email</strong>.</li>
+          <li>Tick <strong>Send it on a schedule</strong>.</li>
+          <li>Under <strong>How often</strong>, choose <em>Every day</em>, <em>Weekdays</em>, <em>Every week on</em> a day, or <em>Every month on the</em> day you pick.</li>
+          <li>Set the <strong>time</strong>. It uses your timezone, shown next to it, and stays right when the clocks change.</li>
+          <li>Add people under <strong>Who gets it</strong>, and choose the <strong>AI for the summary</strong>.</li>
+          <li>Click <strong>Save</strong>. The button changes to <strong>Emailed ✓</strong>, the panel shows when it goes out next, and the report shows how often it’s emailed and to how many people.</li>
+        </ol>
+      </section>
+      <section class="sec" id="recipients"><h2>Who gets it</h2>
+        <ul>
+          <li>The report’s <strong>owner always gets it</strong>. Add up to <strong>25 more people</strong> from your company.</li>
+          <li><strong>People only get it if they can see the report.</strong> If a report is private (<em>Only me</em>), anyone else you add is skipped — the panel warns you. Share the report with a team or with everyone first.</li>
+          <li>If a widget uses connected data someone isn’t allowed to see — like Square or QuickBooks numbers kept to System Admins — their copy shows a short note instead of those numbers.</li>
+          <li>People who are inactive or have left the company are skipped.</li>
+        </ul>
+      </section>
+      <section class="sec" id="summary"><h2>The AI summary</h2>
+        <p>Every email starts with a 2–5 point summary of what the report’s numbers say — the same summary you get with <strong>Explain</strong> on the report. It’s written from each person’s own copy, so it only covers what they can see.</p>
+        <ul>
+          <li>Choose Worklynq’s default AI or another model your company has turned on.</li>
+          <li>Summaries use your company’s AI credits, like AI Search. If credits run out, the email still goes out without a summary and says why.</li>
+          <li>AI can be wrong, so the numbers are always in the email underneath the summary.</li>
+        </ul>
+      </section>
+      <section class="sec" id="email"><h2>What’s in the email</h2>
+        <ul>
+          <li>The AI summary.</li>
+          <li>Each widget, in a form that reads well in email: the number, the top rows of a split, the latest 7 points of a trend, or the first items of a list.</li>
+          <li>A button to open the full report in Worklynq.</li>
+        </ul>
+        <p>Emails come from your workspace’s own email settings.</p>
+      </section>
+      <section class="sec" id="copy"><h2>Email yourself a copy</h2>
+        <p>Anyone who can see a report can get it right now: click <strong>Email me a copy</strong> on the report (or <strong>Email me a copy now</strong> in the Email panel). It’s worked out as you, with the same AI summary.</p>
+      </section>
+      <section class="sec" id="last-send"><h2>Check the last send</h2>
+        <p>Open <strong>Email</strong> on the report. Under <strong>Last send</strong> you’ll see when it went out, who it was sent to, who was skipped and why, and any that failed.</p>
+      </section>
+      <section class="sec" id="stop"><h2>Change or stop it</h2>
+        <p>Open <strong>Email</strong> on the report to change the schedule, the people, or the AI. To stop sending, untick <strong>Send it on a schedule</strong> and click <strong>Save</strong>.</p>
+      </section>
+      <section class="sec" id="troubleshooting"><h2>Troubleshooting</h2>
+        <dl class="ts">
+          <dt>Someone didn’t get the email</dt><dd>Check <strong>Last send</strong>. If they were skipped because they can’t see the report, share it with them (or with a team they’re in). Also ask them to check their spam folder.</dd>
+          <dt>The email has no summary</dt><dd>Your company is out of AI credits. The email explains this; the numbers are still there.</dd>
+          <dt>A widget says the person can’t see its data</dt><dd>That widget uses connected data, like Square or QuickBooks, that’s kept to System Admins. A System Admin can share it in <strong>Dashboards → Connected data</strong>.</dd>
+          <dt>I don’t see the Email button</dt><dd>Only a report’s owner or a System Admin can schedule it. Everyone else sees <strong>Email me a copy</strong>. Dashboards can’t be scheduled — only reports.</dd>
+        </dl>
+      </section>
+      <p class="doc-foot">Last updated: October 23, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
