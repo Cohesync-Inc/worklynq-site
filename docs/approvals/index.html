@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Approvals — Worklynq Docs</title>
+<meta name="description" content="Use the Approvals module for requests that need a yes or no: turn it on, ask for approval, APR numbers, and approval stages.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/" aria-current="page">Approvals</a><ul class="side-sections"><li><a href="#what">What it’s for</a></li><li><a href="#turn-on">Turn on Approvals</a></li><li><a href="#request">Ask for approval</a></li><li><a href="#stages">How a request moves</a></li><li><a href="#numbers">APR numbers</a></li><li><a href="#types">Ticket types for approvals</a></li><li><a href="#tips">Tips</a></li></ul></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Approvals</h1>
+      <p class="intro">Some things need a yes or no before they go ahead — a purchase, access to a system, time off, a change to a menu or a price. The Approvals module gives those requests their own place, their own numbers, and a clear path from asked to answered.</p>
+      <div class="callout"><strong>Optional.</strong> Approvals is off for every company until your System Admin turns it on — whatever your business type.</div>
+      <section class="sec" id="what"><h2>What it’s for</h2>
+        <ul>
+          <li><strong>Purchases</strong> — new equipment, a supplier change, anything over a spending limit.</li>
+          <li><strong>Access</strong> — a new account, a key, permissions to a system.</li>
+          <li><strong>Time off</strong> and shift swaps.</li>
+          <li>Anything else where someone has to sign off before work starts.</li>
+        </ul>
+        <p>Approvals sit alongside your products, projects, and stores as a fourth kind of work, so requests never get lost in the general task list.</p>
+      </section>
+      <section class="sec" id="turn-on"><h2>Turn on Approvals</h2>
+        <ol class="howto">
+          <li>As System Admin, open the <strong>Admin console → Modules</strong>.</li>
+          <li>Switch on <strong>Approvals</strong> (it needs the Tickets module) and save. The change applies to everyone in your company.</li>
+          <li>Worklynq sets you up automatically: an <strong>Approvals</strong> space, with the ready-made <strong>Approval Request</strong> ticket type mapped to it.</li>
+        </ol>
+        <p>Turning Approvals off later only hides it — your requests and their history stay.</p>
+      </section>
+      <section class="sec" id="request"><h2>Ask for approval</h2>
+        <ol class="howto">
+          <li>Create a ticket. <strong>Approvals</strong> appears as its own group, next to products, projects, and operations.</li>
+          <li>Choose the <strong>Approvals</strong> space and the <strong>Approval Request</strong> type — only ticket types mapped to that space are offered.</li>
+          <li>Say what you need and why, add any quote or document, and assign it to the person who decides.</li>
+        </ol>
+      </section>
+      <section class="sec" id="stages"><h2>How a request moves</h2>
+        <div class="flowline" aria-label="Approval Request stages">
+          <span class="st st-grey">Requested</span><span class="arr">→</span><span class="st st-yellow">Under Review</span><span class="arr">→</span>
+          <span class="ends"><span class="st st-green">Approved</span><span class="st st-red">Rejected</span><span class="st st-grey">Withdrawn</span></span>
+        </div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Stage</th><th>What it means</th></tr></thead>
+          <tbody>
+            <tr><td>Requested</td><td>Someone has asked. Nobody has looked yet.</td></tr>
+            <tr><td>Under Review</td><td>The approver is looking at it.</td></tr>
+            <tr><td>Approved</td><td>Yes — the work can go ahead.</td></tr>
+            <tr><td>Rejected</td><td>No. Add a comment so the requester knows why.</td></tr>
+            <tr><td>Withdrawn</td><td>The requester no longer needs it.</td></tr>
+          </tbody>
+        </table></div>
+        <p>A request can end in any of the three final stages, and Worklynq knows which ones mean yes, no, and cancelled.</p>
+      </section>
+      <section class="sec" id="numbers"><h2>APR numbers</h2>
+        <p>Every approval request gets a number from one company-wide sequence — <strong>APR-1</strong>, <strong>APR-2</strong>, and so on — just like operations tickets use OPS. Mention “APR-14” in a comment or a chat and everyone knows exactly which request you mean.</p>
+        <p>APR and OPS are reserved, so a product or project name never ends up with those letters.</p>
+      </section>
+      <section class="sec" id="types"><h2>Ticket types for approvals</h2>
+        <p>The <strong>Approval Request</strong> type comes ready to use. You can rename it, change its stages, or add your own approval types — say, <em>Purchase Request</em> with an extra stage for a second approver — in <strong>Admin console → Work Configuration → Ticket types</strong>, then map them to your Approvals space in <strong>Ticket Type Mapping</strong>, where approval spaces are listed after operations.</p>
+        <p>The ready-made Approval Request type only shows in the ticket type library while the Approvals module is on.</p>
+      </section>
+      <section class="sec" id="tips"><h2>Tips</h2>
+        <ul>
+          <li>Ask your team to put the cost or the dates in the title — “New espresso grinder, $1,200” — so approvers can decide at a glance.</li>
+          <li>Build a dashboard of open approval requests so nothing waits too long.</li>
+          <li>Write your approval rules (who approves what, and spending limits) in <strong>Knowledge Center</strong>, so AI Search can answer “Who approves purchases over $500?”</li>
+        </ul>
+      </section>
+      <p class="doc-foot">Last updated: October 22, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
