@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Order Tracking — Worklynq Docs</title>
+<meta name="description" content="Follow customer orders from new to completed in Worklynq: the board, adding orders, stages, pickup, delivery and shipping, due times, and history.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/" aria-current="page">Order Tracking</a><ul class="side-sections"><li><a href="#what">What it’s for</a></li><li><a href="#turn-on">Turn on Order Tracking</a></li><li><a href="#new-order">Add an order</a></li><li><a href="#stages">How an order moves</a></li><li><a href="#board">The board and the list</a></li><li><a href="#order">Inside an order</a></li><li><a href="#customers">Orders and customers</a></li><li><a href="#tips">Tips</a></li></ul></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Order Tracking</h1>
+      <p class="intro">Follow every customer order from the moment it comes in to the moment it’s picked up, delivered, or shipped. Everyone can see what’s due, who’s on it, and what’s running late — so nobody has to ask twice.</p>
+      <section class="sec" id="what"><h2>What it’s for</h2>
+        <ul>
+          <li>Catering and cake orders at a café or bakery, special orders at a shop, repairs to hand back, parts to ship.</li>
+          <li>A <strong>board</strong> with a column for each stage, so you can see the whole day at a glance.</li>
+          <li>Items, prices, and a total; pickup, delivery, shipping, or in store; a due time; and who is on it.</li>
+          <li>A <strong>history</strong> of who did what and when, on every order.</li>
+        </ul>
+        <p>Order Tracking is part of <a href="/docs/modules/#customer-experience">Customer Experience</a> and uses your customer records, so every order belongs to a customer.</p>
+      </section>
+      <section class="sec" id="turn-on"><h2>Turn on Order Tracking</h2>
+        <ul>
+          <li>It’s <strong>on from the start</strong> for Operations businesses (restaurants, cafés, retail, hospitality) and for Software businesses.</li>
+          <li>For anyone else, your System Admin turns it on in <strong>Admin console → Work Configuration → Modules</strong>. It needs the <strong>Customers</strong> module, which is turned on with it.</li>
+          <li>Once it’s on, <strong>Order Tracking</strong> appears in the sidebar.</li>
+        </ul>
+      </section>
+      <section class="sec" id="new-order"><h2>Add an order</h2>
+        <ol class="howto">
+          <li>Open <strong>Order Tracking</strong> and click <strong>New order</strong>.</li>
+          <li>Pick an existing customer, or add a <strong>new customer</strong> with a name, phone, and email.</li>
+          <li>Add the <strong>items</strong> with a quantity and price. Worklynq works out the total.</li>
+          <li>Choose how it reaches them: <strong>Pickup</strong>, <strong>Delivery</strong>, <strong>Shipping</strong>, or <strong>In store</strong>.</li>
+          <li>Set the due time — <em>Ready by</em>, <em>Deliver by</em>, or <em>Ship by</em>, depending on how it reaches them.</li>
+          <li>Optionally add who it’s assigned to, a delivery address, carrier and tracking number, a reference, and notes. Then click <strong>Create order</strong>.</li>
+        </ol>
+        <p class="tip">Orders you add on a customer’s record show up here too, with their own order number.</p>
+      </section>
+      <section class="sec" id="stages"><h2>How an order moves</h2>
+        <div class="flowline" aria-label="Order stages">
+          <span class="st st-grey">New</span><span class="arr">→</span><span class="st st-yellow">Confirmed</span><span class="arr">→</span><span class="st st-yellow">In progress</span><span class="arr">→</span><span class="st st-yellow">Ready</span><span class="arr">→</span><span class="st st-yellow">On the way</span><span class="arr">→</span>
+          <span class="ends"><span class="st st-green">Completed</span><span class="st st-red">Cancelled</span></span>
+        </div>
+        <ul>
+          <li><strong>Pickup and in-store orders skip <em>On the way</em></strong> — they go straight from Ready to Completed.</li>
+          <li>Any order can be <strong>cancelled</strong>, and a completed or cancelled order can be <strong>reopened</strong>.</li>
+        </ul>
+      </section>
+      <section class="sec" id="board"><h2>The board and the list</h2>
+        <p>The <strong>Board</strong> has one column for each open stage: New, Confirmed, In progress, Ready, and On the way.</p>
+        <ul>
+          <li><strong>Drag a card</strong> to another column, or use its <em>Move to …</em> button.</li>
+          <li><strong>Overdue orders are outlined in red.</strong></li>
+          <li>The board refreshes every minute while it’s open, so a screen in the kitchen or at the counter stays current.</li>
+        </ul>
+        <p>The <strong>List</strong> shows open orders, completed and cancelled ones, or all orders.</p>
+        <p><strong>Filters</strong> work on both: search by order number, customer, item, phone, or tracking number; filter by pickup, delivery, or shipping; and by due time — <em>Due today</em>, <em>Overdue</em>, or <em>Upcoming</em>.</p>
+      </section>
+      <section class="sec" id="order"><h2>Inside an order</h2>
+        <p>Click any order to open it. You’ll see:</p>
+        <ul>
+          <li>A <strong>stage bar</strong> — click any stage to move the order there.</li>
+          <li>The next step as one button, like <strong>Move to Ready</strong> or <strong>Mark completed</strong>, plus <strong>Cancel</strong> and <strong>Reopen</strong>.</li>
+          <li>The order’s details and items, which you can edit.</li>
+          <li>The <strong>history</strong>: every change, who made it, when, and any note.</li>
+        </ul>
+      </section>
+      <section class="sec" id="customers"><h2>Orders and customers</h2>
+        <p>Each customer’s record lists their orders, with a <strong>Track</strong> link that opens the order here. Orders from before Order Tracking was turned on get an order number and a stage the first time they’re opened or edited — nothing else about them changes.</p>
+      </section>
+      <section class="sec" id="tips"><h2>Tips</h2>
+        <ul>
+          <li>Set a due time on every order — it’s what makes <em>Due today</em> and the red overdue outline work.</li>
+          <li>Assign each order to someone, so the board shows who’s on it.</li>
+          <li>Add the carrier and tracking number on shipped orders; you can then search by tracking number.</li>
+        </ul>
+        <p class="next">More about the rest of Customer Experience: <a href="/docs/modules/#customer-experience">Modules</a>.</p>
+      </section>
+      <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
