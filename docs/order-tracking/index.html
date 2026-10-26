@@ -32,7 +32,7 @@
 
 <main id="top">
   <div class="wrap docs-layout">
-    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/" aria-current="page">Order Tracking</a><ul class="side-sections"><li><a href="#what">What it’s for</a></li><li><a href="#turn-on">Turn on Order Tracking</a></li><li><a href="#new-order">Add an order</a></li><li><a href="#stages">How an order moves</a></li><li><a href="#board">The board and the list</a></li><li><a href="#order">Inside an order</a></li><li><a href="#customers">Orders and customers</a></li><li><a href="#tips">Tips</a></li></ul></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/" aria-current="page">Order Tracking</a><ul class="side-sections"><li><a href="#what">What it’s for</a></li><li><a href="#turn-on">Turn on Order Tracking</a></li><li><a href="#new-order">Add an order</a></li><li><a href="#stages">How an order moves</a></li><li><a href="#stores">One board per store</a></li><li><a href="#square">Square orders on the board</a></li><li><a href="#board">The board and the list</a></li><li><a href="#order">Inside an order</a></li><li><a href="#customers">Orders and customers</a></li><li><a href="#tips">Tips</a></li></ul></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
     <article class="doc">
       <p class="eyebrow">Features</p>
       <h1>Order Tracking</h1>
@@ -43,6 +43,7 @@
           <li>A <strong>board</strong> with a column for each stage, so you can see the whole day at a glance.</li>
           <li>Items, prices, and a total; pickup, delivery, shipping, or in store; a due time; and who is on it.</li>
           <li>A <strong>history</strong> of who did what and when, on every order.</li>
+          <li>One board per store, with your Square orders alongside, and the whole thing on a <a href="/docs/tv-screens/">TV</a> if you like.</li>
         </ul>
         <p>Order Tracking is part of <a href="/docs/modules/#customer-experience">Customer Experience</a> and uses your customer records, so every order belongs to a customer.</p>
       </section>
@@ -60,9 +61,11 @@
           <li>Add the <strong>items</strong> with a quantity and price. Worklynq works out the total.</li>
           <li>Choose how it reaches them: <strong>Pickup</strong>, <strong>Delivery</strong>, <strong>Shipping</strong>, or <strong>In store</strong>.</li>
           <li>Set the due time — <em>Ready by</em>, <em>Deliver by</em>, or <em>Ship by</em>, depending on how it reaches them.</li>
-          <li>Optionally add who it’s assigned to, a delivery address, carrier and tracking number, a reference, and notes. Then click <strong>Create order</strong>.</li>
+          <li>Optionally choose the <strong>store</strong> it’s for, and add who it’s assigned to, a delivery address, carrier and tracking number, a reference, and notes. Then click <strong>Create order</strong>.</li>
         </ol>
         <p class="tip">Orders you add on a customer’s record show up here too, with their own order number.</p>
+        <h3 id="walk-in">Walk-in orders</h3>
+        <p>No time to look up a customer at the counter? Click <strong>Walk-in</strong> in the New order form. The order goes under a shared <em>Walk-in</em> customer, and on a TV it shows just its number.</p>
       </section>
       <section class="sec" id="stages"><h2>How an order moves</h2>
         <div class="flowline" aria-label="Order stages">
@@ -74,12 +77,26 @@
           <li>Any order can be <strong>cancelled</strong>, and a completed or cancelled order can be <strong>reopened</strong>.</li>
         </ul>
       </section>
+      <section class="sec" id="stores"><h2>One board per store</h2>
+        <p>Orders can belong to one of your stores — the same stores you use in <a href="/docs/modules/#operations">Operations</a>. Pick a store at the top of Order Tracking to see just its orders. Worklynq remembers your choice and shares it with Operations, so a tablet at the counter always opens on its own store.</p>
+        <p>With a store chosen, the page also shows who’s <a href="/docs/shifts/">on duty</a> there.</p>
+      </section>
+      <section class="sec" id="square"><h2>Square orders on the board</h2>
+        <p>If you use <a href="/docs/integrations/square/">Square</a> and the store is linked to its Square location, that store’s recent Square orders appear on the board next to your Worklynq orders, with a dashed border and a <em>Square</em> tag.</p>
+        <ul>
+          <li>They’re read-only here — staff update them in Square, and the card follows: proposed orders show as <em>New</em>, reserved as <em>In progress</em>, prepared as <em>Ready</em>.</li>
+          <li>A Square order is marked late after 15 minutes in New or In progress.</li>
+          <li>The board shows open Square orders from the last 18 hours and orders completed in the last 2 hours. Canceled and draft orders are left out.</li>
+          <li>If the store isn’t linked or Square can’t be reached, the board shows your Worklynq orders and a short note.</li>
+        </ul>
+      </section>
       <section class="sec" id="board"><h2>The board and the list</h2>
         <p>The <strong>Board</strong> has one column for each open stage: New, Confirmed, In progress, Ready, and On the way.</p>
         <ul>
           <li><strong>Drag a card</strong> to another column, or use its <em>Move to …</em> button.</li>
           <li><strong>Overdue orders are outlined in red.</strong></li>
-          <li>The board refreshes every minute while it’s open, so a screen in the kitchen or at the counter stays current.</li>
+          <li>The board refreshes every minute while it’s open.</li>
+          <li>For a screen in the kitchen or above the counter, click <strong>Show on TV</strong> — see <a href="/docs/tv-screens/">TV screens</a>.</li>
         </ul>
         <p>The <strong>List</strong> shows open orders, completed and cancelled ones, or all orders.</p>
         <p><strong>Filters</strong> work on both: search by order number, customer, item, phone, or tracking number; filter by pickup, delivery, or shipping; and by due time — <em>Due today</em>, <em>Overdue</em>, or <em>Upcoming</em>.</p>
@@ -100,6 +117,7 @@
         <ul>
           <li>Set a due time on every order — it’s what makes <em>Due today</em> and the red overdue outline work.</li>
           <li>Assign each order to someone, so the board shows who’s on it.</li>
+          <li>Ask <a href="/docs/assist/">Assist</a> “what’s still waiting at Main Street?” for a quick list.</li>
           <li>Add the carrier and tracking number on shipped orders; you can then search by tracking number.</li>
         </ul>
         <p class="next">More about the rest of Customer Experience: <a href="/docs/modules/#customer-experience">Modules</a>.</p>
