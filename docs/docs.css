@@ -13,6 +13,8 @@ a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radiu
 img{max-width:100%; display:block;}
 h1,h2,h3{font-family:'Fraunces', Georgia, serif; font-weight:560; letter-spacing:-0.01em; color:var(--teal-deep); margin:0;}
 code{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.92em; background:var(--sage); padding:1px 6px; border-radius:5px;}
+pre{margin:16px 0; padding:16px 18px; background:var(--card-bg); border:1px solid var(--line); border-radius:12px; overflow-x:auto; max-width:100%; font-size:13.5px; line-height:1.55;}
+pre code{background:none; padding:0; border-radius:0; font-size:inherit;}
 .wrap{max-width:1240px; margin:0 auto; padding:0 32px;}
 
 /* header */

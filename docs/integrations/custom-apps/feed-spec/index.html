@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Worklynq data feed spec — Worklynq Docs</title>
+<meta name="description" content="The one-page spec for app developers: how to give Worklynq read-only access to your app’s data with a key-protected feed.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/" aria-current="page">Custom apps</a><ul class="side-sections"><li><a href="#auth">Authentication</a></li><li><a href="#manifest">Manifest</a></li><li><a href="#records">Records</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#checklist">Checklist</a></li></ul></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Custom apps · For developers</p>
+      <h1>Worklynq data feed spec</h1>
+      <p class="intro">Give Worklynq <strong>read-only</strong> access to your app’s data with two kinds of GET request, protected by a key. A company’s System Admin then <a href="/docs/integrations/custom-apps/">adds your app</a> in Worklynq, and its data shows up in their dashboards and reports. Worklynq never writes to your app. This is version 1 of the feed.</p>
+      <section class="sec" id="auth"><h2>1. Authentication</h2>
+        <ul>
+          <li>Generate a long random key (32 or more characters) for each company that will connect, and give it to that company’s System Admin.</li>
+          <li>Worklynq sends it on every request: <code>Authorization: Bearer &lt;key&gt;</code>.</li>
+          <li>Answer <code>401</code> for a missing or wrong key. Compare keys in constant time, and store only a hash if you can.</li>
+          <li>Serve over <strong>https</strong>, from an address reachable on the internet. Don’t redirect — Worklynq doesn’t follow redirects.</li>
+        </ul>
+      </section>
+      <section class="sec" id="manifest"><h2>2. Manifest: <code>GET &lt;feed url&gt;</code></h2>
+        <p>The feed URL is any path you choose, for example <code>https://app.example.com/api/worklynq</code>. It describes your datasets:</p>
+<pre><code>{
+  "worklynq_feed": 1,
+  "app": {"name": "Corner Bakery Rewards", "url": "https://rewards.example.com"},
+  "datasets": [
+    {
+      "id": "members",
+      "label": "Loyalty members",
+      "noun": "members",
+      "description": "Everyone in the rewards program, with their tier and points.",
+      "key": "id",
+      "default_time_field": "joined_at",
+      "fields": [
+        {"id": "id", "type": "string"},
+        {"id": "name", "label": "Name", "type": "string"},
+        {"id": "tier", "label": "Tier", "type": "string", "values": ["Bronze", "Silver", "Gold"]},
+        {"id": "points", "label": "Points balance", "type": "integer", "unit": "points"},
+        {"id": "rewards_redeemed", "label": "Rewards redeemed", "type": "integer", "unit": "rewards"},
+        {"id": "joined_at", "label": "Joined", "type": "datetime"},
+        {"id": "last_visit_at", "label": "Last visit", "type": "datetime"}
+      ],
+      "list": {"title": "name", "subtitle": "tier"}
+    }
+  ]
+}</code></pre>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Key</th><th>Rules</th></tr></thead>
+          <tbody>
+            <tr><td><code>worklynq_feed</code></td><td>Always <code>1</code>.</td></tr>
+            <tr><td><code>datasets[].id</code>, <code>fields[].id</code></td><td>Lowercase letters, numbers, and <code>_</code>, starting with a letter, up to 32 characters. Up to 20 datasets with 60 fields each.</td></tr>
+            <tr><td><code>fields[].type</code></td><td><code>string</code>, <code>number</code>, <code>integer</code>, <code>money</code> (needs <code>"currency": "USD"</code>), <code>boolean</code>, <code>date</code> (<code>2026-10-25</code>), or <code>datetime</code> (ISO 8601 with an offset, like <code>2026-10-25T18:30:00Z</code>).</td></tr>
+            <tr><td><code>values</code></td><td>For category fields (status, tier…): the possible values, in the order charts should show them. Category fields, booleans, and fields with <code>"group": true</code> can split charts; free text like names and emails can’t unless you say so.</td></tr>
+            <tr><td><code>unit</code></td><td>What a number counts (<code>points</code>, <code>rewards</code>), shown in widgets.</td></tr>
+            <tr><td><code>key</code></td><td>The field that identifies a record (default <code>id</code>).</td></tr>
+            <tr><td><code>default_time_field</code></td><td>The date field widgets filter on by default (otherwise the first date field).</td></tr>
+            <tr><td><code>list</code></td><td>Fields shown in list widgets: <code>title</code>, <code>subtitle</code>, <code>badge</code>, and <code>url</code> (https links only).</td></tr>
+          </tbody>
+        </table></div>
+        <p>For each dataset, Worklynq can show the number of records and the total and average of any <code>number</code>, <code>integer</code>, or <code>money</code> field — split by category fields, over time by date fields, and filtered like <code>tier:gold points:&gt;100</code>.</p>
+      </section>
+      <section class="sec" id="records"><h2>3. Records: <code>GET &lt;feed url&gt;/&lt;dataset id&gt;</code></h2>
+        <p>Worklynq asks for <code>?limit=1000</code>, and adds <code>&amp;cursor=&lt;cursor&gt;</code> for the following pages:</p>
+<pre><code>{
+  "items": [
+    {"id": "m_1042", "name": "Ana P.", "tier": "Gold", "points": 920, "rewards_redeemed": 5,
+     "joined_at": "2026-03-02T17:04:00Z", "last_visit_at": "2026-10-24T19:12:00Z"}
+  ],
+  "next_cursor": "m_1042"
+}</code></pre>
+        <ul>
+          <li>Return at most <code>limit</code> items, in any stable order (oldest first, or by id).</li>
+          <li><code>next_cursor</code> is an opaque string for the next page, or <code>null</code> on the last page. The first request has no <code>cursor</code>.</li>
+          <li>Every item has the dataset’s fields; use <code>null</code> for missing values. Extra fields are ignored.</li>
+          <li>Return <strong>current</strong> values — today’s points balance, today’s tier.</li>
+          <li>Worklynq keeps answers for 5 minutes and reads at most 50,000 records per dataset. Each page must be under 20 MB, and answer within 15 seconds.</li>
+        </ul>
+      </section>
+      <section class="sec" id="privacy"><h2>4. Privacy</h2>
+        <p>Send only what the dashboards need. Prefer a display name or initials over full names, and leave out emails, phone numbers, and birthdays unless the company asks for them. By default, only the company’s System Admins can see the data in Worklynq.</p>
+      </section>
+      <section class="sec" id="checklist"><h2>5. Checklist</h2>
+        <ol class="howto">
+          <li><code>GET &lt;feed url&gt;</code> with the key returns the manifest; without it, <code>401</code>.</li>
+          <li><code>GET &lt;feed url&gt;/&lt;dataset id&gt;</code> returns the first page, and following <code>next_cursor</code> reaches <code>null</code>.</li>
+          <li>The company’s System Admin opens <strong>Admin console → Connectors → Custom apps → Add custom app</strong>, enters the feed URL and key, clicks <strong>Test feed</strong>, then <strong>Add app</strong>.</li>
+        </ol>
+        <p class="next">Questions about the feed? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+      </section>
+      <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

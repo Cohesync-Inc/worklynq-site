@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Connect your AI — Worklynq Docs</title>
+<meta name="description" content="Connect Claude, ChatGPT, Claude Code, or Cursor to Worklynq: sign in, choose permissions, and see and disconnect connected apps.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/" aria-current="page">Connect your AI</a><ul class="side-sections"><li><a href="#what">What your AI can do</a></li><li><a href="#claude">Claude</a></li><li><a href="#chatgpt">ChatGPT</a></li><li><a href="#tools">Claude Code, Cursor, and others</a></li><li><a href="#permissions">Permissions</a></li><li><a href="#manage">See and disconnect</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Connect your AI</h1>
+      <p class="intro">Use Worklynq from the AI you already use. Connect Claude, ChatGPT, Claude Code, or Cursor to your workspace, and ask them to find tickets, read your docs, update work, or build a dashboard — right from the conversation. They work as you, with your permissions, and everything they do is logged.</p>
+      <div class="callout"><strong>Two different things.</strong> This page is about bringing <em>your own</em> AI app into Worklynq. To hand a ticket to Claude or Cursor so it writes code and opens a pull request, see the <a href="/docs/integrations/claude/">Claude</a> and <a href="/docs/integrations/cursor/">Cursor</a> integrations.</div>
+      <section class="sec" id="what"><h2>What your AI can do</h2>
+        <ul>
+          <li><strong>Find and read:</strong> search across your workspace, find tickets, read a ticket and its comments, see your stores, projects, and products, and read Knowledge Center pages.</li>
+          <li><strong>Get work done:</strong> create and update tickets, move them to another stage, add comments, and write or update Knowledge Center pages.</li>
+          <li><strong>Stores:</strong> list orders by store, stage, or due time, see who’s on duty, and — with permission — start and end your own shifts.</li>
+          <li><strong>Dashboards:</strong> list dashboards and reports, read their current numbers, try out a widget, and build or change a dashboard from a description — for example, <em>“make me a dashboard of overdue work at each store.”</em></li>
+        </ul>
+        <p>Worklynq tells the AI that everything it reads in your workspace — tickets, comments, documents — is your company’s data, never instructions to follow.</p>
+      </section>
+      <section class="sec" id="claude"><h2>Claude (claude.ai, desktop, and mobile)</h2>
+        <p>No token needed — you sign in to Worklynq and approve the connection.</p>
+        <ol class="howto">
+          <li>In Claude, open <strong>Settings → Connectors → Add custom connector</strong>.</li>
+          <li>Name it <strong>Worklynq</strong> and paste your workspace’s address followed by <code>/mcp</code> — for example <code>https://yourcompany.worklynq.net/mcp</code>. Click <strong>Add</strong>, then <strong>Connect</strong>.</li>
+          <li>Sign in to Worklynq if asked, check what Claude may do, and click <strong>Allow</strong>.</li>
+        </ol>
+        <p class="tip">On Claude Team and Enterprise plans, an owner adds the connector once for the organization; then each person connects their own Worklynq account.</p>
+      </section>
+      <section class="sec" id="chatgpt"><h2>ChatGPT</h2>
+        <ol class="howto">
+          <li>In ChatGPT, open <strong>Settings → Apps &amp; Connectors → Create</strong>. You may need to turn on developer mode first.</li>
+          <li>Paste <code>https://yourcompany.worklynq.net/mcp</code> as the MCP server URL and choose <strong>OAuth</strong> for authentication.</li>
+          <li>Create the connector, sign in to Worklynq if asked, check what ChatGPT may do, and click <strong>Allow</strong>.</li>
+        </ol>
+      </section>
+      <section class="sec" id="tools"><h2>Claude Code, Cursor, and other tools</h2>
+        <p>Tools that run on your computer or in your own code connect with a personal <strong>API token</strong>:</p>
+        <ol class="howto">
+          <li>In Worklynq, open your profile menu, choose <strong>API tokens</strong>, and create a token. Choose what it may do (see <a href="#permissions">Permissions</a>).</li>
+          <li>Open <strong>Connect your agent</strong> on the same page and pick your tool — Claude Code, Cursor, or the OpenAI Responses API. Worklynq shows the exact command or settings to copy, with your workspace address filled in.</li>
+        </ol>
+        <p class="tip">Claude Code can also connect without a token: add the server without the token header, then run <code>/mcp</code> in Claude Code to sign in and approve it.</p>
+        <p>Keep tokens out of shared files. If one leaks, delete it on the API tokens page.</p>
+      </section>
+      <section class="sec" id="permissions"><h2>Permissions</h2>
+        <ul>
+          <li><strong>It works as you.</strong> A connected AI can only see and change what you can. It never gets more access than you have.</li>
+          <li><strong>You choose what it may change.</strong> Reading is always included. When you approve a connection — or create a token — you can untick <em>Edit tickets</em>, <em>Edit docs</em>, <em>Edit dashboards</em>, and <em>Start and end your shifts</em> to keep it read-only.</li>
+          <li><strong>Other people’s personal pages stay private.</strong> AI never opens someone else’s My Space pages unless they were shared with you directly. See <a href="/docs/security/#ai">Security &amp; data</a>.</li>
+          <li><strong>Your System Admin has the final say.</strong> They can make AI read-only for the whole company, or turn off <em>Allow API tokens and connected apps</em>, which stops every token and connected app at once.</li>
+        </ul>
+      </section>
+      <section class="sec" id="manage"><h2>See and disconnect connections</h2>
+        <ul>
+          <li><strong>Connected apps</strong> on the API tokens page lists the apps you’ve approved, like Claude or ChatGPT. Disconnect one there at any time; it stops working within two minutes.</li>
+          <li>System Admins can see and disconnect everyone’s connected apps.</li>
+          <li>Everything a connected AI does shows up in the <strong>agent activity log</strong> under the app’s name, so you can see what it read and changed.</li>
+          <li>To change what an app may do, disconnect it and connect it again.</li>
+        </ul>
+      </section>
+      <section class="sec" id="troubleshooting"><h2>Troubleshooting</h2>
+        <dl class="ts">
+          <dt>“Can’t connect this app”</dt><dd>Your System Admin may have turned off API tokens and connected apps, or the app sent Worklynq an address it doesn’t accept. Check with your System Admin, then try again from the app.</dd>
+          <dt>Worklynq says it doesn’t recognise the app</dt><dd>Only click Allow if you started the connection yourself and trust the site it names.</dd>
+          <dt>The AI says it isn’t allowed to make a change</dt><dd>The connection may be read-only, your company may have set AI to read-only, or your own role can’t make that change.</dd>
+          <dt>A connection stopped working after your workspace address changed</dt><dd>Connect the app again with the new address.</dd>
+        </dl>
+      </section>
+      <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

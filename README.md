@@ -7,7 +7,7 @@ The Worklynq website. Plain HTML pages — no build step, no framework. GitHub P
 | File | What it is |
 |---|---|
 | `index.html` | The whole page: styles in the `<style>` block at the top, then the header, hero, features, integrations, foundation section and footer. The Worklynq logos are embedded in the file; the footer Cohesync logo is `assets/cohesync-logo.png`; the hero and feature photos load from Unsplash (free license). |
-| `docs/` | Product documentation at worklynq.com/docs: overview, Getting started, Modules, Integrations (GitHub, Claude, Cursor, Square, QuickBooks), feature guides (Scheduled reports, Approvals), What’s new, industry guides (restaurants, construction, software), FAQ, and Security & data — one `index.html` per page in its own folder. All pages share `docs/docs.css`. The left-hand menu is repeated in every page, so update it everywhere when adding a page. Mark unbuilt parts with `<span class="badge badge--soon">Coming in the beta</span>`. Keep the Security page and FAQ consistent with the Privacy Policy and DPA. Add each product release to the top of What’s new (`docs/whats-new/index.html`). |
+| `docs/` | Product documentation at worklynq.com/docs: overview, Getting started, Modules, Integrations (GitHub, Claude, Cursor, Square, QuickBooks, Custom apps with the developer feed spec at `docs/integrations/custom-apps/feed-spec/`), feature guides (Scheduled reports, Approvals, Order Tracking, Connect your AI, Assist, Shifts, TV screens), What’s new, industry guides (restaurants, construction, software), FAQ, and Security & data — one `index.html` per page in its own folder. All pages share `docs/docs.css`. The left-hand menu is repeated in every page, so update it everywhere when adding a page. Mark unbuilt parts with `<span class="badge badge--soon">Coming in the beta</span>`. Keep the Security page and FAQ consistent with the Privacy Policy and DPA. Add each product release to the top of What’s new (`docs/whats-new/index.html`). |
 | `terms/`, `privacy/`, `dpa/` | Terms of Use, Privacy Policy and Data Processing Agreement pages. |
 | `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser tab and home-screen icons (the Worklynq W badge). |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
@@ -49,6 +49,7 @@ Get logos from each company's official brand or press kit and follow its usage g
 | Stripe | `stripe.svg` |
 | Shopify | `shopify.svg` |
 | Square | `square.svg` |
+| Mailchimp | `mailchimp.svg` |
 | LinkedIn | `linkedin.svg` |
 | Instagram | `instagram.svg` |
 | Facebook | `facebook.svg` |

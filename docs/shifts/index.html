@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Shifts — Worklynq Docs</title>
+<meta name="description" content="Start and end shifts and breaks in Worklynq or with Assist, see who is on duty at each store, and clock in on Square.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/" aria-current="page">Shifts</a><ul class="side-sections"><li><a href="#what">What it’s for</a></li><li><a href="#start">Start, pause, and end</a></li><li><a href="#on-duty">Who’s on duty</a></li><li><a href="#rules">How shifts work</a></li><li><a href="#square">Clock in on Square</a></li><li><a href="#control">Control</a></li></ul></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Shifts</h1>
+      <p class="intro">See who’s on duty, where, and since when. People start and end their own shifts — by tapping a button, or just by telling Assist — and if you use Square, Worklynq clocks them in and out there too.</p>
+      <section class="sec" id="what"><h2>What it’s for</h2>
+        <ul>
+          <li>Staff clock in at the start of a shift, take breaks, and clock out, at one of your stores.</li>
+          <li>Managers see <strong>On duty now</strong> for each store, or for every store at once.</li>
+          <li>Shifts are part of the <a href="/docs/modules/#operations">Operations</a> module: each shift belongs to one person at one store.</li>
+        </ul>
+      </section>
+      <section class="sec" id="start"><h2>Start, pause, and end a shift</h2>
+        <h3>On the Operations page</h3>
+        <p>The <strong>On duty now</strong> strip shows who’s on shift and has buttons for you: <strong>Start my shift</strong>, <strong>Take a break</strong> / <strong>End break</strong>, and <strong>End my shift</strong>. If you work at more than one store, Worklynq asks <em>Where are you starting?</em></p>
+        <h3>With Assist</h3>
+        <p>Open <a href="/docs/assist/">Assist</a> and say or type “start my shift”, “clock me in”, “taking a break”, or “end my shift”. Assist does it straight away, since it’s your own shift.</p>
+        <h3>Which store</h3>
+        <p>Worklynq uses the store you name; otherwise your only store; otherwise the one you used last; otherwise it asks.</p>
+      </section>
+      <section class="sec" id="on-duty"><h2>Who’s on duty</h2>
+        <ul>
+          <li>The <strong>On duty now</strong> strip appears on the Operations page and, with a store chosen, on the <a href="/docs/order-tracking/">Order Tracking</a> board.</li>
+          <li>It shows each person on shift, since when, and who’s on a break.</li>
+          <li>Put it on a TV in the store with <a href="/docs/tv-screens/">TV screens</a>.</li>
+          <li>Ask Assist “who’s on at Riverside?”</li>
+        </ul>
+      </section>
+      <section class="sec" id="rules"><h2>How shifts work</h2>
+        <ul>
+          <li>One open shift per person at a time.</li>
+          <li>Ending a shift also ends a break that’s still running.</li>
+          <li>A shift open for more than 16 hours is marked <strong>over 16 h</strong> — usually someone forgot to clock out.</li>
+          <li>Breaks are kept in Worklynq.</li>
+        </ul>
+      </section>
+      <section class="sec" id="square"><h2>Clock in on Square</h2>
+        <p>If your company uses <a href="/docs/integrations/square/">Square</a>, starting a shift also clocks the person in on Square, and ending it clocks them out. That happens when:</p>
+        <ul>
+          <li>Square is connected and the store is linked to its Square location, and</li>
+          <li>the person is an active Square team member with the <strong>same email</strong> as their Worklynq sign-in.</li>
+        </ul>
+        <p>If any of that is missing, the Worklynq shift still starts — the shift just notes why it didn’t reach Square, so you can clock in on Square by hand.</p>
+        <p class="tip">If Square was connected before clock-ins were added, a System Admin needs to reconnect Square once to allow them. Until then, shifts say Square needs to be reconnected.</p>
+      </section>
+      <section class="sec" id="control"><h2>Control</h2>
+        <ul>
+          <li>If your System Admin sets AI to read-only, Assist can’t start or end shifts; the buttons on the Operations page still work.</li>
+          <li>Apps connected to Worklynq can only change shifts with the <em>Start and end your shifts</em> permission. See <a href="/docs/connect-your-ai/#permissions">Connect your AI</a>.</li>
+        </ul>
+      </section>
+      <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

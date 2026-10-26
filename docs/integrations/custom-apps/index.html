@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Custom apps — Worklynq Docs</title>
+<meta name="description" content="Connect your company’s own software to Worklynq through a read-only data feed, and use its data in dashboards and reports.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/" aria-current="page">Custom apps</a><ul class="side-sections"><li><a href="#what">What it does</a></li><li><a href="#before">Before you start</a></li><li><a href="#add">Add your app</a></li><li><a href="#dashboards">Use it in dashboards</a></li><li><a href="#access">Who can see the data</a></li><li><a href="#manage">Manage your app</a></li><li><a href="#security">Security</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Integrations</p>
+      <h1>Custom apps</h1>
+      <p class="intro">Bring data from your own software into Worklynq — a loyalty app, an ordering or booking system, anything built for your business. Your app’s developers add a small, key-protected data feed, your System Admin adds the app in Worklynq, and its data shows up in your dashboards and reports. No waiting for us to build a connector.</p>
+      <section class="sec" id="what"><h2>What it does</h2>
+        <ul>
+          <li>Every <strong>dataset</strong> your app shares — customers, visits, bookings, rewards — becomes a source for <a href="/docs/modules/#dashboards">Dashboards &amp; Reports</a>.</li>
+          <li>Count records, total or average any number, split by categories like status or tier, show trends over time, or list records — for example, “Gold members with more than 100 points”.</li>
+          <li>Works with everything else in dashboards: <strong>Describe a dashboard</strong>, <strong>Explain</strong>, and <a href="/docs/reports/">scheduled reports</a>.</li>
+          <li><strong>Read-only.</strong> Worklynq only reads from the feed and never changes anything in your app.</li>
+        </ul>
+      </section>
+      <section class="sec" id="before"><h2>Before you start</h2>
+        <ul>
+          <li><strong>Your app needs a Worklynq data feed.</strong> Send your developers the <a href="/docs/integrations/custom-apps/feed-spec/">feed spec</a> — it’s one page. They’ll give you the feed’s address and a key.</li>
+          <li>You need to be your workspace’s <strong>System Admin</strong>.</li>
+        </ul>
+      </section>
+      <section class="sec" id="add"><h2>Add your app</h2>
+        <ol class="howto">
+          <li>Open <strong>Admin console → Connectors → Custom apps</strong> and click <strong>Add custom app</strong>.</li>
+          <li>Enter the app’s name, the feed address (it starts with <code>https://</code>), and the key from your developers.</li>
+          <li>Click <strong>Test feed</strong>. Worklynq lists the datasets it found.</li>
+          <li>Click <strong>Add app</strong>.</li>
+        </ol>
+      </section>
+      <section class="sec" id="dashboards"><h2>Use it in dashboards</h2>
+        <p>In <strong>Dashboards</strong> or <strong>Reports</strong>, add a widget and pick <em>App name: Dataset</em> under <strong>Data from</strong>. Then choose:</p>
+        <ul>
+          <li><strong>What to show:</strong> the number of records, or the total or average of a number field (points, visits, spend).</li>
+          <li><strong>How to split it:</strong> by a category field, in the order your app lists its values — Bronze, Silver, Gold.</li>
+          <li><strong>When:</strong> any range from today to the last 12 months, or <strong>All time</strong> — the default, so balances and current totals include everyone.</li>
+          <li><strong>How to show it:</strong> a number, bars, a table, a list, or a trend over time when the dataset has a date.</li>
+          <li><strong>Filter:</strong> for example <code>status:gold points:&gt;100</code> or <code>-status:bronze</code>. Every part must match.</li>
+        </ul>
+        <p class="tip">Or just describe it: “a dashboard of loyalty members by status, with points totals” — AI builds it from your app’s real fields.</p>
+      </section>
+      <section class="sec" id="access"><h2>Who can see the data</h2>
+        <p>By default, only System Admins can use a custom app’s data. To share a dataset, a System Admin opens <strong>Dashboards → Connected data</strong> and changes who can use it. Widgets always run as the person looking, so people without access see a note instead of the numbers.</p>
+      </section>
+      <section class="sec" id="manage"><h2>Manage your app</h2>
+        <ul>
+          <li><strong>Preview</strong> the first records of a dataset to check what Worklynq sees.</li>
+          <li><strong>Refresh datasets</strong> after your app adds new data or fields.</li>
+          <li>Change the feed address or key — Worklynq tests the new one before saving.</li>
+          <li><strong>Pause</strong> an app to stop reading from it, or <strong>remove</strong> it. Adding the same feed address again brings its widgets back.</li>
+          <li>Changes in your app show up within 5 minutes.</li>
+        </ul>
+      </section>
+      <section class="sec" id="security"><h2>Security</h2>
+        <ul>
+          <li>The key is stored encrypted and never shown again — Worklynq shows only its last four characters.</li>
+          <li>Feeds must use <strong>https</strong> on a public address. Worklynq won’t connect to private networks and doesn’t follow redirects.</li>
+          <li>Only System Admins can add, change, preview, or remove apps.</li>
+          <li>Share only what your dashboards need — the <a href="/docs/integrations/custom-apps/feed-spec/#privacy">feed spec</a> asks developers to leave out emails, phone numbers, and other personal details unless you need them.</li>
+        </ul>
+      </section>
+      <section class="sec" id="troubleshooting"><h2>Troubleshooting</h2>
+        <dl class="ts">
+          <dt>The app shows “Needs attention”</dt><dd>The feed stopped answering or rejected the key. The message shows your app’s own error — pass it to your developers.</dd>
+          <dt>Test feed fails</dt><dd>Check the address starts with <code>https://</code>, has nothing after a <code>?</code>, and is reachable from the internet; then check the key.</dd>
+          <dt>A new field or dataset is missing</dt><dd>Click <strong>Refresh datasets</strong>.</dd>
+          <dt>Numbers look out of date</dt><dd>Worklynq keeps answers for up to 5 minutes. If they’re older than that, check whether the app is paused.</dd>
+        </dl>
+        <p class="next">For developers: <a href="/docs/integrations/custom-apps/feed-spec/">Worklynq data feed spec</a>.</p>
+      </section>
+      <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
 <title>Square — Worklynq Docs</title>
-<meta name="description" content="Connect Square to Worklynq: read-only sales, orders, and refunds per store, in dashboards and reports.">
+<meta name="description" content="Connect Square to Worklynq: sales, orders, and refunds per store in dashboards and reports, Square orders on boards and TVs, and clock-in from shifts.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -32,29 +32,31 @@
 
 <main id="top">
   <div class="wrap docs-layout">
-    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/" aria-current="page">Square</a><ul class="side-sections"><li><a href="#what">What it does</a></li><li><a href="#reads">What Worklynq reads</a></li><li><a href="#before">Before you start</a></li><li><a href="#connect">Connect Square</a></li><li><a href="#locations">Link your locations</a></li><li><a href="#check">Check the connection</a></li><li><a href="#dashboards">Square in dashboards</a></li><li><a href="#access">Who can see sales</a></li><li><a href="#manage">Keep it up to date</a></li><li><a href="#disconnect">Disconnect</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/" aria-current="page">Square</a><ul class="side-sections"><li><a href="#what">What it does</a></li><li><a href="#reads">What Worklynq uses</a></li><li><a href="#before">Before you start</a></li><li><a href="#connect">Connect Square</a></li><li><a href="#locations">Link your locations</a></li><li><a href="#check">Check the connection</a></li><li><a href="#dashboards">Square in dashboards</a></li><li><a href="#orders">Orders on boards and TVs</a></li><li><a href="#clock-in">Clock in from shifts</a></li><li><a href="#access">Who can see sales</a></li><li><a href="#manage">Keep it up to date</a></li><li><a href="#disconnect">Disconnect</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
     <article class="doc">
       <p class="eyebrow">Integrations</p>
       <h1>Square</h1>
-      <p class="intro">Connect your Square point of sale so Worklynq can show sales, orders, and refunds for each of your stores on your dashboards and reports. Worklynq only <strong>reads</strong> from Square — it never takes payments or changes anything in your Square account.</p>
+      <p class="intro">Connect your Square point of sale so Worklynq can show sales, orders, and refunds for each of your stores on your dashboards and reports, put each store’s Square orders on its Order Tracking board and TVs, and clock staff in and out when their shifts start and end. Apart from those timecards, Worklynq only <strong>reads</strong> from Square — it never takes payments or changes anything else in your Square account.</p>
       <section class="sec" id="what"><h2>What it does</h2>
         <ul>
           <li>Connects your company’s Square seller account to Worklynq, once, for the whole company.</li>
           <li>Links each Square location to the matching store in Worklynq, so sales line up with the work happening there.</li>
           <li>Adds a <strong>Square sales</strong> widget to Dashboards and Reports: sales, orders, average order, refunds, and items sold — by store, item, payment type, day, or hour.</li>
+          <li>Shows each store’s open Square orders on its <a href="/docs/order-tracking/#square">Order Tracking board</a> and <a href="/docs/tv-screens/">TV screens</a>.</li>
+          <li>Clocks people in and out on Square when they start and end a <a href="/docs/shifts/">shift</a> in Worklynq.</li>
         </ul>
       </section>
-      <section class="sec" id="reads"><h2>What Worklynq reads</h2>
+      <section class="sec" id="reads"><h2>What Worklynq uses</h2>
         <div class="table-wrap"><table>
           <thead><tr><th>From Square</th><th>Why</th></tr></thead>
           <tbody>
             <tr><td>Your business profile and locations</td><td>To link Square locations to your stores</td></tr>
             <tr><td>Orders, payments, and refunds</td><td>Sales, orders, and refunds on your dashboards</td></tr>
             <tr><td>Items, inventory, and customers</td><td>Items sold today; more to come</td></tr>
-            <tr><td>Team members and timecards</td><td>Staffing by store, as it’s added</td></tr>
+            <tr><td>Team members and timecards</td><td>Matching staff by email, and clocking them in and out from their shifts — the only thing Worklynq writes to Square</td></tr>
           </tbody>
         </table></div>
-        <p>All access is <strong>read-only</strong>. Worklynq can’t take payments, issue refunds, change prices or items, or edit anything in Square.</p>
+        <p>Everything except timecards is <strong>read-only</strong>. Worklynq can’t take payments, issue refunds, change prices or items, or edit orders in Square. It only creates and closes a timecard for the person starting or ending their own shift, at the current time.</p>
       </section>
       <section class="sec" id="before"><h2>Before you start</h2>
         <ul>
@@ -93,6 +95,12 @@
         <p>Pin a dashboard to one store, and its Square widgets show only that store’s linked locations — a dashboard per store, with sales right next to its checklists and requests.</p>
         <p class="tip">Numbers come from completed Square orders and can be up to 5 minutes behind. Days and hours follow each Square location’s own timezone. If your locations use more than one currency, only your main currency is counted, and the widget says so.</p>
       </section>
+      <section class="sec" id="orders"><h2>Square orders on boards and TVs</h2>
+        <p>Once a store is linked to its Square location, the store’s recent Square orders appear on its Order Tracking board and on its TV screens, next to your Worklynq orders. They’re read-only in Worklynq: staff move them along in Square, and Worklynq follows. See <a href="/docs/order-tracking/#square">Order Tracking</a>.</p>
+      </section>
+      <section class="sec" id="clock-in"><h2>Clock in from shifts</h2>
+        <p>When someone starts a <a href="/docs/shifts/">shift</a> at a linked store, Worklynq clocks them in on Square, and clocks them out when the shift ends. They need to be an active Square team member with the same email as their Worklynq sign-in. If not, the Worklynq shift still starts and notes why it didn’t reach Square. Breaks stay in Worklynq for now.</p>
+      </section>
       <section class="sec" id="access"><h2>Who can see sales</h2>
         <p>By default, only System Admins can use Square widgets. To share them, a System Admin opens <strong>Dashboards → Connected data</strong> and sets Square to <strong>everyone in the company</strong>. Widgets always run as the person looking, so on a shared dashboard, people who aren’t allowed to see Square data see a note instead of the numbers.</p>
       </section>
@@ -111,10 +119,12 @@
           <dt>“No locations found in this Square account”</dt><dd>You signed in to a Square account without locations. Disconnect, then connect again with the account that owns your stores.</dd>
           <dt>A store’s dashboard shows no Square sales</dt><dd>Link that store to its Square location under <a href="#locations">Link your locations</a>.</dd>
           <dt>“Square isn’t set up on this Worklynq server yet”</dt><dd>Contact us at <a href="mailto:info@cohesync.com">info@cohesync.com</a> and we’ll turn it on for your workspace.</dd>
+          <dt>Shifts say “Square needs to be reconnected”</dt><dd>Square was connected before clock-ins were added. A System Admin disconnects and connects Square again to allow them.</dd>
+          <dt>Someone’s shift didn’t clock them in on Square</dt><dd>Check that the store is linked to its Square location and that their Square team member uses the same email as their Worklynq sign-in.</dd>
           <dt>A new location is missing</dt><dd>Click <strong>Refresh from Square</strong>.</dd>
         </dl>
       </section>
-      <p class="doc-foot">Last updated: October 23, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+      <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
     </article>
   </div>
 </main>
