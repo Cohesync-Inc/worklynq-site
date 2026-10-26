@@ -51,7 +51,7 @@
           <li>Every connection to Worklynq is encrypted (HTTPS).</li>
           <li>Data is encrypted at rest by our cloud providers.</li>
           <li>Uploaded files are kept in private storage.</li>
-          <li>The access you grant to connected tools — like API keys and app tokens — is stored encrypted.</li>
+          <li>The access you grant to connected tools — like API keys and app tokens — is stored encrypted, with an encryption key that belongs to your workspace alone.</li>
           <li>Passwords are never stored, only secure hashes of them.</li>
         </ul>
       </section>
@@ -60,6 +60,17 @@
         <p><strong>TV screens</strong> need no sign-in: each one shows a single store and only the views a manager chose, from a secret link or a code only a signed-in manager can enter. Turning a screen off stops it at once. See <a href="/docs/tv-screens/#security">TV screens</a>.</p>
         <p>Pages in someone’s own My Space stay private to them and the people they share with directly. A page shared with a few people doesn’t become visible to the rest of the company.</p>
         <p>On our side, access to production systems is restricted to the people who need it to run and support Worklynq, and it’s logged. Everyone with access is bound by confidentiality.</p>
+      </section>
+      <section class="sec" id="sign-in"><h2>Signing in and accounts</h2>
+        <ul>
+          <li><strong>Sign-up codes</strong> are 6 digits and last 10 minutes. Only the newest code works, and after 5 wrong tries it stops working — ask for a new one.</li>
+          <li><strong>Password reset links</strong> work once and last 30 minutes. Using one changes your password; it can never create a new account.</li>
+          <li><strong>Each sign-up stays with the browser that confirmed the email.</strong> Nobody else can finish it, and a workspace is only switched on after Stripe confirms the payment. Card details go to Stripe and never reach Worklynq.</li>
+          <li><strong>Sign-in tokens are signed with a private key.</strong> Worklynq refuses to start without one, so a token can’t be made up from a publicly known default.</li>
+          <li><strong>Your System Admin manages your workspace only.</strong> The tools that look after every company’s workspace are limited to a short, named list of Worklynq staff.</li>
+          <li><strong>A suspended workspace is closed, not deleted.</strong> While it’s suspended nobody can sign in or use it; your data is kept and everything is back when it’s resumed.</li>
+        </ul>
+        <p>More on signing in: <a href="/docs/signing-in/">Signing in</a>.</p>
       </section>
       <section class="sec" id="ai"><h2>AI and your data</h2>
         <ul>
@@ -103,7 +114,7 @@
           <li><a href="/dpa/">Data Processing Agreement</a> — for business customers, including EU and UK transfer terms. Need a countersigned copy? Email <a href="mailto:info@cohesync.com">info@cohesync.com</a>.</li>
         </ul>
       </section>
-      <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+      <p class="doc-foot">Last updated: October 26, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
     </article>
   </div>
 </main>
