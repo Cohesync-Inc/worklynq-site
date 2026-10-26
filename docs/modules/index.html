@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
 <title>Modules — Worklynq Docs</title>
-<meta name="description" content="Every Worklynq module, what it does, and which ones each type of business starts with.">
+<meta name="description" content="Every Worklynq module, how to turn modules on and off and order the sidebar, what each one needs, and which ones each type of business starts with.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -32,18 +32,40 @@
 
 <main id="top">
   <div class="wrap docs-layout">
-    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/" aria-current="page">Modules</a><ul class="side-sections"><li><a href="#workspace">Workspace</a></li><li><a href="#knowledge-center">Knowledge Center</a></li><li><a href="#ai-hub">AI Hub</a></li><li><a href="#customer-experience">Customer Experience</a></li><li><a href="#platform">Always included</a></li><li><a href="#by-business">Modules by business type</a></li></ul></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/" aria-current="page">Modules</a><ul class="side-sections"><li><a href="#how-it-works">How modules work</a></li><li><a href="#workspace">Workspace</a></li><li><a href="#knowledge-center">Knowledge Center</a></li><li><a href="#ai-hub">AI Hub</a></li><li><a href="#customer-experience">Customer Experience</a></li><li><a href="#platform">Always included</a></li><li><a href="#requirements">What each module needs</a></li><li><a href="#by-business">Modules by business type</a></li></ul></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
     <article class="doc">
       <p class="eyebrow">Documentation</p>
       <h1>Modules</h1>
-      <p class="intro">Worklynq is one platform made of modules. You switch on the ones that fit your business and leave out the rest — a restaurant doesn’t need release planning, and a software team doesn’t need store checklists. This page groups the modules into four services to make them easier to browse. In the app there’s just one sidebar: it lists the modules your company has turned on, in the order your System Admin chooses, and leaves out anything your role can’t open. Everything shares the same people, permissions, and AI, so work, knowledge, and customers stay connected.</p>
+      <p class="intro">Worklynq is built from modules. Your company turns on the ones that fit the way it works and leaves out the rest — a café doesn’t see release planning, and a software team doesn’t see store schedules. The modules you turn on sit together in one sidebar, in the order your System Admin chooses. Everything shares the same people, permissions, and AI, so work, knowledge, and customers stay connected.</p>
       <div class="svc-grid">
-        <a class="svc-card" href="#workspace"><span class="svc-name">Workspace</span><span class="svc-tag">Plan it. Run it. Deliver it.</span><span class="svc-mods">Tickets, Operations, Approvals, Team Board, Roadmaps, Product Releases, Dashboards &amp; Reports</span></a>
+        <a class="svc-card" href="#workspace"><span class="svc-name">Workspace</span><span class="svc-tag">Plan it. Run it. Deliver it.</span><span class="svc-mods">Tickets, Operations, Projects, Approvals, Team Board, Roadmaps, Product Releases, Dashboards &amp; Reports</span></a>
         <a class="svc-card" href="#knowledge-center"><span class="svc-name">Knowledge Center</span><span class="svc-tag">Your business&#x27;s know-how, in one trusted place.</span><span class="svc-mods">Spaces, Knowledge Library</span></a>
-        <a class="svc-card" href="#ai-hub"><span class="svc-name">AI Hub</span><span class="svc-tag">AI that works alongside your team.</span><span class="svc-mods">AI Search, AI Agents, AI Context, Workflows, Assets, Playground</span></a>
-        <a class="svc-card" href="#customer-experience"><span class="svc-name">Customer Experience</span><span class="svc-tag">Every customer, every conversation, in one place.</span><span class="svc-mods">Order Tracking, Customer engagement, Marketing, Social media, Trends</span></a>
+        <a class="svc-card" href="#ai-hub"><span class="svc-name">AI Hub</span><span class="svc-tag">AI that works alongside your team.</span><span class="svc-mods">AI Search, AI Agents</span></a>
+        <a class="svc-card" href="#customer-experience"><span class="svc-name">Customer Experience</span><span class="svc-tag">Every customer, every conversation, in one place.</span><span class="svc-mods">Customers, Order Tracking, Engagement</span></a>
       </div>
-      <div class="callout"><strong>Turning modules on and off.</strong> Your System Admin picks modules during setup and can change them anytime in <strong>Admin console → Work Configuration → Modules</strong>. There they can drag modules into the order the sidebar should show them, see a live preview of what the team sees, or reset to the recommended set for your business type. Some modules need another one (Team Board needs Tickets, for example) — turning one on turns on what it needs, and turning one off turns off what depends on it. Turning a module off only hides it — nothing is deleted, and it comes back as you left it.</div>
+      <p>The four groups above just make the list easier to browse. In the app there are no separate menus: a café might see <em>Operations, Order Tracking, Customers, Tickets, Dashboards</em> and nothing else, while a software team sees its boards, roadmaps, and releases.</p>
+
+      <section class="svc" id="how-it-works">
+        <h2>How modules work</h2>
+        <ul>
+          <li><strong>Your business type sets the starting point.</strong> When you sign up, you say what kind of company you are — Operations, Projects, or Software — and Worklynq turns on the modules that fit. See <a href="#by-business">Modules by business type</a>.</li>
+          <li><strong>One sidebar, in your order.</strong> The modules that are on appear in the sidebar in the order your System Admin sets. Each person only sees the modules their role lets them open. Your company’s first module is where Worklynq opens.</li>
+          <li><strong>Some modules need another one.</strong> Turning a module on also turns on what it needs, and turning one off also turns off what depends on it. The <a href="#requirements">table below</a> lists them.</li>
+          <li><strong>Off means hidden, never deleted.</strong> A module that’s off disappears for everyone, including its pages if someone follows an old link. Its data is kept, and it comes back as you left it when you turn it on again.</li>
+          <li><strong>Every module is included.</strong> You don’t pay extra to turn one on.</li>
+        </ul>
+        <h3 id="change-modules">Change your modules</h3>
+        <p>Only the System Admin can change modules. Everyone else can see the page but not change it.</p>
+        <ol class="howto">
+          <li>Open <strong>Admin console → Work Configuration → Modules</strong>.</li>
+          <li>Turn modules on or off. The page lists the modules that are <strong>on, in sidebar order</strong>, and below them the ones that are off. A note tells you when turning one on or off also changed another.</li>
+          <li><strong>Drag a row</strong>, or use its arrows, to change where it sits in the sidebar.</li>
+          <li>Check <strong>What your team sees</strong> — a live preview of the sidebar that updates as you edit.</li>
+          <li>Click <strong>Save changes</strong>. The sidebar changes for everyone in your company straight away.</li>
+        </ol>
+        <p class="tip">Changed too much? <strong>Reset to recommended</strong> puts back the starting set for your business type — or for another type you pick — so you can save it or adjust it first. At least one module always stays on.</p>
+      </section>
+
       <section class="svc" id="workspace">
         <p class="svc-eyebrow">Service</p>
         <h2>Workspace</h2>
@@ -52,20 +74,28 @@
         <div class="mod" id="tickets">
           <h3>Tickets</h3>
           <p class="mod-tagline">Every piece of work, tracked from start to done.</p>
-          <p>Tickets hold everything your team works on: tasks, requests, issues, orders, inspections, bugs. Each ticket type has its own workflow — a starting stage, up to five stages in the middle, and up to four end stages — and can run in a set order or move freely. Every end stage is marked as a <strong>success</strong>, a <strong>failure</strong>, or <strong>cancelled</strong>, so work can finish more than one way: a Change Order can end Approved, Rejected, or Withdrawn. The workflow editor draws several end stages as branches. Types can sit under one another, like a Story under an Epic or a Punch Item under a Milestone.</p>
-          <ul class="hl"><li>Ticket types with their own stages and colors</li><li>Several endings per type — success, failure, or cancelled</li><li>Parent and child tickets (Epic → Story, Milestone → Punch Item)</li><li>Assignees, priorities, due dates, comments, and attachments</li><li>Automations on each stage: create follow-up tickets, update fields, or hand the ticket to an AI agent</li><li>A library of 35 ready-made ticket types by industry</li></ul>
+          <p>Tickets hold everything your team works on: tasks, requests, issues, inspections, bugs. Each ticket type has its own workflow — a starting stage, up to five stages in the middle, and up to four end stages — and can run in a set order or move freely. Every end stage is marked as a <strong>success</strong>, a <strong>failure</strong>, or <strong>cancelled</strong>, so work can finish more than one way: a Change Order can end Approved, Rejected, or Withdrawn. The workflow editor draws several end stages as branches. Types can sit under one another, like a Story under an Epic or a Punch Item under a Milestone.</p>
+          <ul class="hl"><li>Ticket types with their own stages and colors</li><li>Several endings per type — success, failure, or cancelled</li><li>Parent and child tickets (Epic → Story, Milestone → Punch Item)</li><li>Assignees, priorities, due dates, comments, and attachments</li><li>Automations on each stage: create follow-up tickets, update fields, hand the ticket to Claude or Cursor, or run an AI agent</li><li>A library of 35 ready-made ticket types by industry</li></ul>
+          <p class="req">Many modules build on Tickets: Operations, Projects, Team Board, Roadmaps, Product Releases, and AI Agents.</p>
         </div>
         <div class="mod" id="operations">
-          <h3>Operations <span class="badge badge--soon">Coming in the beta</span></h3>
+          <h3>Operations</h3>
           <p class="mod-tagline">Run every store, every day.</p>
-          <p>For businesses that never “finish” a project — a café, a shop, a hotel, a kitchen. Each of your stores or sites gets its own space with a day-by-day schedule, recurring checklists that create themselves, and its own dashboard. Routine work is marked so it never gets mixed up with one-off requests.</p>
-          <ul class="hl"><li>One space per store, site, or kitchen</li><li>Daily view of everything scheduled or due, by person</li><li>Recurring checklists and tickets (daily, weekly, monthly, set times) with a shared color and marker</li><li>A dashboard for each store</li></ul>
+          <p>For work that never “finishes” — a café, a shop, a hotel, a kitchen, a site. Each store or site is an operation with its own tickets, numbered OPS-1, OPS-2, and so on across the company. The Operations calendar lays out each day’s work by time, in a column per store or per team member, with week and month views; click an empty slot to add a task, or click a task to mark it done or move it. Overdue tasks are flagged, and each ticket type keeps its own color.</p>
+          <ul class="hl"><li>One operation per store, site, or kitchen</li><li>Day, week, and month calendar, by store or by person</li><li>Only the ticket types you map to operations</li><li>A dashboard for each store</li><li>Recurring checklists that create themselves <span class="badge badge--soon">Coming in the beta</span></li></ul>
+          <p class="req">Needs: Tickets</p>
+        </div>
+        <div class="mod" id="projects">
+          <h3>Projects</h3>
+          <p class="mod-tagline">Every job, from kickoff to handover.</p>
+          <p>For work with a start, an end, and often a client — a job site, a renovation, a client engagement. Each project has its own tickets, milestones, and deliverables, and you choose which ticket types it uses when you create it.</p>
+          <ul class="hl"><li>Projects with dates, milestones, and deliverables</li><li>Linked to the customer they’re for</li><li>Their own ticket types and tickets</li></ul>
           <p class="req">Needs: Tickets</p>
         </div>
         <div class="mod" id="approvals">
           <h3>Approvals</h3>
           <p class="mod-tagline">Get a yes or no, on the record.</p>
-          <p>For requests that need sign-off before they go ahead — documents, purchases, access, time off. Each type of request has its own stages, and every request ends approved, rejected, or withdrawn. Approved document approvals mark Knowledge Center pages as Verified. Optional: it’s off until your System Admin turns it on, whatever your business type.</p>
+          <p>For requests that need sign-off before they go ahead — documents, purchases, access, time off. Each type of request has its own stages, and every request ends approved, rejected, or withdrawn. Approved document approvals mark Knowledge Center pages as Verified. Optional: it’s off until your System Admin turns it on, whatever your business type, and it doesn’t need any other module.</p>
           <ul class="hl"><li>Document, access, purchase, and time-off types ready to use</li><li>Add your own types, each with its own stages</li><li>Approved, rejected, and withdrawn endings</li><li><a href="/docs/approvals/">How Approvals works</a></li></ul>
         </div>
         <div class="mod" id="team-board">
@@ -85,8 +115,8 @@
         <div class="mod" id="product-releases">
           <h3>Product Releases</h3>
           <p class="mod-tagline">Ship with confidence.</p>
-          <p>Plan each release, see what&#x27;s in it and what&#x27;s still blocking it, and keep release notes next to the work. Mostly used by software teams.</p>
-          <ul class="hl"><li>Release planning and scope</li><li>Readiness tracking</li><li>Release notes</li></ul>
+          <p>Your products, their versions, and each release: see what&#x27;s in it and what&#x27;s still blocking it, and keep release notes next to the work. Mostly used by software teams.</p>
+          <ul class="hl"><li>Products and versions</li><li>Release planning and readiness</li><li>Release notes</li></ul>
           <p class="req">Needs: Tickets</p>
         </div>
         <div class="mod" id="dashboards">
@@ -96,6 +126,7 @@
           <ul class="hl"><li>Dashboards and reports built from widgets</li><li>Data from Square, QuickBooks, and more</li><li>Shared with only you, a team, or everyone</li><li>One per store, project, or product</li><li>AI builds and explains them — or ask your <a href="/docs/connect-your-ai/">own AI app</a></li><li><a href="/docs/reports/">Scheduled reports</a> with an AI summary</li></ul>
         </div>
       </section>
+
       <section class="svc" id="knowledge-center">
         <p class="svc-eyebrow">Service</p>
         <h2>Knowledge Center</h2>
@@ -104,22 +135,23 @@
         <div class="mod" id="spaces">
           <h3>Spaces</h3>
           <p class="mod-tagline">Write it down once. Share it with the right people.</p>
-          <p>Your own My Space plus shared spaces for the company, all in one place — pick a space at the top of the page tree, with My Space first. Write documents, notes, and procedures in a rich editor, start from templates, send important documents for approval (with the Approvals module on), and archive what&#x27;s out of date without losing it.</p>
+          <p>Your own My Space plus shared spaces for the company, all in one module — pick a space at the top of the page tree, with My Space first. Write documents, notes, and procedures in a rich editor, start from templates, send important documents for approval (with the Approvals module on), and archive what&#x27;s out of date without losing it. Archive and Templates sit under Spaces in the sidebar while it’s open.</p>
           <ul class="hl"><li>My Space and shared spaces, with one space picker</li><li>Rich editor and templates</li><li>Verified pages, with <a href="/docs/approvals/#documents">Approvals</a></li><li>Version history</li><li>Archive that stays searchable</li><li>Pages shared with you stay private to the people they’re shared with</li></ul>
         </div>
         <div class="mod" id="knowledge-library">
           <h3>Knowledge Library</h3>
           <p class="mod-tagline">The company handbook that&#x27;s always current.</p>
-          <p>Company-wide knowledge that belongs to everyone: policies, procedures, guides, playbooks, and standards. People find answers without asking around, and AI agents use the Library as trusted context.</p>
+          <p>Curated collections of your most important documents: policies, procedures, guides, playbooks, and standards. People find answers without asking around, and AI uses the Library as trusted context.</p>
           <ul class="hl"><li>Policies and procedures (SOPs)</li><li>Guides, playbooks, and standards</li><li>Searchable by everyone</li><li>Trusted context for AI</li></ul>
           <p class="req">Needs: Spaces</p>
         </div>
       </section>
+
       <section class="svc" id="ai-hub">
         <p class="svc-eyebrow">Service</p>
         <h2>AI Hub</h2>
         <p class="svc-tagline">AI that works alongside your team.</p>
-        <p>AI Hub brings AI into the work instead of bolting a chatbot onto it. Ask questions across your business, hand tickets to AI agents, and shape how AI behaves — while people stay in charge of the decisions.</p>
+        <p>AI Hub brings AI into the work instead of bolting a chatbot onto it. Ask questions across your business and put AI agents to work — while people stay in charge of the decisions. AI also lives where the data is: it builds and explains <a href="#dashboards">dashboards and reports</a>, and your team can use Worklynq from the <a href="/docs/connect-your-ai/">AI apps they already have</a>.</p>
         <div class="mod" id="ai-search">
           <h3>AI Search</h3>
           <p class="mod-tagline">Ask a question. Get an answer, with sources.</p>
@@ -128,90 +160,76 @@
         </div>
         <div class="mod" id="ai-agents">
           <h3>AI Agents</h3>
-          <p class="mod-tagline">Hand the ticket to an AI teammate.</p>
-          <p>Hand a ticket to Claude or Cursor and they do the work: an agent reads the ticket, works in the product&#x27;s code, and comes back with a pull request — all shown on the ticket. Start an agent from the ticket, when you create it, or automatically when a ticket reaches a certain stage.</p>
-          <ul class="hl"><li>Claude and Cursor agents</li><li>Start from a ticket, on create, or by automation</li><li>Status, summary, changes, and pull request on the ticket</li><li>Turn agents on or off per ticket type</li><li><a href="/docs/connect-your-ai/">Use Worklynq from your own Claude, ChatGPT, or Cursor</a></li></ul>
+          <p class="mod-tagline">Every AI agent working in Worklynq, in one place.</p>
+          <p>Set up agents that look things up and, when you allow it, create and update tickets and docs — as the person who runs them, never with more access. Run one yourself, on a schedule, or when a ticket reaches a stage, and choose whether it asks before making changes. The same page shows your team’s own Claude, ChatGPT, or Cursor connected to Worklynq, the Claude and Cursor coding agents that work on tickets, and an activity log of everything any agent did.</p>
+          <ul class="hl"><li>Worklynq agents: run now, on a schedule, or from a ticket stage</li><li>Ask before making changes, with limits on each run</li><li>Connected agents — <a href="/docs/connect-your-ai/">your own Claude, ChatGPT, or Cursor</a></li><li>Coding agents: hand a ticket to <a href="/docs/integrations/claude/">Claude</a> or <a href="/docs/integrations/cursor/">Cursor</a> and get a pull request</li><li>Activity log of every action</li></ul>
           <p class="req">Needs: Tickets</p>
         </div>
-        <div class="mod" id="ai-context">
-          <h3>AI Context</h3>
-          <p class="mod-tagline">Teach the AI how your business works.</p>
-          <p>Choose the documents, rules, and knowledge your AI should rely on, so its answers and actions fit your business instead of the internet&#x27;s average.</p>
-          <ul class="hl"><li>Curated knowledge collections</li><li>Business rules and terminology</li><li>Controlled, trusted sources</li></ul>
-        </div>
-        <div class="mod" id="workflows">
-          <h3>Workflows</h3>
-          <p class="mod-tagline">Multi-step work, with AI doing the legwork.</p>
-          <p>Chain steps together — gather information, draft, check, act — with a person approving the steps that matter.</p>
-          <ul class="hl"><li>Multi-step AI workflows</li><li>Human approval where it matters</li><li>Triggered by events or on demand</li></ul>
-        </div>
-        <div class="mod" id="assets">
-          <h3>Assets</h3>
-          <p class="mod-tagline">Build it once. Reuse it everywhere.</p>
-          <p>Keep reusable prompts, instructions, and context in one place so every agent and workflow behaves consistently.</p>
-          <ul class="hl"><li>Reusable prompts and instructions</li><li>Shared across agents and workflows</li><li>One place to update</li></ul>
-        </div>
-        <div class="mod" id="playground">
-          <h3>Playground</h3>
-          <p class="mod-tagline">Try it before your team relies on it.</p>
-          <p>Test models, prompts, and context side by side, see what the AI used and what it cost, and only roll out what works.</p>
-          <ul class="hl"><li>Compare models and prompts</li><li>See the context the AI used</li><li>Cost and speed at a glance</li></ul>
-        </div>
       </section>
+
       <section class="svc" id="customer-experience">
         <p class="svc-eyebrow">Service</p>
         <h2>Customer Experience</h2>
         <p class="svc-tagline">Every customer, every conversation, in one place.</p>
-        <p>Taking care of customers looks the same in every business. Customer Experience brings it together — from the first question to the repeat order — for every company type. Order Tracking is available now; the rest rolls out through the beta.</p>
+        <p>Taking care of customers looks the same in every business. Customer Experience brings it together — who your customers are, what they order, and every conversation with them — for every company type.</p>
+        <div class="mod" id="customers">
+          <h3>Customers</h3>
+          <p class="mod-tagline">Know who you sell to.</p>
+          <p>Records for the people and businesses you sell to: contact details, address, status (lead, active, inactive), tags, an owner, and notes — plus everything they’ve bought, their subscriptions, and their orders, with total spent and last purchase. Search and filter the list, and archive customers you no longer work with.</p>
+          <ul class="hl"><li>People and businesses</li><li>Purchases, subscriptions, and orders</li><li>Total spent and last purchase</li><li>Status, tags, and owner</li></ul>
+        </div>
         <div class="mod" id="order-tracking">
           <h3>Order Tracking</h3>
           <p class="mod-tagline">Nobody has to ask twice.</p>
-          <p>Follow every customer order from new to completed on a board with a column per stage — New, Confirmed, In progress, Ready, On the way. Add items and prices, choose pickup, delivery, shipping, or in store, set a due time, and assign it to someone. Overdue orders are outlined in red, and every order keeps a history of who did what and when. On from the start for Operations and Software businesses.</p>
+          <p>Follow every customer order from new to completed on a board with a column per stage — New, Confirmed, In progress, Ready, On the way. Add items and prices, choose pickup, delivery, shipping, or in store, set a due time, and assign it to someone. Overdue orders are outlined in red, and every order keeps a history of who did what and when.</p>
           <ul class="hl"><li>Board and list, with drag and drop</li><li>Pickup, delivery, shipping, or in store</li><li>Due times, with overdue orders flagged</li><li>Order history and customer links</li><li><a href="/docs/order-tracking/">How Order Tracking works</a></li></ul>
-          <p class="req">Needs: Customers — your customer records, turned on with it</p>
+          <p class="req">Needs: Customers</p>
         </div>
-        <div class="mod" id="customer-engagement">
-          <h3>Customer engagement <span class="badge badge--soon">Coming in the beta</span></h3>
-          <p class="mod-tagline">One thread per customer.</p>
-          <p>Requests from forms, email, or a QR code at the counter, replies, follow-ups, and satisfaction — all on each customer’s record.</p>
-          <ul class="hl"><li>Requests from forms, email, or QR code</li><li>Replies, follow-ups, satisfaction</li></ul>
+        <div class="mod" id="engagement">
+          <h3>Engagement</h3>
+          <p class="mod-tagline">Stay in touch, and bring people back.</p>
+          <p>A history on every customer — calls, meetings, emails, and notes your team logs, plus the promo emails they were sent. Create promo emails, pick who gets them (for example, active customers who bought in the last 90 days), and send now or schedule them through your own Mailchimp account, then see opens and clicks. Save the emails you send often as templates. Only customers who agreed to promo emails get them.</p>
+          <ul class="hl"><li>Customer history: calls, meetings, emails, notes</li><li>Promo campaigns through your Mailchimp account</li><li>Audiences from status, tags, and recent purchases</li><li>Templates, test sends, and scheduling</li><li>Opens, clicks, and unsubscribes</li></ul>
+          <p class="req">Needs: Customers</p>
         </div>
-        <div class="mod" id="marketing">
-          <h3>Marketing <span class="badge badge--soon">Coming in the beta</span></h3>
-          <p class="mod-tagline">Reach the customers who will care.</p>
-          <p>Plan campaigns, send them to the right customers, and see what brought people back.</p>
-          <ul class="hl"><li>Campaigns</li><li>Audiences from your customer records</li><li>Results</li></ul>
-        </div>
-        <div class="mod" id="social-media">
-          <h3>Social media <span class="badge badge--soon">Coming in the beta</span></h3>
-          <p class="mod-tagline">Your reputation, in one view.</p>
-          <p>Posts, mentions, and reviews in one place, so you can respond quickly.</p>
-          <ul class="hl"><li>Posts</li><li>Mentions</li><li>Reviews</li></ul>
-        </div>
-        <div class="mod" id="trends">
-          <h3>Trends <span class="badge badge--soon">Coming in the beta</span></h3>
-          <p class="mod-tagline">Spot it before it&#x27;s a problem.</p>
-          <p>What customers ask for, complain about, and buy — over time.</p>
-          <ul class="hl"><li>Requests and complaints over time</li><li>What sells</li><li>AI-spotted patterns</li></ul>
+        <div class="mod" id="planned-cx">
+          <h3>Social media and trends <span class="badge badge--soon">Coming in the beta</span></h3>
+          <p>Posts, mentions, and reviews in one place, and what customers ask for, complain about, and buy over time — so you can respond quickly and spot problems early.</p>
         </div>
       </section>
+
       <section class="svc" id="platform">
         <h2>Always included</h2>
-        <p>These are part of the platform, not modules, so every company has them:</p>
-        <ul class="chips"><li>Users and profiles</li><li>Teams</li><li>Roles and permissions</li><li>Company settings</li><li>Notifications</li><li>Admin console (System Admin)</li></ul>
+        <p>These are part of the platform, not modules, so every company has them whatever modules are on:</p>
+        <ul class="chips"><li>Users and profiles</li><li>Teams</li><li>Roles and permissions</li><li>Company settings</li><li>Notifications</li><li>Admin console (System Admin)</li><li>API tokens and connected apps</li></ul>
       </section>
+
+      <section class="svc" id="requirements">
+        <h2>What each module needs</h2>
+        <p>Turning on a module in the left column turns on what it needs. Turning off a module in the right column turns off everything that needs it.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Module</th><th>Needs</th></tr></thead>
+          <tbody>
+            <tr><td>Operations, Projects, Team Board, Roadmaps, Product Releases, AI Agents</td><td>Tickets</td></tr>
+            <tr><td>Knowledge Library</td><td>Spaces</td></tr>
+            <tr><td>Order Tracking, Engagement</td><td>Customers</td></tr>
+            <tr><td>Tickets, Approvals, Dashboards &amp; Reports, AI Search, Spaces, Customers</td><td>Nothing — each works on its own</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
       <section class="svc" id="by-business">
         <h2>Modules by business type</h2>
-        <p>During setup you pick your business type, and Worklynq switches these modules on to start. You can add or remove any of them later.</p>
+        <p>When you sign up you pick your business type, and Worklynq turns these modules on to start. You can add or remove any of them later, or go back to this set with <strong>Reset to recommended</strong>.</p>
         <div class="table-wrap"><table>
           <thead><tr><th>Business type</th><th>Examples</th><th>Work is organized by</th><th>Modules on to start</th></tr></thead>
           <tbody>
-            <tr><td>Operations</td><td>Restaurants and cafés, hotels, retail stores, facilities</td><td>Your stores or sites</td><td>Operations, Tickets, Dashboards, AI Search, Spaces, Knowledge Library, Order Tracking</td></tr>
-            <tr><td>Projects</td><td>Construction, trades, agencies, IT services, consulting</td><td>Projects and clients</td><td>Everything above, plus Team Board, Roadmaps, AI Context</td></tr>
-            <tr><td>Software</td><td>Software and tech companies</td><td>Products</td><td>Everything</td></tr>
+            <tr><td>Operations</td><td>Restaurants and cafés, hotels, retail stores, facilities</td><td>Your stores or sites</td><td>Operations, Tickets, Dashboards &amp; Reports, AI Search, Spaces, Knowledge Library, Customers, Order Tracking, Engagement</td></tr>
+            <tr><td>Projects</td><td>Construction, trades, agencies, IT services, consulting</td><td>Projects and clients</td><td>Projects, Tickets, Team Board, Roadmaps, Dashboards &amp; Reports, AI Search, Spaces, Knowledge Library, Customers, Engagement</td></tr>
+            <tr><td>Software</td><td>Software and tech companies</td><td>Products</td><td>Every module except Approvals</td></tr>
           </tbody>
         </table></div>
-        <p>Approvals is optional for every business type — turn it on when you need it. Order Tracking can be turned on for any business type; the rest of Customer Experience will be available to every business type as it rolls out.</p>
+        <p>Approvals is optional for every business type — turn it on when you need it.</p>
         <p class="next">Next: <a href="/docs/getting-started/">Getting started</a> walks through setup step by step.</p>
       </section>
       <p class="doc-foot">Last updated: October 25, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>

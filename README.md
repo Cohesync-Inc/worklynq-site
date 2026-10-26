@@ -49,6 +49,7 @@ Get logos from each company's official brand or press kit and follow its usage g
 | Stripe | `stripe.svg` |
 | Shopify | `shopify.svg` |
 | Square | `square.svg` |
+| Mailchimp | `mailchimp.svg` |
 | LinkedIn | `linkedin.svg` |
 | Instagram | `instagram.svg` |
 | Facebook | `facebook.svg` |
