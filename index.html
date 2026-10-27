@@ -194,17 +194,133 @@
 
   /* ---------- BETA (December 2026) ---------- */
   .beta{padding:0 0 84px;}
-  .beta-inner{display:flex; flex-direction:column; align-items:center; gap:14px;}
-  .beta-video{
-    display:block;
-    width:100%;
-    max-width:560px;
-    aspect-ratio:1 / 1;
-    height:auto;
-    background:var(--paper);
+  .beta-card{
+    background:var(--sage);
+    border:1px solid var(--line);
+    color:var(--ink);
+    border-radius:18px;
+    padding:48px 56px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:56px;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
   }
-  .beta-ctas{display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;}
+  /* soft light that drifts across the card */
+  .beta-card::before{
+    content:"";
+    position:absolute;
+    left:-10%; top:-20%;
+    width:60%; height:120%;
+    background:radial-gradient(closest-side, rgba(255,255,255,.55), rgba(255,255,255,0));
+    z-index:-1;
+    pointer-events:none;
+  }
+  /* ring in the top-right corner */
+  .beta-card::after{
+    content:"";
+    position:absolute;
+    right:-110px; top:-110px;
+    width:320px; height:320px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    box-shadow:0 0 0 56px rgba(31,143,118,.05);
+    z-index:-1;
+    pointer-events:none;
+  }
+  .beta-date{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+    padding-right:56px;
+  }
+  .beta-date::after{
+    content:"";
+    position:absolute;
+    right:0; top:0; bottom:0;
+    width:1px;
+    background:var(--line);
+    transform-origin:top;
+  }
+  .beta-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:600;
+  }
+  .beta-eyebrow::before{
+    content:"";
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--teal-bright);
+    box-shadow:0 0 0 4px rgba(47,174,142,.2);
+  }
+  .beta-month{
+    font-family:'Fraunces', Georgia, serif;
+    font-size:clamp(40px, 5vw, 60px);
+    font-weight:450;
+    line-height:1;
+    letter-spacing:-0.02em;
+    color:var(--teal-deep);
+  }
+  .beta-year{
+    font-family:'Fraunces', Georgia, serif;
+    font-style:italic;
+    font-size:18px;
+    color:var(--ink-soft);
+  }
+  .beta-body h2{
+    font-size:clamp(24px, 2.8vw, 34px);
+    line-height:1.15;
+    color:var(--teal-deep);
+    max-width:22ch;
+  }
+  .beta-lede{
+    margin:16px 0 0;
+    font-size:16px;
+    line-height:1.6;
+    max-width:52ch;
+    color:var(--ink-soft);
+  }
+  .beta-perks{
+    list-style:none;
+    margin:26px 0 0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:18px;
+  }
+  .beta-perks li{
+    position:relative;
+    font-size:14px;
+    line-height:1.5;
+    padding-top:14px;
+    color:var(--ink-soft);
+  }
+  .beta-perks li::before,
+  .beta-perks li::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; top:0;
+    height:1px;
+    background:var(--line);
+    transform-origin:left;
+  }
+  .beta-perks li::after{background:var(--teal); height:2px; top:-.5px; opacity:0;}
+  .beta-perks strong{display:block; font-weight:600; font-size:14.5px; margin-bottom:4px; color:var(--ink);}
+  .beta-perks .perk-text{display:block;}
+  .beta-ctas{position:relative; display:flex; align-items:center; gap:20px; margin-top:30px; flex-wrap:wrap;}
   .btn-beta{
+    position:relative;
+    overflow:hidden;
     background:var(--teal-deep);
     color:var(--paper);
     text-decoration:none;
@@ -214,12 +330,129 @@
     font-weight:500;
     transition:background .15s ease, transform .15s ease;
   }
+  .btn-beta::after{
+    content:"";
+    position:absolute;
+    top:0; bottom:0; left:-60%;
+    width:45%;
+    background:linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.28), rgba(255,255,255,0));
+    transform:skewX(-18deg) translateX(0);
+    opacity:0;
+    pointer-events:none;
+  }
   .btn-beta:hover{background:var(--teal); transform:translateY(-1px);}
+  .btn-beta:hover::after{animation:betaShimmer .8s ease;}
   .beta-note{font-size:13.5px; color:var(--ink-soft);}
-  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+  .beta-burst{position:absolute; left:0; top:0; width:0; height:0; pointer-events:none; z-index:2;}
+  .beta-burst i{
+    position:absolute;
+    left:0; top:0;
+    width:var(--s,5px); height:var(--s,5px);
+    margin:calc(var(--s,5px) / -2) 0 0 calc(var(--s,5px) / -2);
+    border-radius:50%;
+    background:var(--c, var(--teal));
+    opacity:0;
+    animation:betaBurst 1.1s cubic-bezier(.15,.75,.3,1) forwards;
+    animation-delay:var(--w,0s);
+  }
+
+  /* ---- Entrance animation: runs once when the section scrolls into view.
+     Only applied when the script adds .beta-anim (so no-JS and reduced-motion
+     visitors simply see the finished card). Each piece has its own delay. ---- */
+  .beta-anim .beta-card{animation:betaRise .8s cubic-bezier(.2,.7,.2,1) 0s;}
+  .beta-anim .beta-card::before{animation:betaDrift 14s ease-in-out .4s infinite alternate;}
+  .beta-anim .beta-card::after{animation:betaRing 1.4s cubic-bezier(.2,.7,.2,1) .15s;}
+  .beta-anim .beta-eyebrow::before{animation:betaPop .5s cubic-bezier(.3,1.6,.5,1) .5s;}
+  .beta-anim .beta-eyebrow-text{display:inline-block; animation:betaWipe .6s ease .65s;}
+  .beta-anim .beta-month .ch{display:inline-block; animation:betaDrop .6s cubic-bezier(.2,.8,.2,1) calc(.9s + var(--i) * .05s);}
+  .beta-anim .beta-year{animation:betaSlide .6s ease 1.45s;}
+  .beta-anim .beta-date::after{animation:betaGrowY .8s cubic-bezier(.6,0,.2,1) 1.5s;}
+  .beta-anim .beta-body h2 .w{display:inline-block; animation:betaFocus .7s ease calc(1.8s + var(--i) * .07s);}
+  .beta-anim .beta-lede{animation:betaUp .7s ease 2.45s;}
+  .beta-anim .beta-perks li::before{animation:betaGrowX .7s cubic-bezier(.6,0,.2,1) calc(2.85s + var(--i) * .28s);}
+  .beta-anim .beta-perks li::after{animation:betaSweep 1.1s cubic-bezier(.6,0,.2,1) calc(2.85s + var(--i) * .28s);}
+  .beta-anim .beta-perks strong{animation:betaUp .5s ease calc(3.05s + var(--i) * .28s);}
+  .beta-anim .beta-perks .perk-text{animation:betaUp .5s ease calc(3.2s + var(--i) * .28s);}
+  .beta-anim .btn-beta{animation:betaButton .6s cubic-bezier(.2,.8,.2,1) 4s;}
+  .beta-anim .btn-beta::after{animation:betaShimmer .9s ease 4.6s;}
+  .beta-anim .beta-note{animation:betaUp .6s ease 4.25s;}
+
+  /* Hold every piece on its first frame until the section is in view.
+     (Must come after the animation rules above, which reset these.) */
+  .beta-anim .beta-card,
+  .beta-anim .beta-card::before,
+  .beta-anim .beta-card::after,
+  .beta-anim .beta-date::after,
+  .beta-anim .beta-eyebrow::before,
+  .beta-anim .beta-eyebrow-text,
+  .beta-anim .beta-month .ch,
+  .beta-anim .beta-year,
+  .beta-anim .beta-body h2 .w,
+  .beta-anim .beta-lede,
+  .beta-anim .beta-perks li::before,
+  .beta-anim .beta-perks li::after,
+  .beta-anim .beta-perks strong,
+  .beta-anim .beta-perks .perk-text,
+  .beta-anim .btn-beta,
+  .beta-anim .btn-beta::after,
+  .beta-anim .beta-note{
+    animation-fill-mode:both;
+    animation-play-state:paused;
+  }
+  .beta-anim.is-in .beta-card,
+  .beta-anim.is-in .beta-card::before,
+  .beta-anim.is-in .beta-card::after,
+  .beta-anim.is-in .beta-date::after,
+  .beta-anim.is-in .beta-eyebrow::before,
+  .beta-anim.is-in .beta-eyebrow-text,
+  .beta-anim.is-in .beta-month .ch,
+  .beta-anim.is-in .beta-year,
+  .beta-anim.is-in .beta-body h2 .w,
+  .beta-anim.is-in .beta-lede,
+  .beta-anim.is-in .beta-perks li::before,
+  .beta-anim.is-in .beta-perks li::after,
+  .beta-anim.is-in .beta-perks strong,
+  .beta-anim.is-in .beta-perks .perk-text,
+  .beta-anim.is-in .btn-beta,
+  .beta-anim.is-in .btn-beta::after,
+  .beta-anim.is-in .beta-note{
+    animation-play-state:running;
+  }
+
+
+  @keyframes betaRise{from{opacity:0; transform:translateY(18px) scale(.985);} to{opacity:1; transform:none;}}
+  @keyframes betaDrift{from{transform:translate(0,0);} to{transform:translate(70%,8%);}}
+  @keyframes betaRing{from{opacity:0; transform:scale(.7) rotate(-25deg);} to{opacity:1; transform:none;}}
+  @keyframes betaPop{0%{transform:scale(0);} 100%{transform:scale(1);}}
+  @keyframes betaWipe{from{clip-path:inset(0 100% 0 0);} to{clip-path:inset(0 0 0 0);}}
+  @keyframes betaDrop{from{opacity:0; transform:translateY(.35em) rotate(4deg);} to{opacity:1; transform:none;}}
+  @keyframes betaSlide{from{opacity:0; transform:translateX(-8px);} to{opacity:1; transform:none;}}
+  @keyframes betaGrowY{from{transform:scaleY(0);} to{transform:scaleY(1);}}
+  @keyframes betaGrowX{from{transform:scaleX(0);} to{transform:scaleX(1);}}
+  @keyframes betaFocus{from{opacity:0; filter:blur(8px); transform:translateY(4px);} to{opacity:1; filter:blur(0); transform:none;}}
+  @keyframes betaUp{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+  @keyframes betaSweep{0%{opacity:1; transform:scaleX(0);} 60%{opacity:1; transform:scaleX(1);} 100%{opacity:0; transform:scaleX(1);}}
+  @keyframes betaButton{from{opacity:0; transform:translateY(10px) scale(.96);} to{opacity:1; transform:none;}}
+  @keyframes betaShimmer{0%{opacity:1; transform:skewX(-18deg) translateX(0);} 100%{opacity:1; transform:skewX(-18deg) translateX(420%);}}
+  @keyframes betaBurst{0%{opacity:1; transform:translate(0,0) scale(1);} 100%{opacity:0; transform:translate(var(--dx),var(--dy)) scale(.3);}}
+
+  @media (max-width:900px){
+    .beta-card{grid-template-columns:1fr; gap:28px; padding:40px 28px;}
+    .beta-date{padding-right:0; padding-bottom:24px; flex-direction:row; align-items:baseline; gap:12px; flex-wrap:wrap;}
+    .beta-date::after{top:auto; left:0; right:0; bottom:0; width:auto; height:1px; transform-origin:left;}
+    .beta-anim .beta-date::after{animation-name:betaGrowX;}
+    .beta-eyebrow{width:100%;}
+    .beta-perks{grid-template-columns:1fr;}
+  }
   @media (max-width:640px){
     .beta{padding:0 0 64px;}
-    .beta-ctas{flex-direction:column; gap:12px;}
+    .beta-card{padding:34px 22px; text-align:center;}
+    .beta-date{justify-content:center;}
+    .beta-date::after{transform-origin:center;}
+    .beta-eyebrow{justify-content:center;}
+    .beta-body h2, .beta-lede{margin-left:auto; margin-right:auto;}
+    .beta-perks li::before, .beta-perks li::after{transform-origin:center;}
+    .beta-ctas{justify-content:center; flex-direction:column; gap:12px;}
   }
 
   /* ---------- WHO WE BUILD FOR ---------- */
@@ -1237,13 +1470,26 @@
   </section>
 
   <section class="beta" id="beta" aria-labelledby="beta-title">
-    <div class="wrap beta-inner">
-      <h2 id="beta-title" class="sr-only">The Worklynq beta opens in December 2026</h2>
-      <p class="sr-only">We're inviting a small group of businesses to run real work on Worklynq before general availability. Beta teams get their own workspace, a direct line to the team, and a say in the roadmap.</p>
-      <video class="beta-video" src="assets/video/beta-launch.mp4" poster="assets/video/beta-launch-poster.jpg" width="1080" height="1080" muted playsinline controls preload="metadata" aria-label="Announcement: the Worklynq beta opens in December 2026"></video>
-      <div class="beta-ctas">
-        <a class="btn-beta" href="#demo" data-interest="Joining the December beta">Request beta access</a>
-        <span class="beta-note">Limited spots &middot; invitations go out in December</span>
+    <div class="wrap">
+      <div class="beta-card">
+        <div class="beta-date">
+          <span class="beta-eyebrow"><span class="beta-eyebrow-text">Beta opens</span></span>
+          <span class="beta-month">December</span>
+          <span class="beta-year">2026</span>
+        </div>
+        <div class="beta-body">
+          <h2 id="beta-title">The Worklynq beta opens this December.</h2>
+          <p class="beta-lede">We're inviting a small group of businesses to run real work on Worklynq before general availability — and to help shape what it becomes.</p>
+          <ul class="beta-perks">
+            <li><strong>Your own workspace</strong><span class="perk-text">A Worklynq workspace at your own address, set up for your industry.</span></li>
+            <li><strong>A direct line to the team</strong><span class="perk-text">Talk to the people building it, not a ticket queue.</span></li>
+            <li><strong>Shape the roadmap</strong><span class="perk-text">Beta feedback decides what ships next.</span></li>
+          </ul>
+          <div class="beta-ctas">
+            <a class="btn-beta" href="#demo" data-interest="Joining the December beta">Request beta access</a>
+            <span class="beta-note">Limited spots &middot; invitations go out in December</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1700,19 +1946,65 @@
 </script>
 
 <script>
-  // Beta video: plays once (muted) the first time it scrolls into view, then rests on its
-  // last frame. Visitors can replay or turn the sound on with the controls. Skipped for
-  // people who ask for reduced motion; they see the poster (the finished card).
+  // Beta section entrance animation. Splits "December" into letters and the heading
+  // into words, then plays the whole sequence once when the card scrolls into view,
+  // ending with a small burst around the button. Skipped for reduced-motion visitors
+  // and without JavaScript: they see the finished card.
   (function () {
-    var v = document.querySelector('.beta-video');
-    if (!v || !('IntersectionObserver' in window)) return;
+    var section = document.getElementById('beta');
+    if (!section || !('IntersectionObserver' in window)) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { io.disconnect(); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+
+    function split(el, cls, byWord) {
+      var text = el.textContent;
+      var parts = byWord ? text.split(' ') : text.split('');
+      el.setAttribute('aria-label', text);
+      el.textContent = '';
+      parts.forEach(function (p, i) {
+        var span = document.createElement('span');
+        span.className = cls;
+        span.setAttribute('aria-hidden', 'true');
+        span.style.setProperty('--i', i);
+        span.textContent = p;
+        el.appendChild(span);
+        if (byWord && i < parts.length - 1) el.appendChild(document.createTextNode(' '));
       });
-    }, { threshold: 0.4 });
-    io.observe(v);
+    }
+    split(section.querySelector('.beta-month'), 'ch', false);
+    split(section.querySelector('.beta-body h2'), 'w', true);
+    section.querySelectorAll('.beta-perks li').forEach(function (li, i) { li.style.setProperty('--i', i); });
+
+    function burst() {
+      var btn = section.querySelector('.btn-beta');
+      var ctas = section.querySelector('.beta-ctas');
+      var box = document.createElement('span');
+      box.className = 'beta-burst';
+      box.style.left = (btn.offsetLeft + btn.offsetWidth / 2) + 'px';
+      box.style.top = (btn.offsetTop + btn.offsetHeight / 2) + 'px';
+      var colors = ['var(--teal)', 'var(--teal-bright)', 'var(--teal-deep)'];
+      for (var i = 0; i < 26; i++) {
+        var a = (i / 26) * Math.PI * 2 + Math.random() * 0.25;
+        var r = 95 + Math.random() * 55;
+        var dot = document.createElement('i');
+        dot.style.setProperty('--dx', Math.round(Math.cos(a) * r) + 'px');
+        dot.style.setProperty('--dy', Math.round(Math.sin(a) * r * 0.75) + 'px');
+        dot.style.setProperty('--s', (4 + Math.random() * 5).toFixed(1) + 'px');
+        dot.style.setProperty('--c', colors[i % 3]);
+        dot.style.setProperty('--w', (Math.random() * 0.12).toFixed(2) + 's');
+        box.appendChild(dot);
+      }
+      ctas.appendChild(box);
+      setTimeout(function () { box.remove(); }, 1600);
+    }
+
+    section.classList.add('beta-anim');
+    var io = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      section.classList.add('is-in');
+      setTimeout(burst, 4700);
+    }, { threshold: 0.5 });
+    io.observe(section);
   })();
 </script>
 
