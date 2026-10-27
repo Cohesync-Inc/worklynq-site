@@ -1417,6 +1417,9 @@
   .inside-phone{max-width:300px;}
   .inside-grid{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px; margin-top:28px;}
   .inside-foot{margin-top:28px; font-size:15px; color:var(--ink-soft);}
+  .inside-sub{max-width:680px; margin:56px 0 0;}
+  .inside-sub h3{font-size:clamp(20px, 2.2vw, 24px); color:var(--teal-deep); margin:0 0 8px;}
+  .inside-sub p{margin:0; color:var(--ink-soft); font-size:15.5px; line-height:1.6;}
   .inside-foot a{color:var(--teal); font-weight:600;}
   @media (max-width:980px){
     .inside-main{grid-template-columns:1fr;}
@@ -1426,6 +1429,7 @@
   @media (max-width:640px){
     .inside{padding:64px 0;}
     .inside-head{text-align:center; margin-left:auto; margin-right:auto;}
+    .inside-sub{text-align:center; margin-left:auto; margin-right:auto;}
     .inside-foot{text-align:center;}
   }
 </style>
@@ -1618,7 +1622,37 @@
           <figcaption><strong>Bring your team in</strong>Invite people by email as Members or Admins when you're ready.</figcaption>
         </figure>
       </div>
-      <p class="inside-foot">Step-by-step with every screen: <a href="/docs/getting-started/">Getting started</a></p>
+      <div class="inside-sub">
+        <h3>Then run the day</h3>
+        <p>Orders, schedules, the counter TV, and AI that knows your work — here’s a café group’s Tuesday morning.</p>
+      </div>
+      <div class="inside-grid">
+        <figure class="shot">
+          <img src="assets/screens/order-tracking-board.webp" alt="Order Tracking for the Downtown café: orders from New to On the way, Square orders alongside, one running late, and who is on duty" loading="lazy" width="1600" height="1250">
+          <figcaption><strong>Every order, one board</strong>Your orders and your Square orders together, with late ones flagged.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screens/operations-day-locations.webp" alt="The Operations calendar with both cafés side by side and the day’s tasks by the hour" loading="lazy" width="1600" height="1350">
+          <figcaption><strong>Today at every store</strong>Checklists, repairs and deliveries by the hour, for each location.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screens/tv-order-tracking.webp" alt="A TV showing open orders in New, In progress and Ready for pickup, with late orders in red" loading="lazy" width="1920" height="1080">
+          <figcaption><strong>On the counter TV</strong>Put orders, today’s tasks or who’s on duty on any TV in the store.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screens/assist-panel.webp" alt="Worklynq Assist answering what is still waiting at the Downtown café" loading="lazy" width="1600" height="1000">
+          <figcaption><strong>Just ask Assist</strong>“What’s still waiting at Downtown?” It checks orders and tickets for you.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screens/dashboard.webp" alt="A dashboard with Square sales, overdue work, open tickets and loyalty members by tier" loading="lazy" width="1600" height="1250">
+          <figcaption><strong>Your numbers, together</strong>Sales, open work and your own apps’ data on one dashboard.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screens/tickets-ask-ai.webp" alt="The tickets list filtered with an Ask AI search" loading="lazy" width="1600" height="1000">
+          <figcaption><strong>Find anything</strong>Type what you’re looking for in plain words and save it as a filter.</figcaption>
+        </figure>
+      </div>
+      <p class="inside-foot">Step-by-step with every screen: <a href="/docs/getting-started/">Getting started</a> · See more in the <a href="/docs/">docs</a></p>
     </div>
   </section>
 

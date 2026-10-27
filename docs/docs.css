@@ -250,6 +250,8 @@ footer{padding:52px 0 60px;}
 .shot img{width:100%; height:auto;}
 .shot figcaption{padding:10px 14px; font-size:14px; color:var(--ink-soft); border-top:1px solid var(--line);}
 .shot--phone{max-width:300px;}
+.shot--narrow{max-width:440px;}
+.shot--medium{max-width:760px;}
 .shot-pair{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:24px 0;}
 .shot-pair .shot{margin:0;}
 .plans{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:20px 0;}

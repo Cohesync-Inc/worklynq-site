@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Tickets — Worklynq Docs</title>
+<meta name="description" content="Find tickets with Ask AI, create them in the right work area, edit similar tickets together, and choose Linear, Free flow, or Custom branching workflows.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/" aria-current="page">Tickets</a><ul class="side-sections"><li><a href="#list">The tickets list</a></li><li><a href="#ask-ai">Search with Ask AI</a></li><li><a href="#new-ticket">Create a ticket</a></li><li><a href="#bulk-edit">Edit many at once</a></li><li><a href="#workflows">Workflow types</a></li><li><a href="#custom-workflow">Branching workflows</a></li></ul></li><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Tickets</h1>
+      <p class="intro">Every piece of work in Worklynq is a ticket — a checklist, a repair, a supplier order, an RFI, a bug. This page covers finding tickets, creating them, editing many at once, and choosing how each type of ticket moves from start to finish.</p>
+      <figure class="shot"><img src="/assets/screens/tickets-ask-ai.webp" alt="The tickets list filtered by an Ask AI search for the Downtown café’s tickets due this week, with Save and clear in the search box" loading="lazy" width="1600" height="1000"><figcaption>Ask AI: “Downtown café, due this week” — save it as a filter or clear it</figcaption></figure>
+      <section class="sec" id="list"><h2>The tickets list</h2>
+        <ul>
+          <li>The list fills your screen. Columns are sized to be readable, the <strong>Title</strong> takes the rest of the width, and any column you resize keeps its width.</li>
+          <li>Sort by any column, and click a ticket to open it.</li>
+          <li><strong>Filter</strong> has two tabs: <strong>Saved</strong> for your saved filters, and <strong>Fields</strong> to filter by status, type, assignee, priority, and more.</li>
+        </ul>
+      </section>
+      <section class="sec" id="ask-ai"><h2>Search with Ask AI</h2>
+        <p>Type what you’re looking for in plain words in the <strong>Ask AI</strong> box in the toolbar — for example “my open repairs due this week” or “overdue at Downtown” — and press <strong>Enter</strong>. Worklynq turns it into a search and shows the matching tickets.</p>
+        <ul>
+          <li><strong>Clear search</strong> goes back to the full list.</li>
+          <li><strong>Save this search as a filter</strong> to use it again from the <em>Saved</em> tab.</li>
+          <li>If AI isn’t available, Worklynq searches by keyword instead and says so.</li>
+        </ul>
+      </section>
+      <section class="sec" id="new-ticket"><h2>Create a ticket</h2>
+        <p>Click <strong>+</strong> at the top of the sidebar, or <strong>New ticket</strong> on a page. Pick the <strong>Work area</strong> — the store, project, product, or approval space the work belongs to — then the <strong>Ticket type</strong>. Only the types mapped to that work area are offered.</p>
+        <figure class="shot"><img src="/assets/screens/new-ticket.webp" alt="The New Ticket dialog with Work area and Ticket type side by side" loading="lazy" width="1600" height="1000"><figcaption>New Ticket starts with the work area, lined up with the ticket type</figcaption></figure>
+        <p class="tip">Your System Admin chooses which ticket types each work area can use in <strong>Work Configuration → Ticket Type Mapping</strong>.</p>
+        <figure class="shot"><img src="/assets/screens/ticket-type-mapping.webp" alt="Ticket Type Mapping: each store, project and approval space with the ticket types it can use" loading="lazy" width="1600" height="1000"><figcaption>Work Configuration → Ticket Type Mapping</figcaption></figure>
+      </section>
+      <section class="sec" id="bulk-edit"><h2>Edit many tickets at once</h2>
+        <p>Super admins can change several tickets together — for example, move a week’s checklists to <em>Done</em> or reassign a batch of repairs.</p>
+        <ol class="howto">
+          <li>On the tickets list, turn on <strong>Bulk edit</strong>. Checkboxes appear.</li>
+          <li>Tick the first ticket. Only <strong>similar tickets</strong> — the same work area and the same ticket type — stay selectable; the rest are dimmed.</li>
+          <li>Tick the others, or select all similar tickets on the page.</li>
+          <li>Choose what to change: status (from that type’s workflow), priority, assignee, due date, and, for products, sprint and release. Every field starts at <strong>Keep as is</strong>.</li>
+          <li>Save. Worklynq updates every selected ticket.</li>
+        </ol>
+        <div class="shot-pair"><figure class="shot"><img src="/assets/screens/tickets-bulk-edit.webp" alt="Bulk edit on the tickets list: two Downtown checklists selected and tickets of other types dimmed" loading="lazy" width="1600" height="1000"><figcaption>Only similar tickets can be selected together</figcaption></figure><figure class="shot"><img src="/assets/screens/tickets-bulk-edit-dialog.webp" alt="Edit 2 Checklist tickets: status set to Done and assignee to Priya, other fields Keep as is" loading="lazy" width="1600" height="1000"><figcaption>Change only what you pick; the rest stays as is</figcaption></figure></div>
+      </section>
+      <section class="sec" id="workflows"><h2>How tickets move: workflow types</h2>
+        <p>Each ticket type has its own stages, and one of three workflow types decides how a ticket can move between them. Your System Admin sets this in <strong>Work Configuration → Ticket Types</strong>.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Workflow type</th><th>How tickets move</th><th>Good for</th></tr></thead>
+          <tbody>
+            <tr><td>Linear</td><td>One stage up or down at a time, without skipping.</td><td>Checklists, repairs, supplier orders</td></tr>
+            <tr><td>Free flow</td><td>From any stage to any stage.</td><td>Simple tasks, guest feedback</td></tr>
+            <tr><td>Custom</td><td>You choose where each stage can go next, so the workflow can split into branches and loop back.</td><td>Reviews, approvals, anything with a “send it back” step</td></tr>
+          </tbody>
+        </table></div>
+        <figure class="shot"><img src="/assets/screens/ticket-types-list.webp" alt="Ticket Types in Work Configuration, with each type’s workflow type and stages" loading="lazy" width="1600" height="1000"><figcaption>Work Configuration → Ticket Types</figcaption></figure>
+        <p>Every workflow has a starting stage, up to five stages in the middle, and up to four <strong>end stages</strong>. Each end stage is marked as a <strong>success</strong>, a <strong>failure</strong>, or <strong>cancelled</strong> — so a request can end <em>Approved</em>, <em>Rejected</em>, or <em>Withdrawn</em>, and Home and reports know which way it finished.</p>
+      </section>
+      <section class="sec" id="custom-workflow"><h2>Build a branching workflow</h2>
+        <p>For example, a <em>Menu Change</em> goes from <em>Proposed</em> to <em>Tasting</em>; after tasting it can be sent back with <em>Changes requested</em>, move on to <em>Costed</em>, or be <em>Rejected</em>.</p>
+        <ol class="howto">
+          <li>Open <strong>Work Configuration → Ticket Types</strong> and edit the type.</li>
+          <li>Set <strong>Workflow type</strong> to <strong>Custom</strong>. It starts from the type’s current one-step-at-a-time moves.</li>
+          <li>Set up the stages as usual: the start, the middle stages, and the end stages.</li>
+          <li>In <strong>Branches</strong>, each stage lists the other stages as chips. Select the stages a ticket may move to next. The diagram above shows the result — moves forward as solid lines, moves back as dashed lines.</li>
+          <li>Save. Worklynq won’t save a workflow with a stage that no path reaches from the start, or a working stage with nowhere to go next. End stages can have no moves out, or some to allow reopening.</li>
+        </ol>
+        <figure class="shot shot--medium"><img src="/assets/screens/workflow-branching.webp" alt="The ticket type editor with a Custom workflow, its Branches panel and diagram" loading="lazy" width="1076" height="808"><figcaption>A Custom workflow: tasting can send a menu change back, on to costing, or to rejected</figcaption></figure>
+        <p><strong>Where the rules apply.</strong> On the board, dragging a card to a stage the workflow doesn’t allow shows <em>This workflow doesn’t go from X to Y</em>. On a ticket, the status menu greys out stages that aren’t a next step. Stage automations aren’t limited by the branches, and Linear and Free flow types work exactly as before.</p>
+        <p class="tip">Want a quick start? <strong>Reset to linear</strong> puts back the one-step-at-a-time moves, and you can add branches from there.</p>
+      </section>
+      <p class="doc-foot">Last updated: October 27, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
