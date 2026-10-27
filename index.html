@@ -194,99 +194,16 @@
 
   /* ---------- BETA (December 2026) ---------- */
   .beta{padding:0 0 84px;}
-  .beta-card{
-    background:var(--sage);
-    border:1px solid var(--line);
-    color:var(--ink);
-    border-radius:18px;
-    padding:48px 56px;
-    display:grid;
-    grid-template-columns:auto 1fr;
-    gap:56px;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
+  .beta-inner{display:flex; flex-direction:column; align-items:center; gap:14px;}
+  .beta-video{
+    display:block;
+    width:100%;
+    max-width:560px;
+    aspect-ratio:1 / 1;
+    height:auto;
+    background:var(--paper);
   }
-  .beta-card::after{
-    content:"";
-    position:absolute;
-    right:-110px; top:-110px;
-    width:320px; height:320px;
-    border-radius:50%;
-    border:1px solid var(--line);
-    box-shadow:0 0 0 56px rgba(31,143,118,.05);
-    pointer-events:none;
-  }
-  .beta-date{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:6px;
-    padding-right:56px;
-    border-right:1px solid var(--line);
-  }
-  .beta-eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:12.5px;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--teal);
-    font-weight:600;
-  }
-  .beta-eyebrow::before{
-    content:"";
-    width:8px; height:8px;
-    border-radius:50%;
-    background:var(--teal-bright);
-    box-shadow:0 0 0 4px rgba(47,174,142,.2);
-  }
-  .beta-month{
-    font-family:'Fraunces', Georgia, serif;
-    font-size:clamp(40px, 5vw, 60px);
-    font-weight:450;
-    line-height:1;
-    letter-spacing:-0.02em;
-    color:var(--teal-deep);
-  }
-  .beta-year{
-    font-family:'Fraunces', Georgia, serif;
-    font-style:italic;
-    font-size:18px;
-    color:var(--ink-soft);
-  }
-  .beta-body{position:relative; z-index:1;}
-  .beta-body h2{
-    font-size:clamp(24px, 2.8vw, 34px);
-    line-height:1.15;
-    color:var(--teal-deep);
-    max-width:22ch;
-  }
-  .beta-lede{
-    margin:16px 0 0;
-    font-size:16px;
-    line-height:1.6;
-    max-width:52ch;
-    color:var(--ink-soft);
-  }
-  .beta-perks{
-    list-style:none;
-    margin:26px 0 0;
-    padding:0;
-    display:grid;
-    grid-template-columns:repeat(3, minmax(0,1fr));
-    gap:18px;
-  }
-  .beta-perks li{
-    font-size:14px;
-    line-height:1.5;
-    padding-top:14px;
-    border-top:1px solid var(--line);
-    color:var(--ink-soft);
-  }
-  .beta-perks strong{display:block; font-weight:600; font-size:14.5px; margin-bottom:4px; color:var(--ink);}
-  .beta-ctas{display:flex; align-items:center; gap:20px; margin-top:30px; flex-wrap:wrap;}
+  .beta-ctas{display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;}
   .btn-beta{
     background:var(--teal-deep);
     color:var(--paper);
@@ -299,19 +216,10 @@
   }
   .btn-beta:hover{background:var(--teal); transform:translateY(-1px);}
   .beta-note{font-size:13.5px; color:var(--ink-soft);}
-  @media (max-width:900px){
-    .beta-card{grid-template-columns:1fr; gap:28px; padding:40px 28px;}
-    .beta-date{padding-right:0; padding-bottom:24px; border-right:0; border-bottom:1px solid var(--line); flex-direction:row; align-items:baseline; gap:12px; flex-wrap:wrap;}
-    .beta-eyebrow{width:100%;}
-    .beta-perks{grid-template-columns:1fr;}
-  }
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
   @media (max-width:640px){
     .beta{padding:0 0 64px;}
-    .beta-card{padding:34px 22px; text-align:center;}
-    .beta-date{justify-content:center;}
-    .beta-eyebrow{justify-content:center;}
-    .beta-body h2, .beta-lede{margin-left:auto; margin-right:auto;}
-    .beta-ctas{justify-content:center; flex-direction:column; gap:12px;}
+    .beta-ctas{flex-direction:column; gap:12px;}
   }
 
   /* ---------- WHO WE BUILD FOR ---------- */
@@ -1329,26 +1237,13 @@
   </section>
 
   <section class="beta" id="beta" aria-labelledby="beta-title">
-    <div class="wrap">
-      <div class="beta-card">
-        <div class="beta-date">
-          <span class="beta-eyebrow">Beta opens</span>
-          <span class="beta-month">December</span>
-          <span class="beta-year">2026</span>
-        </div>
-        <div class="beta-body">
-          <h2 id="beta-title">The Worklynq beta opens this December.</h2>
-          <p class="beta-lede">We're inviting a small group of businesses to run real work on Worklynq before general availability — and to help shape what it becomes.</p>
-          <ul class="beta-perks">
-            <li><strong>Your own workspace</strong>A Worklynq workspace at your own address, set up for your industry.</li>
-            <li><strong>A direct line to the team</strong>Talk to the people building it, not a ticket queue.</li>
-            <li><strong>Shape the roadmap</strong>Beta feedback decides what ships next.</li>
-          </ul>
-          <div class="beta-ctas">
-            <a class="btn-beta" href="#demo" data-interest="Joining the December beta">Request beta access</a>
-            <span class="beta-note">Limited spots &middot; invitations go out in December</span>
-          </div>
-        </div>
+    <div class="wrap beta-inner">
+      <h2 id="beta-title" class="sr-only">The Worklynq beta opens in December 2026</h2>
+      <p class="sr-only">We're inviting a small group of businesses to run real work on Worklynq before general availability. Beta teams get their own workspace, a direct line to the team, and a say in the roadmap.</p>
+      <video class="beta-video" src="assets/video/beta-launch.mp4" poster="assets/video/beta-launch-poster.jpg" width="1080" height="1080" muted playsinline controls preload="metadata" aria-label="Announcement: the Worklynq beta opens in December 2026"></video>
+      <div class="beta-ctas">
+        <a class="btn-beta" href="#demo" data-interest="Joining the December beta">Request beta access</a>
+        <span class="beta-note">Limited spots &middot; invitations go out in December</span>
       </div>
     </div>
   </section>
@@ -1802,6 +1697,23 @@
       img.src = 'assets/logos/' + name + '.' + exts[i];
     })(0);
   });
+</script>
+
+<script>
+  // Beta video: plays once (muted) the first time it scrolls into view, then rests on its
+  // last frame. Visitors can replay or turn the sound on with the controls. Skipped for
+  // people who ask for reduced motion; they see the poster (the finished card).
+  (function () {
+    var v = document.querySelector('.beta-video');
+    if (!v || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { io.disconnect(); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      });
+    }, { threshold: 0.4 });
+    io.observe(v);
+  })();
 </script>
 
 <script>
