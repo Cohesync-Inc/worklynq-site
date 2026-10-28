@@ -89,9 +89,11 @@
         <div class="mod" id="operations">
           <h3>Operations</h3>
           <p class="mod-tagline">Run every store, every day.</p>
-          <p>For work that never “finishes” — a café, a shop, a hotel, a kitchen, a site. Each store or site is an operation with its own tickets, numbered OPS-1, OPS-2, and so on across the company. The Operations calendar lays out each day’s work by time, in a column per store or per team member, with week and month views; click an empty slot to add a task, or click a task to mark it done or move it. Overdue tasks are flagged, and each ticket type keeps its own color.</p>
-          <ul class="hl"><li>One operation per store, site, or kitchen</li><li>Day, week, and month calendar, by store or by person</li><li>Only the ticket types you map to operations</li><li>A dashboard for each store</li><li><a href="/docs/shifts/">Shifts</a>: start, breaks, and who’s on duty, with Square clock-in</li><li><a href="/docs/tv-screens/">TV screens</a> for today’s tasks and who’s on duty</li><li>Recurring checklists that create themselves <span class="badge badge--soon">Coming in the beta</span></li></ul>
+          <p>For work that never “finishes” — a café, a shop, a hotel, a kitchen, a site. Each store or site is a location with its own tickets, numbered with its own tag — DC-1, DC-2 at the Downtown café, RC-1 at Riverside. Your System Admin adds, renames, and archives locations in <strong>Admin console → Work Configuration → Locations</strong>. The Operations calendar lays out each day’s work by time; choose <strong>View by</strong> Location or Team member to see a column per store or per person, and pick one store or person to focus on, with week and month views; click an empty slot to add a task, or click a task to mark it done or move it. Overdue tasks are flagged, and each ticket type keeps its own color.</p>
+          <ul class="hl"><li>One operation per store, site, or kitchen</li><li>Day, week, and month calendar, viewed by location or by team member</li><li>Ticket numbers tagged by location, like DC-12</li><li>Only the ticket types you map to operations</li><li>A dashboard for each store</li><li><a href="/docs/shifts/">Shifts</a>: start, breaks, and who’s on duty, with Square clock-in</li><li><a href="/docs/tv-screens/">TV screens</a> for today’s tasks and who’s on duty</li><li>Recurring checklists that create themselves <span class="badge badge--soon">Coming in the beta</span></li></ul>
         <figure class="shot"><img src="/assets/screens/operations-day-locations.webp" alt="The Operations calendar for both cafés side by side, with tasks by the hour and overdue tasks outlined in red" loading="lazy" width="1600" height="1350"><figcaption>Operations: both stores side by side, today</figcaption></figure>
+        <figure class="shot"><img src="/assets/screens/locations.webp" alt="Work Configuration → Locations: Downtown café with ticket tag DC and Riverside café with tag RC, each with its address, 7 ticket types mapped, and Edit and Archive buttons" loading="lazy" width="1600" height="1000"><figcaption>Admin console → Work Configuration → Locations</figcaption></figure>
+          <p><strong>Managing locations.</strong> On the Locations page, click <strong>Add location</strong> and give it a name, a ticket tag (2–5 letters — Worklynq suggests one from the name, and you can change it), and an optional address or note. Worklynq then asks which ticket types the location uses, since its tickets can only use the types mapped to it. You can rename a location or change its tag later — tickets already made keep their numbers — and archive or restore it. Approvals keep their shared APR-1, APR-2 numbering, and tickets numbered OPS-… before tags arrived keep their numbers so links still work.</p>
           <p class="req">Needs: Tickets</p>
         </div>
         <div class="mod" id="projects">
@@ -148,7 +150,9 @@
           <h3>Spaces</h3>
           <p class="mod-tagline">Write it down once. Share it with the right people.</p>
           <p>Your own My Space plus shared spaces for the company, all in one module — pick a space at the top of the page tree, with My Space first. Write documents, notes, and procedures in a rich editor, start from templates, send important documents for approval (with the Approvals module on), and archive what&#x27;s out of date without losing it. Archive and Templates sit under Spaces in the sidebar while it’s open.</p>
-          <ul class="hl"><li>My Space and shared spaces, with one space picker</li><li>Rich editor and templates</li><li>Verified pages, with <a href="/docs/approvals/#documents">Approvals</a></li><li>Version history</li><li>Archive that stays searchable</li><li>Pages shared with you stay private to the people they’re shared with</li></ul>
+          <ul class="hl"><li>My Space and shared spaces, with one space picker</li><li>Rich editor and templates</li><li>Verified pages, with <a href="/docs/approvals/#documents">Approvals</a></li><li>Version history</li><li>Archive that stays searchable</li><li>Pages shared with you stay private to the people they’re shared with</li><li>Ask <a href="/docs/assist/#this-page">Assist</a> to summarize the page you’re reading</li></ul>
+        <figure class="shot"><img src="/assets/screens/spaces-page.webp" alt="Spaces: the Store procedures space with its pages, and the Opening &amp; closing procedures page open" loading="lazy" width="1600" height="1075"><figcaption>A shared space with its procedures</figcaption></figure>
+          <p>Coming back to Spaces from another module reopens the last page you had open; the Knowledge Library does the same.</p>
         </div>
         <div class="mod" id="knowledge-library">
           <h3>Knowledge Library</h3>
@@ -248,7 +252,7 @@
         <p>Approvals is optional for every business type — turn it on when you need it.</p>
         <p class="next">Next: <a href="/docs/getting-started/">Getting started</a> walks through setup step by step.</p>
       </section>
-      <p class="doc-foot">Last updated: October 26, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+      <p class="doc-foot">Last updated: October 28, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
     </article>
   </div>
 </main>

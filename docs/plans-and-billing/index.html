@@ -36,7 +36,7 @@
     <article class="doc">
       <p class="eyebrow">Get started</p>
       <h1>Plans &amp; billing</h1>
-      <p class="intro">Worklynq is priced per person, monthly or yearly. You choose a plan and how many people when you sign up, and pay on Stripe’s secure checkout page.</p>
+      <p class="intro">Worklynq is priced per person, monthly or yearly. You choose a plan and how many people when you sign up and pay on Stripe’s secure checkout page. After that, your System Admin can change plan, add people, pay invoices, and buy AI credits from Worklynq itself.</p>
       <div class="plans">
         <div class="plan"><h3>Basic</h3><span class="price">$19</span> <span class="per">per person / month</span><div class="per">or $199 per person / year</div><ul><li>Projects, operations and tickets</li><li>Up to 2 integrations</li><li>1,000 AI credits per person a month</li><li>5 GB storage</li><li>Support within 24 hours</li></ul></div>
         <div class="plan"><h3>Advance</h3><span class="price">$39</span> <span class="per">per person / month</span><div class="per">or $399 per person / year</div><ul><li>Everything in Basic</li><li>Unlimited integrations</li><li>3,000 AI credits per person a month</li><li>Automations and workflows</li><li>20 GB storage, support within 4 hours</li></ul></div>
@@ -53,17 +53,49 @@
           <li>You can use a promotion code on the checkout page if you have one.</li>
         </ul>
       </section>
+      <section class="step" id="billing">
+        <h2>Your subscription in Worklynq</h2>
+        <p>Your System Admin manages billing in <strong>Admin console → Billing</strong> (account menu → <strong>System Admin</strong>). It has three pages: Subscription, Invoices, and Credit packs.</p>
+        <figure class="shot"><img src="/assets/screens/billing-subscription.webp" alt="Billing → Subscription: Advance plan at $39 per user a month, 3,000 AI credits per user, next payment $312 on Nov 12, paid by Visa ending 4242, 8 users paid for and 7 active, with Change plan and Add users buttons" loading="lazy" width="1600" height="1125"><figcaption>Admin console → Billing → Subscription</figcaption></figure>
+        <ul>
+          <li><strong>Subscription</strong> shows your plan, the price per person, the AI credits each person gets, how many people you pay for against how many are active, your next payment and its date, and the card on file. If a payment is overdue, the subscription is paused or ending, or the account is suspended, a banner at the top says so.</li>
+          <li><strong>Invoices</strong> lists every invoice with its amount and status. Click <strong>Pay</strong> on one that’s due, or <strong>PDF</strong> to download it. If Worklynq bills you by invoice instead of by card, the page says your invoices come by email.</li>
+          <li><strong>Credit packs</strong> shows the extra AI credits left this month, lets you buy more, and lists every pack your company has bought, with Stripe receipts. See <a href="#ai-costs">AI</a> below.</li>
+        </ul>
+        <p>Only your System Admin, and roles your company has given billing access, can see Billing.</p>
+        <figure class="shot"><img src="/assets/screens/billing-invoices.webp" alt="Billing → Invoices: three paid monthly invoices for Advance × 8 users, each with a PDF link" loading="lazy" width="1600" height="1000"><figcaption>Admin console → Billing → Invoices</figcaption></figure>
+      </section>
       <section class="step" id="changing">
-        <h2>Change your plan or number of people</h2>
-        <p>To change plan, switch between monthly and yearly, add people, or cancel, email <a href="mailto:info@cohesync.com">info@cohesync.com</a> from your System Admin’s address. When you move to a bigger plan or add people mid-way, Stripe charges or credits the difference on your next invoice.</p>
+        <h2>Change your plan or add people</h2>
+        <ol class="howto">
+          <li>Open <strong>Admin console → Billing → Subscription</strong>.</li>
+          <li>Click <strong>Change plan</strong> and pick a plan, or <strong>Add users</strong> and enter how many.</li>
+          <li>Worklynq shows what you’ll be charged now and your new recurring total, including tax and discounts. Check it and confirm.</li>
+        </ol>
+        <figure class="shot shot--narrow"><img src="/assets/screens/billing-change-plan.webp" alt="Change plan dialog: moving from Advance to Premium for 8 users, with the amount charged to your card now and the new monthly total" loading="lazy" width="720" height="748"><figcaption>Change plan shows the charge before you confirm</figcaption></figure>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Change</th><th>When it applies</th><th>What you’re charged</th></tr></thead>
+          <tbody>
+            <tr><td>A more expensive plan, or more people</td><td>As soon as the payment goes through</td><td>The difference for the rest of the current period, charged to your card now</td></tr>
+            <tr><td>A cheaper plan</td><td>At your next renewal</td><td>Nothing now, and nothing is refunded — the new price starts at renewal</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><strong>If the card is declined</strong>, nothing changes and no charge is kept. If your bank asks you to confirm the payment, Worklynq shows a <strong>Confirm payment</strong> link and applies the change once you do.</li>
+          <li><strong>Changed your mind about a cheaper plan?</strong> Until the renewal, Subscription shows the date it takes effect with a <strong>Keep</strong> button for your current plan. Other changes wait until you keep your plan or the switch happens.</li>
+          <li><strong>Billed by invoice today?</strong> Your first change goes through Stripe’s checkout page, and from then on you pay by card.</li>
+          <li>A subscription that is paused, ending, overdue or suspended can’t be changed in Worklynq — contact us.</li>
+        </ul>
+        <p>To have fewer people, switch between monthly and yearly, update your card outside an invoice, or cancel, email <a href="mailto:info@cohesync.com">info@cohesync.com</a> from your System Admin’s address.</p>
       </section>
       <section class="step" id="ai-costs">
         <h2>AI</h2>
         <p>Worklynq’s built-in AI — Assist, AI Search, agents, and AI in dashboards — runs on <a href="/docs/ai-credits/">Worklynq AI credits</a>. Every person gets a monthly allowance with your plan: 1,000 credits on Basic, 3,000 on Advance, and 7,000 on Premium.</p>
-        <p>Need more? Your System Admin can buy extra credits for the month in <strong>System Admin → AI Monitoring</strong>: 1,000 for $10, 5,000 for $45, or 20,000 for $160, shared by everyone once their own credits are used. See <a href="/docs/ai-credits/#extra">Extra credits</a>.</p>
+        <p>Need more? Your System Admin can buy extra credits for the month in <strong>Admin console → Billing → Credit packs</strong> (or with <strong>Buy credits</strong> in AI Monitoring): 1,000 for $10, 5,000 for $45, or 20,000 for $160, shared by everyone once their own credits are used. See <a href="/docs/ai-credits/#extra">Extra credits</a>.</p>
+        <figure class="shot"><img src="/assets/screens/billing-credit-packs.webp" alt="Billing → Credit packs: 4,360 of 5,000 extra credits left this month, 3,000 credits per person included with Advance, three packs to buy, and past purchases with receipts" loading="lazy" width="1600" height="1125"><figcaption>Admin console → Billing → Credit packs</figcaption></figure>
         <p>Claude and Cursor coding agents, and any feature you point at your own Claude or OpenAI key, run on your own account with those providers. They bill you for that usage directly, and it uses no Worklynq credits.</p>
       </section>
-      <p class="doc-foot">Last updated: October 26, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+      <p class="doc-foot">Last updated: October 28, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
 </article>
   </div>
 </main>
