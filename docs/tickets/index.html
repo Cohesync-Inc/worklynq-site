@@ -32,33 +32,53 @@
 
 <main id="top">
   <div class="wrap docs-layout">
-    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/" aria-current="page">Tickets</a><ul class="side-sections"><li><a href="#list">The tickets list</a></li><li><a href="#ask-ai">Search with Ask AI</a></li><li><a href="#new-ticket">Create a ticket</a></li><li><a href="#bulk-edit">Edit many at once</a></li><li><a href="#workflows">Workflow types</a></li><li><a href="#custom-workflow">Branching workflows</a></li></ul></li><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/" aria-current="page">Tickets</a><ul class="side-sections"><li><a href="#list">The tickets list</a></li><li><a href="#ask-ai">Search with Ask AI</a></li><li><a href="#filters">Filters</a></li><li><a href="#new-ticket">Create a ticket</a></li><li><a href="#bulk-edit">Edit many at once</a></li><li><a href="#fields">Fields for each type</a></li><li><a href="#workflows">Workflow types</a></li><li><a href="#sections">Sections on a ticket</a></li><li><a href="#custom-workflow">Branching workflows</a></li></ul></li><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
     <article class="doc">
       <p class="eyebrow">Features</p>
       <h1>Tickets</h1>
-      <p class="intro">Every piece of work in Worklynq is a ticket — a checklist, a repair, a supplier order, an RFI, a bug. This page covers finding tickets, creating them, editing many at once, and choosing how each type of ticket moves from start to finish.</p>
-      <figure class="shot"><img src="/assets/screens/tickets-ask-ai.webp" alt="The tickets list filtered by an Ask AI search for the Downtown café’s tickets due this week, with Save and clear in the search box" loading="lazy" width="1600" height="1000"><figcaption>Ask AI: “Downtown café, due this week” — save it as a filter or clear it</figcaption></figure>
+      <p class="intro">Every piece of work in Worklynq is a ticket — a checklist, a repair, a supplier order, an RFI, a bug. This page covers finding and filtering tickets, creating them, editing many at once, and setting up each type of ticket: the fields it asks for and how it moves from start to finish.</p>
+      <figure class="shot"><img src="/assets/screens/tickets-ask-ai.webp" alt="The tickets list after an Ask AI search for the Downtown café’s tickets due this week, with the AI applied bar showing Unresolved, Downtown café and Due date in next 7 days" loading="lazy" width="1600" height="1000"><figcaption>Ask AI: “Downtown café, due this week” — and exactly what it applied</figcaption></figure>
       <section class="sec" id="list"><h2>The tickets list</h2>
         <ul>
           <li>The list fills your screen. Columns are sized to be readable, and the <strong>Title</strong> takes the rest of the width.</li>
           <li>Drag a column’s edge to resize it — including making the Title narrower, so long titles are cut short. Your widths are remembered. Double-click a column’s edge to put it back to automatic width.</li>
           <li>On a smaller screen, or with <a href="/docs/assist/">Assist</a> open beside the list, the Title keeps a readable width first, and the Created and Updated dates step aside until there’s room. Your own column settings don’t change.</li>
           <li>Sort by any column, and click a ticket to open it.</li>
-          <li><strong>Filter</strong> has two tabs: <strong>Saved</strong> for your saved filters, and <strong>Fields</strong> to filter by status, type, assignee, priority, and more.</li>
+          <li><strong>Filter</strong> opens the <a href="#filters">Filters panel</a>: describe what you want, pick a quick filter, build conditions, and manage your saved filters.</li>
         </ul>
       </section>
       <section class="sec" id="ask-ai"><h2>Search with Ask AI</h2>
-        <p>Type what you’re looking for in plain words in the <strong>Ask AI</strong> box in the toolbar (on a narrow screen it gets its own row under Group, Filter, Columns, and Bulk edit) — for example “my open repairs due this week” or “overdue at Downtown” — and press <strong>Enter</strong>. Worklynq turns it into a search and shows the matching tickets.</p>
+        <p>Type what you’re looking for in plain words in the <strong>Ask AI</strong> box in the toolbar (on a narrow screen it gets its own row under Group, Filter, Columns, and Bulk edit) — for example “my open repairs due this week”, “all operations tickets”, or “overdue at Downtown” — and press <strong>Enter</strong>. Worklynq turns it into filter conditions and shows the matching tickets.</p>
+        <p>A bar under the toolbar shows exactly what was applied, as chips — <em>✦ AI applied: Unresolved · Downtown café · Priority: Critical, High</em>. Then:</p>
         <ul>
-          <li><strong>Clear search</strong> goes back to the full list.</li>
-          <li><strong>Save this search as a filter</strong> to use it again from the <em>Saved</em> tab.</li>
+          <li>Click <strong>×</strong> on a chip to drop that condition.</li>
+          <li><strong>Show query</strong> reveals the search as a Worklynq Query, with a <strong>Copy</strong> button.</li>
+          <li><strong>Edit</strong> opens the conditions in the <a href="#filters">Filters panel</a> to adjust them; <strong>Save</strong> keeps them as a saved filter; <strong>Clear</strong> goes back to the full list.</li>
+        </ul>
+        <figure class="shot"><img src="/assets/screens/tickets-ai-applied.webp" alt="Ask AI applied Unresolved, Downtown café and Riverside café, and Priority Critical or High, with Show query revealing the Worklynq Query and three matching tickets" loading="lazy" width="1600" height="569"><figcaption>“Open high priority tickets at both cafés”, with the query shown</figcaption></figure>
+        <ul>
+          <li><strong>“Open” means not finished.</strong> Ask AI reads open and closed from each ticket type’s workflow: a ticket is resolved once it reaches one of its type’s end stages, whatever that stage is called.</li>
+          <li><strong>It knows your work.</strong> It only uses your real statuses, ticket types, work areas, sprints, and releases, and it understands kinds of work — “operations tickets” means the tickets at all your locations.</li>
           <li>If AI isn’t available, Worklynq searches by keyword instead and says so.</li>
         </ul>
+      </section>
+      <section class="sec" id="filters"><h2>Filters</h2>
+        <p>Click <strong>Filter</strong> in the toolbar. Everything is on one page:</p>
+        <ol class="howto">
+          <li><strong>Describe it.</strong> Type what you want, like “urgent bugs nobody owns”, and click <strong>Fill in</strong> — Ask AI fills in the conditions below for you to check.</li>
+          <li><strong>Quick filters:</strong> My open, Unassigned, Overdue, Due this week, Urgent open, Created this week, and Reported by me.</li>
+          <li><strong>Conditions.</strong> Choose to show tickets matching <strong>all</strong> or <strong>any</strong> of your conditions. Each one reads like a sentence — a field, then <em>is</em>, <em>is not</em>, <em>is empty</em>, <em>contains</em>, <em>in the last / next N days</em>, <em>before</em>, <em>after</em>, <em>between</em>, and so on — and you pick values from your real statuses, people, work areas, teams, sprints, releases, and fields, including your own custom fields. <strong>+ Add group</strong> nests a block with its own all/any, for example <em>assigned to me AND (priority is High or Critical OR overdue)</em>.</li>
+          <li>The footer shows how many tickets match as you go. <strong>View as query</strong> shows the Worklynq Query; <strong>Save as…</strong> names the filter and shares it with <strong>Only me</strong> or <strong>Everyone</strong>; <strong>Apply</strong> shows the tickets.</li>
+        </ol>
+        <figure class="shot shot--medium"><img src="/assets/screens/tickets-filters.webp" alt="The Filters panel: a describe-it box, quick filters with Urgent open picked, two conditions — Resolution is Unresolved and Priority is Critical or High — and saved filters, with 4 tickets matching" loading="lazy" width="1200" height="864"><figcaption>The Filters panel with the Urgent open quick filter</figcaption></figure>
+        <p><strong>Saved filters</strong> sit at the bottom of the panel, under <em>Mine</em> and <em>Shared with me</em>, each with its conditions in plain words. Click one to apply it. Its menu lets you <strong>Edit</strong> it (then <em>Update filter</em> or <em>Save as new</em>), <strong>Rename</strong>, <strong>Share with everyone</strong> or <strong>Make private</strong>, <strong>Duplicate</strong>, <strong>Copy query</strong>, or <strong>Delete</strong>; renaming, sharing and deleting are for your own filters. Click the ★ to make a filter your default.</p>
+        <p class="tip">Know the query language? A saved filter or link with a hand-written Worklynq Query still works, even when it’s too complex to show as conditions — the panel shows it as a read-only query.</p>
       </section>
       <section class="sec" id="new-ticket"><h2>Create a ticket</h2>
         <p>Click <strong>+</strong> at the top of the sidebar, or <strong>New ticket</strong> on a page. Pick the <strong>Work area</strong> — the store, project, product, or approval space the work belongs to — then the <strong>Ticket type</strong>. Only the types mapped to that work area are offered. If you see <em>No work area available</em>, you haven’t been given access to any yet — ask your administrator.</p>
         <figure class="shot"><img src="/assets/screens/new-ticket.webp" alt="The New Ticket dialog with Work area and Ticket type side by side" loading="lazy" width="1600" height="1000"><figcaption>New Ticket starts with the work area, lined up with the ticket type</figcaption></figure>
-        <p class="tip">Your System Admin chooses which ticket types each work area can use in <strong>Work Configuration → Ticket Type Mapping</strong>.</p>
+        <p>The rest of the form asks for the fields that suit that type of ticket — see <a href="#fields">Fields for each type of ticket</a>.</p>
+        <p class="tip">Your System Admin chooses which ticket types each work area can use in <strong>Admin console → Work Configuration → Ticket Type Mapping</strong>.</p>
         <figure class="shot"><img src="/assets/screens/ticket-type-mapping.webp" alt="Ticket Type Mapping: each store, project and approval space with the ticket types it can use" loading="lazy" width="1600" height="1000"><figcaption>Work Configuration → Ticket Type Mapping</figcaption></figure>
       </section>
       <section class="sec" id="bulk-edit"><h2>Edit many tickets at once</h2>
@@ -72,8 +92,35 @@
         </ol>
         <div class="shot-pair"><figure class="shot"><img src="/assets/screens/tickets-bulk-edit.webp" alt="Bulk edit on the tickets list: two Downtown checklists selected and tickets of other types dimmed" loading="lazy" width="1600" height="1000"><figcaption>Only similar tickets can be selected together</figcaption></figure><figure class="shot"><img src="/assets/screens/tickets-bulk-edit-dialog.webp" alt="Edit 2 Checklist tickets: status set to Done and assignee to Priya, other fields Keep as is" loading="lazy" width="1600" height="1000"><figcaption>Change only what you pick; the rest stays as is</figcaption></figure></div>
       </section>
+      <section class="sec" id="fields"><h2>Fields for each type of ticket</h2>
+        <p>Every ticket type asks for the fields that fit its kind of work, and nothing else. A food safety issue asks when it happened and who reported it; a bug asks for the environment and steps to reproduce; an approval asks for the amount. Title and Status are always there, and <strong>*</strong> marks a required field.</p>
+        <div class="shot-pair"><figure class="shot"><img src="/assets/screens/new-ticket-food-safety.webp" alt="New Ticket for a Food Safety Issue: Description, Severity (required), Assignee, Due date, Occurred on, Contact and Rating" loading="lazy" width="1600" height="1250"><figcaption>Creating a food safety issue</figcaption></figure><figure class="shot"><img src="/assets/screens/ticket-detail-food-safety.webp" alt="A Food Safety Issue ticket showing Severity, Priority, Occurred on, Contact, Rating, Assignee, Due date, Corrective action and Root cause" loading="lazy" width="1600" height="1250"><figcaption>The same kind of ticket once it’s open: corrective action and root cause</figcaption></figure></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Kind of ticket</th><th>For example</th><th>Fields of its own</th></tr></thead>
+          <tbody>
+            <tr><td>Operations task</td><td>Checklist, Maintenance Request, Supplier Order, Menu Change</td><td>Vendor, Cost</td></tr>
+            <tr><td>Operations issue</td><td>Food Safety Issue, Guest Feedback</td><td>Severity*, Occurred on, Contact, Rating, Corrective action, Root cause</td></tr>
+            <tr><td>Approval</td><td>Approval Request</td><td>Assignee* (the approver), Amount, Decision notes</td></tr>
+            <tr><td>Service / support</td><td>Service Ticket</td><td>Requester*, Channel, Resolution notes</td></tr>
+            <tr><td>Content / creative</td><td>KB request, Media Creation request</td><td>Platform*, Publish date, Approver, Asset link</td></tr>
+            <tr><td>Engineering issue</td><td>Bug</td><td>Severity*, Environment*, Steps to reproduce, Expected and actual result, Device, Root cause</td></tr>
+            <tr><td>Engineering work</td><td>Story, Task, Feature, Spike</td><td>Acceptance criteria, Estimate, Start date, plus sprint and release</td></tr>
+            <tr><td>Engineering planning</td><td>Epic</td><td>Objective*, Start date, Estimate</td></tr>
+            <tr><td>General</td><td>Anything else</td><td>Description, assignee, priority, start and due dates, labels, files</td></tr>
+          </tbody>
+        </table></div>
+        <p>Worklynq picks the kind from the ticket type’s name, its description, and the work areas it’s used in. A <em>Task</em> on a software product gets the engineering fields; a <em>Task</em> at a café gets the general ones.</p>
+        <h3>Change the fields</h3>
+        <p>Your System Admin can turn any field on or off, or make it required, in <strong>Admin console → Work Configuration → Ticket Type Screens</strong>: pick the ticket type, then the <em>Create</em> or <em>Edit / View</em> screen.</p>
+        <ul>
+          <li>A type nobody has set up yet uses its recommended fields, and the page says <em>Recommended layout: …</em>.</li>
+          <li>A type you’ve already set up keeps your choices. <strong>Reset to recommended</strong> (click twice to confirm) replaces its Create and Edit / View screens with the recommended fields; your custom fields stay as they are.</li>
+          <li>New fields Worklynq adds later arrive switched off, so your forms don’t change on their own.</li>
+        </ul>
+        <figure class="shot"><img src="/assets/screens/ticket-type-screens.webp" alt="Ticket Type Screens for Food Safety Issue: Recommended layout: Operations issue, with Reset to recommended above the field list" loading="lazy" width="1600" height="1015"><figcaption>Admin console → Work Configuration → Ticket Type Screens</figcaption></figure>
+      </section>
       <section class="sec" id="workflows"><h2>How tickets move: workflow types</h2>
-        <p>Each ticket type has its own stages, and one of three workflow types decides how a ticket can move between them. Your System Admin sets this in <strong>Work Configuration → Ticket Types</strong>.</p>
+        <p>Each ticket type has its own stages, and one of three workflow types decides how a ticket can move between them. Your System Admin sets this in <strong>Admin console → Work Configuration → Ticket Types</strong>.</p>
         <div class="table-wrap"><table>
           <thead><tr><th>Workflow type</th><th>How tickets move</th><th>Good for</th></tr></thead>
           <tbody>
@@ -82,13 +129,17 @@
             <tr><td>Custom</td><td>You choose where each stage can go next, so the workflow can split into branches and loop back.</td><td>Reviews, approvals, anything with a “send it back” step</td></tr>
           </tbody>
         </table></div>
-        <figure class="shot"><img src="/assets/screens/ticket-types-list.webp" alt="Ticket Types in Work Configuration, with each type’s workflow type and stages" loading="lazy" width="1600" height="1000"><figcaption>Work Configuration → Ticket Types</figcaption></figure>
-        <p>Every workflow has a starting stage, up to five stages in the middle, and up to four <strong>end stages</strong>. Each end stage is marked as a <strong>success</strong>, a <strong>failure</strong>, or <strong>cancelled</strong> — so a request can end <em>Approved</em>, <em>Rejected</em>, or <em>Withdrawn</em>, and Home and reports know which way it finished.</p>
+        <figure class="shot"><img src="/assets/screens/ticket-types-list.webp" alt="Ticket Types in Work Configuration, with each type’s workflow type, stages and sections" loading="lazy" width="1600" height="1000"><figcaption>Admin console → Work Configuration → Ticket Types</figcaption></figure>
+        <p>Every workflow has a starting stage, up to five stages in the middle, and up to four <strong>end stages</strong>. A ticket counts as resolved once it reaches an end stage — that’s what <em>Unresolved</em> and “open” mean in filters and Ask AI. Each end stage is marked as a <strong>success</strong>, a <strong>failure</strong>, or <strong>cancelled</strong> — so a request can end <em>Approved</em>, <em>Rejected</em>, or <em>Withdrawn</em>, and Home and reports know which way it finished.</p>
+      </section>
+      <section class="sec" id="sections"><h2>Sections on a ticket</h2>
+        <p>Besides fields, a ticket can show extra panels: the <strong>Time recorder</strong> for logging time, and, once those apps are connected, <strong>GitHub</strong> (branches, commits and pull requests) and the <strong>Claude</strong> and <strong>Cursor</strong> coding agents. The <strong>Sections</strong> column on Ticket Types shows which panels each type has. Click it to switch them on or off; apps that aren’t connected yet are greyed out, with a link to connect them.</p>
+        <figure class="shot"><img src="/assets/screens/ticket-types-sections.webp" alt="Sections on Maintenance Request tickets: Time recorder on under Built-in, and GitHub, Claude agent and Cursor agent under Apps, greyed out until connected" loading="lazy" width="1600" height="1250"><figcaption>Choosing the sections for Maintenance Request tickets</figcaption></figure>
       </section>
       <section class="sec" id="custom-workflow"><h2>Build a branching workflow</h2>
         <p>For example, a <em>Menu Change</em> goes from <em>Proposed</em> to <em>Tasting</em>; after tasting it can be sent back with <em>Changes requested</em>, move on to <em>Costed</em>, or be <em>Rejected</em>.</p>
         <ol class="howto">
-          <li>Open <strong>Work Configuration → Ticket Types</strong> and edit the type.</li>
+          <li>Open <strong>Admin console → Work Configuration → Ticket Types</strong> and edit the type.</li>
           <li>Set <strong>Workflow type</strong> to <strong>Custom</strong>. It starts from the type’s current one-step-at-a-time moves.</li>
           <li>Set up the stages as usual: the start, the middle stages, and the end stages.</li>
           <li>In <strong>Branches</strong>, each stage lists the other stages as chips. Select the stages a ticket may move to next. The diagram above shows the result — moves forward as solid lines, moves back as dashed lines.</li>
@@ -98,7 +149,7 @@
         <p><strong>Where the rules apply.</strong> On the board, dragging a card to a stage the workflow doesn’t allow shows <em>This workflow doesn’t go from X to Y</em>. On a ticket, the status menu greys out stages that aren’t a next step. Stage automations aren’t limited by the branches, and Linear and Free flow types work exactly as before.</p>
         <p class="tip">Want a quick start? <strong>Reset to linear</strong> puts back the one-step-at-a-time moves, and you can add branches from there.</p>
       </section>
-      <p class="doc-foot">Last updated: October 28, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+      <p class="doc-foot">Last updated: November 3, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
     </article>
   </div>
 </main>
