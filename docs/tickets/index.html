@@ -141,6 +141,7 @@
             <tr><td>Time logging</td><td>A clock in / stop timer and time entries, with the total time logged.</td></tr>
             <tr><td>Attach files</td><td>Upload files when you create the ticket, and attach more later.</td></tr>
             <tr><td>Hierarchy</td><td>Parent and child tickets: put the ticket under a parent, or add children to it — a milestone and its punch items, an epic and its stories.</td></tr>
+            <tr><td>Linked tickets</td><td>Link the ticket to related ones: <em>relates to</em>, <em>blocks</em>, <em>blocked by</em>, <em>dependent on</em>, <em>duplicates</em>. Shows on the open ticket.</td></tr>
             <tr><td colspan="2"><strong>Apps</strong> (once connected)</td></tr>
             <tr><td><a href="/docs/integrations/github/">GitHub</a></td><td>Branches, commits, and pull requests linked to the ticket.</td></tr>
             <tr><td><a href="/docs/integrations/claude/">Claude agent</a></td><td>Hand the ticket to a Claude coding agent and follow its progress.</td></tr>
@@ -155,11 +156,11 @@
           <li>Switch each section on or off. It saves straight away.</li>
           <li>Apps you haven’t connected are greyed out, with an <strong>Open Apps</strong> link to connect them first.</li>
         </ol>
-        <figure class="shot"><img src="/assets/screens/ticket-types-sections.webp" alt="Sections on Maintenance Request tickets: Time logging and Attach files on, Hierarchy off, and GitHub under Apps greyed out until connected; Food Safety Issue and Guest Feedback show Attach files in the Sections column" loading="lazy" width="1600" height="1250"><figcaption>Maintenance Request tickets get time logging and file uploads, but no parent / children</figcaption></figure>
+        <figure class="shot"><img src="/assets/screens/ticket-types-sections.webp" alt="Sections on Maintenance Request tickets: Time logging and Attach files on, Hierarchy and Linked tickets off, and GitHub under Apps greyed out until connected; Food Safety Issue and Guest Feedback show Attach files in the Sections column" loading="lazy" width="1600" height="1250"><figcaption>Maintenance Request tickets get time logging and file uploads, but no parent / children or linked tickets</figcaption></figure>
         <h3>Where sections show</h3>
         <ul>
           <li><strong>Everywhere the ticket does.</strong> A section that’s on shows on New Ticket and on the open ticket; one that’s off is hidden from both. Sections aren’t fields, so they’re not in Ticket Type Screens or the Fields list — this switch is the only one.</li>
-          <li><strong>Nothing is lost when you turn one off.</strong> A ticket that already has files, logged time, or a parent or children keeps showing them.</li>
+          <li><strong>Nothing is lost when you turn one off.</strong> A ticket that already has files, logged time, a parent or children, or linked tickets keeps showing them.</li>
           <li><strong>Apps follow the switch too.</strong> When the Claude or Cursor section is off for a type, that type’s tickets can’t be handed to the agent, including by stage automations.</li>
         </ul>
         <div class="shot-pair"><figure class="shot"><img src="/assets/screens/new-ticket-sections.webp" alt="New Ticket for a Maintenance Request, ending with the Time Logged section and the Attach Files section with Add files" loading="lazy" width="1600" height="1250"><figcaption>New Ticket with Time logging and Attach files on</figcaption></figure><figure class="shot"><img src="/assets/screens/ticket-detail-sections.webp" alt="An open Maintenance Request with Start clock, Time Logged and Attachments sections above the comments" loading="lazy" width="1600" height="1250"><figcaption>The same sections on the open ticket</figcaption></figure></div>
