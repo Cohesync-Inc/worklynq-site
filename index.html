@@ -292,7 +292,7 @@
   }
 
   /* ---------- JUST ASK ASSIST ---------- */
-  .ask{padding:0 0 84px;}
+  .ask{padding:84px 0; border-top:1px solid var(--line);}
   .ask-grid{
     display:grid;
     grid-template-columns:minmax(0, 1fr) minmax(0, 1.2fr);
@@ -328,7 +328,7 @@
     .ask-grid{grid-template-columns:minmax(0, 1fr); gap:36px;}
   }
   @media (max-width:640px){
-    .ask{padding:0 0 64px;}
+    .ask{padding:64px 0;}
     .ask-copy{text-align:center;}
     .ask-lead{margin-left:auto; margin-right:auto;}
     .ask-prompts{justify-content:center;}
@@ -1674,52 +1674,6 @@
     </div>
   </section>
 
-  <section class="ask" id="assist" aria-labelledby="ask-title">
-    <div class="wrap ask-grid">
-      <div class="ask-copy">
-        <p class="ask-kicker">Worklynq Assist</p>
-        <h2 id="ask-title">Don't dig for it. Just ask.</h2>
-        <p class="ask-lead">Assist sits beside every page in Worklynq. Ask about your business, have it do the busywork, or start your shift, by typing or by talking.</p>
-
-        <div class="ask-group">
-          <span class="ask-label">Ask</span>
-          <ul class="ask-prompts">
-            <li>“What's still waiting at Downtown?”</li>
-            <li>“Which tickets are overdue?”</li>
-            <li>“Summarize how today is going.”</li>
-          </ul>
-        </div>
-        <div class="ask-group">
-          <span class="ask-label">Get it done</span>
-          <ul class="ask-prompts">
-            <li>“Log a repair for the ice machine at Riverside.”</li>
-            <li>“Summarize this page.”</li>
-          </ul>
-        </div>
-        <div class="ask-group">
-          <span class="ask-label">Just say it</span>
-          <ul class="ask-prompts">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>“Start my shift.”</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>“What's next at Riverside?”</li>
-          </ul>
-        </div>
-
-        <ul class="ask-trust">
-          <li><strong>Knows your screen</strong>Ask about the ticket, page, or dashboard you have open.</li>
-          <li><strong>Asks first</strong>Nothing changes until you tap Go ahead.</li>
-          <li><strong>Sees what you see</strong>It works with your permissions, nothing more.</li>
-        </ul>
-        <a class="ask-link" href="/docs/assist/">How Assist works →</a>
-      </div>
-
-      <figure class="shot">
-        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>acme.worklynq.net</span></div>
-        <img src="assets/screens/assist-panel.webp" alt="Worklynq Assist open beside the page, answering what is still waiting at the Downtown café" loading="lazy" width="1600" height="1000">
-        <figcaption>Assist checks orders and tickets for you, right beside the page you're on.</figcaption>
-      </figure>
-    </div>
-  </section>
-
   <section class="beta" id="beta" aria-labelledby="beta-title">
     <div class="wrap">
       <div class="beta-card">
@@ -1900,6 +1854,52 @@
         </figure>
       </div>
       <p class="inside-foot">Step-by-step with every screen: <a href="/docs/getting-started/">Getting started</a> · See more in the <a href="/docs/">docs</a></p>
+    </div>
+  </section>
+
+  <section class="ask" id="assist" aria-labelledby="ask-title">
+    <div class="wrap ask-grid">
+      <div class="ask-copy">
+        <p class="ask-kicker">Worklynq Assist</p>
+        <h2 id="ask-title">Don't dig for it. Just ask.</h2>
+        <p class="ask-lead">Assist sits beside every page in Worklynq. Ask about your business, have it do the busywork, or start your shift, by typing or by talking.</p>
+
+        <div class="ask-group">
+          <span class="ask-label">Ask</span>
+          <ul class="ask-prompts">
+            <li>“What's still waiting at Downtown?”</li>
+            <li>“Which tickets are overdue?”</li>
+            <li>“Summarize how today is going.”</li>
+          </ul>
+        </div>
+        <div class="ask-group">
+          <span class="ask-label">Get it done</span>
+          <ul class="ask-prompts">
+            <li>“Log a repair for the ice machine at Riverside.”</li>
+            <li>“Summarize this page.”</li>
+          </ul>
+        </div>
+        <div class="ask-group">
+          <span class="ask-label">Just say it</span>
+          <ul class="ask-prompts">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>“Start my shift.”</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>“What's next at Riverside?”</li>
+          </ul>
+        </div>
+
+        <ul class="ask-trust">
+          <li><strong>Knows your screen</strong>Ask about the ticket, page, or dashboard you have open.</li>
+          <li><strong>Asks first</strong>Nothing changes until you tap Go ahead.</li>
+          <li><strong>Sees what you see</strong>It works with your permissions, nothing more.</li>
+        </ul>
+        <a class="ask-link" href="/docs/assist/">How Assist works →</a>
+      </div>
+
+      <figure class="shot">
+        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>acme.worklynq.net</span></div>
+        <img src="assets/screens/assist-approve.webp" alt="Worklynq Assist asking for approval, with Go ahead and Don't buttons, before it changes a ticket" loading="lazy" width="1600" height="1000">
+        <figcaption>Assist does the work, and asks before it changes anything.</figcaption>
+      </figure>
     </div>
   </section>
 
