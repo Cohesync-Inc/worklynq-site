@@ -199,7 +199,7 @@
     padding:84px 0;
     margin-bottom:84px;
   }
-  .what-head{max-width:820px; margin-bottom:36px;}
+  .what-head{max-width:900px; margin-bottom:36px;}
   .what-kicker{
     display:inline-flex;
     align-items:center;
@@ -222,7 +222,7 @@
   .what-lead{margin:0; font-size:17px; line-height:1.65; color:rgba(245,243,236,0.82); max-width:62ch;}
   .what-fit{
     display:grid;
-    grid-template-columns:repeat(3, minmax(0, 1fr));
+    grid-template-columns:repeat(4, minmax(0, 1fr));
     gap:14px;
     margin-bottom:28px;
   }
@@ -276,8 +276,14 @@
   .what-case-link:hover{text-decoration:underline;}
   .what-foot{margin:24px 0 0; font-size:15.5px; line-height:1.6; color:rgba(245,243,236,0.8);}
   .what-foot strong{color:var(--paper); font-weight:600;}
+  @media (max-width:1100px){
+    .what-fit{grid-template-columns:repeat(2, minmax(0, 1fr));}
+  }
   @media (max-width:900px){
-    .what-fit, .what-cases{grid-template-columns:minmax(0, 1fr);}
+    .what-cases{grid-template-columns:minmax(0, 1fr);}
+  }
+  @media (max-width:640px){
+    .what-fit{grid-template-columns:minmax(0, 1fr);}
   }
   @media (max-width:640px){
     .what{padding:64px 0; margin-bottom:64px;}
@@ -1621,7 +1627,7 @@
     <div class="wrap">
       <div class="what-head">
         <p class="what-kicker">What Worklynq does</p>
-        <h2 id="what-title">Your POS takes the sale. Your books track the money. Worklynq runs the day.</h2>
+        <h2 id="what-title">Your POS takes the sale. Your books track the money. Your CRM manages customers. Worklynq runs the day.</h2>
         <p class="what-lead">Worklynq isn't a POS, accounting software, or a CRM. It connects to the ones you already have and keeps track of everything in between: the repairs, checklists, orders, crews, and follow-ups that today live in group chats, on paper, and in someone's head.</p>
       </div>
 
@@ -1635,6 +1641,11 @@
           <span class="what-fit-label">Your accounting</span>
           <span class="what-fit-q">“Where did the money go?”</span>
           <span class="what-fit-note">Invoices, expenses, payroll.</span>
+        </div>
+        <div class="what-fit-item">
+          <span class="what-fit-label">Your CRM</span>
+          <span class="what-fit-q">“Who are our customers?”</span>
+          <span class="what-fit-note">Contacts, customer history, deals.</span>
         </div>
         <div class="what-fit-item what-fit-item--us">
           <span class="what-fit-label">Worklynq</span>
