@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Dashboards — Worklynq Docs</title>
+<meta name="description" content="Build dashboards in Worklynq from widgets: open and overdue work, schedules, trends, and data from Square, QuickBooks and your own apps. AI can build and explain them.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/">Tickets</a></li><li><a href="/docs/projects/">Projects</a></li><li><a href="/docs/product-releases/">Product Releases</a></li><li><a href="/docs/dashboards/" aria-current="page">Dashboards</a><ul class="side-sections"><li><a href="#who">Who can use Dashboards</a></li><li><a href="#create">Create a dashboard</a></li><li><a href="#widgets">Add widgets</a></li><li><a href="#data">Data from your other tools</a></li><li><a href="#ai">Build and explain with AI</a></li><li><a href="#share">Share a dashboard</a></li><li><a href="#manage">Keep it tidy</a></li><li><a href="#built-in">Dashboards for projects and versions</a></li></ul></li><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Dashboards</h1>
+      <p class="intro">A dashboard puts the numbers you check every day on one page: open and overdue work, today’s schedule, how much got done, and data from the tools you’ve connected, like Square sales or QuickBooks. Build one widget by widget, or describe it and let AI build it.</p>
+      <section class="sec" id="who"><h2>Who can use Dashboards</h2>
+        <p>Anyone who can see tickets. Open <strong>Dashboards</strong> in the sidebar to see the dashboards you made and the ones shared with you. Each card shows how many widgets it has, when it was last updated, and who can see it.</p>
+        <p>If you don’t see Dashboards in your sidebar, a System Admin turns it on in <strong>Admin console → Work Configuration → Modules</strong>. It doesn’t need any other module.</p>
+        <figure class="shot"><img src="/assets/screens/dashboards-list.webp" alt="Dashboards: Store overview (everyone in the company, 8 widgets), Downtown café — today (Downtown crew, 4 widgets) and Bayview opening (only me, 3 widgets), with Connected data, Describe a dashboard and New Dashboard buttons" loading="lazy" width="1600" height="1000"><figcaption>Your dashboards and the ones shared with you</figcaption></figure>
+      </section>
+      <section class="sec" id="create"><h2>Create a dashboard</h2>
+        <ol class="howto">
+          <li>Open <strong>Dashboards</strong> and click <strong>New Dashboard</strong>.</li>
+          <li>Give it a name and, if you like, a description.</li>
+          <li>Under <strong>Show tickets from</strong>, keep <em>All products, projects and locations</em>, or pick one — for example, one dashboard per café.</li>
+          <li>Choose <a href="#share">who can see it</a>, and save. The dashboard opens, ready for widgets.</li>
+        </ol>
+        <p>Or click <strong>Describe a dashboard</strong> and <a href="#ai">let AI build it</a>.</p>
+      </section>
+      <section class="sec" id="widgets"><h2>Add widgets</h2>
+        <p>Click <strong>Add widget</strong>. Start from a ready-made widget, then change anything you like — the preview updates as you go.</p>
+        <ul>
+          <li><strong>Ready-made:</strong> Open tickets, Overdue, Today’s schedule, Overdue list, Completion rate, Tickets by field, Trend over time, and Workload by person.</li>
+          <li><strong>Show as:</strong> a number, a bar chart, a trend over time, a table, or a list of tickets.</li>
+          <li><strong>Measure:</strong> number of tickets, % done, story points, or hours logged.</li>
+          <li><strong>Split by</strong> status, priority, ticket type, assignee, reporter, work area, release, sprint, or severity.</li>
+          <li><strong>Which tickets:</strong> all, open, done, or overdue — and <strong>when</strong>, by created, updated, due, scheduled or completed date: today, this week, the next 7 days, the last 7, 30 or 90 days, this month, the last 12 months, or all time. A trend counts per day, week or month.</li>
+          <li><strong>Narrow it down</strong> to one work area, or with a filter: type it in plain words under <strong>Filter with AI</strong> and click <strong>Write filter</strong>, or write a <a href="/docs/tickets/#filters">Worklynq Query</a> yourself.</li>
+          <li><strong>Width:</strong> one column, two columns, or full width.</li>
+        </ul>
+        <figure class="shot"><img src="/assets/screens/dashboard-add-widget.webp" alt="Add widget: data from Tickets, the ready-made widgets, and Tickets by field picked — Open tickets by status, as a bar chart of the number of tickets split by status — with a live preview" loading="lazy" width="1600" height="1250"><figcaption>Start from a ready-made widget and see it as you change it</figcaption></figure>
+        <p>Each widget gets its own color, so they’re easy to tell apart. On the dashboard, use the arrows to move a widget, <strong>Edit</strong> to change it, or <strong>Remove</strong>. A dashboard holds up to 40 widgets.</p>
+      </section>
+      <section class="sec" id="data"><h2>Data from your other tools</h2>
+        <p>Widgets aren’t only about tickets. Under <strong>Data from</strong>, pick any tool your company has connected:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Data from</th><th>For example</th></tr></thead>
+          <tbody>
+            <tr><td><a href="/docs/integrations/square/">Square sales</a></td><td>Sales today, sales per day, sales by location, top items, busy hours, average order</td></tr>
+            <tr><td><a href="/docs/integrations/quickbooks/">QuickBooks</a></td><td>Net income this month, profit and loss, invoices and overdue balances by customer</td></tr>
+            <tr><td><a href="/docs/integrations/custom-apps/">Your own apps</a></td><td>Anything your app shares — loyalty members by tier, bookings, visits</td></tr>
+            <tr><td><a href="/docs/integrations/github/">GitHub pull requests</a></td><td>Merged per week, time to merge, by repository, recent pull requests</td></tr>
+            <tr><td>Gmail (company mailbox)</td><td>Emails per day, emails today, who emails you</td></tr>
+            <tr><td>Coding agents (<a href="/docs/integrations/claude/">Claude</a>, <a href="/docs/integrations/cursor/">Cursor</a>)</td><td>Runs, pull requests opened, and spend</td></tr>
+          </tbody>
+        </table></div>
+        <figure class="shot"><img src="/assets/screens/dashboard.webp" alt="A Store overview dashboard: Square sales and orders today, overdue work, sales by store, open tickets by status, loyalty members by tier, and orders per day" loading="lazy" width="1600" height="1250"><figcaption>Sales, open work and loyalty on one dashboard</figcaption></figure>
+        <h3 id="connected-data">Who can use each tool’s data</h3>
+        <p>A System Admin decides who may use each connected tool’s data: click <strong>Connected data</strong> on the Dashboards page and choose <em>Everyone in the company</em> or <em>System Admins only</em> for each one. A widget only shows to people allowed to use its data, even on a shared dashboard.</p>
+        <figure class="shot"><img src="/assets/screens/dashboard-connected-data.webp" alt="Connected data: Square sales, QuickBooks profit and loss, QuickBooks invoices and Pine Rewards loyalty members open to everyone in the company; coding agents, GitHub pull requests and Gmail for System Admins only" loading="lazy" width="1600" height="1125"><figcaption>Choose who may use each connected tool’s data</figcaption></figure>
+      </section>
+      <section class="sec" id="ai"><h2>Build and explain with AI</h2>
+        <ul>
+          <li><strong>Describe a dashboard.</strong> On the Dashboards page, say what you want to see — “today at each location: what’s scheduled, what’s overdue and how much is done, plus sales” — and click <strong>Build</strong>. AI picks the widgets and shows a live preview. Ask for changes in the box below it, then click <strong>Create dashboard</strong>. Nothing is saved until you do.</li>
+          <li><strong>Change with AI.</strong> On a dashboard you can edit, describe what to add, change or drop, and preview it before you save.</li>
+          <li><strong>Explain.</strong> AI tells you in a few points what the numbers say right now — what’s up, what’s behind, what to look at first.</li>
+        </ul>
+        <div class="shot-pair"><figure class="shot"><img src="/assets/screens/dashboard-describe.webp" alt="Describe a dashboard: a request in plain words and a preview of the four widgets AI built" loading="lazy" width="1600" height="1263"><figcaption>Describe it, and AI builds it</figcaption></figure><figure class="shot"><img src="/assets/screens/dashboard-explain.webp" alt="Explain: what this dashboard says, in four points" loading="lazy" width="1600" height="1000"><figcaption>Explain tells you what the numbers say</figcaption></figure></div>
+        <p>AI uses Worklynq’s own AI, or a Claude or OpenAI model your company has set up, and uses your company’s <a href="/docs/ai-credits/">AI credits</a>. You can also ask <a href="/docs/assist/#this-page">Assist</a> “what does this dashboard show?” with a dashboard open, or build and read dashboards from <a href="/docs/connect-your-ai/">your own AI app</a>.</p>
+      </section>
+      <section class="sec" id="share"><h2>Share a dashboard</h2>
+        <p>Click <strong>Settings</strong> on a dashboard to rename it, change which work area it shows, or choose <strong>Who can see it</strong>:</p>
+        <ul>
+          <li><strong>Only me</strong> — the default for a new dashboard.</li>
+          <li><strong>Everyone in the company</strong>.</li>
+          <li><strong>A team</strong> — pick which one.</li>
+        </ul>
+        <p>Other people you share with can’t change your dashboard, but they can <strong>Duplicate</strong> it to make their own copy. Everyone sees the numbers for the work they have access to, so a shared dashboard never shows anyone tickets they couldn’t open.</p>
+        <figure class="shot"><img src="/assets/screens/dashboard-settings.webp" alt="Edit dashboard for Store overview: name, description, Show tickets from all products, projects and locations, and Who can see it set to Everyone in the company" loading="lazy" width="1600" height="1125"><figcaption>Settings: what it shows, and who can see it</figcaption></figure>
+      </section>
+      <section class="sec" id="manage"><h2>Keep it tidy</h2>
+        <ul>
+          <li><strong>Layout:</strong> one, two, or three columns. Three columns needs a wide window; on a smaller one the dashboard shows two.</li>
+          <li><strong>Refresh</strong> updates every widget. The numbers are worked out when you open the dashboard.</li>
+          <li>From a dashboard card’s menu, <strong>Edit</strong>, <strong>Duplicate</strong>, or <strong>Delete</strong> it. Only the person who made a dashboard, or a System Admin, can change or delete it.</li>
+          <li>Your company can keep up to 500 dashboards and scheduled reports.</li>
+        </ul>
+      </section>
+      <section class="sec" id="built-in"><h2>Dashboards for projects and versions</h2>
+        <p>Every <a href="/docs/projects/#dashboard">project</a> and every <a href="/docs/product-releases/#dashboard">product version</a> gets its own dashboard, ready-made with widgets for its tickets. Anyone can change them, with <strong>Change with AI</strong> too, and <strong>Reset widgets</strong> puts the defaults back. They belong to the project or version, so they aren’t listed under Dashboards and can’t be deleted.</p>
+        <p class="tip">Want the numbers in your inbox? <a href="/docs/reports/">Scheduled reports</a> email a set of widgets on a schedule, with an AI summary.</p>
+      </section>
+      <p class="doc-foot">Last updated: November 6, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
