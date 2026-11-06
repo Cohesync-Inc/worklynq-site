@@ -291,6 +291,50 @@
     .what-fix::before{display:none;}
   }
 
+  /* ---------- JUST ASK ASSIST ---------- */
+  .ask{padding:84px 0; border-top:1px solid var(--line);}
+  .ask-grid{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) minmax(0, 1.2fr);
+    gap:56px;
+    align-items:center;
+  }
+  .ask-kicker{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13.5px; color:var(--teal-deep);
+    background:var(--sage); border:1px solid var(--line);
+    padding:6px 13px 6px 11px; border-radius:100px; margin:0 0 20px;
+  }
+  .ask-kicker::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--teal-bright);}
+  .ask h2{font-size:clamp(30px, 3.6vw, 44px); line-height:1.12; color:var(--teal-deep); margin-bottom:16px;}
+  .ask-lead{margin:0 0 26px; font-size:17px; line-height:1.65; color:var(--ink-soft); max-width:50ch;}
+  .ask-group{margin:0 0 16px;}
+  .ask-label{display:block; font-size:12.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--teal); margin-bottom:8px;}
+  .ask-prompts{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px;}
+  .ask-prompts li{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14.5px; line-height:1.4; color:var(--ink);
+    background:var(--card-bg); border:1px solid var(--line);
+    padding:8px 14px; border-radius:16px 16px 16px 4px;
+  }
+  .ask-prompts svg{width:15px; height:15px; color:var(--teal); flex-shrink:0;}
+  .ask-trust{list-style:none; margin:22px 0 0; padding:18px 0 0; border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px;}
+  .ask-trust li{font-size:14px; line-height:1.5; color:var(--ink-soft);}
+  .ask-trust strong{display:block; font-size:14.5px; font-weight:600; color:var(--ink); margin-bottom:2px;}
+  .ask-link{display:inline-block; margin-top:22px; font-size:14.5px; font-weight:600; color:var(--teal-deep); text-decoration:none;}
+  .ask-link:hover{text-decoration:underline;}
+  .ask .shot figcaption{padding:12px 16px; font-size:14px; color:var(--ink-soft); border-top:1px solid var(--line);}
+  @media (max-width:900px){
+    .ask-grid{grid-template-columns:minmax(0, 1fr); gap:36px;}
+  }
+  @media (max-width:640px){
+    .ask{padding:64px 0;}
+    .ask-copy{text-align:center;}
+    .ask-lead{margin-left:auto; margin-right:auto;}
+    .ask-prompts{justify-content:center;}
+    .ask-trust{grid-template-columns:minmax(0, 1fr);}
+  }
+
   /* ---------- BETA (December 2026) ---------- */
   .beta{padding:0 0 84px;}
   .beta-card{
@@ -1810,6 +1854,52 @@
         </figure>
       </div>
       <p class="inside-foot">Step-by-step with every screen: <a href="/docs/getting-started/">Getting started</a> · See more in the <a href="/docs/">docs</a></p>
+    </div>
+  </section>
+
+  <section class="ask" id="assist" aria-labelledby="ask-title">
+    <div class="wrap ask-grid">
+      <div class="ask-copy">
+        <p class="ask-kicker">Worklynq Assist</p>
+        <h2 id="ask-title">Don't dig for it. Just ask.</h2>
+        <p class="ask-lead">Assist sits beside every page in Worklynq. Ask about your business, have it do the busywork, or start your shift, by typing or by talking.</p>
+
+        <div class="ask-group">
+          <span class="ask-label">Ask</span>
+          <ul class="ask-prompts">
+            <li>“What's still waiting at Downtown?”</li>
+            <li>“Which tickets are overdue?”</li>
+            <li>“Summarize how today is going.”</li>
+          </ul>
+        </div>
+        <div class="ask-group">
+          <span class="ask-label">Get it done</span>
+          <ul class="ask-prompts">
+            <li>“Log a repair for the ice machine at Riverside.”</li>
+            <li>“Summarize this page.”</li>
+          </ul>
+        </div>
+        <div class="ask-group">
+          <span class="ask-label">Just say it</span>
+          <ul class="ask-prompts">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>“Start my shift.”</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>“What's next at Riverside?”</li>
+          </ul>
+        </div>
+
+        <ul class="ask-trust">
+          <li><strong>Knows your screen</strong>Ask about the ticket, page, or dashboard you have open.</li>
+          <li><strong>Asks first</strong>Nothing changes until you tap Go ahead.</li>
+          <li><strong>Sees what you see</strong>It works with your permissions, nothing more.</li>
+        </ul>
+        <a class="ask-link" href="/docs/assist/">How Assist works →</a>
+      </div>
+
+      <figure class="shot">
+        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>acme.worklynq.net</span></div>
+        <img src="assets/screens/assist-approve.webp" alt="Worklynq Assist asking for approval, with Go ahead and Don't buttons, before it changes a ticket" loading="lazy" width="1600" height="1000">
+        <figcaption>Assist does the work, and asks before it changes anything.</figcaption>
+      </figure>
     </div>
   </section>
 
