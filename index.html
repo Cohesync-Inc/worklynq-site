@@ -192,6 +192,100 @@
     box-shadow:0 24px 60px -20px rgba(11,59,54,0.35);
   }
 
+  /* ---------- WHAT WORKLYNQ DOES ---------- */
+  .what{padding:0 0 84px;}
+  .what-head{max-width:820px; margin-bottom:36px;}
+  .what-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--teal-deep);
+    background:var(--sage);
+    border:1px solid var(--line);
+    padding:6px 13px 6px 11px;
+    border-radius:100px;
+    margin:0 0 20px;
+  }
+  .what-kicker::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--teal-bright);}
+  .what h2{
+    font-size:clamp(30px, 3.6vw, 44px);
+    line-height:1.12;
+    color:var(--teal-deep);
+    margin-bottom:18px;
+  }
+  .what-lead{margin:0; font-size:17px; line-height:1.65; color:var(--ink-soft); max-width:62ch;}
+  .what-fit{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:14px;
+    margin-bottom:28px;
+  }
+  .what-fit-item{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 22px;
+  }
+  .what-fit-item .what-fit-label{display:block; font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;}
+  .what-fit-item .what-fit-q{display:block; font-family:'Fraunces', Georgia, serif; font-size:20px; line-height:1.3; color:var(--ink);}
+  .what-fit-item .what-fit-note{display:block; font-size:14px; line-height:1.5; color:var(--ink-soft); margin-top:6px;}
+  .what-fit-item--us{background:var(--teal-deep); border-color:var(--teal-deep);}
+  .what-fit-item--us .what-fit-label{color:var(--teal-bright);}
+  .what-fit-item--us .what-fit-q{color:var(--paper);}
+  .what-fit-item--us .what-fit-note{color:rgba(245,243,236,0.8);}
+  .what-cases{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:18px;
+  }
+  .what-case{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px;
+    display:flex;
+    flex-direction:column;
+  }
+  .what-case-head{display:flex; align-items:center; gap:12px; margin-bottom:6px;}
+  .what-case-icon{
+    width:38px; height:38px; border-radius:10px;
+    background:var(--sage); color:var(--teal);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .what-case-icon svg{width:19px; height:19px;}
+  .what-case h3{font-size:22px; line-height:1.25; color:var(--teal-deep);}
+  .what-case-sub{margin:0 0 12px; font-size:14px; color:var(--ink-soft);}
+  .what-pains{list-style:none; margin:0; padding:0; flex:1;}
+  .what-pains li{padding:14px 0; border-top:1px solid var(--line);}
+  .what-pain{display:block; font-style:italic; font-size:15px; line-height:1.5; color:var(--ink);}
+  .what-fix{display:flex; gap:8px; margin-top:4px; font-size:14.5px; line-height:1.55; color:var(--ink-soft);}
+  .what-fix::before{content:"→"; color:var(--teal); font-weight:600; flex-shrink:0;}
+  .what-case-link{
+    margin-top:16px;
+    font-size:14.5px;
+    font-weight:500;
+    color:var(--teal);
+    text-decoration:none;
+  }
+  .what-case-link:hover{text-decoration:underline;}
+  .what-foot{margin:24px 0 0; font-size:15.5px; line-height:1.6; color:var(--ink-soft);}
+  .what-foot strong{color:var(--ink); font-weight:600;}
+  @media (max-width:900px){
+    .what-fit, .what-cases{grid-template-columns:minmax(0, 1fr);}
+  }
+  @media (max-width:640px){
+    .what{padding:0 0 64px;}
+    .what-head, .what-fit-item, .what-foot{text-align:center;}
+    .what-lead{margin-left:auto; margin-right:auto;}
+    .what-case{padding:22px;}
+    .what-case-head{justify-content:center;}
+    .what-case-sub, .what-case-link{text-align:center;}
+    .what-pains li{text-align:center;}
+    .what-fix{justify-content:center;}
+    .what-fix::before{display:none;}
+  }
+
   /* ---------- BETA (December 2026) ---------- */
   .beta{padding:0 0 84px;}
   .beta-card{
@@ -1442,6 +1536,7 @@
       <img src="data:image/png;base64,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" alt="Worklynq — Intelligence Behind Every Operation" class="wordmark">
     </a>
     <nav class="nav-links">
+      <a href="#what">What it does</a>
       <a href="#features">Features</a>
       <a href="#modules">Modules</a>
       <a href="/docs/">Docs</a>
@@ -1470,6 +1565,63 @@
         <!-- Photo: Unsplash (free license), photo-1572021335469-31706a17aaef -->
         <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=1400&h=875&q=75" alt="A small team gathered around a laptop at a shared table, smiling as they work through something together" class="hero-photo" width="1400" height="875" fetchpriority="high">
       </div>
+    </div>
+  </section>
+
+  <section class="what" id="what" aria-labelledby="what-title">
+    <div class="wrap">
+      <div class="what-head">
+        <p class="what-kicker">What Worklynq does</p>
+        <h2 id="what-title">Your POS takes the sale. Your books track the money. Worklynq runs the day.</h2>
+        <p class="what-lead">Worklynq isn't another POS or accounting app. It connects to the ones you already have and keeps track of everything in between: the repairs, checklists, orders, crews, and follow-ups that today live in group chats, on paper, and in someone's head.</p>
+      </div>
+
+      <div class="what-fit">
+        <div class="what-fit-item">
+          <span class="what-fit-label">Your POS</span>
+          <span class="what-fit-q">“What did we sell?”</span>
+          <span class="what-fit-note">Orders, payments, the menu.</span>
+        </div>
+        <div class="what-fit-item">
+          <span class="what-fit-label">Your accounting</span>
+          <span class="what-fit-q">“Where did the money go?”</span>
+          <span class="what-fit-note">Invoices, expenses, payroll.</span>
+        </div>
+        <div class="what-fit-item what-fit-item--us">
+          <span class="what-fit-label">Worklynq</span>
+          <span class="what-fit-q">“What's broken, late, or not done yet?”</span>
+          <span class="what-fit-note">Every task, request, and check across your stores or job sites, with your sales alongside.</span>
+        </div>
+      </div>
+
+      <div class="what-cases">
+        <article class="what-case">
+          <div class="what-case-head"><span class="what-case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10l1.5-5h13L20 10"/><path d="M4 10h16v10H4z"/><path d="M10 20v-5h4v5"/></svg></span><h3>Restaurants &amp; cafés</h3></div>
+          <p class="what-case-sub">What owners tell us, and what Worklynq does about it.</p>
+          <ul class="what-pains">
+            <li><span class="what-pain">“Did anyone call about the walk-in cooler?”</span><span class="what-fix">Maintenance requests tracked from reported to fixed.</span></li>
+            <li><span class="what-pain">“Did the other store actually close properly?”</span><span class="what-fix">Checklists and a schedule for each store, visible from your phone.</span></li>
+            <li><span class="what-pain">“Who placed the produce order? Did it arrive?”</span><span class="what-fix">Supplier orders with an owner and a status.</span></li>
+            <li><span class="what-pain">“Orders are running late and the kitchen doesn't know.”</span><span class="what-fix">Square orders on one board, late ones flagged, up on a kitchen TV.</span></li>
+            <li><span class="what-pain">“A guest complained and nobody followed up.”</span><span class="what-fix">Guest feedback logged and assigned to someone.</span></li>
+          </ul>
+          <a class="what-case-link" href="/docs/guides/restaurants/">See the restaurant guide →</a>
+        </article>
+        <article class="what-case">
+          <div class="what-case-head"><span class="what-case-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg></span><h3>Construction &amp; trades</h3></div>
+          <p class="what-case-sub">What contractors tell us, and what Worklynq does about it.</p>
+          <ul class="what-pains">
+            <li><span class="what-pain">“Which RFIs are still waiting on an answer?”</span><span class="what-fix">RFIs and submittals tracked per job site, with due dates and what's overdue.</span></li>
+            <li><span class="what-pain">“We agreed that change on a call. Where's the record?”</span><span class="what-fix">Each change order records the scope, price, and approval.</span></li>
+            <li><span class="what-pain">“The punch list is on a clipboard in someone's truck.”</span><span class="what-fix">Punch items logged from a phone, right on site.</span></li>
+            <li><span class="what-pain">“Did the inspection pass? Was the incident written up?”</span><span class="what-fix">Inspections, safety incidents, and daily logs, all on record.</span></li>
+            <li><span class="what-pain">“How are my jobs doing right now?”</span><span class="what-fix">Home shows each job site's open and overdue work, or just ask Assist.</span></li>
+          </ul>
+          <a class="what-case-link" href="/docs/guides/construction/">See the construction guide →</a>
+        </article>
+      </div>
+
+      <p class="what-foot"><strong>Keep the tools you have.</strong> Worklynq connects to Square, QuickBooks, and more, so your sales and books sit next to the work, and you can ask Assist what's still open.</p>
     </div>
   </section>
 
