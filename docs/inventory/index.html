@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Inventory — Worklynq Docs</title>
+<meta name="description" content="Inventory in Worklynq: stock at each location, one-tap counts and deliveries, and AI suggestions from your Square and order sales.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/">Tickets</a></li><li><a href="/docs/projects/">Projects</a></li><li><a href="/docs/product-releases/">Product Releases</a></li><li><a href="/docs/dashboards/">Dashboards</a></li><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/inventory/" aria-current="page">Inventory</a><ul class="side-sections"><li><a href="#turn-on">Who it’s for</a></li><li><a href="#stock">Stock at each location</a></li><li><a href="#count">Count the shelves</a></li><li><a href="#suggestions">Suggestions from your sales</a></li><li><a href="#menu">Menu links</a></li><li><a href="#numbers">How the numbers work</a></li><li><a href="#assist">Just tell Assist</a></li></ul></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/chat/">Chat</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Inventory</h1>
+      <p class="intro">Know what’s on the shelves at every location. Update stock with one tap — or by telling Assist — and let Worklynq turn your Square and Order Tracking sales into what to order and where to set your pars.</p>
+      <section class="sec" id="turn-on"><h2>Who it’s for</h2>
+        <p>Inventory is for restaurants, cafés, shops and anyone running <a href="/docs/modules/#operations">Operations</a> locations. It’s on for new Operations companies; others turn it on in <strong>Admin console → Work Configuration → Modules</strong> (it needs Operations). Everyone who can open Operations can count, receive and set up items.</p>
+      </section>
+      <section class="sec" id="stock"><h2>Stock at each location</h2>
+        <p>Open <strong>Inventory</strong> and pick a location. Every item is listed by category, with what’s low or out first, how many days it will last, and its par.</p>
+        <figure class="shot"><img src="/assets/screens/inventory-stock.webp" alt="Inventory for Downtown café: items by category with on hand, par and days left, low and out of stock first, each with Count, + Received and Waste" loading="lazy" width="1600" height="1375"><figcaption>Stock at Downtown café, low items first</figcaption></figure>
+        <ul>
+          <li>Each row has <strong>Count</strong>, <strong>+ Received</strong> and <strong>Waste</strong>. They open a sheet with a big number field and +/− buttons.</li>
+          <li>When an item has an order unit, enter a delivery the way it arrives — “3 cases” — and Worklynq converts it (36 cartons).</li>
+          <li>Click an item to see its history: every count, delivery and waste, with who did it and how.</li>
+          <li><strong>Add an item</strong> with the unit it’s counted in, category, on hand and par — and, if you like, supplier, cost, order unit, days from order to delivery and days between deliveries. A new location can copy its items from another one.</li>
+        </ul>
+        <div class="shot-pair"><figure class="shot"><img src="/assets/screens/inventory-received.webp" alt="Receiving oat milk: 3 cases entered, converted to cartons" loading="lazy" width="1600" height="1000"><figcaption>Book a delivery the way it arrives</figcaption></figure><figure class="shot"><img src="/assets/screens/inventory-item.webp" alt="Cheddar slices: on hand, expected, daily usage, and the history of counts, deliveries and waste" loading="lazy" width="1600" height="1000"><figcaption>Every change on record</figcaption></figure></div>
+      </section>
+      <section class="sec" id="count"><h2>Count the shelves</h2>
+        <p>The <strong>Count</strong> tab is made for walking the walk-in: type what’s on each shelf, press <strong>Enter</strong> to jump to the next row, and save once at the end. Rows you leave blank are skipped. Afterwards Worklynq shows where the count and your sales disagree.</p>
+        <figure class="shot"><img src="/assets/screens/inventory-count.webp" alt="Count mode at Downtown café: a list of items with a box for each count" loading="lazy" width="1600" height="1250"><figcaption>Count mode</figcaption></figure>
+      </section>
+      <section class="sec" id="suggestions"><h2>Suggestions from your sales</h2>
+        <p>Worklynq reads what sold — from <a href="/docs/integrations/square/">Square</a> at the linked location and from <a href="/docs/order-tracking/">Order Tracking</a> — and turns it into suggestions on the <strong>Suggestions</strong> tab. Each one shows the numbers behind it:</p>
+        <ul>
+          <li><strong>Order list</strong> — what to order before the next delivery, by supplier, in order units with cost. Copy it, and click <strong>Received</strong> when it arrives.</li>
+          <li><strong>Par changes</strong> — when your sales say a par is off, with one click to apply (or apply them all).</li>
+          <li><strong>Count differences</strong> — when a count is well off what sales used.</li>
+          <li><strong>Stock nobody uses</strong>, menu items selling without a link, and items due a count.</li>
+        </ul>
+        <figure class="shot"><img src="/assets/screens/inventory-suggestions.webp" alt="Suggestions: an order list by supplier with cost, par changes with Set par, a count difference, and items due a count" loading="lazy" width="1600" height="1563"><figcaption>What to order, and where to set your pars</figcaption></figure>
+      </section>
+      <section class="sec" id="menu"><h2>Menu links</h2>
+        <p>A menu link says what one sale uses — a cheeseburger is 1 bun and 0.33 lb of beef. That’s how sales become usage. The <strong>Menu links</strong> tab lists what actually sold, unlinked items first. Links are shared by every location and match stock items by name.</p>
+        <div class="shot-pair"><figure class="shot"><img src="/assets/screens/inventory-menu-links.webp" alt="Menu links: menu items that sold, with their links or Link ingredients" loading="lazy" width="1600" height="1125"><figcaption>What sold, and what it uses</figcaption></figure><figure class="shot"><img src="/assets/screens/inventory-menu-link-edit.webp" alt="Linking an almond croissant to one croissant from stock" loading="lazy" width="1600" height="1125"><figcaption>Link a menu item in seconds</figcaption></figure></div>
+      </section>
+      <section class="sec" id="numbers"><h2>How the numbers work</h2>
+        <ul>
+          <li><strong>On hand</strong> = the last count, plus deliveries, minus waste.</li>
+          <li><strong>Expected on hand</strong> = on hand minus what sales used since that count. A count records the difference.</li>
+          <li><strong>Daily usage</strong> comes from the last 28 days of sales, by weekday — or, for items no menu link uses, from your counts.</li>
+          <li><strong>Suggested par</strong> = what you use between ordering and the next delivery after that, plus 20%.</li>
+        </ul>
+      </section>
+      <section class="sec" id="assist"><h2>Just tell Assist</h2>
+        <p>Say it or type it to <a href="/docs/assist/">Assist</a>:</p>
+        <ul>
+          <li>“We got 4 cases of tomatoes.” “Count 12 lb of ground beef.” “Tossed 3 lb of fries.” — Assist books it straight away.</li>
+          <li>“What should I order for the weekend?” “Are my pars right?” “Why is cheddar short?”</li>
+          <li>“Link my unlinked menu items.” — Assist drafts the amounts and saves them once you approve.</li>
+        </ul>
+        <figure class="shot shot--phone"><img src="/assets/screens/inventory-phone.webp" alt="Inventory on a phone: stock at Downtown café with Count, Received and Waste on each row" loading="lazy" width="780" height="1688"><figcaption>Update stock from your phone</figcaption></figure>
+      </section>
+      <p class="doc-foot">Last updated: November 11, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
