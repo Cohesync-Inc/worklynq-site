@@ -261,3 +261,14 @@ footer{padding:52px 0 60px;}
 .plan .per{font-size:14px; color:var(--ink-soft);}
 .plan ul{margin:10px 0 0; padding-left:18px; font-size:15px;}
 @media (max-width:720px){.shot-pair,.plans{grid-template-columns:1fr;}}
+
+/* Video tutorials */
+.video{margin:24px 0; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#0f1f1b; box-shadow:0 14px 32px -22px rgba(11,59,54,.45);}
+.video video{display:block; width:100%; height:auto; aspect-ratio:16/9; background:#0f1f1b;}
+.video figcaption{padding:10px 14px; font-size:14px; color:var(--ink-soft); border-top:1px solid var(--line); background:#fff;}
+.transcript{margin:8px 0 24px;}
+.transcript summary{cursor:pointer; font-weight:600;}
+.transcript p{margin:10px 0;}
+.video-list{list-style:none; padding:0; margin:16px 0; display:grid; gap:8px;}
+.video-list li{padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:#fff;}
+.video-list .n{display:inline-block; min-width:1.6em; font-weight:600; color:var(--ink-soft);}
