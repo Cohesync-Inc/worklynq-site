@@ -12,6 +12,8 @@ The Worklynq website. Plain HTML pages — no build step, no framework. GitHub P
 | `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser tab and home-screen icons (the Worklynq W badge). |
 | `assets/videos/` | Tutorial videos for worklynq.com/docs/videos (MP4, WebVTT captions, WebP poster). They're made with `aura_monorepo/tools/product-videos`. |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
+| `robots.txt`, `sitemap.xml` | Tell Google what to crawl. **When you add a page, add its URL to `sitemap.xml`.** |
+| `assets/og-image.png` | The 1200×630 preview image shown when a worklynq.com link is shared (LinkedIn, Slack, iMessage…). |
 | `CNAME` | Tells GitHub Pages to serve this site at worklynq.com. Don't delete it. |
 
 ## Making a change
@@ -19,6 +21,10 @@ The Worklynq website. Plain HTML pages — no build step, no framework. GitHub P
 1. Edit `index.html` — on GitHub's web editor or locally.
 2. To check locally, run `python3 -m http.server` in this folder and open http://localhost:8000.
 3. Commit to `main`. GitHub Pages republishes in a minute or two.
+
+## Search (SEO) tags
+
+Every page's `<head>` has a `<title>`, a `<meta name="description">` (under ~160 characters), a `<link rel="canonical">` with the page's own `https://worklynq.com/.../` URL, and `og:` / `twitter:` tags that repeat the title and description and point at `assets/og-image.png`. Copy them from a neighbouring page when adding one. The homepage also has `application/ld+json` structured data telling Google that Worklynq is software from Cohesync Inc.
 
 ## Integration logos
 
