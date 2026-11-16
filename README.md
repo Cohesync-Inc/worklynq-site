@@ -10,6 +10,7 @@ The Worklynq website. Plain HTML pages — no build step, no framework. GitHub P
 | `docs/` | Product documentation at worklynq.com/docs: overview, Getting started, Modules, Integrations (GitHub, Claude, Cursor, Square, QuickBooks, Custom apps with the developer feed spec at `docs/integrations/custom-apps/feed-spec/`), feature guides (Scheduled reports, Approvals, Order Tracking, Connect your AI, Assist, Shifts, TV screens), What’s new, industry guides (restaurants, construction, software), FAQ, and Security & data — one `index.html` per page in its own folder. All pages share `docs/docs.css`. The left-hand menu is repeated in every page, so update it everywhere when adding a page. Mark unbuilt parts with `<span class="badge badge--soon">Coming in the beta</span>`. Keep the Security page and FAQ consistent with the Privacy Policy and DPA. Add each product release to the top of What’s new (`docs/whats-new/index.html`). |
 | `terms/`, `privacy/`, `dpa/` | Terms of Use, Privacy Policy and Data Processing Agreement pages. |
 | `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser tab and home-screen icons (the Worklynq W badge). |
+| `assets/videos/` | Tutorial videos for worklynq.com/docs/videos (MP4, WebVTT captions, WebP poster). They're made with `aura_monorepo/tools/product-videos`. |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
 | `CNAME` | Tells GitHub Pages to serve this site at worklynq.com. Don't delete it. |
 
