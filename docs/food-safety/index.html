@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Food safety — Worklynq Docs</title>
+<meta name="description" content="Food safety in Worklynq: scheduled temperature and hygiene checks at each location, corrective actions that open a ticket, and a report ready for the inspector.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/#integrations">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/">Tickets</a></li><li><a href="/docs/projects/">Projects</a></li><li><a href="/docs/product-releases/">Product Releases</a></li><li><a href="/docs/dashboards/">Dashboards</a></li><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/inventory/">Inventory</a></li><li><a href="/docs/food-safety/" aria-current="page">Food safety</a><ul class="side-sections"><li><a href="#turn-on">Who it’s for</a></li><li><a href="#today">Today’s checks</a></li><li><a href="#problems">When a reading is out of range</a></li><li><a href="#report">The inspector’s report</a></li><li><a href="#setup">Set up the checks</a></li><li><a href="#assist">Just tell Assist</a></li></ul></li><li><a href="/docs/daily-brief/">Daily brief</a></li><li><a href="/docs/marketing/">Marketing &amp; Social</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/chat/">Chat</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Features</p>
+      <h1>Food safety</h1>
+      <p class="intro">Temperature and hygiene checks at each location, on a schedule. Staff log them from a phone or by telling Assist, a reading out of range asks what was done about it and opens a ticket, and the report is the log an inspector asks for.</p>
+      <section class="sec" id="turn-on"><h2>Who it’s for</h2>
+        <p>Food safety is for restaurants, cafés and anyone running <a href="/docs/modules/#operations">Operations</a> locations that handle food. It’s on for new Operations companies; others turn it on in <strong>Admin console → Work Configuration → Modules</strong> (it needs Operations).</p>
+        <ul>
+          <li><strong>Anyone</strong> who can open Operations logs checks.</li>
+          <li><strong>Managers</strong> — System Admins, and roles that manage tickets or projects — set the checks up. AI can’t change a safe range.</li>
+        </ul>
+      </section>
+      <section class="sec" id="today"><h2>Today’s checks</h2>
+        <p>Open <strong>Food safety</strong> and pick a location. <strong>Today</strong> shows every check scheduled for today, with its times as chips: done (with the reading), <em>due now</em>, <em>late</em>, <em>missed</em> or later. Checks that need a reading now come first.</p>
+        <figure class="shot"><img src="/assets/screens/food-safety-today.webp" alt="Food safety at Downtown café: 7 of 19 checks done, hot holding due now, and cards for the walk-in, reach-in, freezer, sanitizer, dish machine and opening checks with each time’s reading" loading="lazy" width="1600" height="1438"><figcaption>Today’s checks at Downtown café</figcaption></figure>
+        <ol class="howto">
+          <li>Tap <strong>Log reading</strong> on a check.</li>
+          <li>Type the reading in the big number field — the safe range is right above it — or answer Yes or No.</li>
+          <li>Save. The reading fills the check’s time, with your initials and when you took it.</li>
+        </ol>
+        <p>A reading counts for a time from an hour before it until an hour before the next one. Times are in the location’s time zone.</p>
+      </section>
+      <section class="sec" id="problems"><h2>When a reading is out of range</h2>
+        <p>A reading outside the safe range (or a “No”) asks <strong>What did you do about it?</strong>, with one-tap fixes for that kind of check — <em>Moved food to another cooler</em>, <em>Called for repair</em>, <em>Threw out food held above the limit</em> — or your own words.</p>
+        <p>Saving it opens a <strong>Food Safety Issue</strong> ticket at the location for the manager, priority high and on the <a href="/docs/modules/#operations">Operations</a> calendar right away. (Without that ticket type, Worklynq uses Maintenance Request, then Task.)</p>
+        <figure class="shot"><img src="/assets/screens/food-safety-log-problem.webp" alt="Logging the walk-in cooler at 45°F: outside the safe range of 41°F or below, with quick corrective actions and a note that saving opens a Food Safety Issue ticket" loading="lazy" width="1600" height="1250"><figcaption>Out of range: what did you do about it?</figcaption></figure>
+      </section>
+      <section class="sec" id="report"><h2>The inspector’s report</h2>
+        <p><strong>Report</strong> is the log an inspector asks for. Pick a date range (the last 7 days to start); each week is one table with checks and times down the side and days across, every reading with the initials of who took it and when, or <em>missed</em>. Below it: every problem, with the corrective action, who logged it and the ticket.</p>
+        <p><strong>Print / save as PDF</strong> prints only the report.</p>
+        <figure class="shot"><img src="/assets/screens/food-safety-report.webp" alt="The food safety log for Downtown café, Oct 21–27: 98% of checks done, every reading by check and time with initials, and two problems with their corrective actions and tickets" loading="lazy" width="1600" height="1375"><figcaption>Every reading, who took it, and what was done</figcaption></figure>
+      </section>
+      <section class="sec" id="setup"><h2>Set up the checks</h2>
+        <p>Managers open <strong>Set up</strong> for a location:</p>
+        <ul>
+          <li><strong>Add the standard checks</strong> in °F or °C, with US Food Code limits: walk-in and reach-in coolers (41°F or below), freezer (0°F or below), hot holding (135°F or above), sanitizer (50–100 ppm), dish machine final rinse (180°F or above), and yes/no opening checks.</li>
+          <li><strong>+ Check</strong> adds your own: a reading with a unit and the lowest and/or highest safe value, or a yes/no check; the times and weekdays; and instructions for whoever takes it.</li>
+          <li><strong>Edit</strong> or <strong>Turn off</strong> a check. A check that has readings is turned off rather than deleted, so its history stays in the report.</li>
+        </ul>
+        <figure class="shot"><img src="/assets/screens/food-safety-setup.webp" alt="Food safety Set up for Downtown café: eight checks with their safe ranges and times, each with Edit and Turn off, and + Check" loading="lazy" width="1600" height="1125"><figcaption>Each location’s checks, ranges and times</figcaption></figure>
+      </section>
+      <section class="sec" id="assist"><h2>Just tell Assist</h2>
+        <p>Say it or type it to <a href="/docs/assist/">Assist</a>: “walk-in is 38”, “sanitizer 100 ppm”. Assist logs it straight away — and if it’s out of range, asks what you did about it first. Ask “did we miss any temps today?” too.</p>
+        <figure class="shot shot--phone"><img src="/assets/screens/food-safety-phone.webp" alt="Food safety on a phone: hot holding due now with Log reading, and the walk-in and reach-in coolers with their readings" loading="lazy" width="780" height="1688"><figcaption>Log checks from your phone</figcaption></figure>
+        <p class="tip">Food safety numbers show up in the <a href="/docs/daily-brief/">Daily brief</a> every morning: checks done, problems and anything missed.</p>
+      </section>
+      <p class="doc-foot">Last updated: November 15, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
