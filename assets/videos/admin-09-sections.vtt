@@ -1,0 +1,34 @@
+WEBVTT
+
+1
+00:00:00.633 --> 00:00:11.279
+Besides its fields, a ticket can have sections: bigger parts, like a timer, file uploads, or links to other tickets. In this video, you’ll choose which ticket types get which sections.
+
+2
+00:00:12.367 --> 00:00:24.100
+In Work Configuration, open Ticket Types. The Sections column shows the sections each type has. A checklist has none, while a maintenance request has time logging and file uploads.
+
+3
+00:00:24.533 --> 00:00:30.187
+Click a type’s sections to change them. Each section has a switch, and your change saves straight away.
+
+4
+00:00:30.633 --> 00:00:41.215
+Built in are Time logging, with a clock and time entries; Attach files; Hierarchy, for parent and child tickets; and Linked tickets. Let’s turn on linked tickets for repairs.
+
+5
+00:00:41.667 --> 00:00:46.467
+Apps like GitHub, Claude and Cursor appear here too, once they’re connected in Apps.
+
+6
+00:00:46.933 --> 00:00:54.976
+Every section starts off, so simple tickets stay simple. Turning one off hides it on every ticket of that type, but nothing is deleted.
+
+7
+00:00:55.767 --> 00:01:02.039
+On the ticket, its sections show below the fields. Here’s the time logged on this repair, and its attachments.
+
+8
+00:01:03.533 --> 00:01:15.267
+That’s sections. Next in the Admin console series: choosing which ticket types each location, project or product can use. You’ll find every guide at worklynq.com/docs.
+
