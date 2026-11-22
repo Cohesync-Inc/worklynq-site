@@ -1,34 +1,22 @@
 WEBVTT
 
-1
 00:00:00.633 --> 00:00:05.391
 In this video: grouping people into teams, and controlling what each role can do.
 
-2
 00:00:06.467 --> 00:00:13.933
 Teams group people who work together, like the crew at each of your locations. Each team shows its manager and its members.
 
-3
 00:00:14.400 --> 00:00:23.957
 Teams are used across Worklynq, for example to share a space in Spaces with the right people. Click a team to see who’s in it, add someone, or remove them.
 
-4
 00:00:24.633 --> 00:00:29.625
 To start a new team, click New Team, and give it a name, a short description, and a color.
 
-5
 00:00:30.400 --> 00:00:43.733
 Roles control what people can do. Worklynq comes with three: System Admin, Admin and Tenant. To give some people just the access they need, create your own role with New role, like this one for shift leads.
 
-6
 00:00:44.200 --> 00:00:54.163
 Click Edit to see a role’s permissions. The ones on the right are on the role, and the ones on the left aren’t. Move them across to give or take away access, then save.
 
-7
 00:00:54.600 --> 00:01:01.725
 Billing is the one exception. Only the System Admin sees it, or a role of your own that you give billing access to.
-
-8
-00:01:03.200 --> 00:01:12.693
-That’s teams and roles. Next in the Admin console series: turning modules on and off. You’ll find every guide at worklynq.com/docs.
-

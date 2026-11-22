@@ -1,38 +1,25 @@
 WEBVTT
 
-1
 00:00:00.633 --> 00:00:07.908
 In this video: how to invite people to your workspace, follow up on invitations, and change or remove someone’s access.
 
-2
 00:00:09.000 --> 00:00:15.955
 In the Admin console, Users lists everyone in your workspace, with their role, their status, and when they were last active.
 
-3
 00:00:16.400 --> 00:00:21.392
 To invite someone, click Add User. Enter their name and work email, and pick a role.
 
-4
 00:00:21.833 --> 00:00:31.817
 System Admins can do everything, including billing. Admins manage people, teams and settings. Everyone else is a Tenant, with standard access to their work.
 
-5
 00:00:32.267 --> 00:00:39.648
 Click Invite User. They’ll get an email with a link to join, and until they accept, they show here as a pending invitation.
 
-6
 00:00:40.100 --> 00:00:48.463
 Invitations last 14 days. If someone hasn’t joined yet, open the menu on their row to resend the invitation, or cancel it.
 
-7
 00:00:49.233 --> 00:00:54.396
 To change someone’s details or role, open the menu on their row, and choose Edit user.
 
-8
 00:00:54.833 --> 00:01:03.836
 Here you can update their name, or change their role. If someone leaves, deactivate them. They can’t sign in any more, but everything they worked on stays.
-
-9
-00:01:05.333 --> 00:01:13.952
-That’s managing users. Next in the Admin console series: teams and roles. You’ll find every guide at worklynq.com/docs.
-

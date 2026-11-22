@@ -1,42 +1,28 @@
 WEBVTT
 
-1
 00:00:00.633 --> 00:00:10.489
 Worklynq gets more useful when it can see the tools you already use, like your point of sale and your accounts. In this video, you’ll connect apps and check what they bring in.
 
-2
 00:00:11.567 --> 00:00:21.145
 In the Admin console, open Apps, under Integrations. Apps are grouped by what they’re for, and each card says what Worklynq reads and whether it’s connected.
 
-3
 00:00:21.600 --> 00:00:32.203
 To connect an app, you sign in to it and approve access there. Business apps like Square and QuickBooks are read-only, so Worklynq never takes payments or changes your books.
 
-4
 00:00:32.667 --> 00:00:41.264
 Square is already connected. Click Reconfigure to match each Square location to one of yours, so its sales show on that location’s dashboards.
 
-5
 00:00:41.700 --> 00:00:45.497
 Riverside isn’t linked yet. Pick Riverside café, then save.
 
-6
 00:00:45.933 --> 00:00:50.883
 Show sales checks the connection, with the last seven days of orders for each location.
 
-7
 00:00:51.333 --> 00:00:57.861
 Software teams connect GitHub first. Then Cursor and Claude can work on tickets and open pull requests.
 
-8
 00:00:58.300 --> 00:01:07.196
 And your own software, like the Pine Rewards loyalty app, connects through a read-only data feed, so its numbers can go in dashboards and reports.
 
-9
 00:01:07.633 --> 00:01:14.908
 Connecting apps is for System Admins, and anyone whose role allows it. Any keys you give Worklynq are stored encrypted.
-
-10
-00:01:16.300 --> 00:01:26.028
-That’s connecting apps. Next in the Admin console series: plans, billing and credit packs. You’ll find every guide at worklynq.com/docs.
-

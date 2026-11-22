@@ -1,38 +1,25 @@
 WEBVTT
 
-1
 00:00:00.633 --> 00:00:10.895
 Approvals are requests that need a yes or no, like a purchase, time off, or access to a tool. In this video, you’ll set up the kinds of request your team can raise.
 
-2
 00:00:11.967 --> 00:00:22.548
 In Work Configuration, open Approval Types. Four come built in: document approval, access request, purchase request and time off. Each has its own stages.
 
-3
 00:00:23.000 --> 00:00:30.808
 Every request ends approved, rejected or withdrawn. Let’s add our own type, for expense claims. Click New Approval Type.
 
-4
 00:00:31.267 --> 00:00:35.789
 Give it a name, a category and a short description, so people know when to use it.
 
-5
 00:00:36.233 --> 00:00:43.828
 Next, the stages. Open stages are where a request sits while people work on it. Let’s call the review step Manager review.
 
-6
 00:00:44.267 --> 00:00:53.760
 Closing stages end the request, each as approved, rejected or withdrawn. You can add, rename, reorder or remove any stage. Then click Save.
 
-7
 00:00:54.200 --> 00:01:04.099
 Your new type joins the list. From its menu you can edit it, duplicate it, or archive it. Archiving hides it from new requests, and keeps the ones already raised.
 
-8
 00:01:04.867 --> 00:01:11.821
 Now, under Approvals, anyone raising a new request can choose Expense claim, and its description shows right below.
-
-9
-00:01:13.300 --> 00:01:21.833
-That’s approval types. Next in the Admin console series: connecting your apps. You’ll find every guide at worklynq.com/docs.
-
