@@ -1,0 +1,22 @@
+WEBVTT
+
+1
+00:00:00.371 --> 00:00:07.667
+Product Releases tracks every version of the products you build. In this video, you’ll add a version and follow it on its dashboard.
+
+2
+00:00:08.695 --> 00:00:17.655
+Open Product Releases. Each product lists its versions, soonest first, with their status and due date. Released versions fold away underneath.
+
+3
+00:00:18.683 --> 00:00:28.326
+Click New version, and give it a number, a name, and a release date. Anyone can add versions; System Admins add the products themselves, in the Admin console.
+
+4
+00:00:29.345 --> 00:00:38.518
+Open a version for its own dashboard: progress, open and overdue tickets, and who’s working on what. Tickets join a version through their Target release.
+
+5
+00:00:39.538 --> 00:00:42.269
+That’s Product Releases. Next, Dashboards.
+
