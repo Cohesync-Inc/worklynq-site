@@ -51,12 +51,12 @@
       <p><strong>Prefer to watch?</strong> This short video shows System Admins how to turn modules on and off. More are on <a href="/docs/videos/">Video tutorials</a>.</p>
       <figure class="video"><video controls preload="metadata" playsinline poster="/assets/videos/admin-05-modules.webp" width="1920" height="1080"><source src="/assets/videos/admin-05-modules.mp4" type="video/mp4"><track kind="captions" src="/assets/videos/admin-05-modules.vtt" srclang="en" label="English"></video><figcaption>Modules: turning features on and off (1 min)</figcaption></figure>
       <div class="svc-grid">
-        <a class="svc-card" href="#workspace"><span class="svc-name">Workspace</span><span class="svc-tag">Plan it. Run it. Deliver it.</span><span class="svc-mods">Home, Tickets, Operations, Inventory, Food safety, Projects, Approvals, Chat, Team Board, Roadmaps, Product Releases, Dashboards</span></a>
-        <a class="svc-card" href="#knowledge-center"><span class="svc-name">Knowledge Center</span><span class="svc-tag">Your business&#x27;s know-how, in one trusted place.</span><span class="svc-mods">Spaces, Knowledge Library</span></a>
-        <a class="svc-card" href="#ai-hub"><span class="svc-name">AI Hub</span><span class="svc-tag">AI that works alongside your team.</span><span class="svc-mods">AI Search, AI Agents</span></a>
-        <a class="svc-card" href="#customer-experience"><span class="svc-name">Customer Experience</span><span class="svc-tag">Every customer, every conversation, in one place.</span><span class="svc-mods">Customers, Order Tracking, Engagement, Social, Marketing</span></a>
+        <a class="svc-card" href="#workspace"><span class="svc-name">Workspace</span><span class="svc-tag">Plan it. Run it. Deliver it.</span><span class="svc-mods">Home, Tickets, Operations (Calendar, Shifts, Daily brief, TV screens), Inventory, Food safety, Training, Projects, Approvals, Chat, Team Board, Roadmaps, Product Releases, Dashboards (Scheduled reports)</span></a>
+        <a class="svc-card" href="#knowledge-center"><span class="svc-name">Knowledge Center</span><span class="svc-tag">Your business&#x27;s know-how, in one trusted place.</span><span class="svc-mods">Spaces (Templates, Archive &amp; Docs trash), Knowledge Library</span></a>
+        <a class="svc-card" href="#ai-hub"><span class="svc-name">AI Hub</span><span class="svc-tag">AI that works alongside your team.</span><span class="svc-mods">AI Search (Assist), AI Agents, Connect your AI</span></a>
+        <a class="svc-card" href="#customer-experience"><span class="svc-name">Customer Experience</span><span class="svc-tag">Every customer, every conversation, in one place.</span><span class="svc-mods">Customers, Order Tracking (Completed orders), Engagement, Social (Inbox), Marketing (SEO &amp; website)</span></a>
       </div>
-      <p>The four groups above just make the list easier to browse. In the app there are no separate menus: a café might see <em>Operations, Order Tracking, Customers, Tickets, Dashboards</em> and nothing else, while a software team sees its boards, roadmaps, and releases.</p>
+      <p>Names in brackets are parts of the module before them: they come on with it and sit under it in the sidebar, so they have no switch of their own. Each one still has its own section below. The four groups above just make the list easier to browse. In the app there are no separate menus: a café might see <em>Operations, Order Tracking, Customers, Tickets, Dashboards</em> and nothing else, while a software team sees its boards, roadmaps, and releases.</p>
 
       <section class="svc" id="how-it-works">
         <h2>How modules work</h2>
@@ -102,12 +102,43 @@
         <div class="mod" id="operations">
           <h3>Operations</h3>
           <p class="mod-tagline">Run every store, every day.</p>
-          <p>For work that never “finishes” — a café, a shop, a hotel, a kitchen, a site. Each store or site is a location with its own tickets, numbered with its own tag — DC-1, DC-2 at the Downtown café, RC-1 at Riverside. Your System Admin adds, renames, and archives locations in <strong>Admin console → Work Configuration → Locations</strong>. Operations has three tabs: <strong>Calendar</strong>, <strong>Shifts</strong> and <strong>Daily brief</strong>. The calendar opens on the week, with each person’s photo on their tasks, and lays out each day’s work by time; choose <strong>View by</strong> Location or Team member to see a column per store or per person, and pick one store or person to focus on, with week and month views; click an empty slot, or <strong>New task</strong> (which only offers your locations), to add a task, or click a task to mark it done or move it. Overdue tasks are flagged, and each ticket type keeps its own color.</p>
-          <ul class="hl"><li>One operation per store, site, or kitchen</li><li>Day, week, and month calendar, viewed by location or by team member</li><li>Ticket numbers tagged by location, like DC-12</li><li>Only the ticket types you map to operations</li><li>A dashboard for each store</li><li><a href="/docs/daily-brief/">Daily brief</a>: yesterday across every location, every morning</li><li><a href="/docs/shifts/">Shifts</a>: your own shifts, the team schedule, who’s on duty, and Square clock-in</li><li><a href="/docs/inventory/">Inventory</a>: stock at each location, with order suggestions from your sales</li><li><a href="/docs/tv-screens/">TV screens</a> for today’s tasks and who’s on duty</li><li>Recurring checklists that create themselves <span class="badge badge--soon">Coming in the beta</span></li></ul>
-        <figure class="shot"><img src="/assets/screens/operations-day-locations.webp" alt="The Operations calendar for both cafés side by side, with tasks by the hour and overdue tasks outlined in red" loading="lazy" width="1600" height="1350"><figcaption>Operations: both stores side by side, today</figcaption></figure>
+          <p>For work that never “finishes” — a café, a shop, a hotel, a kitchen, a site. Each store or site is a location with its own tickets, numbered with its own tag — DC-1, DC-2 at the Downtown café, RC-1 at Riverside. Your System Admin adds, renames, and archives locations in <strong>Admin console → Work Configuration → Locations</strong>. Operations has three tabs, each with its own section below: <a href="#calendar">Calendar</a>, <a href="#shifts">Shifts</a> and <a href="#daily-brief">Daily brief</a>. It’s also where you put a store on a TV with <a href="#tv-screens">TV screens</a>, and it’s what <a href="#inventory">Inventory</a> and <a href="#food-safety">Food safety</a> build on.</p>
+          <ul class="hl"><li>One operation per store, site, or kitchen</li><li>Ticket numbers tagged by location, like DC-12</li><li>Only the ticket types you map to operations</li><li>On duty now: who’s working at each store, with Start my shift</li><li>A dashboard for each store</li><li>Recurring checklists that create themselves <span class="badge badge--soon">Coming in the beta</span></li></ul>
         <figure class="shot"><img src="/assets/screens/locations.webp" alt="Work Configuration → Locations: Downtown café with ticket tag DC and Riverside café with tag RC, each with its address, 7 ticket types mapped, and Edit and Archive buttons" loading="lazy" width="1600" height="1000"><figcaption>Admin console → Work Configuration → Locations</figcaption></figure>
           <p><strong>Managing locations.</strong> On the Locations page, click <strong>Add location</strong> and give it a name, a ticket tag (2–5 letters — Worklynq suggests one from the name, and you can change it), and an optional address or note. Worklynq then asks which ticket types the location uses, since its tickets can only use the types mapped to it. You can rename a location or change its tag later — tickets already made keep their numbers — and archive or restore it. Approvals keep their shared APR-1, APR-2 numbering, and tickets numbered OPS-… before tags arrived keep their numbers so links still work.</p>
           <p class="req">Needs: Tickets</p>
+        </div>
+        <div class="mod" id="calendar">
+          <h3>Calendar</h3>
+          <p class="mod-tagline">Everything happening today, hour by hour.</p>
+          <p>The first tab of Operations. It opens on the week, with each person’s photo on their tasks, and lays out each day’s work by time. Choose <strong>View by</strong> Location or Team member to see a column per store or per person, and pick one store or person to focus on; switch between day, week and month. Click an empty slot, or <strong>New task</strong> (which only offers your locations), to add a task, or click a task to mark it done, reopen it, or move it. Overdue tasks are flagged, done tasks get a tick, and each ticket type keeps its own color. A ticket with no time set shows on its due date.</p>
+          <ul class="hl"><li>Day, week, and month views</li><li>A column per store, or per person</li><li>Add a task in an empty slot, or schedule a ticket you already have</li><li>Done, overdue, and each ticket type in its own color</li><li>Every scheduled ticket shows its slot in the ticket itself</li></ul>
+        <figure class="shot"><img src="/assets/screens/operations-day-locations.webp" alt="The Operations calendar for both cafés side by side, with tasks by the hour and overdue tasks outlined in red" loading="lazy" width="1600" height="1350"><figcaption>Both stores side by side, today</figcaption></figure>
+          <p class="req">Part of Operations — it comes on with it</p>
+        </div>
+        <div class="mod" id="shifts">
+          <h3>Shifts</h3>
+          <p class="mod-tagline">Who’s on, who’s next, and how the week went.</p>
+          <p>The Shifts tab of Operations. Everyone gets <strong>My shifts</strong>: whether they’re on duty, their shifts for the next 30 days, and what they worked. Managers plan the <strong>team schedule</strong> week by week — add a shift, or <strong>Copy last week</strong> — and see each shift colored by how it went: on duty, worked, late, not in yet, or missed, with planned against worked hours. People start, pause and end their own shifts from the <strong>On duty now</strong> strip, or by telling Assist “start my shift”. If you use Square, starting and ending a shift also clocks the person in and out there.</p>
+          <ul class="hl"><li>My shifts, for everyone</li><li>Team schedule, upcoming, and completed shifts with CSV export</li><li>Start my shift, breaks, and End my shift — by tap or by voice</li><li>Late and missed shifts flagged</li><li>Clock-in and out on <a href="/docs/integrations/square/">Square</a></li><li>Certifications checked when shifts are planned, with <a href="#training">Training</a> on</li><li><a href="/docs/shifts/">How Shifts works</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/shifts-team.webp" alt="Team schedule for Downtown café, Oct 25–31: Diego, Maya, Priya, Sam and Tom with their shifts each day, planned versus worked hours, and people and hours per day" loading="lazy" width="1600" height="1111"><figcaption>The week’s schedule, and how it went</figcaption></figure>
+          <p class="req">Part of Operations — it comes on with it</p>
+        </div>
+        <div class="mod" id="daily-brief">
+          <h3>Daily brief</h3>
+          <p class="mod-tagline">Yesterday, every location, one screen.</p>
+          <p>The Daily brief tab of Operations shows yesterday — or any day you pick — across every location: sales against the same day last week, labour hours and sales per labour hour, food safety checks done, stock and tickets. At the top, up to six things that need you, most urgent first, each linking to the screen that fixes it; below, one card per location. Turn on <strong>Every morning</strong> to get it by email or as a phone notification at the time you choose. Each person only sees what they’re allowed to — sales stay with System Admins unless they’re opened to everyone.</p>
+          <ul class="hl"><li>Totals across all your locations</li><li>What needs you: up to six headlines, with links</li><li>A card per location, with who’s on today</li><li>Every morning by email or phone notification</li><li>Ask Assist “how did we do yesterday?”</li><li><a href="/docs/daily-brief/">How the Daily brief works</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/daily-brief.webp" alt="The daily brief for Monday, October 26: $6,784 in sales, 83.5 labour hours, 35 of 38 food safety checks, six things that need you, and cards for Downtown café and Riverside café" loading="lazy" width="1600" height="1563"><figcaption>Yesterday across both cafés</figcaption></figure>
+          <p class="req">Part of Operations — it comes on with it</p>
+        </div>
+        <div class="mod" id="tv-screens">
+          <h3>TV screens</h3>
+          <p class="mod-tagline">The store’s live board, on any TV.</p>
+          <p>Put a store’s live orders, today’s tasks, and who’s on duty on a TV above the counter, in the kitchen, or in the back office. Click <strong>Show on TV</strong> in Operations or Order Tracking, pick what the TV shows, and type the code the TV displays at your workspace address followed by <em>/tv</em>. With more than one view, the TV switches between them, and a new order always comes to the front. A screen is read-only, needs no sign-in, shows one store only, and you can turn it off from Worklynq at any time. Managers see every screen and player in <strong>Operations → Screens &amp; devices</strong>.</p>
+          <ul class="hl"><li>Order tracking: New, In progress, Ready for pickup — late orders in red</li><li>Operations today: each person’s tasks and checklists</li><li>Who’s on duty at the store</li><li>Connect with a 6-character code, or a link for signage apps</li><li>Worklynq Player: a box behind the TV, run from Worklynq <span class="badge badge--soon">Coming in the beta</span></li><li><a href="/docs/tv-screens/">How TV screens work</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/tv-order-tracking.webp" alt="A TV showing the Downtown café’s open orders in New, In progress and Ready for pickup, with two late orders in red" loading="lazy" width="1920" height="1080"><figcaption>Order tracking on the front-counter TV</figcaption></figure>
+          <p class="req">Comes with Operations; the Order tracking view also needs Order Tracking</p>
         </div>
         <div class="mod" id="inventory">
           <h3>Inventory</h3>
@@ -183,6 +214,15 @@
           <ul class="hl"><li>Dashboards built from widgets</li><li>Data from Square, QuickBooks, your own apps, and more</li><li>Shared with only you, a team, or everyone</li><li>One per store, project, or product — and every <a href="/docs/projects/#dashboard">project</a> and <a href="/docs/product-releases/#dashboard">product version</a> gets its own</li><li>Each widget in its own color, so they’re easy to tell apart</li><li>AI builds and explains them — or ask your <a href="/docs/connect-your-ai/">own AI app</a></li><li><a href="/docs/dashboards/">How Dashboards works</a></li></ul>
         <figure class="shot"><img src="/assets/screens/dashboard.webp" alt="A Store overview dashboard: Square sales and orders today, overdue work, sales by store, open tickets by status, loyalty members by tier, and orders per day" loading="lazy" width="1600" height="1250"><figcaption>One dashboard for sales, open work, and loyalty across both cafés</figcaption></figure>
           <div class="shot-pair"><figure class="shot"><img src="/assets/screens/dashboard-describe.webp" alt="Describe a dashboard: a request in plain words and a preview of the widgets AI built" loading="lazy" width="1600" height="1263"><figcaption>Describe it, and AI builds it</figcaption></figure><figure class="shot"><img src="/assets/screens/dashboard-explain.webp" alt="Explain: what this dashboard says, in four points" loading="lazy" width="1600" height="1000"><figcaption>Explain tells you what the numbers say</figcaption></figure></div>
+          <p class="req">Needs nothing else. Reports, including <a href="#scheduled-reports">Scheduled reports</a>, are part of Dashboards</p>
+        </div>
+        <div class="mod" id="scheduled-reports">
+          <h3>Scheduled reports</h3>
+          <p class="mod-tagline">The numbers, in the inbox, before anyone asks.</p>
+          <p>Email any report from <strong>Dashboards → Reports</strong> every day, on weekdays, every week, or every month, at the time you choose. Each person gets their own copy, worked out as them, so they only see numbers they’re allowed to see — and every email starts with a 2–5 point AI summary of what changed, with the numbers underneath. Anyone who can see a report can also click <strong>Email me a copy</strong> to get it straight away.</p>
+          <ul class="hl"><li>Daily, weekdays, weekly, or monthly, in your time zone</li><li>The owner plus up to 25 people</li><li>An AI summary at the top of every email</li><li>Each copy shows only what that person may see</li><li>Last send: who got it, who was skipped, and why</li><li><a href="/docs/reports/">How Scheduled reports work</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/report-schedule.webp" alt="Email this report: weekdays at 7:00 AM, the owner plus three people, and the AI summary" loading="lazy" width="1600" height="1125"><figcaption>Schedule a report and choose who gets it</figcaption></figure>
+          <p class="req">Part of Dashboards — it comes on with it</p>
         </div>
       </section>
 
@@ -194,15 +234,28 @@
         <div class="mod" id="spaces">
           <h3>Spaces</h3>
           <p class="mod-tagline">Write it down once. Share it with the right people.</p>
-          <p>Your own My Space plus shared spaces for the company, all in one module — pick a space at the top of the page tree, with My Space first. Write documents, notes, and procedures in a rich editor, start from templates, send important documents for approval (with the Approvals module on), and archive what&#x27;s out of date without losing it. Archive and Templates sit under Spaces in the sidebar while it’s open.</p>
-          <ul class="hl"><li>My Space and shared spaces, with one space picker</li><li>Rich editor and templates</li><li>Verified pages, with <a href="/docs/approvals/#documents">Approvals</a></li><li>Version history</li><li>Archive that stays searchable</li><li>Deleted pages wait in Docs trash, where your System Admin can recover them</li><li>Pages shared with you stay private to the people they’re shared with</li><li>Ask <a href="/docs/assist/#this-page">Assist</a> to summarize the page you’re reading</li></ul>
+          <p>Your own My Space plus shared spaces for the company, all in one module — pick a space at the top of the page tree, with My Space first. Write documents, notes, and procedures in a rich editor, start from templates, send important documents for approval (with the Approvals module on), and archive what&#x27;s out of date without losing it. Archive and Templates sit under Spaces in the sidebar while it’s open, and each has its own section below.</p>
+          <ul class="hl"><li>My Space and shared spaces, with one space picker</li><li>Rich editor, and <a href="#templates">templates</a> to start from</li><li>Verified pages, with <a href="/docs/approvals/#documents">Approvals</a></li><li>Version history</li><li><a href="#archive">Archive</a> that stays searchable, and Docs trash for anything deleted</li><li>Pages shared with you stay private to the people they’re shared with</li><li>Ask <a href="/docs/assist/#this-page">Assist</a> to summarize the page you’re reading</li></ul>
         <figure class="shot"><img src="/assets/screens/spaces-page.webp" alt="Spaces: the Store procedures space with its pages, and the Opening &amp; closing procedures page open" loading="lazy" width="1600" height="1075"><figcaption>A shared space with its procedures</figcaption></figure>
-          <p><strong>Templates</strong> (under Spaces in the sidebar) has 38 templates written for small businesses in any industry, in nine categories: Operations, Team &amp; HR, Customers &amp; Sales, Marketing, Finance &amp; Admin, Safety &amp; Compliance, Meetings &amp; Planning, Product, and IT &amp; Tech. They include an opening &amp; closing checklist, a shift handover, a stock count, a risk assessment, a quote &amp; proposal and a social media calendar. Each has its own picture, and its sections come out as numbered, colored cards — in the catalog, in pages made from it, and in the editor. Pick one and click <strong>Use Template</strong>, or <strong>+ New</strong> to save your own.</p>
-        <figure class="shot"><img src="/assets/screens/spaces-templates.webp" alt="Spaces Templates: the template list with pictures — Standard Operating Procedure, Opening &amp; Closing Checklist, Shift Handover, Inventory &amp; Stock Count and more — and the Opening &amp; Closing Checklist open, with numbered colored sections Before opening, Opening tasks, During the day and Closing tasks" loading="lazy" width="1600" height="1000"><figcaption>Templates for small businesses, with colorful sections</figcaption></figure>
           <p><strong>Page covers:</strong> give a page a cover photo or gradient from 107 photos and 36 gradients, grouped into rows — Landscapes, Water, Sky &amp; stars, Cities &amp; places, Work &amp; building, Food, shops &amp; stays, Art &amp; texture, then gradients from light to dark — or upload your own. Hover a cover to see its name. The same picker sets a page’s footer.</p>
           <p>Coming back to Spaces from another module reopens the last page you had open; the Knowledge Library does the same. On a phone, once a page is open the page tree folds behind a <strong>Pages</strong> button, so the page gets the whole screen.</p>
+        </div>
+        <div class="mod" id="templates">
+          <h3>Templates</h3>
+          <p class="mod-tagline">Never start from a blank page.</p>
+          <p>Templates, under Spaces in the sidebar, has 38 templates written for small businesses in any industry, in nine categories: Operations, Team &amp; HR, Customers &amp; Sales, Marketing, Finance &amp; Admin, Safety &amp; Compliance, Meetings &amp; Planning, Product, and IT &amp; Tech. They include an opening &amp; closing checklist, a shift handover, a stock count, a risk assessment, a quote &amp; proposal and a social media calendar. Each has its own picture, and its sections come out as numbered, colored cards — in the catalog, in pages made from it, and in the editor. Pick one and click <strong>Use Template</strong>, or <strong>+ New</strong> to save your own.</p>
+          <ul class="hl"><li>38 ready-made templates in nine categories</li><li>Numbered, colored sections</li><li>Save your own company templates</li></ul>
+        <figure class="shot"><img src="/assets/screens/spaces-templates.webp" alt="Spaces Templates: the template list with pictures — Standard Operating Procedure, Opening &amp; Closing Checklist, Shift Handover, Inventory &amp; Stock Count and more — and the Opening &amp; Closing Checklist open, with numbered colored sections Before opening, Opening tasks, During the day and Closing tasks" loading="lazy" width="1600" height="1000"><figcaption>Templates for small businesses, with colorful sections</figcaption></figure>
+          <p class="req">Part of Spaces — it comes on with it</p>
+        </div>
+        <div class="mod" id="archive">
+          <h3>Archive &amp; Docs trash</h3>
+          <p class="mod-tagline">Out of the way, never lost.</p>
+          <p><strong>Archive</strong>, under Spaces in the sidebar, holds pages that are out of date but worth keeping — last year’s menu, an old procedure. Archived pages leave the page tree but stay searchable and readable; click <strong>Restore</strong> to edit one again.</p>
           <p><strong>Deleted something by mistake?</strong> Deleting a page, a folder, or a whole space moves it to trash rather than erasing it. Your System Admin opens <strong>Admin console → Work Configuration → Docs trash</strong> and clicks <strong>Recover</strong> to put it back where it was, or <strong>Delete</strong> to remove it for good.</p>
+          <ul class="hl"><li>Archive pages without losing them</li><li>Archived pages stay searchable</li><li>Deleted pages, folders and spaces wait in Docs trash</li><li>Recover puts them back where they were</li></ul>
         <figure class="shot"><img src="/assets/screens/docs-trash.webp" alt="Docs trash: a deleted Summer 2026 folder and its two pages, Summer hours and Patio menu, each with Recover and Delete" loading="lazy" width="1600" height="1000"><figcaption>Admin console → Work Configuration → Docs trash</figcaption></figure>
+          <p class="req">Part of Spaces — it comes on with it</p>
         </div>
         <div class="mod" id="knowledge-library">
           <h3>Knowledge Library</h3>
@@ -232,8 +285,17 @@
           <p class="mod-tagline">Ask a question. Get an answer, with sources.</p>
           <p>Ask in plain language — “What&#x27;s still open at the downtown store?” or “What did we decide about the supplier change?” — and get an answer drawn from your tickets, documents, and connected tools, with links back to where it came from. You only see answers from what you&#x27;re allowed to see: AI Search checks your roles before it searches each source, never shows other people’s personal pages, and only searches your own Gmail if you connected it.</p>
           <p><strong>Web Search</strong> next to the question box searches the web as well, for questions about the outside world — a supplier, a regulation, a competitor. <strong>Paste a link</strong> (or just a domain, like <em>example.com</em>) and AI Search reads the page and answers from it together with your workspace; <strong>Attach Files</strong> does the same with a document. The sources come as a numbered list under the answer.</p>
-          <ul class="hl"><li>Plain-language questions</li><li>Answers with links to the source</li><li>Web Search, pasted links and attached files</li><li>Respects everyone's permissions</li><li>Across tickets, documents, and connected tools</li><li><a href="/docs/assist/">Assist</a>: ask, open, or do things from a panel on every page, by voice too</li></ul>
+          <ul class="hl"><li>Plain-language questions</li><li>Answers with links to the source</li><li>Web Search, pasted links and attached files</li><li>Respects everyone's permissions</li><li>Across tickets, documents, and connected tools</li><li><a href="#assist">Assist</a>: the same AI in a panel on every page</li></ul>
         <figure class="shot"><img src="/assets/screens/ai-search.webp" alt="AI Search with a question about food safety issues, a written answer, and the tickets and documents it came from" loading="lazy" width="1600" height="1000"><figcaption>AI Search: an answer with its sources</figcaption></figure>
+          <p class="req">Needs nothing else. <a href="#assist">Assist</a> comes with it</p>
+        </div>
+        <div class="mod" id="assist">
+          <h3>Assist</h3>
+          <p class="mod-tagline">Ask, open, or get it done — from any page.</p>
+          <p>A chat panel on the side of every page, Spaces and the Knowledge Library included. Ask about your work (“Which tickets are overdue?”), tell it what to open (“Show me DC-42”), or have it do things: create and update tickets, write pages, build dashboards, log a fridge temperature, count stock, or start your shift. It knows what’s on your screen, so “summarize this page” or “what’s this ticket waiting on?” just work. Type or talk. Assist works as you, with your permissions, and asks <strong>Go ahead</strong> before it changes anything — except starting, pausing or ending your own shift.</p>
+          <ul class="hl"><li>On every page, beside the work instead of over it</li><li>Answers about the page, ticket, dashboard or channel you’re looking at</li><li>Does things across modules — tickets, docs, dashboards, orders, shifts, stock, food safety, training</li><li>Asks before it changes anything, then links every ticket it changed</li><li>Voice, and a searchable History</li><li><a href="/docs/assist/">How Assist works</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/assist-panel.webp" alt="Worklynq Assist open beside Home, answering what is still waiting at the Downtown café with orders and tickets" loading="lazy" width="1600" height="1000"><figcaption>Assist checks orders and tickets for you, right beside the page you’re on</figcaption></figure>
+          <p class="req">Part of AI Search — anyone whose role can use AI Search can use Assist</p>
         </div>
         <div class="mod" id="ai-agents">
           <h3>AI Agents</h3>
@@ -242,6 +304,14 @@
           <ul class="hl"><li>Worklynq agents: run now, on a schedule, or from a ticket stage</li><li>Ask before making changes, with limits on each run</li><li>Connected agents — <a href="/docs/connect-your-ai/">your own Claude, ChatGPT, or Cursor</a></li><li>Coding agents: hand a ticket to <a href="/docs/integrations/claude/">Claude</a> or <a href="/docs/integrations/cursor/">Cursor</a> and get a pull request</li><li>Activity log of every action</li></ul>
         <figure class="shot"><img src="/assets/screens/agents.webp" alt="Worklynq agents with their schedules and ticket-stage triggers, marked “asks first” when they change tickets" loading="lazy" width="1600" height="1000"><figcaption>AI Agents: each agent, when it runs, and whether it asks before making changes</figcaption></figure>
           <p class="req">Needs: Tickets</p>
+        </div>
+        <div class="mod" id="connect-your-ai">
+          <h3>Connect your AI</h3>
+          <p class="mod-tagline">Use Worklynq from the AI you already use.</p>
+          <p>Connect Claude, ChatGPT, Claude Code, or Cursor to your workspace and work from the conversation: find tickets, read your docs, update work, check orders and who’s on duty, or build a dashboard from a description. Claude and ChatGPT connect by signing in to Worklynq and clicking <strong>Allow</strong> — no token needed; tools on your computer use a personal API token. A connected AI works as you, never with more access, and you choose whether it may edit tickets, docs, dashboards, or your shifts. Everything it does shows in the agent activity log.</p>
+          <ul class="hl"><li>Claude (web, desktop, and mobile) and ChatGPT, with sign-in</li><li>Claude Code, Cursor, and the OpenAI Responses API, with a token</li><li>Read-only, or allowed to edit — your choice per connection</li><li>Connected apps listed on the API tokens page, to disconnect any time</li><li>Your System Admin can turn every token and connected app off at once</li><li><a href="/docs/connect-your-ai/">How to connect your AI</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/api-tokens.webp" alt="The API tokens page with two tokens, Claude and ChatGPT as connected apps, and Connect your agent setup steps for Claude" loading="lazy" width="1600" height="1550"><figcaption>API tokens, connected apps, and setup steps for each AI tool</figcaption></figure>
+          <p class="req">Always included — part of the platform. What a connected AI can reach follows the modules you have on</p>
         </div>
       </section>
 
@@ -261,8 +331,16 @@
           <h3>Order Tracking</h3>
           <p class="mod-tagline">Nobody has to ask twice.</p>
           <p>Follow every customer order from new to completed on a board with a column per stage — New, Confirmed, In progress, Ready, On the way. Add items and prices, choose pickup, delivery, shipping, or in store, set a due time, and assign it to someone. Overdue orders are outlined in red, and every order keeps a history of who did what and when.</p>
-          <ul class="hl"><li>Board and list, with drag and drop</li><li>One board per store, with Square orders alongside</li><li>Walk-in orders</li><li>Pickup, delivery, shipping, or in store</li><li>Due times, with overdue orders flagged</li><li>On a TV in the store</li><li><a href="/docs/order-tracking/">How Order Tracking works</a></li></ul>
+          <ul class="hl"><li>Board and list, with drag and drop</li><li>One board per store, with Square orders alongside</li><li>Walk-in orders</li><li>Pickup, delivery, shipping, or in store</li><li>Due times, with overdue orders flagged</li><li>On a <a href="#tv-screens">TV in the store</a></li><li><a href="/docs/order-tracking/">How Order Tracking works</a></li></ul>
           <p class="req">Needs: Customers</p>
+        </div>
+        <div class="mod" id="completed-orders">
+          <h3>Completed orders</h3>
+          <p class="mod-tagline">How the day — or the week — really went.</p>
+          <p>The Completed tab of Order Tracking, next to Active orders, lists every finished order for the period you pick, from today to all time. At the top: orders, revenue, average order, median time to complete, and how many were on time; below, orders by day or by hour, top items, and who completed them. Filter by location, pickup or delivery, or person, and export to CSV. Ask Assist right on the page — “what were the best sellers, and what barely sold?” or “which hours were busiest?”</p>
+          <ul class="hl"><li>Revenue, average order, and time to complete</li><li>On-time rate</li><li>Orders by day or hour, and top items</li><li>Who completed what</li><li>Export CSV, up to 2,000 orders</li><li><a href="/docs/order-tracking/#completed">How Completed orders work</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/orders-completed.webp" alt="Completed orders at Downtown café for the last 7 days: 37 orders, $5,503 revenue, $148.73 average, 54 minutes median, 84% on time, orders by day, top items, who completed them, and the list of orders" loading="lazy" width="1600" height="1278"><figcaption>Completed orders, with totals and what sold</figcaption></figure>
+          <p class="req">Part of Order Tracking — it comes on with it</p>
         </div>
         <div class="mod" id="engagement">
           <h3>Engagement</h3>
@@ -276,15 +354,34 @@
           <h3>Social</h3>
           <p class="mod-tagline">Every post, on one calendar.</p>
           <p>Plan posts for Facebook, Instagram, Google Business Profile and LinkedIn on one calendar. Write the post once and AI writes a version for each channel in your brand voice, checked against each platform’s limits. Send it for approval if you like, and Worklynq posts it at the time you chose. Comments and Google reviews come into one Inbox to answer, and Results shows how every post did.</p>
-          <ul class="hl"><li>Week and month calendar</li><li>A version per channel, with character and hashtag counts</li><li>AI writes or rewrites in your brand voice</li><li>Approvals before posts go out</li><li>Posts itself to connected Pages and profiles</li><li>Inbox for comments and reviews, with AI replies</li><li>Results per post and channel</li><li><a href="/docs/marketing/">How Marketing &amp; Social works</a></li></ul>
+          <ul class="hl"><li>Week and month calendar</li><li>A version per channel, with character and hashtag counts</li><li>AI writes or rewrites in your brand voice</li><li>Approvals before posts go out</li><li>Posts itself to connected Pages and profiles</li><li><a href="#inbox">Inbox</a> for comments and reviews, with AI replies</li><li>Results per post and channel</li><li><a href="/docs/marketing/">How Marketing &amp; Social works</a></li></ul>
         <figure class="shot"><img src="/assets/screens/social-week.webp" alt="The Social calendar for a week, with posts on their days and drafts without a date" loading="lazy" width="1600" height="1111"><figcaption>A week of posts</figcaption></figure>
+        <figure class="shot"><img src="/assets/screens/social-results.webp" alt="Social Results for 30 days: totals for Facebook, Instagram, Google Business Profile and LinkedIn, and each post’s views, reach, reactions, comments and shares" loading="lazy" width="1600" height="1000"><figcaption>Results: how every post did</figcaption></figure>
+          <p class="req">Needs nothing else. Connect each platform in Admin console → Integrations — rolling out during the beta</p>
+        </div>
+        <div class="mod" id="inbox">
+          <h3>Inbox</h3>
+          <p class="mod-tagline">Every comment and review, answered from one place.</p>
+          <p>Social → Inbox brings in Facebook, Instagram and LinkedIn comments on the posts Worklynq published, and your Google reviews, checking for new ones every 15 minutes. Reply from Worklynq with an AI suggestion in your brand voice, or turn an unhappy review into a ticket so someone follows it up. The top of the Inbox shows what’s waiting, how many are unhappy, and how fast you usually reply.</p>
+          <ul class="hl"><li>Comments and Google reviews together</li><li>AI reply suggestions in your brand voice</li><li>Make a ticket from a complaint</li><li>Waiting, unhappy, replied-to rate, and typical reply time</li><li><a href="/docs/marketing/#inbox">How the Inbox works</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/social-inbox-review.webp" alt="The Social Inbox: five waiting, one unhappy review, 86% replied to, typical reply 3 hours, and a two-star Google review open with AI reply suggestions and Create ticket" loading="lazy" width="1600" height="1111"><figcaption>Reply to a review, or make it a ticket</figcaption></figure>
+          <p class="req">Part of Social — it comes on with it</p>
         </div>
         <div class="mod" id="marketing">
           <h3>Marketing</h3>
           <p class="mod-tagline">Campaigns that sound like you.</p>
           <p>Campaigns with a goal, dates, locations, channels, budget, promo code and link tag, with all their posts in one place — and AI that plans a campaign’s posts for you. Your brand voice lives here too, so everything AI writes sounds like your business.</p>
-          <ul class="hl"><li>Campaigns: planned, live, ended</li><li>AI plans a campaign’s posts</li><li>Brand voice for every AI post</li><li>SEO &amp; website: Google Search, Analytics and Business Profile, with AI ideas</li><li><a href="/docs/marketing/#seo">SEO &amp; website</a></li></ul>
+          <ul class="hl"><li>Campaigns: planned, live, ended</li><li>AI plans a campaign’s posts</li><li>Brand voice for every AI post</li><li><a href="#seo">SEO &amp; website</a>: what Google says, with AI ideas</li><li><a href="/docs/marketing/#campaigns">How Marketing works</a></li></ul>
+        <figure class="shot"><img src="/assets/screens/marketing-campaigns.webp" alt="Marketing campaigns: Winter menu (live, 4 posts), Bayview opening (planned) and Back-to-school mornings (ended)" loading="lazy" width="1600" height="1000"><figcaption>Campaigns, by status</figcaption></figure>
+          <p class="req">Needs nothing else</p>
+        </div>
+        <div class="mod" id="seo">
+          <h3>SEO &amp; website</h3>
+          <p class="mod-tagline">What Google says about you, and what to do next.</p>
+          <p>Marketing → SEO &amp; website shows the last 7 days, 28 days or 3 months against the period before: clicks and searches from Google Search, visits from Google Analytics — including which posts brought people in — and, for each Business Profile location, views on Search and Maps, calls, direction requests, website clicks and reviews waiting for a reply. <strong>Content ideas</strong> suggests posts and pages that answer real searches, and <strong>Better title</strong> rewrites titles for pages that are shown often but rarely clicked. Worklynq never changes your website. It needs the Google connection.</p>
+          <ul class="hl"><li>Google Search: clicks, top searches, and searches almost on page 1</li><li>Website visits, by channel and post</li><li>Business Profile: views, calls, directions, and reviews</li><li>AI content ideas and better page titles</li><li>Search, visits and Business Profile widgets for any dashboard</li><li><a href="/docs/marketing/#seo">How SEO &amp; website works</a></li></ul>
         <figure class="shot"><img src="/assets/screens/marketing-seo-ai.webp" alt="SEO &amp; website: clicks from Google, searches almost on page 1, and AI content ideas" loading="lazy" width="1600" height="1667"><figcaption>SEO &amp; website, with ideas from AI</figcaption></figure>
+          <p class="req">Part of Marketing — it comes on with it. Needs the Google connection in Admin console → Integrations</p>
         </div>
         <div class="mod" id="planned-cx">
           <h3>Customer trends <span class="badge badge--soon">Coming in the beta</span></h3>
@@ -295,7 +392,7 @@
       <section class="svc" id="platform">
         <h2>Always included</h2>
         <p>These are part of the platform, not modules, so every company has them whatever modules are on:</p>
-        <ul class="chips"><li>Users and profiles</li><li>Teams</li><li>Roles and permissions</li><li>Company settings</li><li>Notifications</li><li>Admin console (System Admin)</li><li>API tokens and connected apps</li></ul>
+        <ul class="chips"><li>Users and profiles</li><li>Teams</li><li>Roles and permissions</li><li>Company settings</li><li>Notifications</li><li>Admin console (System Admin)</li><li>API tokens and <a href="#connect-your-ai">connected apps</a></li><li><a href="/docs/integrations/">Integrations</a></li><li><a href="/docs/ai-credits/">AI credits</a> and AI Monitoring</li><li><a href="/docs/faq/#browser-notifications">Browser notifications</a></li></ul>
       </section>
 
       <section class="svc" id="requirements">
@@ -309,6 +406,20 @@
             <tr><td>Knowledge Library</td><td>Spaces</td></tr>
             <tr><td>Order Tracking, Engagement</td><td>Customers</td></tr>
             <tr><td>Home, Tickets, Approvals, Chat, Training, Dashboards, AI Search, Spaces, Customers, Social, Marketing</td><td>Nothing — each works on its own</td></tr>
+          </tbody>
+        </table></div>
+        <p>Some sections above are parts of a module rather than modules of their own. They come on and off with it:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Part</th><th>Comes with</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#calendar">Calendar</a>, <a href="#shifts">Shifts</a>, <a href="#daily-brief">Daily brief</a>, <a href="#tv-screens">TV screens</a></td><td>Operations</td></tr>
+            <tr><td><a href="#scheduled-reports">Scheduled reports</a></td><td>Dashboards</td></tr>
+            <tr><td><a href="#templates">Templates</a>, <a href="#archive">Archive &amp; Docs trash</a></td><td>Spaces</td></tr>
+            <tr><td><a href="#assist">Assist</a></td><td>AI Search</td></tr>
+            <tr><td><a href="#completed-orders">Completed orders</a></td><td>Order Tracking</td></tr>
+            <tr><td><a href="#inbox">Inbox</a></td><td>Social</td></tr>
+            <tr><td><a href="#seo">SEO &amp; website</a></td><td>Marketing</td></tr>
+            <tr><td><a href="#connect-your-ai">Connect your AI</a></td><td>Always included</td></tr>
           </tbody>
         </table></div>
       </section>
