@@ -1,0 +1,34 @@
+WEBVTT
+
+1
+00:00:00.633 --> 00:00:09.657
+Work in Worklynq always happens somewhere: at a location, in a project, or for a product. In this video, you’ll set those up in the Admin console.
+
+2
+00:00:10.733 --> 00:00:23.960
+Under Work Configuration, Locations lists the places your team works. Every operations ticket belongs to a location, and its number starts with the location’s ticket tag, like DC for Downtown café.
+
+3
+00:00:24.400 --> 00:00:33.808
+To add one, click Add location, and give it a name. Worklynq suggests a short ticket tag from the name, and you can add an address or a note for your team.
+
+4
+00:00:34.267 --> 00:00:40.709
+Next, choose which ticket types people can create there. You can change this any time, in Ticket Type Mapping.
+
+5
+00:00:41.167 --> 00:00:49.145
+Each location shows how many ticket types it uses. And when a location closes, archive it. Its tickets and history are kept.
+
+6
+00:00:49.933 --> 00:00:59.896
+Projects are work with a start and an end, like opening a new café, or launching a winter menu. Each one shows its objective, its progress, and its timeline.
+
+7
+00:01:00.333 --> 00:01:11.597
+You can also start projects from the Projects module, where Assist can draft the plan for you. And if your company builds software, your products are set up here too, once Product Releases is on.
+
+8
+00:01:13.067 --> 00:01:22.795
+That’s where your work happens. Next in the Admin console series: ticket types and custom workflows. You’ll find every guide at worklynq.com/docs.
+
