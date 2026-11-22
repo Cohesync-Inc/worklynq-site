@@ -1,0 +1,34 @@
+WEBVTT
+
+1
+00:00:00.633 --> 00:00:11.492
+A café raises checklists and repairs, while a new-store project needs milestones and punch items. In this video, you’ll choose which ticket types each work area can use.
+
+2
+00:00:12.567 --> 00:00:24.833
+In Work Configuration, open Ticket Type Mapping. Your work areas are grouped under Projects, Operations for your locations, and Approvals. Each one lists the ticket types people can create there.
+
+3
+00:00:25.300 --> 00:00:31.593
+Bayview opening is the new café being built. Let’s let the team there order supplies too. Click the plus.
+
+4
+00:00:32.033 --> 00:00:38.732
+Tick every type this work area should offer. You can search, or select them all. Nothing changes until you save.
+
+5
+00:00:39.167 --> 00:00:46.228
+Save, and supplier orders now show up for Bayview opening. To take a type away, click the cross on it, then save.
+
+6
+00:00:46.667 --> 00:00:52.320
+Removing a type only stops new tickets of that type. Tickets already created stay as they are.
+
+7
+00:00:53.100 --> 00:00:59.479
+Now, when someone creates a ticket and picks Bayview opening, Supplier Order is one of the types they can choose.
+
+8
+00:01:00.967 --> 00:01:09.585
+That’s ticket type mapping. Next in the Admin console series: approval types. You’ll find every guide at worklynq.com/docs.
+
