@@ -1,30 +1,19 @@
 WEBVTT
 
-1
 00:00:00.633 --> 00:00:09.529
 Every ticket type asks for the details that fit its kind of work. In this video, you’ll add your own fields, and choose which ones each ticket type shows.
 
-2
 00:00:10.600 --> 00:00:20.307
 Fields are the details a ticket asks for, like its assignee, its due date, or the vendor for a repair. You’ll find them in Work Configuration, under Fields.
 
-3
 00:00:20.767 --> 00:00:30.943
 System fields come built in. Custom Fields are your own. Here, the café tracks the vendor and cost of a repair, and the temperature reading on a food safety issue.
 
-4
 00:00:31.400 --> 00:00:38.333
 To add one, click New Custom Field, give it a name, and choose its type, like text, a number, a date, or a dropdown.
 
-5
 00:00:39.133 --> 00:00:47.837
 Then choose where each field shows. In Ticket Type Screens, pick a ticket type, like Food Safety Issue, and a screen: Create, or Edit and View.
 
-6
 00:00:48.300 --> 00:00:58.455
 Each type starts from a recommended layout for its kind of work. Switch a field on to show it, and mark it required if it must always be filled in. Then save your changes.
-
-7
-00:00:59.933 --> 00:01:10.941
-That’s fields and screens. Next in the Admin console series: sections, like time logging and file uploads. You’ll find every guide at worklynq.com/docs.
-

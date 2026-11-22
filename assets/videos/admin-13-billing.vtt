@@ -1,42 +1,28 @@
 WEBVTT
 
-1
 00:00:00.633 --> 00:00:09.252
 Everything you pay for is in one place. In this video, you’ll see your plan, add users, find your invoices, and buy extra AI credits.
 
-2
 00:00:10.333 --> 00:00:18.632
 In the Admin console, open Subscription, under Billing. It shows your plan and what it includes, your next payment, and the card it’s paid with.
 
-3
 00:00:19.067 --> 00:00:26.448
 You pay per user. Here, eight users are paid for, and seven are active. To make room for more people, click Add users.
 
-4
 00:00:26.900 --> 00:00:34.623
 Choose how many. You’re charged only for the rest of this billing period, and the new users are ready as soon as the payment goes through.
 
-5
 00:00:35.067 --> 00:00:45.200
 Change plan compares Basic, Advance and Premium, and the AI credits each includes. Moving up applies right away. A cheaper plan starts at your next renewal.
 
-6
 00:00:45.633 --> 00:00:50.263
 Invoices lists every invoice. View one, or download it as a PDF.
 
-7
 00:00:50.700 --> 00:01:00.172
 Credit packs are for AI. Each person gets credits with your plan every month. When someone runs out, they use extra credits from a pack, shared by everyone.
 
-8
 00:01:00.633 --> 00:01:08.825
 Bigger packs cost less per credit. Extra credits are for the month you buy them in. Every purchase, with its receipt, is listed below.
 
-9
 00:01:09.267 --> 00:01:13.512
 All payments go through Stripe, so your card details never reach Worklynq.
-
-10
-00:01:14.900 --> 00:01:26.015
-That’s plans and billing. Next in the Admin console series: how AI credits are used, and keeping an eye on them. You’ll find every guide at worklynq.com/docs.
-

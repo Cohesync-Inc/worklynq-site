@@ -1,26 +1,16 @@
 WEBVTT
 
-1
 00:00:00.371 --> 00:00:09.928
 Order Tracking follows every customer order, from the moment it comes in until it’s picked up, delivered, or shipped. In this video, you’ll add an order and move it along.
 
-2
 00:00:10.964 --> 00:00:21.567
 Open Order Tracking, and pick a store. The board has a column for each stage: New, Confirmed, In progress, Ready, and On the way. Overdue orders are outlined in red.
 
-3
 00:00:22.585 --> 00:00:28.153
 Square orders for the store show up alongside your own. Drag a card to move it to the next stage.
 
-4
 00:00:29.177 --> 00:00:37.156
 Click New order. Pick the customer, or Walk-in, add the items, choose pickup, delivery, or shipping, set when it’s due, and who’s on it.
 
-5
 00:00:40.002 --> 00:00:47.405
 Every order keeps its items, its stage, and a history of who did what, and when. Put the board on a TV in the store, too.
-
-6
-00:00:48.429 --> 00:00:51.181
-That’s Order Tracking. Next, Completed orders.
-

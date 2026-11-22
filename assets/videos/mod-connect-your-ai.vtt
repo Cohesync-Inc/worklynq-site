@@ -1,26 +1,16 @@
 WEBVTT
 
-1
 00:00:00.369 --> 00:00:10.609
 Connect Claude, ChatGPT, Claude Code, or Cursor to Worklynq, and work from the conversation. In this video, you’ll connect an AI app and choose what it may do.
 
-2
 00:00:11.628 --> 00:00:22.615
 In Claude or ChatGPT, add a custom connector with your workspace address, followed by slash M C P. Sign in to Worklynq, and this screen asks what the app may do.
 
-3
 00:00:23.638 --> 00:00:34.731
 Reading is always included. Untick editing tickets, docs, dashboards, or your shifts to keep it read-only, then click Allow. It works as you, and never sees more than you can.
 
-4
 00:00:35.758 --> 00:00:47.513
 Tools on your computer, like Claude Code and Cursor, use a personal A P I token. Create one on the API tokens page, then Connect your agent shows the exact setup to copy.
 
-5
 00:00:48.536 --> 00:00:59.885
 Connected apps are listed here too: disconnect one at any time. Your System Admin can turn every token and app off at once, and everything they do shows in the agent activity log.
-
-6
-00:01:00.905 --> 00:01:03.614
-That’s Connect your AI. Next, Customers.
-
