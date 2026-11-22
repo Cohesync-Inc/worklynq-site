@@ -272,3 +272,46 @@ footer{padding:52px 0 60px;}
 .video-list{list-style:none; padding:0; margin:16px 0; display:grid; gap:8px;}
 .video-list li{padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:#fff;}
 .video-list .n{display:inline-block; min-width:1.6em; font-weight:600; color:var(--ink-soft);}
+
+/* Video tutorials page: series tabs, card grid, pop-up player */
+.vtabs{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:28px 0 8px;}
+.vtab{display:flex; flex-direction:column; gap:4px; text-align:left; padding:14px 18px; border:1px solid var(--line); border-radius:12px; background:#fff; cursor:pointer; font:inherit; color:var(--ink); border-left:6px solid var(--teal);}
+.vtab--admin{border-left-color:#C9971C;}
+.vtab[aria-selected="true"]{background:var(--sage); border-color:var(--teal); border-left-width:6px; box-shadow:0 10px 24px -20px rgba(11,59,54,.6);}
+.vtab--admin[aria-selected="true"]{background:#FBF3DF; border-color:#C9971C;}
+.vtab-name{font-weight:600; font-size:17px;}
+.vtab-meta{font-size:13.5px; color:var(--ink-soft);}
+.vtab:focus-visible{outline:3px solid var(--focus); outline-offset:2px;}
+.vseries{margin-top:20px;}
+.vseries > h2{margin-top:8px;}
+.vgrid{list-style:none; padding:0; margin:18px 0 8px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; counter-reset:none;}
+.vcard-btn{display:flex; flex-direction:column; width:100%; height:100%; padding:0 0 14px; border:1px solid var(--line); border-radius:12px; background:#fff; cursor:pointer; text-align:left; font:inherit; color:var(--ink); overflow:hidden; transition:box-shadow .15s, transform .15s;}
+.vcard-btn:hover{box-shadow:0 14px 28px -20px rgba(11,59,54,.55); transform:translateY(-2px);}
+.vcard-btn:focus-visible{outline:3px solid var(--focus); outline-offset:2px;}
+.vcard-thumb{position:relative; display:block; aspect-ratio:16/9; background:#0f1f1b;}
+.vcard-thumb img{display:block; width:100%; height:100%; object-fit:cover;}
+.vcard-play{position:absolute; left:50%; top:50%; width:54px; height:54px; margin:-27px 0 0 -27px; border-radius:50%; background:rgba(11,59,54,.88); box-shadow:0 6px 16px rgba(0,0,0,.25);}
+.vcard-play::after{content:""; position:absolute; left:21px; top:16px; border-left:17px solid #fff; border-top:11px solid transparent; border-bottom:11px solid transparent;}
+.vcard-time{position:absolute; right:8px; bottom:8px; padding:2px 7px; border-radius:6px; background:rgba(0,0,0,.72); color:#fff; font-size:12.5px; font-weight:600;}
+.vcard-num{display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; margin:12px 14px 0; border-radius:50%; background:var(--sage); color:var(--teal-deep); font-size:13px; font-weight:700;}
+.vseries--admin .vcard-num{background:#FBF3DF; color:#7A5A0A;}
+.vcard-title{display:block; margin:8px 14px 0; font-weight:600; line-height:1.3;}
+.vcard-blurb{display:block; margin:4px 14px 0; font-size:14px; color:var(--ink-soft); line-height:1.4;}
+.vcard--hl .vcard-btn{outline:3px solid var(--teal); outline-offset:2px;}
+.vsoon{margin-top:14px; font-size:15px; color:var(--ink-soft);}
+.vnext{margin-top:36px; padding-top:20px; border-top:1px solid var(--line);}
+.vplayer{width:min(1100px,94vw); padding:0; border:0; border-radius:14px; background:#0f1f1b; color:#fff;}
+.vplayer::backdrop{background:rgba(10,24,21,.72);}
+.vplayer-head{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:14px 18px;}
+.vplayer-label{margin:0; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:#9FD3C2;}
+.vplayer-head h2{margin:2px 0 0; font-size:20px; color:#fff;}
+.vplayer-close{flex:none; width:38px; height:38px; border:0; border-radius:50%; background:rgba(255,255,255,.12); color:#fff; font-size:24px; line-height:1; cursor:pointer;}
+.vplayer-close:hover{background:rgba(255,255,255,.22);}
+.vplayer video{display:block; width:100%; height:auto; aspect-ratio:16/9; background:#000;}
+@media (max-width:980px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:600px){.vgrid,.vtabs{grid-template-columns:1fr;}}
+.doc .vgrid{padding-left:0; margin-left:0;}
+.vcard-series{position:absolute; left:8px; top:8px; padding:2px 8px; border-radius:6px; font-size:11.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; background:var(--teal-deep); color:#fff;}
+.vcard-series::before{content:"Getting started";}
+.vseries--admin .vcard-series{background:#C9971C; color:#1e1606;}
+.vseries--admin .vcard-series::before{content:"Admin console";}
