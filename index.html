@@ -333,6 +333,13 @@
   .tour-play-label{font-family:'Fraunces', Georgia, serif; font-size:24px; font-weight:560; text-shadow:0 2px 12px rgba(0,0,0,.35); display:flex; flex-direction:column; align-items:center; gap:4px;}
   .tour-play-label small{font-family:'IBM Plex Sans', sans-serif; font-size:13.5px; font-weight:500; opacity:.9;}
   .tour-frame.is-playing .tour-play{display:none;}
+  .tour-film{padding:0; border:0; border-radius:14px; background:#000; width:min(1100px, 94vw); overflow:visible;}
+  .tour-film::backdrop{background:rgba(6,20,18,.85);}
+  .tour-film video{display:block; width:100%; height:auto; aspect-ratio:16/9; border-radius:14px;}
+  .tour-film-close{
+    position:absolute; right:0; top:-48px; width:40px; height:40px; border-radius:50%; border:0; cursor:pointer;
+    background:var(--paper); color:var(--teal-deep); font-size:26px; line-height:40px; padding:0;
+  }
   .tour-more{max-width:1000px; margin:40px auto 0;}
   .tour-more-title{margin:0 0 16px; font-weight:600; color:var(--teal-deep);}
   .tour-cards{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px;}
@@ -1975,6 +1982,13 @@
           <button type="button" class="tour-play" aria-label="Play: A day at a café, 2 minutes"><span class="tour-play-btn" aria-hidden="true"></span></button>
         </div>
       </figure>
+      <dialog class="tour-film" id="tour-film" aria-label="A day at a café">
+        <button type="button" class="tour-film-close" aria-label="Close video">&times;</button>
+        <video controls preload="none" playsinline poster="assets/videos/industry-01-cafe.webp" width="1920" height="1080">
+          <source src="assets/videos/industry-01-cafe.mp4" type="video/mp4">
+          <track kind="captions" src="assets/videos/industry-01-cafe.vtt" srclang="en" label="English">
+        </video>
+      </dialog>
       <div class="tour-more">
         <p class="tour-more-title">Short tutorials to get you going</p>
         <ul class="tour-cards">
@@ -2857,28 +2871,19 @@
       btn.setAttribute('aria-label', 'Watch a day on Worklynq, 2 minutes');
       setKnob(0);
     }
-    // Play the café walk-through straight away, full screen, without leaving the hero.
-    // Runs inside the slide gesture itself, so phones allow sound and full screen.
+    // Open the café walk-through in a pop-up player and start it, without leaving the hero.
+    // Called directly inside the slide gesture, so iPhones allow playback with sound.
+    var dlg = document.getElementById('tour-film'), filmVid = dlg && dlg.querySelector('video');
     function go() {
-      var video = document.getElementById('tour-video');
-      if (!video) return;
-      var frame = video.closest('.tour-frame');
-      if (frame) frame.classList.add('is-playing');
-      video.setAttribute('controls', '');
-      if (video.webkitEnterFullscreen && !video.requestFullscreen) {
-        // iPhone: without playsinline, play() opens the native full-screen player
-        video.removeAttribute('playsinline');
-        video.addEventListener('webkitendfullscreen', function restore() {
-          video.setAttribute('playsinline', '');
-          video.removeEventListener('webkitendfullscreen', restore);
-        });
-      }
-      var p = video.play(); if (p && p.catch) p.catch(function () {});
-      if (video.requestFullscreen) {
-        var f = video.requestFullscreen(); if (f && f.catch) f.catch(function () {});
-      } else if (video.webkitEnterFullscreen) {
-        try { video.webkitEnterFullscreen(); } catch (err) {}
-      }
+      if (!dlg || !filmVid) return;
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+      var p = filmVid.play(); if (p && p.catch) p.catch(function () {});  // if a browser still refuses, the player is open with its play button
+    }
+    function closeFilm() { filmVid.pause(); if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+    if (dlg) {
+      dlg.querySelector('.tour-film-close').addEventListener('click', closeFilm);
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) closeFilm(); });
+      dlg.addEventListener('close', function () { filmVid.pause(); });
     }
     setSlider(phone.matches);
     if (phone.addEventListener) phone.addEventListener('change', function (e) { setSlider(e.matches); });
