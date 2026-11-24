@@ -258,14 +258,41 @@
   }
   .hero-watch-time{font-size:13px; color:var(--ink-soft); font-weight:400; padding:3px 9px; border:1px solid var(--line); border-radius:100px;}
   .hero-watch:hover .hero-watch-play{background:var(--teal); transform:scale(1.06);}
+  .hero-watch-fill{display:none;}
+  /* phones: slide the play knob across to watch */
+  .hero-watch.is-slider{
+    position:relative; overflow:hidden; display:flex; width:min(340px, 100%); height:60px; margin:32px auto 0;
+    padding:0 18px 0 64px; justify-content:center; gap:10px; border-radius:999px;
+    background:var(--teal-deep); color:var(--paper);
+    touch-action:pan-y; user-select:none; -webkit-user-select:none; -webkit-tap-highlight-color:transparent;
+  }
+  .hero-watch.is-slider .hero-watch-play{
+    position:absolute; left:9px; top:9px; z-index:2; background:var(--paper);
+    transform:translateX(var(--kx, 0px)); transition:transform .35s cubic-bezier(.2,.9,.3,1.2);
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+  }
+  .hero-watch.is-slider .hero-watch-play::before{border-color:transparent transparent transparent var(--teal-deep);}
+  .hero-watch.is-slider .hero-watch-fill{
+    display:block; position:absolute; left:0; top:0; bottom:0; z-index:0; border-radius:999px;
+    width:calc(var(--kx, 0px) + 60px); background:rgba(47,174,142,.5); transition:width .35s cubic-bezier(.2,.9,.3,1.2);
+  }
+  .hero-watch.is-slider.is-dragging .hero-watch-play, .hero-watch.is-slider.is-dragging .hero-watch-fill{transition:none;}
+  .hero-watch.is-slider .hero-watch-label, .hero-watch.is-slider .hero-watch-time{position:relative; z-index:1; opacity:calc(1 - var(--kp, 0) * 1.4);}
+  .hero-watch.is-slider .hero-watch-label{
+    white-space:nowrap; font-size:15.5px;
+    background:linear-gradient(100deg, rgba(245,243,236,.6) 30%, #fff 50%, rgba(245,243,236,.6) 70%);
+    background-size:250% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:heroSlideShine 2.4s linear infinite;
+  }
+  .hero-watch.is-slider .hero-watch-time{color:rgba(245,243,236,.85); border-color:rgba(245,243,236,.3);}
+  .hero-watch.is-slider:hover .hero-watch-play{background:var(--paper);}
+  .hero-watch.is-slider.is-nudge .hero-watch-play{animation:heroNudge .9s ease;}
+  @keyframes heroSlideShine{from{background-position:100% 0;} to{background-position:-150% 0;}}
+  @keyframes heroNudge{0%,100%{transform:translateX(0);} 30%{transform:translateX(46px);} 55%{transform:translateX(0);} 75%{transform:translateX(16px);}}
 
   /* hero: gentle effects (only once JS adds .hero-fx; without JS the hero is static) */
   .tag svg circle{transform-origin:center; transform-box:fill-box;}
   .tag{position:relative;}
-  .hero-mark{
-    background:linear-gradient(var(--teal-bright), var(--teal-bright)) 0 92% / 0 .08em no-repeat;
-    transition:background-size .9s cubic-bezier(.6,.1,.2,1) 1.25s;
-  }
   .hero-fx .hero-copy > .tag,
   .hero-fx .hero-copy > .lede,
   .hero-fx .hero-copy > .hero-watch{opacity:0; transform:translateY(12px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); transition-delay:var(--d,0s);}
@@ -273,7 +300,6 @@
   .hero-fx .hero-visual{opacity:0; transform:scale(.97); transition:opacity 1s ease .2s, transform 1.2s cubic-bezier(.2,.8,.2,1) .2s;}
   .hero-fx.is-in .hero-copy > *, .hero-fx.is-in h1 .w{opacity:1; transform:none;}
   .hero-fx.is-in .hero-visual{opacity:1; transform:none;}
-  .hero-fx.is-in .hero-mark{background-size:100% .08em;}
   .hero-fx.is-in .hero-watch-play{animation:heroWatchPulse 2.4s ease-out 2.2s 2;}
   .hero-fx.is-in .tag svg circle{animation:heroDot 2.6s ease-in-out infinite;}
   @keyframes heroWatchPulse{0%{box-shadow:0 0 0 0 rgba(47,174,142,.5);} 100%{box-shadow:0 0 0 16px rgba(47,174,142,0);}}
@@ -913,6 +939,32 @@
   .who-point-icon svg{width:19px; height:19px;}
   .who-point h3{font-size:19px; line-height:1.25; color:var(--paper);}
   .who-point p{margin:0; font-size:15px; line-height:1.6; color:rgba(245,243,236,0.78);}
+
+  /* Who we build for: effects (only once JS adds .who-fx; without JS the section is static) */
+  .who-point{transition:transform .25s ease, border-color .25s ease, background-color .25s ease;}
+  .who-point:hover{transform:translateY(-4px); border-color:rgba(47,174,142,.55); background:rgba(255,255,255,0.09);}
+  .who-types li{transition:border-color .2s ease, background-color .2s ease;}
+  .who-types li:hover{border-color:var(--teal-bright); background:rgba(47,174,142,.18);}
+  .who-fx .who-kicker::before{animation:whoDot 2.6s ease-in-out infinite;}
+  @keyframes whoDot{0%,100%{box-shadow:0 0 0 0 rgba(47,174,142,.6);} 60%{box-shadow:0 0 0 7px rgba(47,174,142,0);}}
+  .who-fx .who-copy > .who-kicker, .who-fx .who-copy > h2, .who-fx .who-copy > p{
+    opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); transition-delay:var(--d,0s);
+  }
+  .who-fx .who-grid.is-in .who-copy > *{opacity:1; transform:none;}
+  .who-fx .who-types li{opacity:0; transform:translateY(8px) scale(.92); transition:opacity .45s ease, transform .45s cubic-bezier(.2,.9,.3,1.3), border-color .2s ease, background-color .2s ease; transition-delay:calc(.6s + var(--i,0) * 80ms);}
+  .who-fx .who-grid.is-in .who-types li{opacity:1; transform:none;}
+  .who-fx .who-grid.is-in .who-types li:hover{transition-delay:0s;}
+  .who-media{border-radius:16px;}
+  .who-fx .who-photo{clip-path:inset(0 100% 0 0 round 16px); transform:scale(1.06); transition:clip-path 1.2s cubic-bezier(.7,0,.2,1) .2s, transform 2.2s cubic-bezier(.2,.8,.2,1) .2s;}
+  .who-fx .who-grid.is-in .who-photo{clip-path:inset(0 0 0 0 round 16px); transform:none;}
+  .who-fx .who-point{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1), border-color .25s ease, background-color .25s ease; transition-delay:var(--d,0s);}
+  .who-fx .who-points.is-in .who-point{opacity:1; transform:none;}
+  .who-fx .who-points.is-in .who-point:hover{transform:translateY(-4px); transition-delay:0s;}
+  .who-fx .who-point-icon svg *{stroke-dasharray:70; stroke-dashoffset:70; transition:stroke-dashoffset 1.2s ease; transition-delay:calc(var(--d,0s) + .35s);}
+  .who-fx .who-points.is-in .who-point-icon svg *{stroke-dashoffset:0;}
+  @media (prefers-reduced-motion: reduce){
+    .who *, .hero-watch *{animation:none !important;}
+  }
   @media (max-width:900px){
     .who-grid{grid-template-columns:minmax(0, 1fr); gap:36px;}
     .who-points{grid-template-columns:minmax(0, 1fr);}
@@ -1821,10 +1873,10 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="var(--teal-bright)"/></svg>
           Operations software built for the way your business works
         </span>
-        <h1>The businesses you run are already <span class="hero-mark">connected.</span> Your software isn't.</h1>
+        <h1>The businesses you run are already connected. Your software isn't.</h1>
         <p class="lede">Worklynq is built to bring your teams, operations, documents, enterprise tools, and AI into one connected intelligent platform, helping you run your business with shared context, connected intelligence, and AI-powered execution.</p>
         <p class="lede lede-accent">So your teams spend less time searching, coordinating, and managing information—and more time moving the business forward.</p>
-        <a class="hero-watch" href="#tour"><span class="hero-watch-play" aria-hidden="true"></span>Watch a day on Worklynq<span class="hero-watch-time">2 min</span></a>
+        <a class="hero-watch" href="#tour" draggable="false"><span class="hero-watch-fill" aria-hidden="true"></span><span class="hero-watch-play" aria-hidden="true"></span><span class="hero-watch-label">Watch a day on Worklynq</span><span class="hero-watch-time">2 min</span></a>
       </div>
 
       <div class="hero-visual">
@@ -2776,12 +2828,100 @@
     var frame = document.querySelector('.tour-frame');
     if (!frame) return;
     var video = frame.querySelector('video'), btn = frame.querySelector('.tour-play');
-    btn.addEventListener('click', function () {
+    // Hide the browser's own play overlay until the video starts, so only one play button shows.
+    video.removeAttribute('controls');
+    function start() {
       frame.classList.add('is-playing');
-      video.play();
-      video.focus();
+      video.setAttribute('controls', '');
+      var p = video.play(); if (p && p.catch) p.catch(function () {});
+    }
+    btn.addEventListener('click', function () { start(); video.focus(); });
+    video.addEventListener('play', function () { frame.classList.add('is-playing'); video.setAttribute('controls', ''); });
+    window.worklynqPlayTour = start;
+  })();
+
+  // Hero "Watch a day on Worklynq": on phones it's a slide-to-watch control.
+  // Slide the knob across: scroll to the tour and start the video. Laptops and keyboards: a normal link.
+  (function () {
+    var btn = document.querySelector('.hero-watch');
+    if (!btn) return;
+    var knob = btn.querySelector('.hero-watch-play'), label = btn.querySelector('.hero-watch-label');
+    var phone = window.matchMedia('(max-width: 640px)');
+    var slider = false, dragging = false, startX = 0, kx = 0, max = 0, moved = false;
+    function setKnob(x) {
+      kx = x; btn.style.setProperty('--kx', x + 'px');
+      btn.style.setProperty('--kp', max ? (x / max).toFixed(3) : 0);
+    }
+    function setSlider(on) {
+      slider = on; btn.classList.toggle('is-slider', on);
+      label.textContent = on ? 'Slide to watch' : 'Watch a day on Worklynq';
+      btn.setAttribute('aria-label', 'Watch a day on Worklynq, 2 minutes');
+      setKnob(0);
+    }
+    function go() {
+      var tour = document.getElementById('tour');
+      if (tour) tour.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.worklynqPlayTour) window.worklynqPlayTour();
+    }
+    setSlider(phone.matches);
+    if (phone.addEventListener) phone.addEventListener('change', function (e) { setSlider(e.matches); });
+    else if (phone.addListener) phone.addListener(function (e) { setSlider(e.matches); });
+
+    btn.addEventListener('pointerdown', function (e) {
+      if (!slider || (e.pointerType === 'mouse' && e.button !== 0)) return;
+      dragging = true; moved = false; startX = e.clientX - kx;
+      max = btn.clientWidth - knob.offsetWidth - 18;
+      btn.classList.add('is-dragging'); btn.classList.remove('is-nudge');
+      try { btn.setPointerCapture(e.pointerId); } catch (err) {}
     });
-    video.addEventListener('play', function () { frame.classList.add('is-playing'); });
+    btn.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var x = Math.max(0, Math.min(max, e.clientX - startX));
+      if (Math.abs(x - kx) > 2) moved = true;
+      setKnob(x);
+    });
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false; btn.classList.remove('is-dragging');
+      if (kx >= max * 0.85) {
+        setKnob(max);
+        if (navigator.vibrate) { try { navigator.vibrate(12); } catch (err) {} }
+        setTimeout(function () { go(); setKnob(0); }, 180);
+      } else { setKnob(0); }
+    }
+    btn.addEventListener('dragstart', function (e) { if (slider) e.preventDefault(); });
+    btn.addEventListener('pointerup', endDrag);
+    btn.addEventListener('pointercancel', endDrag);
+    btn.addEventListener('lostpointercapture', endDrag);
+    btn.addEventListener('click', function (e) {
+      if (!slider) return;                       // laptops: plain link to #tour
+      e.preventDefault();
+      if (e.detail === 0) { go(); return; }      // keyboard / screen reader
+      if (!moved) { btn.classList.remove('is-nudge'); void btn.offsetWidth; btn.classList.add('is-nudge'); }
+    });
+    btn.addEventListener('animationend', function (e) { if (e.animationName === 'heroNudge') btn.classList.remove('is-nudge'); });
+  })();
+
+  // Who we build for: content rises in, business types pop in, the photo unveils,
+  // the three points rise with their icons drawing in. Once, on scroll.
+  (function () {
+    var sec = document.getElementById('who');
+    if (!sec || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var parts = sec.querySelectorAll('.who-copy > .who-kicker, .who-copy > h2, .who-copy > p');
+    [].forEach.call(parts, function (el, i) { el.style.setProperty('--d', (i * 0.12) + 's'); });
+    [].forEach.call(sec.querySelectorAll('.who-types li'), function (li, i) { li.style.setProperty('--i', i); });
+    [].forEach.call(sec.querySelectorAll('.who-point'), function (el, i) { el.style.setProperty('--d', (i * 0.15) + 's'); });
+    sec.classList.add('who-fx');
+    function watch(el, threshold) {
+      var io = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        el.classList.add('is-in'); io.disconnect();
+      }, { threshold: threshold });
+      io.observe(el);
+    }
+    watch(sec.querySelector('.who-grid'), 0.25);
+    watch(sec.querySelector('.who-points'), 0.25);
   })();
 </script>
 </body>
