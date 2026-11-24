@@ -2837,7 +2837,6 @@
     }
     btn.addEventListener('click', function () { start(); video.focus(); });
     video.addEventListener('play', function () { frame.classList.add('is-playing'); video.setAttribute('controls', ''); });
-    window.worklynqPlayTour = start;
   })();
 
   // Hero "Watch a day on Worklynq": on phones it's a slide-to-watch control.
@@ -2858,10 +2857,28 @@
       btn.setAttribute('aria-label', 'Watch a day on Worklynq, 2 minutes');
       setKnob(0);
     }
+    // Play the café walk-through straight away, full screen, without leaving the hero.
+    // Runs inside the slide gesture itself, so phones allow sound and full screen.
     function go() {
-      var tour = document.getElementById('tour');
-      if (tour) tour.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      if (window.worklynqPlayTour) window.worklynqPlayTour();
+      var video = document.getElementById('tour-video');
+      if (!video) return;
+      var frame = video.closest('.tour-frame');
+      if (frame) frame.classList.add('is-playing');
+      video.setAttribute('controls', '');
+      if (video.webkitEnterFullscreen && !video.requestFullscreen) {
+        // iPhone: without playsinline, play() opens the native full-screen player
+        video.removeAttribute('playsinline');
+        video.addEventListener('webkitendfullscreen', function restore() {
+          video.setAttribute('playsinline', '');
+          video.removeEventListener('webkitendfullscreen', restore);
+        });
+      }
+      var p = video.play(); if (p && p.catch) p.catch(function () {});
+      if (video.requestFullscreen) {
+        var f = video.requestFullscreen(); if (f && f.catch) f.catch(function () {});
+      } else if (video.webkitEnterFullscreen) {
+        try { video.webkitEnterFullscreen(); } catch (err) {}
+      }
     }
     setSlider(phone.matches);
     if (phone.addEventListener) phone.addEventListener('change', function (e) { setSlider(e.matches); });
@@ -2886,7 +2903,8 @@
       if (kx >= max * 0.85) {
         setKnob(max);
         if (navigator.vibrate) { try { navigator.vibrate(12); } catch (err) {} }
-        setTimeout(function () { go(); setKnob(0); }, 180);
+        go();
+        setTimeout(function () { setKnob(0); }, 600);
       } else { setKnob(0); }
     }
     btn.addEventListener('dragstart', function (e) { if (slider) e.preventDefault(); });
