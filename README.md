@@ -11,6 +11,7 @@ The Worklynq website. Plain HTML pages — no build step, no framework. GitHub P
 | `terms/`, `privacy/`, `dpa/` | Terms of Use, Privacy Policy and Data Processing Agreement pages. |
 | `favicon.svg`, `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Browser tab and home-screen icons (the Worklynq W badge). |
 | `assets/videos/` | Tutorial videos for worklynq.com/docs/videos (MP4, WebVTT captions, WebP poster). They're made with `aura_monorepo/tools/product-videos`. |
+| `assets/one-video.js` | Makes sure only one video plays at a time. Add `<script src="/assets/one-video.js" defer></script>` before `</body>` on any new page with a video. |
 | `assets/logos/` | Optional official logos for the integrations section (see below). |
 | `robots.txt`, `sitemap.xml` | Tell Google what to crawl. **When you add a page, add its URL to `sitemap.xml`.** |
 | `assets/og-image.png` | The 1200×630 preview image shown when a worklynq.com link is shared (LinkedIn, Slack, iMessage…). |
