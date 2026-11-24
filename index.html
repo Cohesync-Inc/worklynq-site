@@ -243,6 +243,94 @@
     box-shadow:0 24px 60px -20px rgba(11,59,54,0.35);
   }
 
+  /* hero: watch link */
+  .hero-watch{
+    display:inline-flex; align-items:center; gap:12px; margin-top:32px;
+    text-decoration:none; color:var(--teal-deep); font-weight:500; font-size:15.5px;
+  }
+  .hero-watch-play{
+    position:relative; width:42px; height:42px; border-radius:50%; flex-shrink:0;
+    background:var(--teal-deep); transition:background .2s ease, transform .2s ease;
+  }
+  .hero-watch-play::before{
+    content:""; position:absolute; left:16px; top:13px;
+    border-style:solid; border-width:8px 0 8px 12px; border-color:transparent transparent transparent var(--paper);
+  }
+  .hero-watch-time{font-size:13px; color:var(--ink-soft); font-weight:400; padding:3px 9px; border:1px solid var(--line); border-radius:100px;}
+  .hero-watch:hover .hero-watch-play{background:var(--teal); transform:scale(1.06);}
+
+  /* hero: gentle effects (only once JS adds .hero-fx; without JS the hero is static) */
+  .tag svg circle{transform-origin:center; transform-box:fill-box;}
+  .tag{position:relative;}
+  .hero-mark{
+    background:linear-gradient(var(--teal-bright), var(--teal-bright)) 0 92% / 0 .08em no-repeat;
+    transition:background-size .9s cubic-bezier(.6,.1,.2,1) 1.25s;
+  }
+  .hero-fx .hero-copy > .tag,
+  .hero-fx .hero-copy > .lede,
+  .hero-fx .hero-copy > .hero-watch{opacity:0; transform:translateY(12px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); transition-delay:var(--d,0s);}
+  .hero-fx h1 .w{display:inline-block; opacity:0; transform:translateY(.35em); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1); transition-delay:calc(.15s + var(--i) * 55ms);}
+  .hero-fx .hero-visual{opacity:0; transform:scale(.97); transition:opacity 1s ease .2s, transform 1.2s cubic-bezier(.2,.8,.2,1) .2s;}
+  .hero-fx.is-in .hero-copy > *, .hero-fx.is-in h1 .w{opacity:1; transform:none;}
+  .hero-fx.is-in .hero-visual{opacity:1; transform:none;}
+  .hero-fx.is-in .hero-mark{background-size:100% .08em;}
+  .hero-fx.is-in .hero-watch-play{animation:heroWatchPulse 2.4s ease-out 2.2s 2;}
+  .hero-fx.is-in .tag svg circle{animation:heroDot 2.6s ease-in-out infinite;}
+  @keyframes heroWatchPulse{0%{box-shadow:0 0 0 0 rgba(47,174,142,.5);} 100%{box-shadow:0 0 0 16px rgba(47,174,142,0);}}
+  @keyframes heroDot{0%,100%{transform:scale(1); opacity:1;} 50%{transform:scale(.7); opacity:.6;}}
+
+  /* ---------- TOUR (watch it in action) ---------- */
+  .tour{padding:84px 0; border-top:1px solid var(--line);}
+  .tour-head{max-width:720px; margin:0 auto 36px; text-align:center;}
+  .tour-kicker{margin:0 0 12px; font-size:13px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--teal);}
+  .tour-head h2{font-size:clamp(28px, 3.4vw, 40px); line-height:1.12; color:var(--teal-deep);}
+  .tour-head p{margin:16px auto 0; font-size:17px; color:var(--ink-soft); line-height:1.6;}
+  .tour-player{
+    margin:0 auto; max-width:1000px; background:var(--card-bg); border:1px solid var(--line);
+    border-radius:16px; overflow:hidden; box-shadow:0 24px 60px -24px rgba(11,59,54,.35);
+  }
+  .tour-player .shot-bar{display:flex; align-items:center; gap:6px; padding:10px 14px; background:var(--paper-2); border-bottom:1px solid var(--line); font-size:12px; color:var(--ink-soft);}
+  .tour-player .shot-bar i{width:9px; height:9px; border-radius:50%; background:var(--line);}
+  .tour-player .shot-bar span{margin-left:10px;}
+  .tour-frame{position:relative; aspect-ratio:16/9; background:var(--teal-deep);}
+  .tour-frame video{display:block; width:100%; height:100%;}
+  .tour-play{
+    position:absolute; inset:0; display:block;
+    border:0; padding:0; cursor:pointer; font:inherit; color:var(--paper);
+    background:transparent;
+  }
+  .tour-play-btn{position:absolute; left:70%; top:50%; margin:-42px 0 0 -42px; width:84px; height:84px; border-radius:50%; background:var(--teal-deep); box-shadow:0 10px 30px rgba(11,59,54,.4); transition:transform .25s ease, background .25s ease;}
+  .tour-play-btn::before{content:""; position:absolute; left:32px; top:25px; border-style:solid; border-width:17px 0 17px 26px; border-color:transparent transparent transparent var(--paper);}
+  .tour-play-btn::after{content:""; position:absolute; inset:0; border-radius:50%; animation:tourRing 2.4s ease-out infinite;}
+  @keyframes tourRing{0%{box-shadow:0 0 0 0 rgba(47,174,142,.55);} 100%{box-shadow:0 0 0 22px rgba(47,174,142,0);}}
+  .tour-play:hover .tour-play-btn{transform:scale(1.07); background:var(--teal);}
+  .tour-play-label{font-family:'Fraunces', Georgia, serif; font-size:24px; font-weight:560; text-shadow:0 2px 12px rgba(0,0,0,.35); display:flex; flex-direction:column; align-items:center; gap:4px;}
+  .tour-play-label small{font-family:'IBM Plex Sans', sans-serif; font-size:13.5px; font-weight:500; opacity:.9;}
+  .tour-frame.is-playing .tour-play{display:none;}
+  .tour-more{max-width:1000px; margin:40px auto 0;}
+  .tour-more-title{margin:0 0 16px; font-weight:600; color:var(--teal-deep);}
+  .tour-cards{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px;}
+  .tour-cards a{display:block; text-decoration:none; color:var(--ink);}
+  .tour-thumb{position:relative; display:block; border-radius:10px; overflow:hidden; border:1px solid var(--line); transition:transform .2s ease, box-shadow .2s ease;}
+  .tour-thumb img{width:100%; height:auto;}
+  .tour-time{position:absolute; right:8px; bottom:8px; font-size:12px; font-weight:600; color:var(--paper); background:rgba(11,59,54,.85); padding:2px 7px; border-radius:6px;}
+  .tour-cards a:hover .tour-thumb{transform:translateY(-3px); box-shadow:0 14px 30px -14px rgba(11,59,54,.45);}
+  .tour-card-title{display:block; margin-top:10px; font-weight:500; font-size:15px;}
+  .tour-all{display:inline-block; margin-top:22px; font-weight:500; color:var(--teal); text-decoration:none; border-bottom:1px solid currentColor;}
+  @media (max-width:720px){
+    .tour{padding:64px 0;}
+    .tour-cards{grid-template-columns:1fr; gap:18px;}
+    .tour-more{text-align:center;}
+    .tour-play-btn{width:56px; height:56px; margin:-28px 0 0 -28px; left:78%; top:45%;}
+    .tour-play-btn::before{left:21px; top:16px; border-width:12px 0 12px 18px;}
+    .tour-play-label{font-size:19px;}
+    .tour-player .shot-bar{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-fx *, .hero-fx .hero-visual, .tour *{animation:none !important; transition:none !important;}
+    .hero-fx .hero-copy > *, .hero-fx h1 .w, .hero-fx .hero-visual{opacity:1 !important; transform:none !important;}
+  }
+
   /* ---------- WHAT WORKLYNQ DOES ---------- */
   .what{
     background:var(--teal-deep);
@@ -1733,9 +1821,10 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="var(--teal-bright)"/></svg>
           Operations software built for the way your business works
         </span>
-        <h1>The businesses you run are already connected. Your software isn't.</h1>
+        <h1>The businesses you run are already <span class="hero-mark">connected.</span> Your software isn't.</h1>
         <p class="lede">Worklynq is built to bring your teams, operations, documents, enterprise tools, and AI into one connected intelligent platform, helping you run your business with shared context, connected intelligence, and AI-powered execution.</p>
         <p class="lede lede-accent">So your teams spend less time searching, coordinating, and managing information—and more time moving the business forward.</p>
+        <a class="hero-watch" href="#tour"><span class="hero-watch-play" aria-hidden="true"></span>Watch a day on Worklynq<span class="hero-watch-time">2 min</span></a>
       </div>
 
       <div class="hero-visual">
@@ -1813,6 +1902,35 @@
       <div class="wq-foot">
         <p><strong>Keep the tools you have.</strong> Worklynq connects to Square, QuickBooks and more. Anything else, just ask Assist.</p>
         <nav class="wq-guide-row" aria-label="Industry guides"><span>Industry guides</span><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a><a href="/docs/guides/construction/">Construction &amp; trades</a><a href="/docs/guides/software/">Software teams</a></nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="tour" id="tour" aria-labelledby="tour-title">
+    <div class="wrap">
+      <div class="tour-head">
+        <p class="tour-kicker">Watch it in action</p>
+        <h2 id="tour-title">Follow one café through a day on Worklynq.</h2>
+        <p>Two cafés, an owner, two shift leads and a small crew. From the morning brief to closing, see how the work gets done, in about two minutes.</p>
+      </div>
+      <figure class="tour-player">
+        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div>
+        <div class="tour-frame">
+          <video id="tour-video" controls preload="none" playsinline poster="assets/videos/industry-01-cafe.webp" width="1920" height="1080">
+            <source src="assets/videos/industry-01-cafe.mp4" type="video/mp4">
+            <track kind="captions" src="assets/videos/industry-01-cafe.vtt" srclang="en" label="English">
+          </video>
+          <button type="button" class="tour-play" aria-label="Play: A day at a café, 2 minutes"><span class="tour-play-btn" aria-hidden="true"></span></button>
+        </div>
+      </figure>
+      <div class="tour-more">
+        <p class="tour-more-title">Short tutorials to get you going</p>
+        <ul class="tour-cards">
+          <li><a href="/docs/videos/#first-look"><span class="tour-thumb"><img src="assets/videos/01-first-look-thumb.webp" alt="" loading="lazy" width="800" height="450"><span class="tour-time">2:10</span></span><span class="tour-card-title">Your first look at Worklynq</span></a></li>
+          <li><a href="/docs/videos/#tickets"><span class="tour-thumb"><img src="assets/videos/02-tickets-thumb.webp" alt="" loading="lazy" width="800" height="450"><span class="tour-time">1:56</span></span><span class="tour-card-title">Working with tickets</span></a></li>
+          <li><a href="/docs/videos/#03-assist"><span class="tour-thumb"><img src="assets/videos/03-assist-thumb.webp" alt="" loading="lazy" width="800" height="450"><span class="tour-time">1:39</span></span><span class="tour-card-title">Getting more out of Assist</span></a></li>
+        </ul>
+        <a class="tour-all" href="/docs/videos/">All video tutorials &rarr;</a>
       </div>
     </div>
   </section>
@@ -2617,6 +2735,53 @@
       } else stop();
     }, { threshold: 0.2 }).observe(section);
     document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
+  })();
+</script>
+<script>
+  // Hero: a gentle one-time entrance (words rise in, "connected." gets a teal underline,
+  // the photo settles). Skipped for reduced-motion visitors and without JavaScript.
+  (function () {
+    var hero = document.querySelector('.hero');
+    if (!hero) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { hero.classList.add('hero-fx', 'is-in'); return; }
+    var h1 = hero.querySelector('h1'), n = 0;
+    h1.setAttribute('aria-label', h1.textContent);
+    function wrap(node) {
+      [].slice.call(node.childNodes).forEach(function (c) {
+        if (c.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach(function (part) {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+            var w = document.createElement('span');
+            w.className = 'w'; w.setAttribute('aria-hidden', 'true');
+            w.style.setProperty('--i', n++); w.textContent = part;
+            frag.appendChild(w);
+          });
+          node.replaceChild(frag, c);
+        } else if (c.nodeType === 1) { wrap(c); }
+      });
+    }
+    wrap(h1);
+    var copy = hero.querySelectorAll('.hero-copy > .tag, .hero-copy > .lede, .hero-copy > .hero-watch');
+    var delays = [0, 0.75, 0.9, 1.05];
+    [].forEach.call(copy, function (el, i) { el.style.setProperty('--d', (delays[i] || 0) + 's'); });
+    hero.classList.add('hero-fx');
+    requestAnimationFrame(function () { requestAnimationFrame(function () { hero.classList.add('is-in'); }); });
+  })();
+
+  // Tour: the big play button starts the video (captions stay off unless turned on).
+  (function () {
+    var frame = document.querySelector('.tour-frame');
+    if (!frame) return;
+    var video = frame.querySelector('video'), btn = frame.querySelector('.tour-play');
+    btn.addEventListener('click', function () {
+      frame.classList.add('is-playing');
+      video.play();
+      video.focus();
+    });
+    video.addEventListener('play', function () { frame.classList.add('is-playing'); });
   })();
 </script>
 </body>
