@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://worklynq.com/</loc></url>
+  <url><loc>https://worklynq.com/assist/</loc></url>
+  <url><loc>https://worklynq.com/modules/</loc></url>
+  <url><loc>https://worklynq.com/integrations/</loc></url>
+  <url><loc>https://worklynq.com/how-it-works/</loc></url>
   <url><loc>https://worklynq.com/docs/ai-credits/</loc></url>
   <url><loc>https://worklynq.com/docs/approvals/</loc></url>
   <url><loc>https://worklynq.com/docs/assist/</loc></url>

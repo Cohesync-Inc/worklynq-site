@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Worklynq integrations — Square, QuickBooks, Google, Meta, GitHub, Claude</title>
+<meta name="description" content="Connect Square, QuickBooks, Google, Facebook, Instagram, LinkedIn, Mailchimp, GitHub, Claude, Cursor and your own apps to Worklynq. See what each one does for your business.">
+<link rel="canonical" href="https://worklynq.com/integrations/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Worklynq">
+<meta property="og:title" content="Worklynq integrations — Square, QuickBooks, Google, Meta, GitHub, Claude">
+<meta property="og:description" content="Connect Square, QuickBooks, Google, Facebook, Instagram, LinkedIn, Mailchimp, GitHub, Claude, Cursor and your own apps to Worklynq. See what each one does for your business.">
+<meta property="og:url" content="https://worklynq.com/integrations/">
+<meta property="og:image" content="https://worklynq.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Worklynq: one intelligent platform to run your business">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/integrations.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <img src="data:image/png;base64,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" alt="Worklynq — Intelligence Behind Every Operation" class="wordmark">
+    </a>
+    <nav class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/modules/">Modules</a>
+      <a href="/assist/">Assist</a>
+      <a href="/integrations/" aria-current="page">Integrations</a>
+      <a href="/how-it-works/">How it works</a>
+      <a href="/docs/">Docs</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="sub-page">
+  <div class="wrap"><p class="page-crumb"><a href="/">Worklynq</a> &rsaquo; Integrations</p></div>
+  <section class="ih" aria-labelledby="ih-title">
+    <div class="wrap">
+      <div class="ih-grid">
+        <div>
+          <p class="ih-kicker">Integrations</p>
+          <h1 id="ih-title">Keep the tools you have. Make them work together.</h1>
+          <p class="ih-lede">Worklynq connects to your point of sale, your books, your marketing channels and your code, and puts what they know next to the work your team does every day.</p>
+          <p class="ih-lede">Your System Admin connects each one in a minute, from Admin console → Integrations. Each tool asks you to sign in and approve, and Worklynq only reaches what you allow.</p>
+          <div class="ih-actions">
+            <a class="btn-solid btn-solid--dark" href="/?interest=Integrations#demo">See it with your tools</a>
+            <a class="btn-ghost btn-ghost--dark" href="/docs/integrations/">Integration docs</a>
+          </div>
+        </div>
+        <figure class="tour-player ih-player">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net · Admin console</span></div>
+          <div class="tour-frame">
+            <video controls preload="none" playsinline poster="/assets/videos/admin-12-apps.webp" width="1920" height="1080">
+              <source src="/assets/videos/admin-12-apps.mp4" type="video/mp4">
+              <track kind="captions" src="/assets/videos/admin-12-apps.vtt" srclang="en" label="English">
+            </video>
+            <button type="button" class="tour-play" aria-label="Play: Connecting apps, 1 minute 16 seconds"><span class="tour-play-btn" aria-hidden="true"></span></button>
+          </div>
+          <figcaption><strong>Connecting apps</strong> · 1:16 · how to connect a tool and check what it brings in</figcaption>
+        </figure>
+      </div>
+      <nav class="ijump" aria-label="Jump to an integration">
+        <p class="ijump-title">Available now and rolling out through the beta</p>
+        <ul>
+          <li><a href="#square"><span class="int-logo" data-logo="square" aria-hidden="true">S</span>Square</a></li>
+          <li><a href="#quickbooks"><span class="int-logo" data-logo="quickbooks" aria-hidden="true">Q</span>QuickBooks</a></li>
+          <li><a href="#google"><span class="int-logo" data-logo="google" aria-hidden="true">G</span>Google</a></li>
+          <li><a href="#meta"><span class="int-logo" data-logo="facebook" aria-hidden="true">f</span>Facebook + Instagram</a></li>
+          <li><a href="#linkedin"><span class="int-logo" data-logo="linkedin" aria-hidden="true">in</span>LinkedIn</a></li>
+          <li><a href="#mailchimp"><span class="int-logo" data-logo="mailchimp" aria-hidden="true">M</span>Mailchimp</a></li>
+          <li><a href="#coding-agents"><span class="int-logo" data-logo="github" aria-hidden="true">G</span>GitHub</a></li>
+          <li><a href="#coding-agents"><span class="int-logo" data-logo="claude" aria-hidden="true">C</span>Claude</a></li>
+          <li><a href="#coding-agents"><span class="int-logo" data-logo="cursor" aria-hidden="true">C</span>Cursor</a></li>
+          <li><a href="#your-ai"><span class="int-logo" data-logo="chatgpt" aria-hidden="true">AI</span>Claude &amp; ChatGPT</a></li>
+          <li><a href="#custom-apps"><span class="int-logo" data-logo="custom-apps" aria-hidden="true">+</span>Your own apps</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="iwhere" aria-labelledby="iwhere-title">
+    <div class="wrap">
+      <h2 id="iwhere-title">Connect once. It shows up everywhere it helps.</h2>
+      <p>A connection isn’t another tab to check. Its data turns up in the parts of Worklynq your team already uses, and Assist can answer questions about it.</p>
+      <ul class="iwhere-grid">
+        <li><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 15l3-4 3 2 4-5"/></svg>Dashboards</strong><span>Square sales, QuickBooks profit, Google searches and your own app’s data, <em>next to open work</em>.</span></li>
+        <li><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Scheduled reports</strong><span>The same numbers, emailed on a schedule with an AI summary of what changed.</span></li>
+        <li><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Order boards &amp; TVs</strong><span>Square orders beside your own, on the board and on the kitchen TV.</span></li>
+        <li><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Shifts</strong><span>Start a shift in Worklynq and you’re clocked in on Square.</span></li>
+        <li><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 001 1h2l5 4V6L6 10H4a1 1 0 00-1 1z"/><path d="M15.5 8.5a5 5 0 010 7"/></svg>Marketing &amp; Social</strong><span>Posts, comments, reviews, searches and promo emails, by store.</span></li>
+        <li><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg>Tickets &amp; agents</strong><span>Pull requests from Claude and Cursor, right on the ticket that asked for them.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="icat" id="sales-finance" aria-labelledby="sales-finance-title">
+    <div class="wrap">
+      <div class="icat-head">
+        <p class="icat-kicker">Sales &amp; finance</p>
+        <h2 id="sales-finance-title">See the money next to the work that makes it.</h2>
+        <p>Connect your point of sale and your books once, for the whole company. Worklynq reads the numbers and puts them beside the checklists, orders and projects behind them.</p>
+      </div>
+      <article class="irow" id="square" aria-labelledby="square-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/dashboard.webp" aria-label="Enlarge: Square sales and orders by store, next to the work that’s still open"><img src="/assets/screens/dashboard.webp" alt="A store overview dashboard: Square sales and orders today, sales by store, overdue work and open tickets" loading="lazy" width="1600" height="1250"></button><figcaption>Square sales and orders by store, next to the work that’s still open</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/tv-order-tracking.webp" aria-label="Enlarge: Square orders on the counter TV"><img src="/assets/screens/tv-order-tracking.webp" alt="A TV showing open orders by stage, with late ones in red" loading="lazy" width="1920" height="1080"></button><figcaption>Square orders on the counter TV</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/shifts-mine.webp" aria-label="Enlarge: Shifts that clock people in on Square"><img src="/assets/screens/shifts-mine.webp" alt="The Shifts page with upcoming shifts at the Riverside café" loading="lazy" width="1600" height="1250"></button><figcaption>Shifts that clock people in on Square</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="square" aria-hidden="true">S</span><h3 id="square-name">Square</h3><span class="ibadge">Available now</span></div>
+          <p class="irow-pitch">Every store’s sales, orders and shifts, lined up with the work happening there.</p>
+          <p>Connect your Square seller account once and link each Square location to its store in Worklynq. From then on, Square is part of how every store runs its day.</p>
+          <ul class="ibenefits">
+            <li><strong>Sales on every store’s dashboard.</strong> Sales, orders, average order, refunds and items sold, split by store, item, payment type, day or hour.</li>
+            <li><strong>Square orders on the board and the TV.</strong> Each store’s open Square orders show on its Order Tracking board and kitchen TV, right next to your Worklynq orders.</li>
+            <li><strong>Clock in by starting a shift.</strong> When someone starts or ends their shift in Worklynq, they’re clocked in or out on Square too.</li>
+            <li><strong>A dashboard per store.</strong> Pin a dashboard to one store and its Square numbers show only that store’s locations, beside its checklists and requests.</li>
+            <li><strong>In your emailed reports.</strong> Add Square widgets to the reports Worklynq emails out on a schedule.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Read-only, apart from timecards.</strong> Worklynq never takes payments, issues refunds, or changes prices, items or orders in Square. Numbers are at most 5 minutes behind.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-order-tracking" data-video="mod-order-tracking" data-title="Order Tracking"><span class="iwatch-play" aria-hidden="true"></span>Watch: Order Tracking <span class="iwatch-time">0:48</span></a><a class="isetup" href="/docs/integrations/square/">Set up Square &rarr;</a></div>
+        </div>
+      </article>
+      <article class="irow irow--flip" id="quickbooks" aria-labelledby="quickbooks-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/dashboard-connected-data.webp" aria-label="Enlarge: Choose who can use QuickBooks profit &amp; loss and invoices"><img src="/assets/screens/dashboard-connected-data.webp" alt="The Connected data window listing QuickBooks profit and loss and QuickBooks invoices with who can use each" loading="lazy" width="1600" height="1125"></button><figcaption>Choose who can use QuickBooks profit & loss and invoices</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/setup-5-connect.webp" aria-label="Enlarge: Connect it during first-time setup"><img src="/assets/screens/setup-5-connect.webp" alt="First-time setup step: connect QuickBooks, Claude, Square and GitHub" loading="lazy" width="1600" height="1000"></button><figcaption>Connect it during first-time setup</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/report-schedule.webp" aria-label="Enlarge: Email the numbers every morning, with an AI summary"><img src="/assets/screens/report-schedule.webp" alt="Emailing a report every weekday at 7 AM with an AI summary" loading="lazy" width="1600" height="1125"></button><figcaption>Email the numbers every morning, with an AI summary</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="quickbooks" aria-hidden="true">Q</span><h3 id="quickbooks-name">QuickBooks</h3><span class="ibadge">Available now</span></div>
+          <p class="irow-pitch">Profit, invoices and open balances, right where you make decisions.</p>
+          <p>Connect QuickBooks Online once for the company, then put its numbers on any dashboard or scheduled report, next to the store, job or project they belong to.</p>
+          <ul class="ibenefits">
+            <li><strong>Profit and loss at a glance.</strong> Income, cost of sales, gross profit, expenses and net income, as a total or as a trend by day, week or month.</li>
+            <li><strong>Invoices that need chasing.</strong> Amount invoiced, open and overdue balances, and what’s due in the next 7 days, by customer or by status.</li>
+            <li><strong>Numbers that match your books.</strong> Worklynq follows your cash or accrual setting and QuickBooks’ own weeks, and every invoice links straight to QuickBooks.</li>
+            <li><strong>You decide who sees them.</strong> QuickBooks numbers start out for System Admins only. Share them when you’re ready; anyone without access sees a note instead.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Read-only.</strong> Worklynq can’t create invoices, record payments or change anything in QuickBooks. Works with QuickBooks Online.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-scheduled-reports" data-video="mod-scheduled-reports" data-title="Scheduled reports"><span class="iwatch-play" aria-hidden="true"></span>Watch: Scheduled reports <span class="iwatch-time">0:42</span></a><a class="isetup" href="/docs/integrations/quickbooks/">Set up QuickBooks &rarr;</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="icat" id="marketing" aria-labelledby="marketing-title">
+    <div class="wrap">
+      <div class="icat-head">
+        <p class="icat-kicker">Marketing &amp; customers</p>
+        <h2 id="marketing-title">Post, reply and measure from where you run the business.</h2>
+        <p>Plan posts for every channel on one calendar, answer comments and reviews in one inbox, and see what brings people in. AI writes in your brand voice, and you check everything before it goes out.</p>
+      </div>
+      <article class="irow" id="google" aria-labelledby="google-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/marketing-seo-local.webp" aria-label="Enlarge: Business Profile: views, calls, directions and reviews for each store"><img src="/assets/screens/marketing-seo-local.webp" alt="Business Profile results for one café: views, calls, directions, searches, reviews and a profile checklist" loading="lazy" width="1600" height="1222"></button><figcaption>Business Profile: views, calls, directions and reviews for each store</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/marketing-seo-ai.webp" aria-label="Enlarge: Google Search, with AI content ideas"><img src="/assets/screens/marketing-seo-ai.webp" alt="Google Search results in Worklynq with AI content ideas" loading="lazy" width="1600" height="1667"></button><figcaption>Google Search, with AI content ideas</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/integrations-google.webp" aria-label="Enlarge: One connection for Search, Analytics and Business Profile"><img src="/assets/screens/integrations-google.webp" alt="Connecting Google: choosing the Search Console property, Analytics property and Business Profile locations" loading="lazy" width="1600" height="1375"></button><figcaption>One connection for Search, Analytics and Business Profile</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="google" aria-hidden="true">G</span><h3 id="google-name">Google</h3><span class="ibadge ibadge--soon">Rolling out in the beta</span></div>
+          <p class="irow-pitch">Know how people find you, and what to do about it.</p>
+          <p>One Google connection brings in Search Console, Google Analytics and your Business Profile locations, each linked to its store. It all shows up in Marketing → SEO &amp; website.</p>
+          <ul class="ibenefits">
+            <li><strong>What people search to find you.</strong> Clicks, times shown, click-through rate and position, with your top searches and pages, against the period before.</li>
+            <li><strong>Ideas from real searches.</strong> “Almost on page 1” finds searches where you sit just off the first page, and AI suggests posts and pages that answer them.</li>
+            <li><strong>Better titles for pages people skip.</strong> For pages that show up but rarely get clicked, AI writes new titles and descriptions from that page’s own searches.</li>
+            <li><strong>Your Business Profile, store by store.</strong> Views on Search and Maps, calls, directions and website clicks, a profile checklist, local posts and review replies.</li>
+            <li><strong>Which posts bring visits.</strong> Tagged links show the visits each post and campaign sends to your website.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Read-only, apart from Business Profile posts and review replies.</strong> Worklynq never changes your website or your profile details.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-seo" data-video="mod-seo" data-title="SEO &amp;amp; website"><span class="iwatch-play" aria-hidden="true"></span>Watch: SEO &amp; website <span class="iwatch-time">0:46</span></a><a class="isetup" href="/docs/marketing/">How Marketing works &rarr;</a></div>
+        </div>
+      </article>
+      <article class="irow irow--flip" id="meta" aria-labelledby="meta-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/social-week.webp" aria-label="Enlarge: The posts calendar: every channel, every store, one week"><img src="/assets/screens/social-week.webp" alt="The Social calendar with a week of posts across channels and a Needs attention list" loading="lazy" width="1600" height="1111"></button><figcaption>The posts calendar: every channel, every store, one week</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/social-new-post-ai.webp" aria-label="Enlarge: AI writes a version for each channel"><img src="/assets/screens/social-new-post-ai.webp" alt="Writing a new post with AI, with a version for Facebook, Instagram and Google" loading="lazy" width="1600" height="1111"></button><figcaption>AI writes a version for each channel</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/integrations-meta.webp" aria-label="Enlarge: Pick the Pages, and which store each belongs to"><img src="/assets/screens/integrations-meta.webp" alt="Choosing Facebook Pages and Instagram accounts and the store each belongs to" loading="lazy" width="1600" height="1125"></button><figcaption>Pick the Pages, and which store each belongs to</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="facebook" aria-hidden="true">f</span><h3 id="meta-name">Facebook + Instagram</h3><span class="ibadge ibadge--soon">Rolling out in the beta</span></div>
+          <p class="irow-pitch">Plan the week’s posts once. Worklynq posts them on time.</p>
+          <p>Connect your Facebook Pages and the Instagram account on each, and choose which store every Page belongs to.</p>
+          <ul class="ibenefits">
+            <li><strong>One post, the right version for each channel.</strong> Write it once, or have AI write it in your brand voice. Each channel gets its own version, checked against its limits.</li>
+            <li><strong>Posted when you said.</strong> Scheduled posts go out on their own, in your time zone. If a platform refuses one, Worklynq tries again and tells you why.</li>
+            <li><strong>Approvals when you want them.</strong> Turn approvals on and nothing is posted until the right person says yes.</li>
+            <li><strong>See how every post did.</strong> Views, reactions, comments and shares for each channel and each post, over 7, 30 or 90 days.</li>
+            <li><strong>Comments in one inbox.</strong> Answer with AI reply suggestions, or turn a complaint into a ticket in one click.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Read-only, apart from posts and replies.</strong> Instagram accounts need to be professional accounts linked to a Facebook Page. Until a channel is connected, you can still plan posts, copy them and mark them as posted.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-social" data-video="mod-social" data-title="Social"><span class="iwatch-play" aria-hidden="true"></span>Watch: Social <span class="iwatch-time">0:50</span></a><a class="isetup" href="/docs/marketing/">How Social works &rarr;</a></div>
+        </div>
+      </article>
+      <article class="irow" id="linkedin" aria-labelledby="linkedin-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/social-results.webp" aria-label="Enlarge: How every post did, LinkedIn included"><img src="/assets/screens/social-results.webp" alt="Social results with totals for Facebook, Instagram, Google Business Profile and LinkedIn, and a row per post" loading="lazy" width="1600" height="1000"></button><figcaption>How every post did, LinkedIn included</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/social-inbox-review.webp" aria-label="Enlarge: Reviews and comments, one inbox"><img src="/assets/screens/social-inbox-review.webp" alt="The Social Inbox with Google reviews and a LinkedIn comment waiting for a reply" loading="lazy" width="1600" height="1111"></button><figcaption>Reviews and comments, one inbox</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/social-approve.webp" aria-label="Enlarge: Approve a post, or ask for changes"><img src="/assets/screens/social-approve.webp" alt="A post waiting for approval with Approve and Request changes buttons" loading="lazy" width="1600" height="1111"></button><figcaption>Approve a post, or ask for changes</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="linkedin" aria-hidden="true">in</span><h3 id="linkedin-name">LinkedIn</h3><span class="ibadge ibadge--soon">Rolling out in the beta</span></div>
+          <p class="irow-pitch">Show up where clients and future hires look.</p>
+          <p>Post to the LinkedIn Company Pages you manage, on the same calendar as every other channel.</p>
+          <ul class="ibenefits">
+            <li><strong>Scheduled company posts.</strong> Links turn into article cards, and photos upload with the post.</li>
+            <li><strong>Results next to your other channels.</strong> See how each post did, side by side with Facebook, Instagram and Google.</li>
+            <li><strong>Comments in the Social Inbox.</strong> Reply as your Page, with AI suggesting replies in your brand voice.</li>
+            <li><strong>A heads-up before it lapses.</strong> LinkedIn sign-ins last 60 days. Worklynq warns you a week before, so scheduled posts keep going out.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Read-only, apart from posts and replies.</strong> You need to be an admin of the Company Page.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-inbox" data-video="mod-inbox" data-title="Social Inbox"><span class="iwatch-play" aria-hidden="true"></span>Watch: Social Inbox <span class="iwatch-time">0:37</span></a><a class="isetup" href="/docs/marketing/">How Social works &rarr;</a></div>
+        </div>
+      </article>
+      <article class="irow irow--flip" id="mailchimp" aria-labelledby="mailchimp-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/engagement-campaign.webp" aria-label="Enlarge: Who gets it, from what and when they bought"><img src="/assets/screens/engagement-campaign.webp" alt="A promo email campaign: who gets it by status, tags and purchases, the sender and the subject" loading="lazy" width="1600" height="1250"></button><figcaption>Who gets it, from what and when they bought</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/customer-panel.webp" aria-label="Enlarge: Every customer’s purchases, and whether they agreed to promo emails"><img src="/assets/screens/customer-panel.webp" alt="A customer record with purchases, orders and agreement to promo emails" loading="lazy" width="1600" height="1250"></button><figcaption>Every customer’s purchases, and whether they agreed to promo emails</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="mailchimp" aria-hidden="true">M</span><h3 id="mailchimp-name">Mailchimp</h3><span class="ibadge">Available now</span></div>
+          <p class="irow-pitch">Promo emails to the customers who’ll actually care.</p>
+          <p>With the Engagement module, write a promo email, pick who gets it from what and when they bought, and send it through your own Mailchimp account.</p>
+          <ul class="ibenefits">
+            <li><strong>Audiences from real purchases.</strong> Pick by status, tags and recent purchases, like “active customers who bought in the last 90 days”.</li>
+            <li><strong>Send now or schedule.</strong> Send yourself a test first, and save the emails you send often as templates.</li>
+            <li><strong>See what worked.</strong> Opens, clicks and unsubscribes for every campaign.</li>
+            <li><strong>Only people who said yes.</strong> Promo emails only go to customers who agreed to receive them.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Your Mailchimp account, your sending domain.</strong> Worklynq picks the audience and writes the email; Mailchimp delivers it.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-engagement" data-video="mod-engagement" data-title="Engagement"><span class="iwatch-play" aria-hidden="true"></span>Watch: Engagement <span class="iwatch-time">0:44</span></a><a class="isetup" href="/docs/modules/">About Engagement &rarr;</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="icat" id="developers-ai" aria-labelledby="developers-ai-title">
+    <div class="wrap">
+      <div class="icat-head">
+        <p class="icat-kicker">Developer tools &amp; AI</p>
+        <h2 id="developers-ai-title">Let AI pick up the work, and keep people in charge.</h2>
+        <p>Hand tickets to AI coding agents, or bring the AI app you already use into your workspace. Everything they do is logged, and nothing gets merged without your team.</p>
+      </div>
+      <article class="irow" id="coding-agents" aria-labelledby="coding-agents-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/agents.webp" aria-label="Enlarge: Every agent in one place: yours, your team’s and coding agents"><img src="/assets/screens/agents.webp" alt="The Agents page with Worklynq agents, connected agents, coding agents and activity tabs" loading="lazy" width="1600" height="1000"></button><figcaption>Every agent in one place: yours, your team’s and coding agents</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/agents-activity.webp" aria-label="Enlarge: Every action an agent took, and who it acted for"><img src="/assets/screens/agents-activity.webp" alt="The agent activity log listing each action an AI agent took and who it acted for" loading="lazy" width="1600" height="1000"></button><figcaption>Every action an agent took, and who it acted for</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/integrations.webp" aria-label="Enlarge: Connected apps show in green in Integrations"><img src="/assets/screens/integrations.webp" alt="Admin console Integrations with connected apps shown in green" loading="lazy" width="1600" height="1000"></button><figcaption>Connected apps show in green in Integrations</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="github" aria-hidden="true">G</span><h3 id="coding-agents-name">GitHub, Claude &amp; Cursor</h3><span class="ibadge">Available now</span></div>
+          <p class="irow-pitch">Hand the ticket to an AI agent. Get a pull request back.</p>
+          <p>Connect GitHub, then Claude, Cursor or both. Agents pick up bugs, stories and small features from your tickets, work in the right repository, and your team reviews what comes back.</p>
+          <div class="itrio">
+            <div><p class="itrio-name"><span class="int-logo" data-logo="github" aria-hidden="true">G</span>GitHub</p><p>Gives Worklynq the repositories you choose, and only those, and opens the pull request when an agent is done.</p><a href="/docs/integrations/github/">Set up GitHub &rarr;</a></div>
+            <div><p class="itrio-name"><span class="int-logo" data-logo="claude" aria-hidden="true">C</span>Claude</p><p>Works on its own branch and reports its summary, changed files and usage right on the ticket.</p><a href="/docs/integrations/claude/">Set up Claude &rarr;</a></div>
+            <div><p class="itrio-name"><span class="int-logo" data-logo="cursor" aria-hidden="true">C</span>Cursor</p><p>Starts a Cursor cloud agent from a workflow stage. The pull request link lands on the ticket.</p><a href="/docs/integrations/cursor/">Set up Cursor &rarr;</a></div>
+          </div>
+          <ul class="ibenefits">
+            <li><strong>Start by hand or by workflow.</strong> Hand a ticket over yourself, or add an agent to a stage so every ticket that reaches it goes to the agent.</li>
+            <li><strong>Everything on the ticket.</strong> Status, summary, files changed, activity, the pull request and what the run used.</li>
+            <li><strong>Limits you set.</strong> A maximum run time, stop-if-idle, and for Claude a maximum cost per session.</li>
+            <li><strong>Your team merges.</strong> Agents never merge their own work. Every change comes back as a pull request.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Your accounts, your bill.</strong> Agent usage is billed to your own Anthropic or Cursor account, and Worklynq only reaches the repositories you grant.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-ai-agents" data-video="mod-ai-agents" data-title="AI agents"><span class="iwatch-play" aria-hidden="true"></span>Watch: AI agents <span class="iwatch-time">0:49</span></a></div>
+        </div>
+      </article>
+      <article class="irow irow--flip" id="your-ai" aria-labelledby="your-ai-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/api-tokens.webp" aria-label="Enlarge: Connected apps, tokens and setup steps for each AI tool"><img src="/assets/screens/api-tokens.webp" alt="API tokens and connected apps, with setup steps for Claude, ChatGPT, Claude Code, Cursor and the OpenAI Responses API" loading="lazy" width="1600" height="1550"></button><figcaption>Connected apps, tokens and setup steps for each AI tool</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/oauth-consent.webp" aria-label="Enlarge: Approve it, and choose what it may change"><img src="/assets/screens/oauth-consent.webp" alt="Approving Claude to use Worklynq, with checkboxes for what it may change" loading="lazy" width="610" height="670"></button><figcaption>Approve it, and choose what it may change</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/dashboard-describe.webp" aria-label="Enlarge: Describe a dashboard, get it built"><img src="/assets/screens/dashboard-describe.webp" alt="Describing a dashboard in plain words and getting the widgets built" loading="lazy" width="1600" height="1263"></button><figcaption>Describe a dashboard, get it built</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="claude" aria-hidden="true">AI</span><h3 id="your-ai-name">Your own AI</h3><span class="ibadge">Available now</span></div>
+          <p class="irow-pitch">Ask about your work from the AI you already use.</p>
+          <p>Connect Claude, ChatGPT, Claude Code or Cursor to your workspace. Sign in, approve it, and ask it to find tickets, read your docs, update work or build a dashboard, right from the conversation.</p>
+          <ul class="ibenefits">
+            <li><strong>Find and read.</strong> Search the workspace, read tickets and comments, see your stores, projects and products, and read Knowledge Center pages.</li>
+            <li><strong>Get work done.</strong> Create and update tickets, move them to the next stage, comment, and write Knowledge Center pages.</li>
+            <li><strong>Run the store.</strong> List orders by store or stage, see who’s on duty, and start or end your own shift.</li>
+            <li><strong>Dashboards from a sentence.</strong> “Make me a dashboard of overdue work at each store.”</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>It works as you, with your permissions and nothing more.</strong> Untick what it may change to keep it read-only, and see everything it did in the agent activity log.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-connect-your-ai" data-video="mod-connect-your-ai" data-title="Connect your AI"><span class="iwatch-play" aria-hidden="true"></span>Watch: Connect your AI <span class="iwatch-time">1:01</span></a><a class="isetup" href="/docs/connect-your-ai/">Connect your AI &rarr;</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="icat" id="your-software" aria-labelledby="your-software-title">
+    <div class="wrap">
+      <div class="icat-head">
+        <p class="icat-kicker">Your own software</p>
+        <h2 id="your-software-title">Nothing important left outside the picture.</h2>
+        <p>Every business runs on something no one else does. Connect it yourself.</p>
+      </div>
+      <article class="irow" id="custom-apps" aria-labelledby="custom-apps-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/integrations-custom-apps.webp" aria-label="Enlarge: Your own app sits next to the rest, with an Add app tile"><img src="/assets/screens/integrations-custom-apps.webp" alt="Admin console Integrations with a connected custom app, Pine Rewards, and an Add app tile" loading="lazy" width="1600" height="1000"></button><figcaption>Your own app sits next to the rest, with an Add app tile</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/dashboard.webp" aria-label="Enlarge: Loyalty members by tier, from your own app"><img src="/assets/screens/dashboard.webp" alt="A dashboard with Pine Rewards loyalty members by tier next to Square sales" loading="lazy" width="1600" height="1250"></button><figcaption>Loyalty members by tier, from your own app</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/dashboard-add-widget.webp" aria-label="Enlarge: Pick the data, how to count it and how to show it"><img src="/assets/screens/dashboard-add-widget.webp" alt="Adding a dashboard widget: choose the data, measure, split and filter" loading="lazy" width="1600" height="1250"></button><figcaption>Pick the data, how to count it and how to show it</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="custom-apps" aria-hidden="true">+</span><h3 id="custom-apps-name">Custom apps</h3><span class="ibadge">Available now</span></div>
+          <p class="irow-pitch">The software only your business has, in the same dashboards as everything else.</p>
+          <p>Your developers add a small, key-protected data feed to your loyalty app, ordering or booking system. Add it in Worklynq, and its data is ready for dashboards and reports. No waiting for us to build a connector.</p>
+          <ul class="ibenefits">
+            <li><strong>Every dataset becomes a source.</strong> Customers, visits, bookings, rewards: count them, total or average them, split by status or tier, or show a trend.</li>
+            <li><strong>Or just describe it.</strong> “A dashboard of loyalty members by status, with points totals.” AI builds it from your app’s real fields.</li>
+            <li><strong>Works with the rest.</strong> Describe a dashboard, Explain and scheduled reports all work with your app’s data.</li>
+            <li><strong>Fresh within 5 minutes.</strong> Preview what Worklynq sees, refresh after your app adds fields, or pause it anytime.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Read-only, over https, with the key stored encrypted.</strong> The feed spec asks developers to leave out personal details your dashboards don’t need.</span></p>
+          <div class="irow-links"><a class="iwatch" href="/docs/videos/#mod-dashboards" data-video="mod-dashboards" data-title="Dashboards"><span class="iwatch-play" aria-hidden="true"></span>Watch: Dashboards <span class="iwatch-time">0:42</span></a><a class="isetup" href="/docs/integrations/custom-apps/">Connect a custom app &rarr;</a><a class="isetup" href="/docs/integrations/custom-apps/feed-spec/">Feed spec for developers &rarr;</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="isoon" id="coming" aria-labelledby="isoon-title">
+    <div class="wrap">
+      <div class="isoon-head">
+        <span class="ibadge ibadge--soon">Rolling out in the beta</span>
+        <h2 id="isoon-title">More connections on the way</h2>
+        <p>These are planned and roll out through the beta. Each one gets its own page in the docs when it’s ready. Use something that isn’t listed? <a href="/?interest=Integrations#demo">Tell us</a>: it helps us decide what to build next.</p>
+      </div>
+      <div class="int-grid">
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></div>
+            <h3>Workspace & mail</h3>
+          </div>
+          <p>Email, calendars and documents in the same context as the work they’re about.</p>
+          <ul class="int-tools">
+            <li class="int-tool" data-logo="gmail"><span class="int-logo" aria-hidden="true">G</span>Gmail</li>
+            <li class="int-tool" data-logo="outlook"><span class="int-logo" aria-hidden="true">O</span>Outlook</li>
+            <li class="int-tool" data-logo="google-calendar"><span class="int-logo" aria-hidden="true">GC</span>Google Calendar</li>
+            <li class="int-tool" data-logo="google-drive"><span class="int-logo" aria-hidden="true">GD</span>Google Drive</li>
+            <li class="int-tool" data-logo="microsoft-365"><span class="int-logo" aria-hidden="true">M3</span>Microsoft 365</li>
+            <li class="int-tool" data-logo="onedrive"><span class="int-logo" aria-hidden="true">O</span>OneDrive</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a7.5 7.5 0 01-11 6.6L4 20l1.4-4.6A7.5 7.5 0 1120 12z"/></svg></div>
+            <h3>Communications</h3>
+          </div>
+          <p>Keep conversations connected to the customers, projects, and products they concern.</p>
+          <ul class="int-tools">
+            <li class="int-tool" data-logo="slack"><span class="int-logo" aria-hidden="true">S</span>Slack</li>
+            <li class="int-tool" data-logo="microsoft-teams"><span class="int-logo" aria-hidden="true">MT</span>Microsoft Teams</li>
+            <li class="int-tool" data-logo="zoom"><span class="int-logo" aria-hidden="true">Z</span>Zoom</li>
+            <li class="int-tool" data-logo="google-meet"><span class="int-logo" aria-hidden="true">GM</span>Google Meet</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M7 15h3"/></svg></div>
+            <h3>Business systems</h3>
+          </div>
+          <p>More point-of-sale, accounting and online-store systems.</p>
+          <ul class="int-tools">
+            <li class="int-tool" data-logo="pos-systems"><span class="int-logo" aria-hidden="true">PS</span>Other POS systems</li>
+            <li class="int-tool" data-logo="xero"><span class="int-logo" aria-hidden="true">X</span>Xero</li>
+            <li class="int-tool" data-logo="stripe"><span class="int-logo" aria-hidden="true">S</span>Stripe</li>
+            <li class="int-tool" data-logo="shopify"><span class="int-logo" aria-hidden="true">S</span>Shopify</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></div>
+            <h3>Developer tools</h3>
+          </div>
+          <p>Bring issues, docs and code from the other tools your developers use.</p>
+          <ul class="int-tools">
+            <li class="int-tool" data-logo="jira"><span class="int-logo" aria-hidden="true">J</span>Jira</li>
+            <li class="int-tool" data-logo="confluence"><span class="int-logo" aria-hidden="true">C</span>Confluence</li>
+            <li class="int-tool" data-logo="gitlab"><span class="int-logo" aria-hidden="true">G</span>GitLab</li>
+          </ul>
+        </article>
+        <article class="int-card">
+          <div class="int-card-head">
+            <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/></svg></div>
+            <h3>Social media</h3>
+          </div>
+          <p>More channels for the Social calendar, inbox and results.</p>
+          <ul class="int-tools">
+            <li class="int-tool" data-logo="x"><span class="int-logo" aria-hidden="true">X</span>X</li>
+            <li class="int-tool" data-logo="youtube"><span class="int-logo" aria-hidden="true">Y</span>YouTube</li>
+            <li class="int-tool" data-logo="tiktok"><span class="int-logo" aria-hidden="true">T</span>TikTok</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="itrust" aria-labelledby="itrust-title">
+    <div class="wrap">
+      <h2 id="itrust-title">How connections work</h2>
+      <ul class="itrust-grid">
+        <li><strong>Only your System Admin connects</strong>People can’t wire up company tools on their own. Apps like Claude or ChatGPT that you connect for yourself only ever act as you.</li>
+        <li><strong>You choose the access</strong>Worklynq only reaches what you allow: the repositories, Pages, locations and properties you pick.</li>
+        <li><strong>Read-only where it should be</strong>Business systems are read-only. Worklynq never takes payments or changes your books. The one exception is Square timecards when you start or end your own shift.</li>
+        <li><strong>Your account, your bill</strong>Connected services run under your own account with them. AI agent usage is billed to you by Anthropic or Cursor.</li>
+        <li><strong>Stored securely</strong>Keys and tokens are stored encrypted, and Worklynq only ever shows the last few characters.</li>
+        <li><strong>Disconnect anytime</strong>One click in the Admin console. Apps you connected yourself are disconnected from your profile menu → API tokens.</li>
+      </ul>
+      <p class="itrust-foot">More detail in <a href="/docs/security/">Security &amp; data</a> and the <a href="/docs/integrations/">integration docs</a>.</p>
+    </div>
+  </section>
+
+  <dialog class="iviewer" id="iviewer" aria-label="Video">
+    <div class="iviewer-bar"><span class="iviewer-title"></span><button type="button" class="iviewer-close" aria-label="Close">&times;</button></div>
+    <div class="iviewer-body"></div>
+  </dialog>
+
+  <section class="cta-band">
+    <div class="wrap cta-band-inner">
+      <div>
+        <h2>See it with the tools you already use</h2>
+        <p>Tell us what you run on, and we’ll show you what Worklynq does with it.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a class="btn-solid" href="/?interest=Integrations#demo">Request a demo</a>
+        <a class="btn-ghost" href="/#beta">Join the December beta</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/modules/">Modules</a>
+        <a href="/assist/">Assist</a>
+        <a href="/integrations/">Integrations</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  // Integration logos: drop an official logo file into /assets/logos/ named after the tool
+  // (e.g. square.svg, quickbooks.png). If a file is found it replaces the monogram.
+  (function () {
+    var cache = {};
+    document.querySelectorAll('[data-logo]').forEach(function (el) {
+      var slot = el.classList.contains('int-logo') ? el : el.querySelector('.int-logo');
+      if (!slot) return;
+      var name = el.getAttribute('data-logo');
+      (cache[name] = cache[name] || []).push(slot);
+    });
+    Object.keys(cache).forEach(function (name) {
+      var exts = ['svg', 'png'];
+      (function tryNext(i) {
+        if (i >= exts.length) return;
+        var probe = new Image();
+        probe.onload = function () {
+          cache[name].forEach(function (slot) {
+            var img = new Image(); img.alt = ''; img.src = probe.src;
+            slot.textContent = ''; slot.appendChild(img);
+          });
+        };
+        probe.onerror = function () { tryNext(i + 1); };
+        probe.src = '/assets/logos/' + name + '.' + exts[i];
+      })(0);
+    });
+  })();
+
+  // Intro video: the big play button starts it.
+  (function () {
+    var frame = document.querySelector('.ih .tour-frame');
+    if (!frame) return;
+    var video = frame.querySelector('video'), btn = frame.querySelector('.tour-play');
+    video.removeAttribute('controls');
+    btn.addEventListener('click', function () {
+      frame.classList.add('is-playing'); video.setAttribute('controls', '');
+      var p = video.play(); if (p && p.catch) p.catch(function () {});
+      video.focus();
+    });
+    video.addEventListener('play', function () { frame.classList.add('is-playing'); video.setAttribute('controls', ''); });
+  })();
+
+  // "Watch" buttons play the tutorial in a pop-up player; screenshots open larger.
+  // Without JavaScript, Watch links go to the video tutorials page and pictures stay as they are.
+  (function () {
+    var dlg = document.getElementById('iviewer');
+    if (!dlg || !dlg.showModal) return;
+    var body = dlg.querySelector('.iviewer-body'), title = dlg.querySelector('.iviewer-title');
+    function open(label, node) {
+      body.innerHTML = ''; body.appendChild(node); title.textContent = label;
+      dlg.setAttribute('aria-label', label);
+      dlg.showModal();
+    }
+    function close() { var v = body.querySelector('video'); if (v) v.pause(); body.innerHTML = ''; }
+    document.querySelectorAll('.iwatch[data-video]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var key = a.getAttribute('data-video');
+        var v = document.createElement('video');
+        v.controls = true; v.playsInline = true; v.preload = 'auto';
+        v.poster = '/assets/videos/' + key + '.webp';
+        v.innerHTML = '<source src="/assets/videos/' + key + '.mp4" type="video/mp4">' +
+          '<track kind="captions" src="/assets/videos/' + key + '.vtt" srclang="en" label="English">';
+        open(a.getAttribute('data-title'), v);
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      });
+    });
+    document.querySelectorAll('.shot-zoom').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var img = new Image();
+        img.src = b.getAttribute('data-full');
+        img.alt = b.querySelector('img').alt;
+        open(b.closest('figure').querySelector('figcaption').textContent, img);
+      });
+    });
+    dlg.querySelector('.iviewer-close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', close);
+  })();
+</script>
+<script src="/assets/one-video.js" defer></script>
+</body>
+</html>
