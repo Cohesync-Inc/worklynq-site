@@ -1,19 +1,28 @@
 WEBVTT
 
-00:00:00.633 --> 00:00:09.401
-AI Search answers questions from everything in your workspace: tickets, orders, pages, and the tools you’ve connected. Here’s how to use it.
+00:00:00.633 --> 00:00:07.588
+AI Search answers questions from everything in your workspace, and from the web when you want it to. Here’s how to use it.
 
-00:00:10.500 --> 00:00:20.121
+00:00:08.667 --> 00:00:18.288
 Open AI Search from the sidebar, and ask a question in plain English. For example: which food safety issues did we have this month, and are any still open?
 
-00:00:20.567 --> 00:00:26.540
-AI Search looks through your tickets, docs and connected tools, and only uses what you’re allowed to see.
+00:00:18.733 --> 00:00:23.981
+It looks through your tickets, docs, and connected tools, and only uses what you’re allowed to see.
 
-00:00:27.000 --> 00:00:37.005
-You get a short answer, with the sources it used underneath. Here, three food safety tickets, and the opening and closing procedures page. Click a source to open it.
+00:00:24.433 --> 00:00:28.913
+You get a short answer first, and a numbered list of the sources it used underneath.
 
-00:00:37.800 --> 00:00:48.467
-Every search is saved. Open the sidebar to find past chats, search them, or keep them in folders. Your Assist chats are saved here too, so you can pick up where you left off.
+00:00:29.700 --> 00:00:39.897
+To look beyond your workspace, turn on Web Search. AI Search then checks the web and your workspace together, like whether your walk-in limit matches the FDA Food Code.
 
-00:00:48.900 --> 00:00:54.916
-You can also attach a file or a link and ask about it, or turn on Web Search to look beyond your workspace.
+00:00:40.333 --> 00:00:44.195
+Web pages show their site in the sources. Click one to open it.
+
+00:00:44.967 --> 00:00:53.607
+You can also paste a link, or just a web address, right into your question. AI Search reads the page, and answers using your workspace too.
+
+00:00:54.067 --> 00:00:59.485
+Here, the supplier’s grinders are matched against the purchase request already waiting for approval.
+
+00:00:59.933 --> 00:01:08.253
+To ask about a file, attach it. And every search is saved: open the sidebar to find past chats, search them, or keep them in folders.
