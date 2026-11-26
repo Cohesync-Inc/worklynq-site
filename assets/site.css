@@ -1823,3 +1823,41 @@ footer{
   .cta-band p{margin-left:auto; margin-right:auto;}
   .cta-band-actions{justify-content:center;}
 }
+
+/* ---------- One product… and A look inside: effects ----------
+   Only active once JS adds .sx-on to the section (so without JS, or with reduce-motion,
+   everything is simply visible). Each piece plays once as it scrolls into view. */
+.sx-on .sx{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); transition-delay:var(--d, 0s);}
+.sx-on .sx.is-in{opacity:1; transform:none;}
+
+/* feature rows: the photo fades in (no sliding), its sage block grows from the corner,
+   then the title and text rise in and the icon draws itself */
+.sx-on .frow .frow-photo{opacity:0; transition:opacity 1s ease .1s, transform .4s ease, box-shadow .4s ease;}
+.sx-on .frow.is-in .frow-photo{opacity:1;}
+.sx-on .frow .frow-media::after{transform:scale(.4); opacity:0; transform-origin:100% 100%; transition:transform .9s cubic-bezier(.2,.8,.2,1) .35s, opacity .6s ease .35s;}
+.sx-on .frow:nth-child(even) .frow-media::after{transform-origin:0 100%;}
+.sx-on .frow.is-in .frow-media::after{transform:none; opacity:1;}
+.sx-on .frow .frow-copy > *{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1);}
+.sx-on .frow .frow-copy > :nth-child(1){transition-delay:.35s;}
+.sx-on .frow .frow-copy > :nth-child(2){transition-delay:.5s;}
+.sx-on .frow.is-in .frow-copy > *{opacity:1; transform:none;}
+.sx-on .frow .frow-icon svg *{stroke-dasharray:80; stroke-dashoffset:80; transition:stroke-dashoffset 1.2s ease .6s;}
+.sx-on .frow.is-in .frow-icon svg *{stroke-dashoffset:0;}
+.frow-media:hover .frow-photo{transform:scale(1.015); box-shadow:0 30px 70px -28px rgba(11,59,54,0.45);}
+
+/* the three "One …" pills pop in one after another, their dots pulse once */
+.sx-on .features-foot span{opacity:0; transform:translateY(8px) scale(.95); transition:opacity .5s ease, transform .5s cubic-bezier(.2,.9,.3,1.3); transition-delay:calc(.15s + var(--i, 0) * .15s);}
+.sx-on .features-foot.is-in span{opacity:1; transform:none;}
+.sx-on .features-foot.is-in span::before{animation:sxDot 1.2s ease-out calc(.4s + var(--i, 0) * .15s) 1;}
+@keyframes sxDot{0%{box-shadow:0 0 0 0 rgba(47,174,142,.6);} 100%{box-shadow:0 0 0 8px rgba(47,174,142,0);}}
+
+/* screenshots: rise in turn, lift a little on hover */
+.inside .shot{transition:transform .25s ease, box-shadow .25s ease;}
+.inside .shot:hover{transform:translateY(-4px); box-shadow:0 26px 50px -24px rgba(11,59,54,.5);}
+.sx-on .inside .shot.sx{transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease; transition-delay:var(--d, 0s), var(--d, 0s), 0s;}
+.sx-on .inside .shot.sx.is-in:hover{transform:translateY(-4px); transition-delay:0s;}
+
+@media (prefers-reduced-motion: reduce){
+  .sx-on .sx, .sx-on .frow .frow-photo, .sx-on .frow .frow-media::after, .sx-on .frow .frow-copy > *, .sx-on .features-foot span{opacity:1 !important; transform:none !important; transition:none !important;}
+  .sx-on .frow .frow-icon svg *{stroke-dashoffset:0 !important;}
+}
