@@ -1878,3 +1878,46 @@ footer{
   .sx-on .sx, .sx-on .frow .frow-photo, .sx-on .frow .frow-media::after, .sx-on .frow .frow-copy > *, .sx-on .features-foot span{opacity:1 !important; transform:none !important; transition:none !important;}
   .sx-on .frow .frow-icon svg *{stroke-dashoffset:0 !important;}
 }
+
+/* ---------- Explore Worklynq tiles: make them pop ---------- */
+.explore-card{position:relative; overflow:hidden; isolation:isolate;
+  transition:border-color .25s ease, transform .3s cubic-bezier(.2,.9,.3,1.3), box-shadow .3s ease;}
+/* a teal bar along the top that fills in on hover */
+.explore-card::before{content:""; position:absolute; left:0; top:0; height:3px; width:100%; z-index:1;
+  background:linear-gradient(90deg, var(--teal), var(--teal-bright)); transform:scaleX(.18); transform-origin:left;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1);}
+/* a soft spotlight that follows the cursor (laptops) */
+.explore-card::after{content:""; position:absolute; inset:0; z-index:-1; opacity:0; transition:opacity .3s ease;
+  background:radial-gradient(240px circle at var(--mx, 50%) var(--my, 0%), rgba(47,174,142,.14), transparent 70%);}
+.explore-icon{transition:background .3s ease, color .3s ease, transform .45s cubic-bezier(.2,.9,.3,1.4);}
+.explore-arrow{display:inline-block; transition:transform .3s cubic-bezier(.2,.9,.3,1.4);}
+.explore-card:hover{transform:translateY(-6px); border-color:var(--teal); box-shadow:0 24px 44px -24px rgba(11,59,54,.55);}
+.explore-card:hover::before{transform:scaleX(1);}
+.explore-card:hover::after{opacity:1;}
+.explore-card:hover .explore-icon{background:var(--teal-deep); color:var(--paper); transform:rotate(-8deg) scale(1.1);}
+.explore-card:hover .explore-arrow{transform:translateX(5px);}
+.explore-card:hover .explore-go{text-decoration:none;}
+.explore-card:active{transform:translateY(-2px) scale(.98);}
+.explore-card:focus-visible{outline:2px solid var(--focus); outline-offset:3px;}
+
+/* entrance: the tiles pop in one after another, their icons draw themselves,
+   and a light sweep runs across each one as it lands */
+.ex-fx .explore-card{opacity:0; transform:translateY(24px) scale(.92);}
+.ex-fx.is-in .explore-card{opacity:1; transform:none;
+  transition:opacity .5s ease calc(var(--i) * .12s), transform .7s cubic-bezier(.2,.9,.3,1.35) calc(var(--i) * .12s), border-color .25s ease, box-shadow .3s ease;}
+.ex-fx.is-in .explore-card:hover{transform:translateY(-6px); transition-delay:0s;}
+.ex-fx .explore-icon svg *{stroke-dasharray:80; stroke-dashoffset:80;}
+.ex-fx.is-in .explore-icon svg *{stroke-dashoffset:0; transition:stroke-dashoffset 1.1s ease calc(.3s + var(--i) * .12s);}
+.ex-fx.is-in .explore-card::before{animation:exBar 1.1s cubic-bezier(.2,.8,.2,1) calc(.35s + var(--i) * .12s) 1;}
+@keyframes exBar{0%{transform:scaleX(.18);} 45%{transform:scaleX(1);} 100%{transform:scaleX(.18);}}
+@media (max-width:640px){
+  /* phones: no hover, so the top bar stays full and the icon is filled */
+  .explore-card::before{transform:scaleX(1);}
+  .explore-icon{background:var(--teal-deep); color:var(--paper);}
+  .ex-fx.is-in .explore-card::before{animation-name:exBarFill;}
+}
+@keyframes exBarFill{0%{transform:scaleX(0);} 100%{transform:scaleX(1);}}
+@media (prefers-reduced-motion: reduce){
+  .ex-fx .explore-card{opacity:1 !important; transform:none !important;}
+  .explore-card, .explore-card::before, .explore-icon, .explore-arrow{transition:none !important; animation:none !important;}
+}

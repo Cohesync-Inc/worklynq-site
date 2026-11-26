@@ -406,10 +406,10 @@
         <p>Assist, modules, integrations and the foundation underneath, each on its own page.</p>
       </div>
       <ul class="explore-grid">
-        <li><a class="explore-card" href="/assist/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><h3>Assist</h3><p>Ask about your business, have it do the busywork, or start your shift by voice.</p><span class="explore-go">Explore &rarr;</span></a></li>
-        <li><a class="explore-card" href="/modules/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><path d="M17.25 13.5v7.5M13.5 17.25H21"/></svg></span><h3>Modules</h3><p>Turn on what your kind of business needs, plus Customer Experience for every customer.</p><span class="explore-go">Explore &rarr;</span></a></li>
-        <li><a class="explore-card" href="/integrations/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="12" r="2.5"/></svg></span><h3>Integrations</h3><p>Square, QuickBooks, Google, Meta, GitHub, Claude and more, with what each one does for you.</p><span class="explore-go">Explore &rarr;</span></a></li>
-        <li><a class="explore-card" href="/how-it-works/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><h3>How it works</h3><p>One intelligence foundation underneath every part of Worklynq.</p><span class="explore-go">Explore &rarr;</span></a></li>
+        <li><a class="explore-card" href="/assist/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><h3>Assist</h3><p>Ask about your business, have it do the busywork, or start your shift by voice.</p><span class="explore-go">Explore <span class="explore-arrow" aria-hidden="true">&rarr;</span></span></a></li>
+        <li><a class="explore-card" href="/modules/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><path d="M17.25 13.5v7.5M13.5 17.25H21"/></svg></span><h3>Modules</h3><p>Turn on what your kind of business needs, plus Customer Experience for every customer.</p><span class="explore-go">Explore <span class="explore-arrow" aria-hidden="true">&rarr;</span></span></a></li>
+        <li><a class="explore-card" href="/integrations/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="12" r="2.5"/></svg></span><h3>Integrations</h3><p>Square, QuickBooks, Google, Meta, GitHub, Claude and more, with what each one does for you.</p><span class="explore-go">Explore <span class="explore-arrow" aria-hidden="true">&rarr;</span></span></a></li>
+        <li><a class="explore-card" href="/how-it-works/"><span class="explore-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><h3>How it works</h3><p>One intelligence foundation underneath every part of Worklynq.</p><span class="explore-go">Explore <span class="explore-arrow" aria-hidden="true">&rarr;</span></span></a></li>
       </ul>
     </div>
   </section>
@@ -960,6 +960,32 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
     watch.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+<script>
+  // Explore Worklynq tiles: pop in one after another when they scroll into view; on laptops a soft
+  // spotlight follows the cursor across each tile. Skipped for reduce-motion and without JavaScript.
+  (function () {
+    var grid = document.querySelector('.explore-grid');
+    if (!grid || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var cards = grid.querySelectorAll('.explore-card');
+    [].forEach.call(cards, function (c, i) { c.style.setProperty('--i', i); });
+    grid.classList.add('ex-fx');
+    void grid.offsetHeight;
+    var io = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return;
+      grid.classList.add('is-in'); io.disconnect();
+    }, { threshold: 0.2 });
+    io.observe(grid);
+    if (!window.matchMedia('(hover: hover)').matches) return;
+    [].forEach.call(cards, function (c) {
+      c.addEventListener('pointermove', function (e) {
+        var r = c.getBoundingClientRect();
+        c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
   })();
 </script>
 <script src="/assets/one-video.js" defer></script>
