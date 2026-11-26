@@ -97,7 +97,7 @@
         <h1>The businesses you run are already connected. Your software isn't.</h1>
         <p class="lede">Worklynq is built to bring your teams, operations, documents, enterprise tools, and AI into one connected intelligent platform, helping you run your business with shared context, connected intelligence, and AI-powered execution.</p>
         <p class="lede lede-accent">So your teams spend less time searching, coordinating, and managing information—and more time moving the business forward.</p>
-        <a class="hero-watch" href="#tour"><span class="hero-watch-fill" aria-hidden="true"></span><span class="hero-watch-play" aria-hidden="true"></span><span class="hero-watch-label">Watch a day on Worklynq</span><span class="hero-watch-time">2 min</span></a>
+        <a class="hero-watch" href="#tour"><span class="hero-watch-play" aria-hidden="true"></span><span class="hero-watch-label">Watch a day on Worklynq</span><span class="hero-watch-time">2 min</span></a>
       </div>
 
       <div class="hero-visual">
@@ -816,79 +816,20 @@
     video.addEventListener('play', function () { frame.classList.add('is-playing'); video.setAttribute('controls', ''); });
   })();
 
-  // Hero "Watch a day on Worklynq". Phones: slide the play knob across to open a pop-up player
-  // and start the café walk-through. Built on touch events so a sideways slide never fights the
-  // page scroll, finishes at 60% of the way, and starts playback at the end of the slide itself
-  // (which iPhones accept, with sound). A plain tap nudges the knob to show it slides.
-  // Laptops: a normal link to the tour. Keyboard / screen readers: Enter opens the player.
+  // Hero "Watch a day on Worklynq". Phones: one tap opens a pop-up player and starts the café
+  // walk-through (started inside the tap, so iPhones allow it, with sound). Laptops: scrolls to the tour.
   (function () {
     var btn = document.querySelector('.hero-watch');
     var dlg = document.getElementById('tour-film'), vid = dlg && dlg.querySelector('video');
     if (!btn || !dlg || !vid) return;
-    var knob = btn.querySelector('.hero-watch-play'), label = btn.querySelector('.hero-watch-label');
     var phone = window.matchMedia('(max-width: 640px)');
-    var slider = false, x0 = 0, y0 = 0, kx = 0, max = 0, mode = '';   // mode: '', 'slide' or 'scroll'
     btn.setAttribute('aria-label', 'Watch a day on Worklynq, 2 minutes');
-
-    function setKnob(x) {
-      kx = x; btn.style.setProperty('--kx', x + 'px');
-      btn.style.setProperty('--kp', max ? (x / max).toFixed(3) : 0);
-    }
-    function setSlider(on) {
-      slider = on; btn.classList.toggle('is-slider', on);
-      label.textContent = on ? 'Slide to watch' : 'Watch a day on Worklynq';
-      setKnob(0);
-    }
-    function open() {
+    btn.addEventListener('click', function (e) {
+      if (!phone.matches) return;                // laptops: plain link to #tour
+      e.preventDefault();
       if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
       var p = vid.play(); if (p && p.catch) p.catch(function () {});   // if refused, the player is open with its play button
-    }
-    function nudge() { btn.classList.remove('is-nudge'); void btn.offsetWidth; btn.classList.add('is-nudge'); }
-    setSlider(phone.matches);
-    if (phone.addEventListener) phone.addEventListener('change', function (e) { setSlider(e.matches); });
-    else if (phone.addListener) phone.addListener(function (e) { setSlider(e.matches); });
-
-    btn.addEventListener('touchstart', function (e) {
-      if (!slider || e.touches.length !== 1) return;
-      x0 = e.touches[0].clientX - kx; y0 = e.touches[0].clientY; mode = '';
-      max = btn.clientWidth - knob.offsetWidth - 16;
-      btn.classList.remove('is-nudge');
-    }, { passive: true });
-    btn.addEventListener('touchmove', function (e) {
-      if (!slider || mode === 'scroll') return;
-      var t = e.touches[0], dx = t.clientX - x0 - kx, dy = t.clientY - y0;
-      if (!mode) {
-        if (Math.abs(dx) > 6 && Math.abs(dx) > Math.abs(dy)) { mode = 'slide'; btn.classList.add('is-dragging'); }
-        else if (Math.abs(dy) > 8) { mode = 'scroll'; return; }
-        else return;
-      }
-      e.preventDefault();                                     // sliding: keep the page still
-      setKnob(Math.max(0, Math.min(max, t.clientX - x0)));
-    }, { passive: false });
-    btn.addEventListener('touchend', function (e) {
-      if (!slider) return;
-      var wasSlide = mode === 'slide'; mode = '';
-      btn.classList.remove('is-dragging');
-      if (wasSlide) {
-        e.preventDefault();                                   // no click after a slide
-        if (kx >= max * 0.6) {
-          setKnob(max);
-          if (navigator.vibrate) { try { navigator.vibrate(12); } catch (err) {} }
-          open();                                             // inside the touch, so playback is allowed
-          setTimeout(function () { setKnob(0); }, 500);
-        } else { setKnob(0); }
-      }
     });
-    btn.addEventListener('touchcancel', function () { mode = ''; btn.classList.remove('is-dragging'); setKnob(0); });
-    btn.addEventListener('click', function (e) {
-      if (!slider) return;                                    // laptops: plain link to #tour
-      e.preventDefault();
-      if (e.detail === 0) { open(); return; }                 // keyboard / screen reader
-      nudge();                                                // a tap: show that it slides
-    });
-    btn.addEventListener('contextmenu', function (e) { if (slider) e.preventDefault(); });
-    btn.addEventListener('animationend', function (e) { if (e.animationName === 'heroNudge') btn.classList.remove('is-nudge'); });
-
     function close() { vid.pause(); if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
     dlg.querySelector('.tour-film-close').addEventListener('click', close);
     dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
