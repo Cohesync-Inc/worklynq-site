@@ -192,23 +192,40 @@ header.nav{
 }
 .hero-watch-time{font-size:13px; color:var(--ink-soft); font-weight:400; padding:3px 9px; border:1px solid var(--line); border-radius:100px;}
 .hero-watch:hover .hero-watch-play{background:var(--teal); transform:scale(1.06);}
-/* phones: a full-width tap button that opens the video player */
+.hero-watch-fill{display:none;}
+/* phones: slide the play knob across to watch */
 @media (max-width:640px){
   .hero-watch{
-    display:flex; width:min(340px, 100%); margin:32px auto 0; padding:8px 16px 8px 8px; gap:12px;
-    border-radius:999px; background:var(--teal-deep); color:var(--paper);
-    box-shadow:0 10px 24px -12px rgba(11,59,54,.55); -webkit-tap-highlight-color:transparent;
-    transition:transform .15s ease, background .2s ease;
+    position:relative; overflow:hidden; display:flex; width:min(340px, 100%); height:60px; margin:32px auto 0;
+    padding:0 16px 0 66px; gap:10px; justify-content:center; border-radius:999px;
+    background:var(--teal-deep); color:var(--paper); box-shadow:0 10px 24px -12px rgba(11,59,54,.55);
+    touch-action:pan-y; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; -webkit-tap-highlight-color:transparent;
   }
-  .hero-watch:active{transform:scale(.97); background:var(--teal);}
-  .hero-watch .hero-watch-play{width:44px; height:44px; background:var(--paper);}
+  .hero-watch .hero-watch-play{
+    position:absolute; left:8px; top:8px; z-index:2; width:44px; height:44px; background:var(--paper);
+    transform:translateX(var(--kx, 0px)); transition:transform .3s cubic-bezier(.2,.9,.3,1.2), background .2s ease;
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+  }
   .hero-watch .hero-watch-play::before{left:17px; top:14px; border-color:transparent transparent transparent var(--teal-deep);}
-  .hero-watch:hover .hero-watch-play{background:var(--paper); transform:none;}
-  .hero-watch-label{flex:1; text-align:left; font-size:15.5px; white-space:nowrap;}
-  .hero-watch .hero-watch-time{font-size:12px; padding:2px 8px; flex-shrink:0;}
-  .hero-watch .hero-watch-time{color:rgba(245,243,236,.85); border-color:rgba(245,243,236,.3);}
-  .hero-fx.is-in .hero-watch-play{animation:heroWatchPulseLight 2.4s ease-out 2.2s infinite;}
+  .hero-watch:hover .hero-watch-play{background:var(--paper);}
+  .hero-watch .hero-watch-fill{
+    display:block; position:absolute; left:0; top:0; bottom:0; z-index:0; border-radius:999px;
+    width:calc(var(--kx, 0px) + 60px); background:rgba(47,174,142,.55); transition:width .3s cubic-bezier(.2,.9,.3,1.2);
+  }
+  .hero-watch.is-dragging .hero-watch-play, .hero-watch.is-dragging .hero-watch-fill{transition:none;}
+  .hero-watch .hero-watch-label, .hero-watch .hero-watch-time{position:relative; z-index:1; opacity:calc(1 - var(--kp, 0) * 1.4);}
+  .hero-watch .hero-watch-label{
+    white-space:nowrap; font-size:15.5px;
+    background:linear-gradient(100deg, rgba(245,243,236,.6) 30%, #fff 50%, rgba(245,243,236,.6) 70%);
+    background-size:250% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:heroSlideShine 2.4s linear infinite;
+  }
+  .hero-watch .hero-watch-time{font-size:12px; padding:2px 8px; flex-shrink:0; color:rgba(245,243,236,.85); border-color:rgba(245,243,236,.3);}
+  .hero-watch.is-slider.is-nudge .hero-watch-play{animation:heroNudge .9s ease;}
+  .hero-fx.is-in .hero-watch-play{animation:heroWatchPulseLight 2.4s ease-out 2.2s 3;}
 }
+@keyframes heroSlideShine{from{background-position:100% 0;} to{background-position:-150% 0;}}
+@keyframes heroNudge{0%,100%{translate:0 0;} 30%{translate:56px 0;} 55%{translate:0 0;} 75%{translate:18px 0;}}
 @keyframes heroWatchPulseLight{0%{box-shadow:0 0 0 0 rgba(245,243,236,.55);} 70%,100%{box-shadow:0 0 0 12px rgba(245,243,236,0);}}
 /* pop-up player */
 .tour-film{padding:0; border:0; border-radius:14px; background:#000; width:min(1100px, 94vw); overflow:visible;}
