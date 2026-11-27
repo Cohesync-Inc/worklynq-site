@@ -219,7 +219,7 @@ header.nav{
   animation:heroSlideShine 2.4s linear infinite;
 }
 .hero-watch.is-slider .hero-watch-time{color:rgba(245,243,236,.85); border-color:rgba(245,243,236,.3);}
-.hero-watch.is-slider:hover .hero-watch-play{background:var(--paper);}
+.hero-watch.is-slider:hover .hero-watch-play{background:var(--paper); transform:translateX(var(--kx, 0px));}   /* phones count a touch as hover: never let it hold the ball back */
 .hero-watch.is-slider.is-nudge .hero-watch-play{animation:heroNudge .9s ease;}
 @keyframes heroSlideShine{from{background-position:100% 0;} to{background-position:-150% 0;}}
 @keyframes heroNudge{0%,100%{transform:translateX(0);} 30%{transform:translateX(46px);} 55%{transform:translateX(0);} 75%{transform:translateX(16px);}}
