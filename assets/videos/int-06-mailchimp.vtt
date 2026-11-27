@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:10.831
+With the Engagement module and your own Mailchimp account, you can send promo emails to the customers who’ll actually care, picked from what they bought, and see how each one did.
+
+00:00:11.900 --> 00:00:21.692
+Mailchimp connects in Engagement, under Connection. Your System Admin pastes in a Mailchimp API key, and picks the audience your customers are added to.
+
+00:00:22.133 --> 00:00:31.477
+Set the name and address promos come from, on your own domain. Worklynq picks who gets each email, and Mailchimp sends it, and handles unsubscribes.
+
+00:00:31.933 --> 00:00:40.147
+Anyone who unsubscribes is marked in Worklynq too, and never gets a promo again. Check unsubscribes brings the latest across.
+
+00:00:41.133 --> 00:00:47.661
+Campaigns lists every promo: drafts, scheduled, and sent, with how many people got it, opened it, and clicked.
+
+00:00:48.100 --> 00:00:55.524
+Open a draft. Who gets it is picked from your customers: their status, the kind of customer, their tags, and what they bought, and when.
+
+00:00:55.967 --> 00:01:02.985
+It tells you how many will get it, and who’s left out and why. Promo emails only go to customers who agreed to get them.
+
+00:01:03.433 --> 00:01:11.519
+Below, write the subject and the email: a heading, your message, and a button. Your address and an unsubscribe link are always added.
+
+00:01:11.967 --> 00:01:20.073
+Send yourself a test first. Then click Send, and send it now, or schedule it. You can save the emails you send often as templates.
+

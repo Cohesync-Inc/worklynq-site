@@ -1,0 +1,38 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:12.601
+Hand a ticket to Claude, Anthropic’s AI, and it does the work. Claude reads the ticket, works in your code, and Worklynq opens the pull request, with everything Claude did shown right on the ticket.
+
+00:00:13.700 --> 00:00:20.804
+Connect GitHub first: Claude works in your code through it. Then, in Apps, under Developer tools, click Connect on Claude.
+
+00:00:21.267 --> 00:00:31.080
+Paste an Anthropic API key, from the Claude Console, under API keys. Claude’s usage is billed to that account by Anthropic, pay as you go.
+
+00:00:32.067 --> 00:00:36.632
+Once it’s connected, choose the Claude model to use, and the default base branch.
+
+00:00:38.833 --> 00:00:47.089
+Session limits protect your credits if a session gets stuck: a maximum run time, a stop when it’s idle, and a maximum cost per session.
+
+00:00:47.533 --> 00:00:54.467
+Then map each product to its repository. That’s where Claude works on that product’s tickets, always on its own branch.
+
+00:00:55.467 --> 00:01:03.595
+Here’s a bug on the ordering app: the tip isn’t added to group order totals. Its Claude section shows the repository Claude will work in.
+
+00:01:04.033 --> 00:01:11.372
+Click Hand this ticket to Claude, and add anything a new teammate would want to know. The ticket’s description always goes along.
+
+00:01:11.833 --> 00:01:18.788
+Click Start Claude. It reads the code, makes the change, and runs the tests, and you can follow along here, or stop it.
+
+00:01:19.867 --> 00:01:28.123
+When it’s done, Worklynq opens the pull request. The ticket shows Claude’s summary, the files it changed, what it did, and what it cost.
+
+00:01:28.567 --> 00:01:36.375
+Claude never merges its own work. Your team reviews the pull request, and Run Claude again starts a fresh session if it needs another go.
+
+00:01:36.833 --> 00:01:49.015
+You can also hand a ticket to Claude when you create it, or from a workflow, so every ticket that reaches a stage goes to Claude. Turn Claude on for each ticket type first, under Ticket Types, Sections.
+

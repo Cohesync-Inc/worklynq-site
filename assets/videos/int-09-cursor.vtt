@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:11.343
+Cursor’s cloud agents can pick up tickets too. The agent reads the ticket, works in the product’s repository, and opens a pull request, and the link lands on the ticket.
+
+00:00:12.433 --> 00:00:17.895
+In Apps, under Developer tools, click Connect on Cursor. There are two steps in Cursor first.
+
+00:00:18.333 --> 00:00:29.811
+Create an API key in your Cursor dashboard. And in Cursor, connect GitHub, for the repositories its agents may change. Cursor works in your code through its own GitHub connection.
+
+00:00:30.267 --> 00:00:40.144
+Then continue, and paste the key. Worklynq checks it, and loads the repositories your Cursor account can reach. Agent usage is billed to that Cursor account.
+
+00:00:41.133 --> 00:00:49.795
+Once it’s connected, Cursor shows the repositories it can reach. Map each product to its repository, so its tickets go to the right code.
+
+00:00:50.233 --> 00:00:58.873
+On the Cursor tile, you can also set a maximum run time. Cursor has no cost cap per session, so keep an eye on your Cursor plan’s usage.
+
+00:00:59.867 --> 00:01:10.427
+Cursor starts from a workflow. Add the Cursor agent action to a stage of a ticket type, and every ticket that reaches that stage starts an agent, with the instructions you choose.
+
+00:01:10.867 --> 00:01:19.208
+The ticket shows the agent’s status and summary, and the pull request it opened, for your team to review. Your team decides what gets merged.
+
+00:01:19.667 --> 00:01:28.712
+Like Claude and GitHub, turn the Cursor section on for each ticket type first, under Ticket Types, Sections. While it’s off, that type can’t start an agent.
+

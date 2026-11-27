@@ -1,0 +1,44 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:10.191
+Connect QuickBooks Online, and your profit and loss, invoices and open balances sit on your dashboards, right next to the work that drives them. Here’s how.
+
+00:00:11.267 --> 00:00:20.035
+Your System Admin connects QuickBooks once, for the company. In the Admin console, open Apps, and choose QuickBooks, under Sales and finance.
+
+00:00:20.500 --> 00:00:30.420
+Worklynq reads three things: your company name, currency and fiscal year, your profit and loss report, and your invoices and their balances. All of it read-only.
+
+00:00:30.867 --> 00:00:39.869
+Click Continue to QuickBooks, sign in, choose your company if you have more than one, and approve. You need QuickBooks Online, and a user who can connect apps.
+
+00:00:40.867 --> 00:00:49.635
+Back in Worklynq, QuickBooks shows as connected, with your company’s name and currency. It keeps itself fresh, so there’s nothing to do day to day.
+
+00:00:50.100 --> 00:01:01.193
+Changed your company name, currency or fiscal year? Click Refresh from QuickBooks. A connection lasts up to five years, and when it’s close to ending, you’ll see a Reconnect now link here.
+
+00:01:02.167 --> 00:01:08.503
+Now add QuickBooks to a dashboard. Click Add widget, and under Data from, choose QuickBooks profit and loss.
+
+00:01:08.967 --> 00:01:21.852
+Start from net income, income per month, top expenses, or gross profit. You can show income, cost of sales, gross profit, expenses or net income, as a total or a trend by day, week or month.
+
+00:01:22.300 --> 00:01:29.361
+It uses your QuickBooks reporting settings, cash or accrual, and its weeks, so the numbers match your QuickBooks reports.
+
+00:01:29.800 --> 00:01:39.805
+QuickBooks invoices works the same way: amount invoiced, open and overdue balances, by customer or by status, including what’s due in the next seven days.
+
+00:01:40.800 --> 00:01:49.056
+Here’s a dashboard built from them: this month’s net income and gross profit, overdue invoices, and income over the last twelve months.
+
+00:01:49.500 --> 00:01:59.569
+Put a profit and loss trend next to your store or project dashboards, to see how the work and the money move together. Numbers are at most five minutes behind QuickBooks.
+
+00:02:00.667 --> 00:02:10.821
+At first, only System Admins can use QuickBooks numbers. To share them, open Connected data on the Dashboards page, and set QuickBooks to everyone in the company.
+
+00:02:11.267 --> 00:02:23.085
+Widgets always run as the person looking, so anyone who isn’t allowed sees a note instead of the numbers. And Worklynq can’t create invoices, record payments, or change anything in QuickBooks.
+

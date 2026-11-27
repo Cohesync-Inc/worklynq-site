@@ -1,0 +1,41 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:09.359
+Connect your Square point of sale, and every store’s sales, orders and shifts line up with the work happening there. Here’s how to set it up, and where it shows up.
+
+00:00:10.433 --> 00:00:18.967
+Your System Admin connects Square once, for the whole company. In the Admin console, open Apps, and choose Square, under Sales and finance.
+
+00:00:19.400 --> 00:00:28.317
+First, you see exactly what Worklynq will read: your locations, orders, payments and refunds, items, and your team members and their timecards.
+
+00:00:28.767 --> 00:00:36.895
+Click Continue to Square, sign in to the Square account that owns your locations, and approve access. You come straight back to Worklynq.
+
+00:00:37.867 --> 00:00:45.611
+Square now shows as connected, with your Square account and its locations. Link each one to the store it belongs to in Worklynq.
+
+00:00:46.067 --> 00:00:53.725
+Riverside isn’t linked yet. Pick Riverside café, and save. A location you don’t link stays out of every store’s numbers.
+
+00:00:54.167 --> 00:01:03.127
+To check it’s working, click Show sales. You get the last seven days of orders, sales and refunds, for each location and in total, straight from Square.
+
+00:01:04.200 --> 00:01:12.285
+Now Square can go on any dashboard. Add a Square sales widget, and choose sales, orders, average order, refunds, or items sold.
+
+00:01:12.733 --> 00:01:19.965
+Split it by store, item, payment type, day of the week, or hour, and show it as a number, bars, a trend, or a table.
+
+00:01:20.400 --> 00:01:31.003
+Pin a dashboard to one store, and its Square numbers show only that store, right next to its checklists and requests. The same widgets work in the reports Worklynq emails out.
+
+00:01:32.100 --> 00:01:40.804
+In Order Tracking, pick a store, and its open Square orders show on the board next to your own, with a Square tag. They show on the kitchen TV, too.
+
+00:01:41.900 --> 00:01:50.817
+And in Shifts, when someone starts or ends their shift in Worklynq, they’re clocked in or out on Square, too. Square matches each person by their email.
+
+00:01:51.267 --> 00:02:01.251
+Those timecards are the only thing Worklynq writes. Everything else is read-only: it never takes payments, issues refunds, or changes your items or orders.
+
