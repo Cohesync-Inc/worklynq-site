@@ -1,16 +1,29 @@
 WEBVTT
 
-00:00:00.363 --> 00:00:09.110
-Engagement keeps a history with every customer, and sends promo emails through your own Mailchimp account. In this video, you’ll build a campaign.
+00:00:00.633 --> 00:00:15.780
+Engagement sends promo emails to the customers who agreed to hear from you, picked from what they bought, and keeps a history of every conversation. It sends through your own Mailchimp account. In this video, you’ll set it up, pick an audience, and send a campaign.
 
-00:00:10.146 --> 00:00:17.570
-On every customer, Log activity records calls, meetings, emails, and notes, next to the promo emails they were sent.
+00:00:16.867 --> 00:00:26.659
+Mailchimp connects in Engagement, under Connection. Your System Admin pastes in a Mailchimp API key, and picks the audience your customers are added to.
 
-00:00:18.597 --> 00:00:23.440
-Open Engagement to see your campaigns. Save emails you send often as templates.
+00:00:27.100 --> 00:00:36.444
+Set the name and address promos come from, on your own domain. Worklynq picks who gets each email, and Mailchimp sends it, and handles unsubscribes.
 
-00:00:24.464 --> 00:00:34.171
-In a campaign, choose who gets it, for example active customers who bought in the last 90 days, and see how many that is. Preview the email as you write it.
+00:00:36.900 --> 00:00:45.113
+Anyone who unsubscribes is marked in Worklynq too, and never gets a promo again. Check unsubscribes brings the latest across.
 
-00:00:35.207 --> 00:00:43.058
-Send a test, send it now, or schedule it, then see opens and clicks. Only customers who agreed to promo emails get them.
+00:00:46.100 --> 00:00:52.628
+Campaigns lists every promo: drafts, scheduled, and sent, with how many people got it, opened it, and clicked.
+
+00:00:53.067 --> 00:01:00.491
+Open a draft. Who gets it is picked from your customers: their status, the kind of customer, their tags, and what they bought, and when.
+
+00:01:00.933 --> 00:01:07.952
+It tells you how many will get it, and who’s left out and why. Promo emails only go to customers who agreed to get them.
+
+00:01:08.400 --> 00:01:16.485
+Below, write the subject and the email: a heading, your message, and a button. Your address and an unsubscribe link are always added.
+
+00:01:16.933 --> 00:01:25.040
+Send yourself a test first. Then click Send, and send it now, or schedule it. You can save the emails you send often as templates.
+

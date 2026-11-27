@@ -1,19 +1,29 @@
 WEBVTT
 
-00:00:00.373 --> 00:00:09.653
-Inventory keeps stock at each location up to date, and tells you what to order. In this video, you’ll check stock, log a delivery, and see the suggestions.
+00:00:00.633 --> 00:00:12.751
+Inventory keeps stock at each location up to date, and tells you what to order. In this video, you’ll receive a delivery, count the walk-in, act on suggestions, and see which dishes earn the most.
 
-00:00:10.675 --> 00:00:17.928
-Open Inventory. Every item shows how fast it’s used and how many days are left, with low and out items flagged.
+00:00:13.833 --> 00:00:22.815
+Open Inventory and pick a location. Every item is listed by category, with what’s low or out first, how many days it will last, and its par.
 
-00:00:18.977 --> 00:00:25.398
-Keep it current with one tap: Count, Received, or Waste. Here, three cartons of oat milk just arrived.
+00:00:23.267 --> 00:00:30.968
+Each row has Count, Received and Waste. The oat milk just arrived, so click Received. Enter it the way it came: three cases.
 
-00:00:26.420 --> 00:00:33.097
-Count mode walks you through the walk-in, shelf by shelf. Or just tell Assist, we got four cases of tomatoes.
+00:00:31.433 --> 00:00:38.559
+Worklynq converts it to thirty-six cartons, and shows what’s on hand after. Save, and it’s on record, with who did it.
 
-00:00:34.118 --> 00:00:44.358
-Worklynq reads what sold in Square and Order Tracking, works out daily usage through your menu links, and suggests what to order from each supplier, and where to set your pars.
+00:00:39.333 --> 00:00:46.864
+The Count tab is made for walking the walk-in. Type what’s on each shelf, press Enter to jump to the next, and save once at the end.
 
-00:00:45.391 --> 00:00:49.359
-And Profit shows which dishes earn the most, and which ones need a new price.
+00:00:47.633 --> 00:00:58.215
+Suggestions reads what sold, from Square and Order Tracking, and turns it into what to order, pars to change, and counts that don’t add up. Each shows the numbers behind it.
+
+00:00:59.000 --> 00:01:07.853
+That works through menu links. A link says what one sale uses, so an almond croissant uses one croissant. Link a menu item in seconds.
+
+00:01:08.633 --> 00:01:20.047
+Profit shows what each dish costs to make, what it sells for, and what it leaves you. The menu matrix sorts dishes into stars, workhorses, puzzles, and dogs, with a suggestion for each.
+
+00:01:20.500 --> 00:01:29.844
+Profit, like sales, is for System Admins, unless they open sales to everyone. And you can always just tell Assist: we got four cases of oat milk.
+

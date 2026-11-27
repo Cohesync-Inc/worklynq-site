@@ -1,16 +1,29 @@
 WEBVTT
 
-00:00:00.369 --> 00:00:10.609
-Connect Claude, ChatGPT, Claude Code, or Cursor to Worklynq, and work from the conversation. In this video, you’ll connect an AI app and choose what it may do.
+00:00:00.633 --> 00:00:16.121
+Connect your AI lets people use Worklynq from the AI they already use: Claude, ChatGPT, Claude Code or Cursor. They can find tickets, read docs, update work, or build a dashboard, right from the conversation, and everything is logged.
 
-00:00:11.628 --> 00:00:22.615
-In Claude or ChatGPT, add a custom connector with your workspace address, followed by slash M C P. Sign in to Worklynq, and this screen asks what the app may do.
+00:00:17.200 --> 00:00:28.315
+Everything’s on one page: open your profile menu, and choose API tokens. Connect your agent shows the steps for each AI app, with your workspace’s address filled in.
 
-00:00:23.638 --> 00:00:34.731
-Reading is always included. Untick editing tickets, docs, dashboards, or your shifts to keep it read-only, then click Allow. It works as you, and never sees more than you can.
+00:00:28.767 --> 00:00:40.756
+For Claude, open Settings, Connectors, Add custom connector, and paste this address. ChatGPT works the same way. There’s no token to copy: you sign in to Worklynq, and approve.
 
-00:00:35.758 --> 00:00:47.513
-Tools on your computer, like Claude Code and Cursor, use a personal A P I token. Create one on the API tokens page, then Connect your agent shows the exact setup to copy.
+00:00:41.733 --> 00:00:49.435
+Worklynq asks you to approve the app. It works as you, so it can only see and change what you can. Reading is always included.
 
-00:00:48.536 --> 00:00:59.885
-Connected apps are listed here too: disconnect one at any time. Your System Admin can turn every token and app off at once, and everything they do shows in the agent activity log.
+00:00:49.900 --> 00:00:56.812
+Untick anything it shouldn’t change, like editing tickets, docs or dashboards, or starting your shifts. Then click Allow.
+
+00:00:57.800 --> 00:01:06.568
+Tools that run on your computer, like Claude Code or Cursor, use a personal API token. Click Create token, and choose what it may do.
+
+00:01:07.033 --> 00:01:16.847
+Then pick your tool under Connect your agent, and copy the exact command or settings. Keep tokens out of shared files, and revoke one as soon as you stop using it.
+
+00:01:17.300 --> 00:01:22.185
+Apps you signed in to are listed under Connected apps, where you can disconnect them any time.
+
+00:01:23.167 --> 00:01:33.940
+Everything a connected AI does is logged under Agents, with who it acted for. And your System Admin can keep every connection read-only, or turn them off for the whole company.
+

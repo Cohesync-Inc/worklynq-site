@@ -1,16 +1,29 @@
 WEBVTT
 
-00:00:00.371 --> 00:00:09.928
-Order Tracking follows every customer order, from the moment it comes in until it’s picked up, delivered, or shipped. In this video, you’ll add an order and move it along.
+00:00:00.633 --> 00:00:13.540
+Order Tracking follows every customer order, from the moment it comes in to pickup or delivery, so nobody has to ask what’s due, or who’s on it. In this video, you’ll run the board, add an order, and follow one through.
 
-00:00:10.964 --> 00:00:21.567
-Open Order Tracking, and pick a store. The board has a column for each stage: New, Confirmed, In progress, Ready, and On the way. Overdue orders are outlined in red.
+00:00:14.633 --> 00:00:21.545
+Open Order Tracking. The board has a column for each stage: new, confirmed, in progress, ready, and on the way.
 
-00:00:22.585 --> 00:00:28.153
-Square orders for the store show up alongside your own. Drag a card to move it to the next stage.
+00:00:22.000 --> 00:00:28.549
+Each card shows the customer, what they ordered, when it’s due, and who’s on it. Late orders are outlined in red.
 
-00:00:29.177 --> 00:00:37.156
-Click New order. Pick the customer, or Walk-in, add the items, choose pickup, delivery, or shipping, set when it’s due, and who’s on it.
+00:00:29.000 --> 00:00:33.928
+The muffins are ready. Click Move to Ready on the card, or drag it to the next column.
 
-00:00:40.002 --> 00:00:47.405
-Every order keeps its items, its stage, and a history of who did what, and when. Put the board on a TV in the store, too.
+00:00:34.367 --> 00:00:43.519
+Pick a store at the top to see just its board, and who’s on duty there. If you use Square, that store’s Square orders show alongside yours, with a Square tag.
+
+00:00:43.967 --> 00:00:50.601
+To add an order, click New order. For a quick one at the counter, choose Walk-in, so there’s no customer to look up.
+
+00:00:51.067 --> 00:00:58.661
+Add the items, and Worklynq works out the total. Choose pickup or delivery, when it’s due, and who’s on it. Then create the order.
+
+00:01:00.400 --> 00:01:07.611
+Click any order to open it. The stage bar moves it along, and the history shows every change, who made it, and any notes.
+
+00:01:08.400 --> 00:01:18.320
+Completed shows how the day or week went: orders, revenue, what sold best, and who did the work. You can export it, or ask Assist, like which days were busiest.
+

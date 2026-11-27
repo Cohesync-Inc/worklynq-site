@@ -1,13 +1,23 @@
 WEBVTT
 
-00:00:00.372 --> 00:00:08.308
-The Team Board is a shared board for planning and running a team’s work. In this video, you’ll plan a backlog and move work across the board.
+00:00:00.633 --> 00:00:10.148
+The Team Board is a shared board for planning and running one team’s work. In this video, you’ll plan from the backlog, set up a sprint, and move work across the board.
 
-00:00:09.347 --> 00:00:18.563
-Open Team Board, and pick a team. The Backlog lists everything that’s waiting, so you can plan what comes next, and group it into sprints if you work that way.
+00:00:11.233 --> 00:00:19.937
+Open Team Board, and pick a team. The Backlog tab lists everything that’s waiting for this team, with its type, due date, status, and who’s on it.
 
-00:00:19.590 --> 00:00:25.627
-Kanban Board shows the same tickets by stage. Drag a card to the next column as the work moves on.
+00:00:20.400 --> 00:00:29.915
+If you work in sprints, the current one sits at the top, with its goal and dates. Move tickets into it, a few at a time or in bulk, and New sprint plans the next one.
 
-00:00:26.647 --> 00:00:34.007
-Filter by person, ticket type, or priority to focus on one part of the work. Every card opens the full ticket.
+00:00:30.367 --> 00:00:35.807
+Columns lets you choose what the list shows, like priority, components, or the target release.
+
+00:00:36.800 --> 00:00:44.779
+Kanban Board shows the same tickets as cards, in a column for each stage. Drag a card to the next column as the work moves on.
+
+00:00:45.233 --> 00:00:54.919
+Each ticket type keeps its own stages, so a checklist and a maintenance request move the way they should. Filter by person, type, or priority to focus.
+
+00:00:55.367 --> 00:01:05.159
+Every card opens the full ticket, so the board is where the team runs its week. Each team has its own board, so the kitchen and the front of house can work their own way.
+
