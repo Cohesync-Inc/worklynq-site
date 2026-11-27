@@ -1,0 +1,26 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:12.623
+Got your own software, like a loyalty app, or an ordering or booking system? Connect it as a custom app, and its data shows up in your dashboards and reports, without waiting for us to build a connector.
+
+00:00:13.700 --> 00:00:21.551
+First, your app’s developers add a small, key-protected data feed. The spec is one page. They give you the feed’s address and a key.
+
+00:00:22.000 --> 00:00:27.141
+In Apps, under Custom apps, click Add app. Enter the app’s name, the feed address, and the key.
+
+00:00:27.600 --> 00:00:33.211
+Click Test feed. Worklynq lists the datasets it found, and their fields. Then click Add app.
+
+00:00:34.200 --> 00:00:42.797
+Here’s Pine Rewards, Harbor and Pine’s loyalty app, already connected. Manage shows its datasets: loyalty members, and redemptions.
+
+00:00:43.233 --> 00:00:50.743
+Preview shows the first records, so you can check the data looks right. It’s read-only: Worklynq never changes anything in your app.
+
+00:00:51.733 --> 00:01:01.888
+In Dashboards, add a widget, and pick your app’s dataset under Data from. Count records, total or average a number, split by a field like tier, or show a trend.
+
+00:01:02.333 --> 00:01:13.875
+Or describe the dashboard you want, and AI builds it from your app’s real fields. At first only System Admins can use the data. Share it from Connected data on the Dashboards page.
+

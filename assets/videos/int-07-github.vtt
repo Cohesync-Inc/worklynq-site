@@ -1,0 +1,32 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:13.327
+Connect GitHub, and Worklynq can work with your code: tickets show their branches, commits and pull requests, and AI coding agents can work in your repositories. It’s the first step for software teams.
+
+00:00:14.400 --> 00:00:19.669
+In the Admin console, open Apps, and under Developer tools, click Connect on GitHub.
+
+00:00:20.133 --> 00:00:29.136
+Installing the Worklynq GitHub App is the recommended way. Click Continue to GitHub, and pick the account or organization that owns your code.
+
+00:00:29.600 --> 00:00:39.584
+Then choose the repositories Worklynq may use, and only those. Approve read and write access to their contents and pull requests, and you come back to Worklynq.
+
+00:00:40.567 --> 00:00:46.839
+GitHub now shows as connected, with your organization and how many repositories Worklynq can see.
+
+00:00:48.300 --> 00:00:55.553
+To add or remove repositories later, use Repos on GitHub. You can connect more than one organization, too.
+
+00:00:56.000 --> 00:01:05.323
+Then turn the GitHub section on for the ticket types that should show code, in Work Configuration, Ticket Types, Sections. It starts off for every type.
+
+00:01:06.300 --> 00:01:16.241
+Here’s a bug on a client’s patient app: large text breaks the appointment card. Each project is mapped to its repositories, so the ticket knows where its code lives.
+
+00:01:16.700 --> 00:01:24.380
+Its GitHub section shows every branch, commit and pull request that mentions the ticket’s key, with their state, straight from GitHub.
+
+00:01:24.833 --> 00:01:30.977
+Starting the work yourself? Copy the suggested branch name, and anything you push shows up here on its own.
+
