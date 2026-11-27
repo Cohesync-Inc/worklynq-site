@@ -1,13 +1,23 @@
 WEBVTT
 
-00:00:00.371 --> 00:00:07.667
-Product Releases tracks every version of the products you build. In this video, you’ll add a version and follow it on its dashboard.
+00:00:00.633 --> 00:00:12.217
+Product Releases tracks every version of the products you build, like an ordering app or a loyalty program. In this video, you’ll read the release list, add a version, and follow one on its dashboard.
 
-00:00:08.695 --> 00:00:17.655
-Open Product Releases. Each product lists its versions, soonest first, with their status and due date. Released versions fold away underneath.
+00:00:13.300 --> 00:00:22.452
+Open Product Releases. Each product lists its versions, soonest first, with their status, from being planned, through development and testing, to released.
 
-00:00:18.683 --> 00:00:28.326
-Click New version, and give it a number, a name, and a release date. Anyone can add versions; System Admins add the products themselves, in the Admin console.
+00:00:22.900 --> 00:00:28.617
+Each one shows its due date, and how many days are left. Released versions fold away underneath.
 
-00:00:29.345 --> 00:00:38.518
-Open a version for its own dashboard: progress, open and overdue tickets, and who’s working on what. Tickets join a version through their Target release.
+00:00:29.067 --> 00:00:39.413
+Click New version, and give it a number, a name, the product, and a release date. Anyone can add versions; System Admins add the products themselves, in the Admin console.
+
+00:00:40.400 --> 00:00:48.549
+Open a version for its own dashboard: how far along it is, the days to release, open and overdue tickets, and who’s working on what.
+
+00:00:49.000 --> 00:00:54.739
+Its tickets are listed by stage, so you can see what’s in testing, what’s still in progress, and what’s done.
+
+00:00:55.200 --> 00:01:04.075
+Tickets join a version through their Target release, so the version always shows exactly what’s left. And Explain has AI tell you whether it’s on track.
+

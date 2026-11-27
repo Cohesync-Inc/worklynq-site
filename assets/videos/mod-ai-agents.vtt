@@ -1,16 +1,20 @@
 WEBVTT
 
-00:00:00.375 --> 00:00:09.804
-AI Agents puts AI to work on your tickets and docs, with people still in charge. In this video, you’ll see your agents, how they run, and what they did.
+00:00:00.633 --> 00:00:13.753
+AI agents take on routine work: checking that the store opened on time, chasing a supplier order, sorting guest feedback. In this video, you’ll see your agents, how they run, and how everything they do is logged.
 
-00:00:10.829 --> 00:00:21.282
+00:00:14.833 --> 00:00:25.287
 Open Agents. Worklynq agents look things up and, when you allow it, create and update tickets and docs. Each one works as the person who runs it, never with more access.
 
-00:00:22.299 --> 00:00:29.254
-Run one yourself, on a schedule, or when a ticket reaches a stage, and choose whether it asks before making changes.
+00:00:25.733 --> 00:00:35.909
+Run one yourself, on a schedule, or when a ticket reaches a stage, and choose whether it asks before making changes. Create agent starts a new one from a description.
 
-00:00:30.278 --> 00:00:41.691
-Connected agents lists your team’s own Claude, ChatGPT, or Cursor connected to Worklynq. Coding agents hand a ticket to Claude or Cursor, and get a pull request back.
+00:00:36.367 --> 00:00:42.255
+Connected agents lists your team’s own Claude, ChatGPT or Cursor, connected to Worklynq.
 
-00:00:42.738 --> 00:00:48.626
-And Activity logs everything any agent did: what it read, what it changed, and who it acted for.
+00:00:42.700 --> 00:00:50.188
+And once GitHub is connected, a Coding agents tab hands a ticket to Claude or Cursor, and gets a pull request back.
+
+00:00:51.167 --> 00:01:01.108
+And Activity logs everything any agent did: what it read, what it changed, whether it worked, and who it acted for. Filter by agent, or show changes only.
+

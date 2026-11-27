@@ -1,16 +1,26 @@
 WEBVTT
 
-00:00:00.368 --> 00:00:08.773
-Scheduled reports email the numbers to the people who need them, every day, week, or month. In this video, you’ll put a report on a schedule.
+00:00:00.633 --> 00:00:10.809
+Scheduled reports email the numbers to the people who need them, every day, week, or month. In this video, you’ll open a report, put it on a schedule, and choose who gets it.
 
-00:00:09.799 --> 00:00:14.834
-Open a report in Dashboards, under Reports. This one is the morning store report.
+00:00:11.900 --> 00:00:21.927
+Reports live in Dashboards, under Reports. They’re built from the same widgets. This one is the morning store report: sales, orders, overdue work and loyalty.
 
-00:00:15.853 --> 00:00:23.064
-Click Email, and tick Send it on a schedule. Choose every day, weekdays, a day of the week, or a day of the month, and the time.
+00:00:22.367 --> 00:00:30.367
+Click Emailed to see its schedule. Choose every day, weekdays, a day of the week, or a day of the month, and the time, in your time zone.
 
-00:00:24.089 --> 00:00:31.001
+00:00:30.833 --> 00:00:37.745
 Add who gets it. Each person gets their own copy, worked out as them, so they only see numbers they’re allowed to see.
 
-00:00:32.027 --> 00:00:41.499
-Every email starts with a short AI summary of what changed, with the numbers underneath. Anyone who can see the report can also click Email me a copy.
+00:00:38.200 --> 00:00:46.520
+Every email starts with a short AI summary of what changed, with the numbers underneath. The last send shows here, with who it went to.
+
+00:00:46.967 --> 00:00:56.524
+A report is still a dashboard, too. Explain sums it up on screen, Change with AI rearranges it, and Add widget puts more numbers in the email.
+
+00:00:56.967 --> 00:01:05.415
+Settings decides who can see and edit the report, and pins it to one store or project, so each manager can get one just for their place.
+
+00:01:05.867 --> 00:01:10.731
+Anyone who can see a report can also click Email me a copy, whenever they need it.
+
