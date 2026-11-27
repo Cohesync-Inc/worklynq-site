@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-<link rel="stylesheet" href="/assets/integrations.css">
+<link rel="stylesheet" href="/assets/integrations.css?v=20261126m">
 </head>
 <body>
 
@@ -69,9 +69,9 @@
               <source src="/assets/videos/admin-12-apps.mp4" type="video/mp4">
               <track kind="captions" src="/assets/videos/admin-12-apps.vtt" srclang="en" label="English">
             </video>
-            <button type="button" class="tour-play" aria-label="Play: Connecting apps, 1 minute 16 seconds"><span class="tour-play-btn" aria-hidden="true"></span></button>
+            <button type="button" class="tour-play" aria-label="Play: Connecting apps, 1 minute 26 seconds"><span class="tour-play-btn" aria-hidden="true"></span></button>
           </div>
-          <figcaption><strong>Connecting apps</strong> · 1:16 · how to connect a tool and check what it brings in</figcaption>
+          <figcaption><strong>Connecting apps</strong> · 1:26 · how to connect a tool and check what it brings in. <a href="/docs/videos/#integrations">Watch all 11 integration videos &rarr;</a></figcaption>
         </figure>
       </div>
       <nav class="ijump" aria-label="Jump to an integration">
@@ -83,6 +83,8 @@
           <li><a href="#meta"><span class="int-logo" data-logo="facebook" aria-hidden="true">f</span>Facebook + Instagram</a></li>
           <li><a href="#linkedin"><span class="int-logo" data-logo="linkedin" aria-hidden="true">in</span>LinkedIn</a></li>
           <li><a href="#mailchimp"><span class="int-logo" data-logo="mailchimp" aria-hidden="true">M</span>Mailchimp</a></li>
+          <li><a href="#email"><span class="int-logo" data-logo="gmail" aria-hidden="true">G</span>Gmail</a></li>
+          <li><a href="#email"><span class="int-logo" data-logo="outlook" aria-hidden="true">O</span>Outlook</a></li>
           <li><a href="#coding-agents"><span class="int-logo" data-logo="github" aria-hidden="true">G</span>GitHub</a></li>
           <li><a href="#coding-agents"><span class="int-logo" data-logo="claude" aria-hidden="true">C</span>Claude</a></li>
           <li><a href="#coding-agents"><span class="int-logo" data-logo="cursor" aria-hidden="true">C</span>Cursor</a></li>
@@ -92,6 +94,17 @@
       </nav>
     </div>
   </section>
+
+  <nav class="ibar" aria-label="Integrations on this page">
+    <div class="wrap"><ul>
+      <li><a href="#sales-finance">Sales &amp; finance</a></li>
+      <li><a href="#marketing">Marketing &amp; customers</a></li>
+      <li><a href="#developers-ai">Developer tools &amp; AI</a></li>
+      <li><a href="#your-software">Your own software</a></li>
+      <li><a href="#coming">Coming soon</a></li>
+      <li><a href="#how">How it works</a></li>
+    </ul></div>
+  </nav>
 
   <section class="iwhere" aria-labelledby="iwhere-title">
     <div class="wrap">
@@ -242,6 +255,25 @@
           <div class="irow-links"><a class="iwatch" href="/docs/videos/#int-06-mailchimp" data-video="int-06-mailchimp" data-title="Mailchimp"><span class="iwatch-play" aria-hidden="true"></span>Watch: Mailchimp <span class="iwatch-time">1:21</span></a><a class="isetup" href="/docs/modules/">About Engagement &rarr;</a></div>
         </div>
       </article>
+      <article class="irow" id="email" aria-labelledby="email-name">
+        <div class="irow-media">
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/email-dashboard.webp" aria-label="Enlarge: How much email comes in, and who it’s from"><img src="/assets/screens/email-dashboard.webp" alt="A dashboard of the catering mailbox: emails today and this week, who emails most, and emails per day for the last 30 days" loading="lazy" width="1600" height="1250"></button><figcaption>How much email comes in, and who it’s from</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/integrations-email.webp" aria-label="Enlarge: One company mailbox, connected read-only"><img src="/assets/screens/integrations-email.webp" alt="The Outlook connection showing the connected company mailbox, with Google Mail and Outlook under Customers and email" loading="lazy" width="1600" height="1250"></button><figcaption>One company mailbox, connected read-only</figcaption></figure></div>
+        </div>
+        <div class="irow-copy">
+          <div class="irow-name"><span class="int-logo" data-logo="gmail" aria-hidden="true">@</span><h3 id="email-name">Gmail &amp; Outlook</h3><span class="ibadge">Gmail available now</span><span class="ibadge ibadge--soon">Outlook in the beta</span></div>
+          <p class="irow-pitch">See the email behind the work, without opening anyone’s inbox.</p>
+          <p>Your System Admin connects one company mailbox, like catering@ or hello@, on Google Workspace, Microsoft 365 or Outlook.com. Worklynq counts what comes in, so you can see the load next to the work.</p>
+          <ul class="ibenefits">
+            <li><strong>Email on your dashboards.</strong> Emails today, this week or per day, and who emails you most, by sender or by their domain.</li>
+            <li><strong>Spot the busy days.</strong> Put the mailbox next to orders and open tickets, and see when a rush is coming before it lands.</li>
+            <li><strong>In your scheduled reports.</strong> The same numbers, emailed with the rest of the morning report.</li>
+            <li><strong>You decide who sees it.</strong> Email widgets start out for System Admins only. Share them in Connected data when you’re ready.</li>
+          </ul>
+          <p class="ifacts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Read-only, one mailbox.</strong> Worklynq never sends, deletes or moves email, and nobody’s personal inbox is connected.</span></p>
+          <div class="irow-links"><a class="isetup" href="/docs/integrations/">Integration docs &rarr;</a></div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -254,8 +286,8 @@
       </div>
       <article class="irow" id="coding-agents" aria-labelledby="coding-agents-name">
         <div class="irow-media">
-          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>harborandpine.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/agents.webp" aria-label="Enlarge: Every agent in one place: yours, your team’s and coding agents"><img src="/assets/screens/agents.webp" alt="The Agents page with Worklynq agents, connected agents, coding agents and activity tabs" loading="lazy" width="1600" height="1000"></button><figcaption>Every agent in one place: yours, your team’s and coding agents</figcaption></figure>
-          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/agents-activity.webp" aria-label="Enlarge: Every action an agent took, and who it acted for"><img src="/assets/screens/agents-activity.webp" alt="The agent activity log listing each action an AI agent took and who it acted for" loading="lazy" width="1600" height="1000"></button><figcaption>Every action an agent took, and who it acted for</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/integrations.webp" aria-label="Enlarge: Connected apps show in green in Integrations"><img src="/assets/screens/integrations.webp" alt="Admin console Integrations with connected apps shown in green" loading="lazy" width="1600" height="1000"></button><figcaption>Connected apps show in green in Integrations</figcaption></figure></div>
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>servicesdemo.worklynq.net</span></div><button type="button" class="shot-zoom" data-full="/assets/screens/dev-ticket-github.webp" aria-label="Enlarge: A bug with its branch, commit and pull request"><img src="/assets/screens/dev-ticket-github.webp" alt="A bug ticket in a software company's workspace, with its open pull request, branch and commit from GitHub" loading="lazy" width="1600" height="1375"></button><figcaption>A bug with its branch, commit and pull request</figcaption></figure>
+          <div class="irow-thumbs"><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/dev-claude-setup.webp" aria-label="Enlarge: Each client project mapped to its repository"><img src="/assets/screens/dev-claude-setup.webp" alt="Claude settings: model, session limits, and each project mapped to its repository" loading="lazy" width="1600" height="1375"></button><figcaption>Each project mapped to its repository</figcaption></figure><figure class="shot"><button type="button" class="shot-zoom" data-full="/assets/screens/dev-github-connection.webp" aria-label="Enlarge: The GitHub App, on the repositories you choose"><img src="/assets/screens/dev-github-connection.webp" alt="The GitHub connection: one organization, 20 repositories, and the permissions granted" loading="lazy" width="1600" height="1250"></button><figcaption>The GitHub App, on the repositories you choose</figcaption></figure></div>
         </div>
         <div class="irow-copy">
           <div class="irow-name"><span class="int-logo" data-logo="github" aria-hidden="true">G</span><h3 id="coding-agents-name">GitHub, Claude &amp; Cursor</h3><span class="ibadge">Available now</span></div>
@@ -338,15 +370,13 @@
         <article class="int-card">
           <div class="int-card-head">
             <div class="int-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></div>
-            <h3>Workspace & mail</h3>
+            <h3>Calendars &amp; files</h3>
           </div>
-          <p>Email, calendars and documents in the same context as the work they’re about.</p>
+          <p>Meetings and documents in the same context as the work they’re about.</p>
           <ul class="int-tools">
-            <li class="int-tool" data-logo="gmail"><span class="int-logo" aria-hidden="true">G</span>Gmail</li>
-            <li class="int-tool" data-logo="outlook"><span class="int-logo" aria-hidden="true">O</span>Outlook</li>
             <li class="int-tool" data-logo="google-calendar"><span class="int-logo" aria-hidden="true">GC</span>Google Calendar</li>
             <li class="int-tool" data-logo="google-drive"><span class="int-logo" aria-hidden="true">GD</span>Google Drive</li>
-            <li class="int-tool" data-logo="microsoft-365"><span class="int-logo" aria-hidden="true">M3</span>Microsoft 365</li>
+            <li class="int-tool" data-logo="microsoft-calendar"><span class="int-logo" aria-hidden="true">MC</span>Microsoft Calendar</li>
             <li class="int-tool" data-logo="onedrive"><span class="int-logo" aria-hidden="true">O</span>OneDrive</li>
           </ul>
         </article>
@@ -404,7 +434,7 @@
     </div>
   </section>
 
-  <section class="itrust" aria-labelledby="itrust-title">
+  <section class="itrust" id="how" aria-labelledby="itrust-title">
     <div class="wrap">
       <h2 id="itrust-title">How connections work</h2>
       <ul class="itrust-grid">
@@ -538,6 +568,37 @@
     dlg.querySelector('.iviewer-close').addEventListener('click', function () { dlg.close(); });
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
     dlg.addEventListener('close', close);
+  })();
+</script>
+<script>
+  // Section bar: highlight where you are. Phones: show the first three benefits of each tool, with a button for the rest.
+  (function () {
+    var links = [].slice.call(document.querySelectorAll('.ibar a'));
+    var map = {}; links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return
+          links.forEach(function (a) { a.removeAttribute('aria-current') })
+          var a = map[e.target.id]; if (!a) return // the intro and the "shows up" band clear it
+          a.setAttribute('aria-current', 'true')
+          var bar = a.closest('ul'); if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' })
+        })
+      }, { rootMargin: '-45% 0px -50% 0px' })
+      Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el) })
+      ;['.ih', '.iwhere'].forEach(function (q) { var el = document.querySelector(q); if (el) io.observe(el) })
+    }
+    if (!window.matchMedia('(max-width: 640px)').matches) return
+    document.querySelectorAll('.ibenefits').forEach(function (ul) {
+      var n = ul.children.length; if (n <= 3) return
+      ul.classList.add('is-short')
+      var name = (ul.closest('.irow') || document).querySelector('h3')
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'imore'
+      b.textContent = 'Show ' + (n - 3) + ' more'
+      b.setAttribute('aria-label', 'Show ' + (n - 3) + ' more about ' + (name ? name.textContent : 'this tool'))
+      b.addEventListener('click', function () { ul.classList.remove('is-short'); b.remove() })
+      ul.after(b)
+    })
   })();
 </script>
 <script src="/assets/one-video.js" defer></script>

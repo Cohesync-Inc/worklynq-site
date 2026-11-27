@@ -133,3 +133,70 @@
 .irow-thumbs:has(> :only-child){grid-template-columns:1fr;}
 .irow-thumbs > :only-child{max-width:calc(50% - 7px);}
 @media (max-width:640px){ .irow-thumbs > :only-child{max-width:none;} }
+
+/* ---------- Section bar (sticky) ---------- */
+.ibar{position:sticky; top:0; z-index:20; background:rgba(246,244,238,.94); backdrop-filter:saturate(1.2) blur(8px); -webkit-backdrop-filter:saturate(1.2) blur(8px); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.ibar ul{list-style:none; margin:0; padding:10px 0; display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.ibar ul::-webkit-scrollbar{display:none;}
+.ibar a{display:block; white-space:nowrap; padding:7px 14px; border-radius:100px; font-size:14px; font-weight:500; color:var(--ink-soft); text-decoration:none; border:1px solid transparent;}
+.ibar a:hover{color:var(--teal-deep); background:#fff; border-color:var(--line);}
+.ibar a[aria-current]{color:var(--paper); background:var(--teal-deep);}
+.icat, .isoon, .itrust{scroll-margin-top:58px;}
+.irow{scroll-margin-top:70px;}
+.imore{display:block; margin:-6px 0 20px; padding:8px 16px; border-radius:100px; border:1px solid var(--line); background:#fff; color:var(--teal-deep); font:600 14px 'IBM Plex Sans', sans-serif; cursor:pointer;}
+.ibenefits.is-short li:nth-child(n+4){display:none;}
+
+/* ---------- Phones ---------- */
+@media (max-width:720px){
+  /* Keep "Request a demo" in the header when the menu links are hidden. */
+  .nav-links{display:flex;}
+  .nav-links a:not(.nav-cta){display:none;}
+  .nav-links .nav-cta{padding:8px 14px; font-size:14px;}
+}
+@media (max-width:640px){
+  .ih h1{font-size:32px;}
+  .ih-lede{font-size:16px;}
+  /* Tool chips: one swipeable row instead of eight rows. */
+  .ijump{margin-top:32px; padding-top:22px;}
+  .ijump ul{flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; margin:0 -20px; padding:2px 20px 6px; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+  .ijump ul::-webkit-scrollbar{display:none;}
+  .ijump a{white-space:nowrap;}
+  .ibar ul{padding:8px 0; margin:0 -20px; padding-left:20px; padding-right:20px;}
+  .ibar a{font-size:13.5px; padding:6px 12px;}
+
+  /* Where data shows up: a compact list. */
+  .iwhere{padding:48px 0;}
+  .iwhere-grid{gap:10px;}
+  .iwhere-grid li{padding:14px 16px; text-align:left;}
+  .iwhere-grid strong{font-size:17px;}
+
+  /* One tool: name and pitch first, then the picture, then the detail. */
+  .irow{gap:0; padding:36px 0;}
+  .irow-copy{display:contents;}
+  .irow-name{order:0; margin-bottom:10px;}
+  .irow-copy > .irow-pitch{order:1; text-align:center; margin-bottom:18px; font-size:21px;}
+  .irow-media{order:2; margin-bottom:20px;}
+  .irow-copy > p:not(.irow-pitch):not(.ifacts){order:3; font-size:15px;}
+  .itrio{order:4;}
+  .ibenefits{order:5;}
+  .imore{order:6; justify-self:center;}
+  .ifacts{order:7;}
+  .irow-links{order:8; flex-direction:column; gap:4px;}
+  .isetup, .itrio a, .itrust-foot a, .isoon-head a{display:inline-block; padding:10px 6px;}
+  .irow-thumbs{display:none;}
+  .irow-name h3{font-size:24px;}
+  .ibenefits li{font-size:14.5px;}
+  .ifacts{font-size:13.5px; text-align:left;}
+  .ifacts span{text-align:left;}
+  /* A hint that the chip rows scroll sideways. */
+  .ijump, .ibar .wrap{position:relative;}
+  .ijump::after, .ibar .wrap::after{content:""; position:absolute; right:-20px; bottom:6px; width:36px; height:44px; pointer-events:none; background:linear-gradient(90deg, rgba(246,244,238,0), var(--paper));}
+  .ibar .wrap::after{bottom:0; height:100%;}
+  /* Coming soon and how it works: tighter cards. */
+  .isoon{padding:56px 0;}
+  .isoon .int-card{padding:18px 16px;}
+  .itrust{padding:56px 0;}
+  .itrust-grid li{padding:16px;}
+  .icat{padding:52px 0 8px;}
+  .icat-head h2{font-size:26px;}
+}
