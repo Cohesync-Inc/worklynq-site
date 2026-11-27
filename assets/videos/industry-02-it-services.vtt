@@ -1,0 +1,43 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:15.844
+Vector6 Tech builds and runs software for five clients, with four delivery pods, a support desk, and twenty GitHub repositories. Let’s follow Aarav, the CEO, through a Friday, and see how Worklynq keeps the client work on track.
+
+00:00:16.933 --> 00:00:29.477
+Aarav starts on Home. It shows what’s open across the company, what’s overdue, and the few things that need him today, like a change request from Northwind, and a P1 incident on the Greenleaf support desk.
+
+00:00:29.933 --> 00:00:33.688
+Below, every client project, with its open and overdue work.
+
+00:00:34.467 --> 00:00:43.043
+The Delivery Overview dashboard puts every client side by side: open work, what’s overdue, and the hours logged in the last thirty days.
+
+00:00:43.500 --> 00:00:50.924
+Further down, milestones by status. One is at risk: Trackfold’s driver app, after a battery drain escalation.
+
+00:00:51.700 --> 00:01:04.415
+Each client engagement is a project, with its own ticket numbers, milestones, sprints, and dashboard. Trackfold is just over half done, with user acceptance testing at three depots on December eighth.
+
+00:01:05.200 --> 00:01:17.403
+Anything outside the agreed scope is a change request. Northwind wants Afterpay at checkout. It has its own stages: it’s reviewed, approved once the client signs, and only then scheduled and built.
+
+00:01:18.200 --> 00:01:29.784
+On the Medora patient app, a bug: large text breaks the appointment card. Because GitHub is connected, the ticket shows the work itself: the open pull request, the branch, and the commit.
+
+00:01:30.233 --> 00:01:35.140
+Nobody has to ask where the fix is. Reviewers open the pull request straight from here.
+
+00:01:35.933 --> 00:01:49.352
+It’s Friday, so the Weekly Client Status report is ready for the leadership team: what was completed, hours by project, and overdue work. Email sends it now or on a schedule, with a short AI summary on top.
+
+00:01:49.800 --> 00:01:54.728
+And at the bottom, anything critical or at risk, so the leadership team sees it first.
+
+00:01:55.500 --> 00:02:07.809
+Every client has a space: the statement of work, runbooks, status reports, and meeting notes. Before the Trackfold call, Aarav reads Tuesday’s notes: the battery fix, and the date for user testing.
+
+00:02:08.267 --> 00:02:13.173
+AI Search and Assist answer from these pages too, for the people allowed to see them.
+
+00:02:13.967 --> 00:02:20.943
+Finally, Customers: every client, lead, and past client, with its account owner and what they’ve spent, next to the work.
