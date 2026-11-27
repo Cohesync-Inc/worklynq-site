@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>IT services &amp; agencies — Worklynq Docs</title>
+<meta name="description" content="How an IT services company runs client work in Worklynq: a project per client, service requests on retainers, change requests, incidents, GitHub on every ticket, and a weekly client status report.">
+<link rel="canonical" href="https://worklynq.com/docs/guides/it-services/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Worklynq">
+<meta property="og:title" content="IT services &amp; agencies — Worklynq Docs">
+<meta property="og:description" content="How an IT services company runs client work in Worklynq: a project per client, service requests on retainers, change requests, incidents, GitHub on every ticket, and a weekly client status report.">
+<meta property="og:url" content="https://worklynq.com/docs/guides/it-services/">
+<meta property="og:image" content="https://worklynq.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Worklynq: one intelligent platform to run your business">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css?v=20261122c">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/integrations/">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/videos/">Video tutorials</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/roles/">Roles &amp; permissions</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/">Tickets</a></li><li><a href="/docs/projects/">Projects</a></li><li><a href="/docs/product-releases/">Product Releases</a></li><li><a href="/docs/dashboards/">Dashboards</a></li><li><a href="/docs/reports/">Scheduled reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/inventory/">Inventory</a></li><li><a href="/docs/food-safety/">Food safety</a></li><li><a href="/docs/training/">Training</a></li><li><a href="/docs/daily-brief/">Daily brief</a></li><li><a href="/docs/marketing/">Marketing &amp; Social</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/chat/">Chat</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li><li><a href="/docs/guides/it-services/" aria-current="page">IT services &amp; agencies</a><ul class="side-sections"><li><a href="#setup">Recommended setup</a></li><li><a href="#week">A week in Worklynq</a></li><li><a href="#first-week">Your first week</a></li><li><a href="#tips">Tips</a></li></ul></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Industry guide</p>
+      <h1>IT services &amp; agencies</h1>
+      <p class="intro">Here’s how an IT services company runs its client work in Worklynq — fixed-bid builds, dedicated teams and support retainers side by side, with the code in GitHub and every client’s status a click away. The example is <em>Vector6 Tech</em>, a 30-person company in Pune with five clients, four delivery pods, a support desk and 20 GitHub repositories.</p>
+      <div class="callout"><strong>Built around Projects.</strong> Each client engagement is a project with its own ticket prefix, milestones, sprints and dashboard. If you also build and look after an app for a client, add it as a product so each version gets its own release dashboard. Teams are your pods, and roles decide who sees client contracts and billing.</div>
+      <section class="sec" id="setup"><h2>Recommended setup</h2>
+        <div class="table-wrap"><table><tbody><tr><td>Business type</td><td>Projects</td></tr><tr><td>Industry</td><td>IT services</td></tr><tr><td>Work is organized by</td><td>Projects — one for each client engagement (for example <em>Northwind – Storefront Replatform</em>, tickets NWO-1, NWO-2…), plus one for your own internal work. Add a product for any app you release for a client.</td></tr><tr><td>Modules</td><td><a href="/docs/projects/">Projects</a>, <a href="/docs/tickets/">Tickets</a>, Team Board, Roadmaps, <a href="/docs/dashboards/">Dashboards</a>, <a href="/docs/reports/">Scheduled reports</a>, AI Search, Spaces, Knowledge Library, Customers, Engagement. Add <a href="/docs/product-releases/">Product Releases</a>, <a href="/docs/chat/">Chat</a> and AI Agents if you use them.</td></tr><tr><td>Ticket types</td><td>Epic, Story, Task, Sub-task, Bug, Milestone, Service Request, Change Request, Incident, Feature Request</td></tr><tr><td>Teams</td><td>One per pod or squad (Pod Atlas, Pod Banyan…), plus Support Desk and Platform &amp; Design</td></tr><tr><td>Connections</td><td><a href="/docs/integrations/github/">GitHub</a> for your repositories, <a href="/docs/integrations/claude/">Claude</a> and/or <a href="/docs/integrations/cursor/">Cursor</a> for coding agents, and <a href="/docs/integrations/quickbooks/">QuickBooks</a> for your books</td></tr></tbody></table></div>
+        <p>You’ll pick all of this during <a href="/docs/getting-started/">setup</a>, and you can change any of it later.</p>
+        <h3>Ticket types for client work</h3>
+        <p>Each type has its own stages, so a client’s request and a sprint story don’t share one generic workflow:</p>
+        <div class="table-wrap"><table><thead><tr><th>Type</th><th>Use it for</th><th>Stages</th></tr></thead><tbody>
+          <tr><td>Service Request</td><td>A client asks for help or a change on a support retainer</td><td>New › Assigned › In Progress › Waiting on Client › Resolved</td></tr>
+          <tr><td>Change Request</td><td>A change to the agreed scope or a client’s systems, which needs the client’s OK</td><td>Requested › Under Review › Approved › Scheduled › Implemented</td></tr>
+          <tr><td>Incident</td><td>Something is down or broken for the client’s users right now</td><td>Reported › Investigating › Mitigated › Resolved</td></tr>
+          <tr><td>Milestone</td><td>A phase or payment milestone in the contract</td><td>Planned › In Progress › At Risk › Complete</td></tr>
+          <tr><td>Epic, Story, Task, Bug</td><td>The delivery work itself, planned in sprints</td><td>Story: To Do › In Progress › In Review › QA › Done</td></tr>
+        </tbody></table></div>
+      </section>
+      <section class="sec" id="week"><h2>A week in Worklynq</h2>
+        <ol class="week">
+          <li><span class="day">Mon</span><div><h3>Delivery review</h3><p>The Head of Delivery opens the <em>Delivery Overview</em> dashboard: what’s open and late on every client project, and where this week’s hours are going. Each pod lead has their own client dashboard too — Northwind’s shows the Black Friday code freeze and hypercare. Trackfold is flagged at risk, so the Trackfold pod lead plans the recovery in this sprint on the Team Board. <a class="watch" href="/docs/videos/#feature-dashboards">Watch: Dashboards</a> · <a class="watch" href="/docs/videos/#mod-team-board">Watch: Team Board</a></p></div></li>
+          <li><span class="day">Tue</span><div><h3>A P1 on a retainer</h3><p>Greenleaf’s grade export is timing out for every school. The support desk logs an <em>Incident</em> (GLL-31, critical) and moves it to <em>Mitigated</em> once exports run again; the engineers log their time on the ticket, so the retainer’s hours this month stay accurate on Greenleaf’s support dashboard. Everyday requests — “rename Learning Areas to Subjects” — are <em>Service Requests</em> that wait in <em>Waiting on Client</em> when the ball is in the client’s court. <a class="watch" href="/docs/videos/#tickets">Watch: Working with tickets</a></p></div></li>
+          <li><span class="day">Wed</span><div><h3>A change request</h3><p>Northwind asks for Afterpay at checkout. Instead of slipping into the sprint, it’s a <em>Change Request</em> (NWO-63, “CR-02”) with the estimate and impact. The Client Partner moves it through <em>Under Review</em> to <em>Approved</em> once Northwind signs, and only then is it scheduled. The client’s record in <strong>Customers</strong> shows the account and its owner, and <strong>Engagement</strong> keeps every call and meeting about it. <a class="watch" href="/docs/videos/#mod-customers">Watch: Customers</a></p></div></li>
+          <li><span class="day">Thu</span><div><h3>Code and tickets in one place</h3><p>An engineer on the Medora pod picks up the bug <em>MDH-36</em>, “Large text breaks appointment card layout”. With the GitHub section turned on for Bugs, the ticket shows the branch, the commits and the open pull request — reviewers don’t have to ask where the fix is. If you’ve connected Claude or Cursor, small, well-defined bugs can go to an agent instead, and come back as a pull request your team reviews. <a class="watch" href="/docs/integrations/github/">Read: GitHub</a></p></div></li>
+          <li><span class="day">Fri</span><div><h3>Client status, emailed</h3><p>The <em>Weekly Client Status</em> report — completed this week, hours logged by project, overdue work, milestones due in the next 7 days, and anything critical or at risk — lands in the leadership team’s inbox at a set time, with a short AI summary on top. Each person gets their own copy, worked out as them. <a class="watch" href="/docs/videos/#feature-scheduled-reports">Watch: Scheduled reports</a></p></div></li>
+          <li><span class="day">Anytime</span><div><h3>Ask about the account</h3><p>Every client has a space in <strong>Spaces</strong>: the SOW, runbooks, meeting notes, status reports, the RAID log and the change request log. Before a call, the Client Partner asks AI Search “What did we agree with Trackfold about the battery drain?” and gets the answer from last week’s meeting notes, with a link. <a class="watch" href="/docs/videos/#05-ai-search">Watch: AI Search</a> · <a class="watch" href="/docs/videos/#mod-spaces">Watch: Spaces</a></p></div></li>
+        </ol>
+      </section>
+      <section class="sec" id="first-week"><h2>Your first week</h2>
+        <p>A System Admin can set up an IT services company in a day. In this order:</p>
+        <ol class="steps">
+          <li><strong>Sign up</strong> and choose <em>Projects</em> as your business type and <em>IT services</em> as your industry. <a href="/docs/videos/#admin-01-setup">Watch</a></li>
+          <li><strong>Invite the team</strong>, add a team per pod, and give each person a role: engineers work tickets, while client partners and finance also see Customers and billing. <a href="/docs/videos/#admin-03-users">Watch</a> · <a href="/docs/videos/#admin-04-teams-roles">Watch</a></li>
+          <li><strong>Add a project per client engagement</strong>, with its own ticket prefix (NWO, MDH…), owners and milestones. <a href="/docs/projects/#plan-with-assist">Plan with Assist</a> drafts the milestones from the SOW. <a href="/docs/videos/#feature-projects">Watch</a></li>
+          <li><strong>Add the client-work ticket types</strong> — Service Request, Change Request, Incident and Milestone — and turn on time logging for the types you bill. <a href="/docs/videos/#admin-07-ticket-types">Watch</a> · <a href="/docs/videos/#admin-09-sections">Watch</a></li>
+          <li><strong>Connect GitHub</strong>, choose the repositories, and turn the GitHub section on for Story, Task, Bug and the other delivery types. <a href="/docs/videos/#admin-12-apps">Watch</a></li>
+          <li><strong>Add each client in Customers</strong>, with their contacts, subscriptions and the account owner, and log calls and meetings in Engagement. <a href="/docs/videos/#mod-customers">Watch</a></li>
+          <li><strong>Make a space per client</strong> for the SOW, runbooks and meeting notes. <a href="/docs/videos/#mod-spaces">Watch</a></li>
+          <li><strong>Build a dashboard per client</strong> and a weekly status report, and schedule it for Friday. <a href="/docs/videos/#feature-dashboards">Watch</a></li>
+        </ol>
+      </section>
+      <section class="sec" id="tips"><h2>Tips</h2><ul><li>Keep one project per engagement, not per client: a client with a build and a separate support retainer gets two projects, so hours and dashboards don’t mix.</li><li>Use a <em>Change Request</em> for anything outside the agreed scope, so the client’s OK is recorded before the work starts — and the CR log writes itself.</li><li>Put retainer limits and SLAs in the project’s description and on its dashboard (for example “120 h/month, P1 response 1 h”), so the whole pod sees them.</li><li>Write meeting notes in the client’s space straight after each call. AI Search answers from them, and only people who can see that space get those answers.</li><li>Click <strong>Explain</strong> on a client dashboard before a status call — it tells you what changed in plain words.</li><li>Use <a href="/docs/chat/">Chat</a> with a channel per client. When a message is really a job, select it and click <strong>Make ticket</strong>.</li><li>Building a product of your own rather than client work? See the <a href="/docs/guides/software/">software teams guide</a>.</li></ul>
+        <p class="next">Next: <a href="/docs/getting-started/">Getting started</a> · <a href="/docs/projects/">Projects</a> · <a href="/docs/modules/">All modules</a></p></section>
+      <p class="doc-foot">Last updated: November 26, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/one-video.js" defer></script>
+</body>
+</html>
