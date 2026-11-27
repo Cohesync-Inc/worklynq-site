@@ -1,0 +1,44 @@
+WEBVTT
+
+00:00:00.633 --> 00:00:11.769
+Home is where everyone starts. It shows the work that needs you, what’s overdue across the company, and how each location is doing, so the first thing you see each morning is what to do next.
+
+00:00:12.867 --> 00:00:16.088
+Home greets you by name, with today’s date and your company.
+
+00:00:16.533 --> 00:00:25.429
+The first three counts cover every ticket in the company: how many are open, how many are past their due date, and how many are due in the next seven days.
+
+00:00:25.867 --> 00:00:31.029
+Assigned to me counts the open tickets that are yours. Click it, and you’re in your ticket list.
+
+00:00:32.100 --> 00:00:40.463
+Needs you lists your own open tickets, soonest due first. Each one shows its ticket type and location, the stage it’s at, and when it’s due.
+
+00:00:40.900 --> 00:00:49.177
+Due dates read the way you’d say them: due today, tomorrow, a weekday, or days overdue, in red, so you can see what’s slipping at a glance.
+
+00:00:49.633 --> 00:00:52.769
+Click one to open it, with everything you need to move it on.
+
+00:00:53.867 --> 00:01:03.381
+Further down, each kind of work gets its own tile. Operations lists your locations, busiest first, with how many tickets are open and how many are overdue.
+
+00:01:03.833 --> 00:01:14.372
+Projects and approval workflows have their own tiles, and so do products, if your company makes them. A tile only shows when that kind has open work and its module is on.
+
+00:01:14.833 --> 00:01:19.463
+Each tile shows up to six, and says when there are more. Click one to go straight to it.
+
+00:01:20.533 --> 00:01:27.360
+Got a question? Assist, the button at the bottom right of every page, answers from your tickets, orders and documents.
+
+00:01:28.333 --> 00:01:35.416
+And if you’re the System Admin and chose Finish later during setup, Home keeps a link back to it, until your workspace is ready.
+
+00:01:36.400 --> 00:01:42.736
+Home is a module, too. It’s on for every company and first in the sidebar, so it’s where Worklynq opens.
+
+00:01:43.200 --> 00:01:51.755
+A System Admin can move it, or turn it off, in Work Configuration, then Modules. Worklynq then opens on your first module instead.
+
