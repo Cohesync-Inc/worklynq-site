@@ -1,26 +1,30 @@
 WEBVTT
 
-00:00:00.633 --> 00:00:10.809
-Scheduled reports email the numbers to the people who need them, every day, week, or month. In this video, you’ll open a report, put it on a schedule, and choose who gets it.
+1
+00:00:00.633 --> 00:00:09.764
+Reports are sets of widgets made to be read and sent. Open one any time, or have it emailed every morning, with a short AI summary on top.
 
-00:00:11.900 --> 00:00:21.927
-Reports live in Dashboards, under Reports. They’re built from the same widgets. This one is the morning store report: sales, orders, overdue work and loyalty.
+2
+00:00:10.833 --> 00:00:19.943
+Reports has its own place in the sidebar, right after Dashboards. Here are the reports you made, and the ones shared with you, with how often each is emailed.
 
-00:00:22.367 --> 00:00:30.367
-Click Emailed to see its schedule. Choose every day, weekdays, a day of the week, or a day of the month, and the time, in your time zone.
+3
+00:00:20.400 --> 00:00:30.384
+Start one with New Report, or Describe a report, and AI builds it. Reports use the same widgets as dashboards: tickets, and data from your connected tools.
 
-00:00:30.833 --> 00:00:37.745
-Add who gets it. Each person gets their own copy, worked out as them, so they only see numbers they’re allowed to see.
+4
+00:00:31.367 --> 00:00:34.801
+To send it on a schedule, open the report and click Email.
 
-00:00:38.200 --> 00:00:46.520
-Every email starts with a short AI summary of what changed, with the numbers underneath. The last send shows here, with who it went to.
+5
+00:00:35.267 --> 00:00:45.123
+Tick Send it on a schedule. Pick every day, weekdays, a day each week, or a day each month, and the time. Add the people who get it, and choose the AI for the summary.
 
-00:00:46.967 --> 00:00:56.524
-A report is still a dashboard, too. Explain sums it up on screen, Change with AI rearranges it, and Add widget puts more numbers in the email.
+6
+00:00:45.567 --> 00:00:54.079
+Each person gets their own copy, worked out as them, so they only see numbers they’re allowed to see. Under Last send, you can check who got it.
 
-00:00:56.967 --> 00:01:05.415
-Settings decides who can see and edit the report, and pins it to one store or project, so each manager can get one just for their place.
-
-00:01:05.867 --> 00:01:10.731
-Anyone who can see a report can also click Email me a copy, whenever they need it.
+7
+00:00:54.533 --> 00:00:59.461
+If Reports is turned off, scheduled emails pause, and pick up again when it’s back on.
 

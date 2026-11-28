@@ -1,0 +1,26 @@
+WEBVTT
+
+1
+00:00:00.633 --> 00:00:11.919
+Connect a company mailbox on Microsoft 365 or Outlook dot com, like bookings or catering, and see how much email comes in, and who it’s from, next to the work.
+
+2
+00:00:13.000 --> 00:00:19.037
+As the System Admin, open Apps in the Admin console. Outlook is under Customers and email.
+
+3
+00:00:19.500 --> 00:00:29.228
+Open it, click Continue to Microsoft, and sign in with the mailbox you want to connect. Worklynq only reads it. It never sends, moves or deletes email.
+
+4
+00:00:29.667 --> 00:00:36.877
+Once it’s connected, you see the mailbox here. Use a different mailbox to switch, or Disconnect to remove Worklynq’s sign-in.
+
+5
+00:00:38.067 --> 00:00:46.493
+Now Outlook is data for dashboards and reports. This dashboard counts the emails to bookings today, and who emails most, by their domain.
+
+6
+00:00:46.933 --> 00:00:55.787
+It counts the Inbox. Outlook widgets start out for System Admins only. Open them to everyone in Connected data, on the Dashboards page.
+
