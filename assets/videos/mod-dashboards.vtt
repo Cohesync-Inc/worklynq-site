@@ -1,23 +1,38 @@
 WEBVTT
 
-00:00:00.633 --> 00:00:13.156
-Dashboards put the numbers you care about on one screen: open work, sales, and data from your connected tools. In this video, you’ll read a dashboard, ask what it says, add a widget, and build one with AI.
+1
+00:00:00.633 --> 00:00:08.057
+Dashboards put your work and your numbers side by side: open tickets, today’s schedule, sales, and data from your other tools.
 
-00:00:14.233 --> 00:00:23.428
-Open Dashboards. A dashboard is built from widgets: counts, tickets split by any field, overdue work, trends, and Square sales, side by side.
+2
+00:00:09.133 --> 00:00:16.472
+Each kind of widget has its own look. Big numbers fill their card, bars stand out, and every widget has its own color.
 
-00:00:23.867 --> 00:00:27.835
-Click Explain, and AI tells you what the numbers say, in a few points.
+3
+00:00:16.933 --> 00:00:23.419
+To add one, click Add widget. It takes three steps. First, say what you want to see, and click Find the data.
 
-00:00:28.300 --> 00:00:34.423
-Add widget lets you choose the data, what to measure, how to split it, and how to show it, with a live preview.
+4
+00:00:23.867 --> 00:00:31.269
+AI finds the data, from tickets or any tool you can use, and shows what it understood. The preview counts what matches.
 
-00:00:35.400 --> 00:00:41.224
-Or describe the dashboard you want. AI builds it, and shows you a preview before anything is saved.
+5
+00:00:31.733 --> 00:00:35.531
+Next, choose how to show it. The AI’s pick is marked Suggested.
 
-00:00:43.800 --> 00:00:51.800
-Keep a dashboard to yourself, share it with a team, or with everyone. Pin it to one store or project, and every widget shows just that.
+6
+00:00:35.967 --> 00:00:40.959
+Last, the details: the title, what to count, how to split it, and the width. Then add it.
 
-00:00:52.267 --> 00:01:00.651
-Data from connected tools, like Square or QuickBooks, starts out for System Admins. Connected data is where they choose who may use it.
+7
+00:00:41.400 --> 00:00:46.733
+Every widget has a menu, to duplicate it, or copy it to another dashboard or report.
+
+8
+00:00:47.733 --> 00:00:55.627
+Or describe a whole dashboard, and AI builds it, with a preview before anything is saved. Explain tells you what the numbers say.
+
+9
+00:00:56.067 --> 00:01:06.413
+Keep a dashboard private, share it with a team, or with everyone. People only see numbers they’re allowed to see. Archived projects stay available, to report on past work.
 

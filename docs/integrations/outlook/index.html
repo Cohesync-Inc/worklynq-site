@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Outlook — Worklynq Docs</title>
+<meta name="description" content="Connect a Microsoft 365 or Outlook.com mailbox to Worklynq, read-only: how much email comes in and who it’s from, on your dashboards and reports.">
+<link rel="canonical" href="https://worklynq.com/docs/integrations/outlook/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Worklynq">
+<meta property="og:title" content="Outlook — Worklynq Docs">
+<meta property="og:description" content="Connect a Microsoft 365 or Outlook.com mailbox to Worklynq, read-only: how much email comes in and who it’s from, on your dashboards and reports.">
+<meta property="og:url" content="https://worklynq.com/docs/integrations/outlook/">
+<meta property="og:image" content="https://worklynq.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Worklynq: one intelligent platform to run your business">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/docs.css?v=20261126i">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/worklynq-logo.png" alt="Worklynq" width="237" height="68"></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#features">Features</a>
+      <a href="/docs/" aria-current="page">Docs</a>
+      <a href="/integrations/">Integrations</a>
+      <a class="nav-cta" href="/#demo">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap docs-layout">
+    <aside class="docs-side"><details class="side-details" id="docs-nav"><summary>Docs menu</summary><nav aria-label="Documentation"><p class="side-title">Get started</p><ul class="side-pages"><li><a href="/docs/">Overview</a></li><li><a href="/docs/getting-started/">Getting started</a></li><li><a href="/docs/videos/">Video tutorials</a></li><li><a href="/docs/signing-in/">Signing in</a></li><li><a href="/docs/roles/">Roles &amp; permissions</a></li><li><a href="/docs/people/">People &amp; org chart</a></li><li><a href="/docs/plans-and-billing/">Plans &amp; billing</a></li><li><a href="/docs/ai-credits/">AI credits</a></li><li><a href="/docs/whats-new/">What’s new</a></li></ul><p class="side-title">Features</p><ul class="side-pages"><li><a href="/docs/home/">Home</a></li><li><a href="/docs/tickets/">Tickets</a></li><li><a href="/docs/projects/">Projects</a></li><li><a href="/docs/product-releases/">Product Releases</a></li><li><a href="/docs/dashboards/">Dashboards</a></li><li><a href="/docs/reports/">Reports</a></li><li><a href="/docs/approvals/">Approvals</a></li><li><a href="/docs/order-tracking/">Order Tracking</a></li><li><a href="/docs/inventory/">Inventory</a></li><li><a href="/docs/food-safety/">Food safety</a></li><li><a href="/docs/training/">Training</a></li><li><a href="/docs/daily-brief/">Daily brief</a></li><li><a href="/docs/marketing/">Marketing &amp; Social</a></li><li><a href="/docs/connect-your-ai/">Connect your AI</a></li><li><a href="/docs/assist/">Assist</a></li><li><a href="/docs/chat/">Chat</a></li><li><a href="/docs/shifts/">Shifts</a></li><li><a href="/docs/tv-screens/">TV screens</a></li></ul><p class="side-title">Reference</p><ul class="side-pages"><li><a href="/docs/modules/">Modules</a></li><li><a href="/docs/integrations/">Integrations</a></li><li class="sub"><a href="/docs/integrations/github/">GitHub</a></li><li class="sub"><a href="/docs/integrations/claude/">Claude</a></li><li class="sub"><a href="/docs/integrations/cursor/">Cursor</a></li><li class="sub"><a href="/docs/integrations/square/">Square</a></li><li class="sub"><a href="/docs/integrations/quickbooks/">QuickBooks</a></li><li class="sub"><a href="/docs/integrations/outlook/" aria-current="page">Outlook</a><ul class="side-sections"><li><a href="#what">What it does</a></li><li><a href="#reads">What Worklynq reads</a></li><li><a href="#before">Before you start</a></li><li><a href="#connect">Connect Outlook</a></li><li><a href="#dashboards">Outlook in dashboards</a></li><li><a href="#access">Who can see the numbers</a></li><li><a href="#disconnect">Change the mailbox or disconnect</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li><li class="sub"><a href="/docs/integrations/calendars/">Google &amp; Microsoft Calendar</a></li><li class="sub"><a href="/docs/integrations/custom-apps/">Custom apps</a></li></ul><p class="side-title">Industry guides</p><ul class="side-pages"><li><a href="/docs/guides/restaurants/">Restaurants &amp; cafés</a></li><li><a href="/docs/guides/construction/">Construction &amp; trades</a></li><li><a href="/docs/guides/software/">Software teams</a></li><li><a href="/docs/guides/it-services/">IT services &amp; agencies</a></li></ul><p class="side-title">Help</p><ul class="side-pages"><li><a href="/docs/faq/">FAQ</a></li><li><a href="/docs/security/">Security &amp; data</a></li></ul></nav></details></aside><script>(function(){var d=document.getElementById("docs-nav");if(d&&window.matchMedia("(min-width: 981px)").matches)d.open=true;})();</script>
+    <article class="doc">
+      <p class="eyebrow">Integrations</p>
+      <h1>Outlook</h1>
+      <p class="intro">Connect one company mailbox on <strong>Microsoft 365</strong> or <strong>Outlook.com</strong> — bookings@, catering@, hello@ — and see how much email comes in, and who it’s from, next to the work it turns into. Worklynq only <strong>reads</strong>: it never sends, moves or deletes email.</p>
+      <p><strong>Prefer to watch?</strong> This short video shows how to connect Outlook and where its data shows up. More are on <a href="/docs/videos/#int-12-outlook">Video tutorials</a>.</p>
+      <figure class="video"><video controls preload="metadata" playsinline poster="/assets/videos/int-12-outlook.webp" width="1920" height="1080"><source src="/assets/videos/int-12-outlook.mp4" type="video/mp4"><track kind="captions" src="/assets/videos/int-12-outlook.vtt" srclang="en" label="English"></video><figcaption>Outlook (1 min)</figcaption></figure>
+      <section class="sec" id="what"><h2>What it does</h2>
+        <ul>
+          <li>Connects one Outlook mailbox for the whole company, once.</li>
+          <li>Adds an <strong>Outlook (company mailbox)</strong> widget to <a href="/docs/dashboards/">dashboards</a> and <a href="/docs/reports/">reports</a>: emails today, per day, or this month, and who emails you most.</li>
+        </ul><p class="tip">New in the beta: this connection is being switched on workspace by workspace. If you can’t connect yet, or you see “isn’t set up on this Worklynq server yet”, email <a href="mailto:info@cohesync.com">info@cohesync.com</a> and we’ll turn it on for you.</p>
+      </section>
+      <section class="sec" id="reads"><h2>What Worklynq reads</h2>
+        <ul>
+          <li>The mailbox’s address and name</li>
+          <li>When each email in the <strong>Inbox</strong> arrived, and who sent it</li>
+        </ul>
+        <p>All access is <strong>read-only</strong>. Worklynq never sends, moves or deletes email, and only one company mailbox is connected — nobody’s personal inbox.</p>
+      </section>
+      <section class="sec" id="before"><h2>Before you start</h2>
+        <ul>
+          <li>You need to be your workspace’s <strong>System Admin</strong>.</li>
+          <li>You need the sign-in for the mailbox you want to connect. Some Microsoft 365 companies only let their IT admin approve new apps — if Microsoft asks for an admin’s approval, send them the request it shows.</li>
+        </ul>
+      </section>
+      <section class="sec" id="connect"><h2>Connect Outlook</h2>
+        <ol class="howto">
+          <li>Open <strong>Admin console → Integrations</strong> and choose <strong>Outlook</strong> under <em>Customers &amp; email</em>.</li>
+          <li>Click <strong>Continue to Microsoft</strong> and sign in with the mailbox you want to connect.</li>
+          <li>Review what Worklynq will read and click <strong>Accept</strong>.</li>
+          <li>You’re back in Worklynq, and Outlook shows <strong>Connected</strong> with the mailbox’s address.</li>
+        </ol>
+        <figure class="shot"><img src="/assets/screens/integrations-outlook.webp" alt="The Outlook window: bookings@harborpine.example connected, how to add Outlook widgets, and Disconnect, Use a different mailbox and Done" loading="lazy" width="1120" height="395"><figcaption>One company mailbox, connected read-only</figcaption></figure>
+      </section>
+      <section class="sec" id="dashboards"><h2>Outlook in dashboards</h2>
+        <p>In <strong>Dashboards</strong> or <strong>Reports</strong>, click <strong>Add widget</strong> and ask for it — “emails to bookings this week” — or choose <em>Outlook (company mailbox)</em> as the data.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Shows</th><th>Split by</th><th>When</th></tr></thead>
+          <tbody><tr><td>Emails received — as a number, a trend per day, week or month, a bar chart, a table, or a list of recent emails</td><td>Sender, or sender’s domain</td><td>Today, this week, this month, the last 7, 30 or 90 days, or the last 12 months</td></tr></tbody>
+        </table></div>
+        <ul>
+          <li>It counts the <strong>Inbox</strong> only, not its subfolders.</li>
+          <li>Splitting by sender looks at the 300 most recent emails in the range.</li>
+        </ul>
+        <figure class="shot"><img src="/assets/screens/dashboard-calendar.webp" alt="A Bookings &amp; meetings dashboard: what’s coming up from the calendars, meetings by calendar, busiest hours, 47 emails to bookings today, and who emails bookings by domain" loading="lazy" width="1600" height="1475"><figcaption>The bookings inbox next to the calendars</figcaption></figure>
+      </section>
+      <section class="sec" id="access"><h2>Who can see the numbers</h2>
+        <p>To start, only System Admins can use Outlook widgets. To share them, a System Admin opens <strong>Dashboards → Connected data</strong> and sets Outlook to <strong>everyone in the company</strong>. On a shared dashboard, people who aren’t allowed see a note instead of the numbers.</p>
+      </section>
+      <section class="sec" id="disconnect"><h2>Change the mailbox or disconnect</h2>
+        <ul>
+          <li><strong>Use a different mailbox</strong> signs in again with another one.</li>
+          <li><strong>Disconnect</strong> deletes Worklynq’s saved sign-in, and Outlook widgets stop showing data. To remove Worklynq from the Microsoft account too, open <strong>myapps.microsoft.com</strong> and remove it there.</li>
+        </ul>
+      </section>
+      <section class="sec" id="troubleshooting"><h2>Troubleshooting</h2>
+        <dl class="ts">
+          <dt>“Needs reconnecting”</dt><dd>Microsoft stopped accepting Worklynq’s sign-in — for example, the password changed or access was removed. Open Outlook in Integrations and click <strong>Reconnect Outlook</strong>.</dd>
+          <dt>Microsoft says an admin has to approve the app</dt><dd>Your company’s Microsoft 365 only lets its IT admin approve apps. Ask them to approve Worklynq, then connect again.</dd>
+          <dt>The numbers look low</dt><dd>Only the Inbox is counted. Email that rules move into other folders isn’t included.</dd>
+        </dl>
+      </section>
+      <p class="doc-foot">Last updated: November 27, 2026. Questions? <a href="mailto:info@cohesync.com">info@cohesync.com</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="/assets/cohesync-logo.png" alt="Cohesync" width="190" height="48">
+        Where Humans and AI Thrive Together
+      </div>
+      <div class="footer-links">
+        <a href="https://cohesync.com" target="_blank" rel="noopener">cohesync.com</a>
+        <a href="/#features">Features</a>
+        <a href="/docs/">Docs</a>
+        <a href="/#demo">Request a demo</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/dpa/">Data Processing Agreement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
